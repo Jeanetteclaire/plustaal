@@ -94,6 +94,7 @@
     .tile-plus {
       position: relative;
       display: block;
+      transition: width 0.5s ease, height 0.5s ease;
     }
 
     .tile-plus::before,
@@ -115,6 +116,31 @@
       height: 30%;
       top: 35%;
       left: 0;
+    }
+
+    /* Toast notification for inactive tiles */
+    .toast {
+      position: fixed;
+      bottom: max(3rem, env(safe-area-inset-bottom));
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(240, 233, 221, 0.95);
+      color: #1a1814;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      z-index: 50;
+      white-space: nowrap;
+    }
+
+    .toast.visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
 
     /* ===== Snap view ===== */
@@ -163,6 +189,7 @@
       justify-content: center;
       padding: max(4rem, env(safe-area-inset-top)) 1.5rem max(2rem, env(safe-area-inset-bottom));
       overflow: hidden;
+      background: #1a1814;
     }
 
     .plus-decoration {
@@ -390,7 +417,6 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* Placeholder for levels not yet built */
     .placeholder-content {
       text-align: center;
     }
@@ -432,12 +458,13 @@
     </div>
   </div>
 
+  <div class="toast" id="toast"></div>
+
   <div class="snap-view hidden" id="snap-view">
     <button class="back-button" id="back-button" aria-label="back to wall">←</button>
 
     <div class="snap-pages" id="snap-pages">
 
-      <!-- Level 1: Recognition (real exercise) -->
       <section class="snap-page level-1">
         <div class="plus-decoration" data-level="1"></div>
         <div class="page-content">
@@ -463,7 +490,6 @@
         </div>
       </section>
 
-      <!-- Levels 2-4: still placeholder -->
       <section class="snap-page level-2">
         <div class="plus-decoration" data-level="2"></div>
         <div class="page-content placeholder-content">
@@ -492,6 +518,77 @@
   </div>
 
   <script>
+    // ===== State persistence (NEW in Step 4) =====
+    //
+    // All mastery state lives in localStorage under a single key.
+    // The state object looks like:
+    // {
+    //   "er-1-plaatsbijwoord": {
+    //     levelsComplete: 0-4,
+    //     lastPracticed: ISO date string
+    //   }
+    // }
+    // Untouched tiles are absent from this object — absence means untouched.
+
+    const STATE_KEY = 'plustaal:state';
+    const DECAY_PERIOD_MS = 7 * 24 * 60 * 60 * 1000;  // 7 days in milliseconds
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STATE_KEY);
+        return raw ? JSON.parse(raw) : {};
+      } catch (err) {
+        console.error('State load failed:', err);
+        return {};
+      }
+    }
+
+    function saveState(state) {
+      try {
+        localStorage.setItem(STATE_KEY, JSON.stringify(state));
+      } catch (err) {
+        console.error('State save failed:', err);
+      }
+    }
+
+    // Apply weekly decay: for each tracked tile, if more than 7 days have passed
+    // since last practice, drop one level per 7-day period (down to minimum 0).
+    function applyDecay(state) {
+      const now = Date.now();
+      for (const tileId in state) {
+        const tile = state[tileId];
+        if (!tile.lastPracticed) continue;
+        const lastTime = new Date(tile.lastPracticed).getTime();
+        const elapsed = now - lastTime;
+        const periodsElapsed = Math.floor(elapsed / DECAY_PERIOD_MS);
+        if (periodsElapsed > 0 && tile.levelsComplete > 0) {
+          tile.levelsComplete = Math.max(0, tile.levelsComplete - periodsElapsed);
+        }
+      }
+      return state;
+    }
+
+    function getMasteryForTile(tileId) {
+      const state = loadState();
+      return state[tileId]?.levelsComplete ?? 0;
+    }
+
+    function recordLevelComplete(tileId, level) {
+      const state = loadState();
+      if (!state[tileId]) {
+        state[tileId] = { levelsComplete: 0, lastPracticed: null };
+      }
+      // Only advance if completing the next level in sequence
+      if (state[tileId].levelsComplete < level) {
+        state[tileId].levelsComplete = level;
+      }
+      state[tileId].lastPracticed = new Date().toISOString();
+      saveState(state);
+    }
+
+    // Apply decay on every app load so the wall reflects time passed
+    saveState(applyDecay(loadState()));
+
     // ===== Wall generation =====
 
     const grid = document.getElementById('tile-grid');
@@ -502,33 +599,76 @@
 
     const MASTERY_SIZES = [78, 62, 43, 33, 17];
 
-    function masteryForPosition(row, col) {
+    // For Step 4: only one tile is active (top-left, index 0).
+    // It maps to the er-1-plaatsbijwoord content.
+    // Future steps: more active tiles as content is written.
+    const ACTIVE_TILE_INDEX = 0;
+    const ACTIVE_TILE_ID = 'er-1-plaatsbijwoord';
+
+    // Untouched tiles get a position-based size for the halftone gradient effect.
+    // The active tile's size comes from its mastery state.
+    function sizeForUntouchedTile(row, col) {
       const positionProgress = (row / (ROWS - 1)) * 0.6 + (col / (COLS - 1)) * 0.4;
       const masteryLevel = Math.round((1 - positionProgress) * 4);
-      return Math.max(0, Math.min(4, masteryLevel));
+      return MASTERY_SIZES[Math.max(0, Math.min(4, masteryLevel))];
     }
 
-    for (let i = 0; i < COLS * ROWS; i++) {
-      const row = Math.floor(i / COLS);
-      const col = i % COLS;
+    function sizeForActiveTile() {
+      const levelsComplete = getMasteryForTile(ACTIVE_TILE_ID);
+      return MASTERY_SIZES[levelsComplete];
+    }
 
-      const masteryLevel = masteryForPosition(row, col);
-      const baseSize = MASTERY_SIZES[masteryLevel];
-      const variation = (Math.random() - 0.5) * 6;
-      const plusPercent = baseSize + variation;
+    function buildWall() {
+      grid.innerHTML = '';
 
-      const tile = document.createElement('button');
-      tile.className = 'tile';
-      tile.dataset.index = i;
-      tile.setAttribute('aria-label', `tile ${i + 1}`);
+      for (let i = 0; i < COLS * ROWS; i++) {
+        const row = Math.floor(i / COLS);
+        const col = i % COLS;
 
-      const plus = document.createElement('span');
-      plus.className = 'tile-plus';
-      plus.style.width = `${plusPercent}%`;
-      plus.style.height = `${plusPercent}%`;
+        let baseSize;
+        const isActive = (i === ACTIVE_TILE_INDEX);
 
-      tile.appendChild(plus);
-      grid.appendChild(tile);
+        if (isActive) {
+          baseSize = sizeForActiveTile();
+        } else {
+          baseSize = sizeForUntouchedTile(row, col);
+        }
+
+        // Small variation only for non-active tiles, so the active tile's size
+        // is precise to its mastery state (no random jitter).
+        const variation = isActive ? 0 : (Math.random() - 0.5) * 6;
+        const plusPercent = baseSize + variation;
+
+        const tile = document.createElement('button');
+        tile.className = 'tile';
+        tile.dataset.index = i;
+        tile.dataset.active = isActive;
+        tile.setAttribute('aria-label', `tile ${i + 1}${isActive ? ', active' : ', coming soon'}`);
+
+        const plus = document.createElement('span');
+        plus.className = 'tile-plus';
+        plus.style.width = `${plusPercent}%`;
+        plus.style.height = `${plusPercent}%`;
+
+        tile.appendChild(plus);
+        grid.appendChild(tile);
+      }
+    }
+
+    buildWall();
+
+    // ===== Toast for inactive tiles =====
+
+    const toast = document.getElementById('toast');
+    let toastTimeout = null;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('visible');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('visible');
+      }, 2000);
     }
 
     // ===== Snap view navigation =====
@@ -538,7 +678,7 @@
     const snapPages = document.getElementById('snap-pages');
     const backButton = document.getElementById('back-button');
 
-    function openSnapView(tileIndex) {
+    function openSnapView() {
       snapPages.scrollLeft = 0;
       resetLevel1();
       wallView.classList.add('hidden');
@@ -548,13 +688,21 @@
     function closeSnapView() {
       snapView.classList.add('hidden');
       wallView.classList.remove('hidden');
+      // Rebuild wall in case mastery state changed during the session
+      buildWall();
     }
 
-    document.querySelectorAll('.tile').forEach(tile => {
-      tile.addEventListener('click', () => {
-        const tileIndex = parseInt(tile.dataset.index, 10);
-        openSnapView(tileIndex);
-      });
+    // Tile click handler — branches by active vs inactive
+    grid.addEventListener('click', (e) => {
+      const tile = e.target.closest('.tile');
+      if (!tile) return;
+      const tileIndex = parseInt(tile.dataset.index, 10);
+
+      if (tileIndex === ACTIVE_TILE_INDEX) {
+        openSnapView();
+      } else {
+        showToast('Coming soon — content in progress');
+      }
     });
 
     backButton.addEventListener('click', closeSnapView);
@@ -597,15 +745,11 @@
 
     // ===== Level 1 exercise logic =====
 
-    // Content state — loaded once from JSON, then used per session
     let zoneContent = null;
     let level1Exercises = null;
-
-    // Session state — resets every time the snap view opens
     let currentQuestionIndex = 0;
     let correctCount = 0;
 
-    // DOM references for Level 1 UI
     const progressEl = document.getElementById('progress-1');
     const promptEl = document.getElementById('prompt-1');
     const btnCorrect = document.getElementById('btn-correct-1');
@@ -618,12 +762,10 @@
     const completeEl = document.getElementById('complete-1');
     const scoreEl = document.getElementById('score-1');
 
-    // Load content from JSON at app start
     async function loadContent() {
       try {
         const response = await fetch('content/er.json');
         zoneContent = await response.json();
-        // For Step 3, use the first tile's Level 1 — all tiles open the same content
         level1Exercises = zoneContent.tiles[0].levels['1'];
         renderCurrentQuestion();
       } catch (err) {
@@ -634,12 +776,10 @@
 
     function renderCurrentQuestion() {
       if (!level1Exercises) return;
-
       const exercise = level1Exercises[currentQuestionIndex];
       progressEl.textContent = `Question ${currentQuestionIndex + 1} / ${level1Exercises.length}`;
       promptEl.textContent = exercise.prompt;
 
-      // Reset button states
       btnCorrect.className = 'exercise-button';
       btnIncorrect.className = 'exercise-button';
       feedbackEl.classList.remove('visible');
@@ -649,10 +789,8 @@
     function handleAnswer(userSaidCorrect) {
       const exercise = level1Exercises[currentQuestionIndex];
       const isRight = (userSaidCorrect === exercise.correctUse);
-
       if (isRight) correctCount++;
 
-      // Mark which button got tapped, and whether it was right or wrong
       const tappedBtn = userSaidCorrect ? btnCorrect : btnIncorrect;
       const otherBtn = userSaidCorrect ? btnIncorrect : btnCorrect;
       tappedBtn.classList.add(isRight ? 'correct' : 'incorrect');
@@ -665,7 +803,6 @@
       explanationEl.textContent = exercise.explanation;
       feedbackEl.classList.add('visible');
 
-      // Show next button after a short pause so feedback registers
       setTimeout(() => {
         nextBtn.classList.add('visible');
       }, 300);
@@ -684,6 +821,9 @@
       exerciseEl.style.display = 'none';
       completeEl.classList.add('visible');
       scoreEl.textContent = `${correctCount} / ${level1Exercises.length} correct`;
+
+      // Save mastery progress: Level 1 complete on the active tile
+      recordLevelComplete(ACTIVE_TILE_ID, 1);
     }
 
     function resetLevel1() {
@@ -698,7 +838,6 @@
     btnIncorrect.addEventListener('click', () => handleAnswer(false));
     nextBtn.addEventListener('click', advance);
 
-    // Kick off content loading
     loadContent();
 
   </script>
