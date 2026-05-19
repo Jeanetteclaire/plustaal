@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>PlusTaal</title>
+
+  <!-- Manrope from Google Fonts (matching Cue Card / Fingo identity) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background: #1a1814;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #f0e9dd;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .app {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: max(2rem, env(safe-area-inset-top)) 1.5rem max(2rem, env(safe-area-inset-bottom));
+    }
+
+    .title {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #f0e9dd;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .wall {
+      width: 100%;
+      max-width: 360px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      width: 100%;
+    }
+
+    .tile {
+      aspect-ratio: 1;
+      position: relative;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: transform 0.15s ease;
+      font: inherit;
+      color: inherit;
+    }
+
+    .tile:active {
+      transform: scale(0.85);
+    }
+
+    .tile-plus {
+      position: relative;
+      display: block;
+    }
+
+    .tile-plus::before,
+    .tile-plus::after {
+      content: '';
+      position: absolute;
+      background: #f0e9dd;
+    }
+
+    .tile-plus::before {
+      width: 30%;
+      height: 100%;
+      left: 35%;
+      top: 0;
+    }
+
+    .tile-plus::after {
+      width: 100%;
+      height: 30%;
+      top: 35%;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1 class="title">PlusTaal</h1>
+    <div class="wall">
+      <div class="grid" id="tile-grid"></div>
+    </div>
+  </div>
+
+  <script>
+    const grid = document.getElementById('tile-grid');
+    const COLS = 6;
+    const ROWS = 10;
+
+    grid.style.gridTemplateColumns = `repeat(${COLS}, 1fr)`;
+
+    // 5 discrete mastery sizes: untouched → 1/4 → 2/4 → 3/4 → mastered
+    const MASTERY_SIZES = [78, 62, 43, 33, 17];
+
+    // Demo state — distribute tiles across mastery levels so the halftone reads.
+    // Position-based: top-left tiles tend to be more mastered (smaller),
+    //                 bottom-right tiles tend to be untouched (larger).
+    function masteryForPosition(row, col) {
+      const positionProgress = (row / (ROWS - 1)) * 0.6 + (col / (COLS - 1)) * 0.4;
+      // Map 0-1 to discrete mastery levels (4 = mastered, 0 = untouched)
+      const masteryLevel = Math.round((1 - positionProgress) * 4);
+      return Math.max(0, Math.min(4, masteryLevel));
+    }
+
+    for (let i = 0; i < COLS * ROWS; i++) {
+      const row = Math.floor(i / COLS);
+      const col = i % COLS;
+
+      const masteryLevel = masteryForPosition(row, col);
+      const baseSize = MASTERY_SIZES[masteryLevel];
+
+      // Small per-tile variation so it doesn't look mechanically stepped
+      const variation = (Math.random() - 0.5) * 6;  // ±3%
+      const plusPercent = baseSize + variation;
+
+      const tile = document.createElement('button');
+      tile.className = 'tile';
+      tile.setAttribute('aria-label', `tile ${i + 1}, mastery level ${4 - masteryLevel}/4`);
+
+      const plus = document.createElement('span');
+      plus.className = 'tile-plus';
+      plus.style.width = `${plusPercent}%`;
+      plus.style.height = `${plusPercent}%`;
+
+      tile.appendChild(plus);
+      grid.appendChild(tile);
+    }
+  </script>
+</body>
+</html>
