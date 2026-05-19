@@ -1,0 +1,57 @@
+{
+  "zone": "er",
+  "zoneName": "Er",
+  "tiles": [
+    {
+      "id": "er-1-plaatsbijwoord",
+      "theme": "Er als plaatsbijwoord",
+      "themeEnglish": "Er as locative adverb (referring to a place)",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik ben gisteren naar Utrecht geweest. Ik ben er drie uur gebleven.",
+            "correctUse": true,
+            "explanation": "Correct. 'Er' here refers back to Utrecht — a clear locative use replacing 'daar' or 'in Utrecht'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik woon in Amsterdam. Ik woon daar al dertig jaar.",
+            "correctUse": true,
+            "explanation": "Correct. 'Daar' is used here for emphasis, which is also fine. 'Er' would also be correct: 'Ik woon er al dertig jaar.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ben je ooit in Parijs geweest? Ja, ik ben daar twee keer geweest.",
+            "correctUse": true,
+            "explanation": "Correct. With explicit emphasis on the location, 'daar' works. 'Er' would also be correct here: 'Ja, ik ben er twee keer geweest.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "We gaan naar het strand. Wil je daar mee?",
+            "correctUse": false,
+            "explanation": "Niet correct. With directional verbs like 'gaan' you need 'er…heen' or 'daarheen', not just 'daar mee'. Correct: 'Wil je er mee naartoe?' or 'Wil je mee daarheen?'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het café op de hoek is gesloten. Ik heb er gisteren nog gegeten.",
+            "correctUse": true,
+            "explanation": "Correct. 'Er' refers back to the café — a clean locative reference."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ben je naar de winkel geweest? Nee, ik ben er nog niet naartoe geweest.",
+            "correctUse": false,
+            "explanation": "Niet correct. The natural form here is 'Nee, ik ben er nog niet geweest' — 'naartoe' is redundant because 'er' already carries the locative sense with 'geweest'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Op zondag ga ik altijd naar mijn moeder. Ik blijf er meestal eten.",
+            "correctUse": true,
+            "explanation": "Correct. 'Er' refers to the location (at mum's). Natural, idiomatic use."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -6,7 +6,6 @@
 
   <title>PlusTaal</title>
 
-  <!-- Manrope from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -162,7 +161,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: max(4rem, env(safe-area-inset-top)) 1.5rem max(2rem, env(safe-area-inset-bottom));
       overflow: hidden;
     }
 
@@ -188,7 +187,8 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      max-width: 320px;
+      max-width: 360px;
+      width: 100%;
     }
 
     .page-label {
@@ -209,6 +209,198 @@
       line-height: 1.1;
     }
 
+    /* ===== Level 1 exercise UI ===== */
+
+    .exercise {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .exercise-progress {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f0e9dd;
+      opacity: 0.5;
+    }
+
+    .exercise-prompt {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.45;
+      color: #f0e9dd;
+      text-align: center;
+      min-height: 6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exercise-question {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #f0e9dd;
+      opacity: 0.6;
+      text-align: center;
+    }
+
+    .exercise-buttons {
+      display: flex;
+      gap: 0.75rem;
+      width: 100%;
+    }
+
+    .exercise-button {
+      flex: 1;
+      padding: 1rem 1rem;
+      background: transparent;
+      border: 1px solid rgba(240, 233, 221, 0.3);
+      border-radius: 999px;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.15s ease, background 0.2s ease;
+    }
+
+    .exercise-button:active {
+      transform: scale(0.96);
+      border-color: rgba(240, 233, 221, 0.6);
+    }
+
+    .exercise-button.disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    .exercise-button.correct {
+      background: rgba(120, 180, 120, 0.18);
+      border-color: rgba(150, 200, 150, 0.6);
+      color: #d8ecd8;
+    }
+
+    .exercise-button.incorrect {
+      background: rgba(200, 110, 100, 0.18);
+      border-color: rgba(220, 130, 120, 0.6);
+      color: #f0d4cf;
+    }
+
+    .exercise-feedback {
+      min-height: 5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .exercise-feedback.visible {
+      opacity: 1;
+    }
+
+    .feedback-verdict {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .feedback-verdict.correct {
+      color: #b8dab8;
+    }
+
+    .feedback-verdict.incorrect {
+      color: #e0a59c;
+    }
+
+    .feedback-explanation {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #f0e9dd;
+      opacity: 0.75;
+      text-align: center;
+      max-width: 320px;
+    }
+
+    .next-button {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: 1px solid rgba(240, 233, 221, 0.4);
+      border-radius: 999px;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .next-button.visible {
+      opacity: 0.85;
+      pointer-events: auto;
+    }
+
+    .next-button:active {
+      transform: scale(0.96);
+      border-color: rgba(240, 233, 221, 0.7);
+      opacity: 1;
+    }
+
+    /* Level complete state */
+    .level-complete {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .level-complete.visible {
+      display: flex;
+    }
+
+    .complete-tick {
+      width: 64px;
+      height: 64px;
+      border: 2px solid #f0e9dd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      opacity: 0.85;
+    }
+
+    .complete-text {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .complete-score {
+      font-size: 14px;
+      opacity: 0.65;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Placeholder for levels not yet built */
+    .placeholder-content {
+      text-align: center;
+    }
+
+    /* Back button */
     .back-button {
       position: fixed;
       top: max(1rem, env(safe-area-inset-top));
@@ -249,17 +441,37 @@
     <button class="back-button" id="back-button" aria-label="back to wall">←</button>
 
     <div class="snap-pages" id="snap-pages">
+
+      <!-- Level 1: Recognition (real exercise) -->
       <section class="snap-page level-1">
         <div class="plus-decoration" data-level="1"></div>
         <div class="page-content">
-          <div class="page-label">Level 1 / 4</div>
-          <div class="page-title">Recognition</div>
+          <div id="exercise-1" class="exercise">
+            <div class="exercise-progress" id="progress-1">Question 1 / 7</div>
+            <div class="exercise-prompt" id="prompt-1">Loading…</div>
+            <div class="exercise-question">Is this use of <em>er</em> correct?</div>
+            <div class="exercise-buttons">
+              <button class="exercise-button" id="btn-incorrect-1">Niet correct</button>
+              <button class="exercise-button" id="btn-correct-1">Correct</button>
+            </div>
+            <div class="exercise-feedback" id="feedback-1">
+              <div class="feedback-verdict" id="verdict-1"></div>
+              <div class="feedback-explanation" id="explanation-1"></div>
+              <button class="next-button" id="next-1">Next →</button>
+            </div>
+          </div>
+          <div class="level-complete" id="complete-1">
+            <div class="complete-tick">✓</div>
+            <div class="complete-text">Level 1 complete</div>
+            <div class="complete-score" id="score-1">7 / 7 correct</div>
+          </div>
         </div>
       </section>
 
+      <!-- Levels 2-4: still placeholder -->
       <section class="snap-page level-2">
         <div class="plus-decoration" data-level="2"></div>
-        <div class="page-content">
+        <div class="page-content placeholder-content">
           <div class="page-label">Level 2 / 4</div>
           <div class="page-title">Cloze</div>
         </div>
@@ -267,7 +479,7 @@
 
       <section class="snap-page level-3">
         <div class="plus-decoration" data-level="3"></div>
-        <div class="page-content">
+        <div class="page-content placeholder-content">
           <div class="page-label">Level 3 / 4</div>
           <div class="page-title">Simple translation</div>
         </div>
@@ -275,15 +487,18 @@
 
       <section class="snap-page level-4">
         <div class="plus-decoration" data-level="4"></div>
-        <div class="page-content">
+        <div class="page-content placeholder-content">
           <div class="page-label">Level 4 / 4</div>
           <div class="page-title">Complex translation</div>
         </div>
       </section>
+
     </div>
   </div>
 
   <script>
+    // ===== Wall generation =====
+
     const grid = document.getElementById('tile-grid');
     const COLS = 6;
     const ROWS = 10;
@@ -330,6 +545,7 @@
 
     function openSnapView(tileIndex) {
       snapPages.scrollLeft = 0;
+      resetLevel1();
       wallView.classList.add('hidden');
       snapView.classList.remove('hidden');
     }
@@ -383,6 +599,112 @@
     document.querySelectorAll('.plus-decoration').forEach(container => {
       generatePlusDecorations(container, 18);
     });
+
+    // ===== Level 1 exercise logic =====
+
+    // Content state — loaded once from JSON, then used per session
+    let zoneContent = null;
+    let level1Exercises = null;
+
+    // Session state — resets every time the snap view opens
+    let currentQuestionIndex = 0;
+    let correctCount = 0;
+
+    // DOM references for Level 1 UI
+    const progressEl = document.getElementById('progress-1');
+    const promptEl = document.getElementById('prompt-1');
+    const btnCorrect = document.getElementById('btn-correct-1');
+    const btnIncorrect = document.getElementById('btn-incorrect-1');
+    const feedbackEl = document.getElementById('feedback-1');
+    const verdictEl = document.getElementById('verdict-1');
+    const explanationEl = document.getElementById('explanation-1');
+    const nextBtn = document.getElementById('next-1');
+    const exerciseEl = document.getElementById('exercise-1');
+    const completeEl = document.getElementById('complete-1');
+    const scoreEl = document.getElementById('score-1');
+
+    // Load content from JSON at app start
+    async function loadContent() {
+      try {
+        const response = await fetch('content/er.json');
+        zoneContent = await response.json();
+        // For Step 3, use the first tile's Level 1 — all tiles open the same content
+        level1Exercises = zoneContent.tiles[0].levels['1'];
+        renderCurrentQuestion();
+      } catch (err) {
+        console.error('Could not load content:', err);
+        promptEl.textContent = 'Content failed to load. Run from a local server, not file://';
+      }
+    }
+
+    function renderCurrentQuestion() {
+      if (!level1Exercises) return;
+
+      const exercise = level1Exercises[currentQuestionIndex];
+      progressEl.textContent = `Question ${currentQuestionIndex + 1} / ${level1Exercises.length}`;
+      promptEl.textContent = exercise.prompt;
+
+      // Reset button states
+      btnCorrect.className = 'exercise-button';
+      btnIncorrect.className = 'exercise-button';
+      feedbackEl.classList.remove('visible');
+      nextBtn.classList.remove('visible');
+    }
+
+    function handleAnswer(userSaidCorrect) {
+      const exercise = level1Exercises[currentQuestionIndex];
+      const isRight = (userSaidCorrect === exercise.correctUse);
+
+      if (isRight) correctCount++;
+
+      // Mark which button got tapped, and whether it was right or wrong
+      const tappedBtn = userSaidCorrect ? btnCorrect : btnIncorrect;
+      const otherBtn = userSaidCorrect ? btnIncorrect : btnCorrect;
+      tappedBtn.classList.add(isRight ? 'correct' : 'incorrect');
+      otherBtn.classList.add('disabled');
+      btnCorrect.classList.add('disabled');
+      btnIncorrect.classList.add('disabled');
+
+      verdictEl.textContent = isRight ? 'Goed!' : 'Niet helemaal.';
+      verdictEl.className = 'feedback-verdict ' + (isRight ? 'correct' : 'incorrect');
+      explanationEl.textContent = exercise.explanation;
+      feedbackEl.classList.add('visible');
+
+      // Show next button after a short pause so feedback registers
+      setTimeout(() => {
+        nextBtn.classList.add('visible');
+      }, 300);
+    }
+
+    function advance() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex >= level1Exercises.length) {
+        showComplete();
+      } else {
+        renderCurrentQuestion();
+      }
+    }
+
+    function showComplete() {
+      exerciseEl.style.display = 'none';
+      completeEl.classList.add('visible');
+      scoreEl.textContent = `${correctCount} / ${level1Exercises.length} correct`;
+    }
+
+    function resetLevel1() {
+      currentQuestionIndex = 0;
+      correctCount = 0;
+      exerciseEl.style.display = '';
+      completeEl.classList.remove('visible');
+      if (level1Exercises) renderCurrentQuestion();
+    }
+
+    btnCorrect.addEventListener('click', () => handleAnswer(true));
+    btnIncorrect.addEventListener('click', () => handleAnswer(false));
+    nextBtn.addEventListener('click', advance);
+
+    // Kick off content loading
+    loadContent();
 
   </script>
 </body>
