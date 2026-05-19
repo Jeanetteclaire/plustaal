@@ -53,53 +53,85 @@
         ],
         "2": [
           {
-            "type": "cloze",
-            "prompt": "Ik ben gisteren naar Rotterdam geweest. Ik heb ___ gegeten.",
-            "acceptedAnswers": ["er", "daar"],
-            "preferred": "er",
-            "explanation": "Both 'er' and 'daar' work. 'Er' is unmarked and natural; 'daar' adds slight emphasis on the location."
+            "type": "transformation",
+            "prompt": "Ik heb tien jaar in Rotterdam gewoond.",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "Ik heb er tien jaar gewoond.",
+              "Ik heb daar tien jaar gewoond."
+            ],
+            "preferred": "Ik heb er tien jaar gewoond.",
+            "explanation": "'Er' replaces 'in Rotterdam' and sits right after the auxiliary verb 'heb'. The time phrase 'tien jaar' follows, then the participle 'gewoond' at the end. 'Daar' would also be acceptable, with slight emphasis."
           },
           {
-            "type": "cloze",
-            "prompt": "Ze gaat morgen naar Brussel. Ze blijft ___ een week.",
-            "acceptedAnswers": ["er", "daar"],
-            "preferred": "er",
-            "explanation": "Locative reference to Brussel. 'Er' is the default; 'daar' is also fine for emphasis."
+            "type": "transformation",
+            "prompt": "Ze gaat volgende week naar Spanje.",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "Ze gaat er volgende week naartoe.",
+              "Ze gaat er volgende week heen.",
+              "Zij gaat er volgende week naartoe.",
+              "Zij gaat er volgende week heen."
+            ],
+            "preferred": "Ze gaat er volgende week naartoe.",
+            "explanation": "'Gaan' is directional, so it needs 'er…naartoe' or 'er…heen'. The split construction wraps around the time phrase: er + time + naartoe."
           },
           {
-            "type": "cloze",
-            "prompt": "Het museum is dicht op maandag. Ik ben ___ vorige week wel geweest.",
-            "acceptedAnswers": ["er", "daar"],
-            "preferred": "er",
-            "explanation": "Standard locative — 'er' refers back to the museum without emphasis."
+            "type": "transformation",
+            "prompt": "Heb je ooit in Italië gewoond?",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "Heb je er ooit gewoond?",
+              "Heb je daar ooit gewoond?"
+            ],
+            "preferred": "Heb je er ooit gewoond?",
+            "explanation": "In a question, 'er' goes after the conjugated verb + subject. Pattern: aux + subject + er + time + participle."
           },
           {
-            "type": "cloze",
-            "prompt": "Wanneer ga je naar Frankrijk? Ik ga ___ in de zomer naartoe.",
-            "acceptedAnswers": ["er"],
-            "preferred": "er",
-            "explanation": "With 'naartoe' (directional), only 'er' works in this position — split construction 'er…naartoe'."
+            "type": "transformation",
+            "prompt": "Mijn ouders willen graag naar Australië reizen.",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "Mijn ouders willen er graag naartoe reizen.",
+              "Mijn ouders willen er graag heen reizen."
+            ],
+            "preferred": "Mijn ouders willen er graag naartoe reizen.",
+            "explanation": "With 'reizen' as a directional verb plus modal 'willen', the split construction 'er…naartoe' wraps around the adverb and the infinitive sits at the end."
           },
           {
-            "type": "cloze",
-            "prompt": "Ken je dat café? Ja, ik kom ___ regelmatig.",
-            "acceptedAnswers": ["er", "daar"],
-            "preferred": "er",
-            "explanation": "Locative — 'er' refers to the café. 'Daar' also works with slight emphasis."
+            "type": "transformation",
+            "prompt": "We hebben gisteren in een nieuw restaurant gegeten.",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "We hebben er gisteren gegeten.",
+              "We hebben daar gisteren gegeten.",
+              "Wij hebben er gisteren gegeten.",
+              "Wij hebben daar gisteren gegeten."
+            ],
+            "preferred": "We hebben er gisteren gegeten.",
+            "explanation": "Perfectum word order: aux + subject becomes subject + aux + er + time + participle. 'Er' sits right after the auxiliary."
           },
           {
-            "type": "cloze",
-            "prompt": "Het restaurant is duur, maar de service is ___ heel goed.",
-            "acceptedAnswers": ["er", "daar"],
-            "preferred": "er",
-            "explanation": "'Er' refers back to the restaurant. 'Daar' also acceptable."
+            "type": "transformation",
+            "prompt": "Ben je gisteren bij je oma geweest?",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "Ben je er gisteren geweest?",
+              "Ben je daar gisteren geweest?"
+            ],
+            "preferred": "Ben je er gisteren geweest?",
+            "explanation": "'Bij je oma' is treated as a location. Question word order: aux + subject + er + time + participle."
           },
           {
-            "type": "cloze",
-            "prompt": "Ze willen naar de bergen. Ze willen ___ deze zomer naartoe.",
-            "acceptedAnswers": ["er"],
-            "preferred": "er",
-            "explanation": "Directional construction 'er…naartoe' — only 'er' works in the split form."
+            "type": "transformation",
+            "prompt": "Ik kom regelmatig in dat café.",
+            "task": "Rewrite using 'er'.",
+            "acceptedAnswers": [
+              "Ik kom er regelmatig.",
+              "Ik kom daar regelmatig."
+            ],
+            "preferred": "Ik kom er regelmatig.",
+            "explanation": "When 'komen' means 'visit a place habitually' (rather than 'arrive at'), it takes plain locative 'er', not 'er…naartoe'. 'Daar' also works with slight emphasis."
           }
         ],
         "3": [

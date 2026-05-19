@@ -187,8 +187,10 @@
       align-items: center;
       justify-content: center;
       padding: max(4rem, env(safe-area-inset-top)) 1.5rem max(2rem, env(safe-area-inset-bottom));
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
       background: #1a1814;
+      -webkit-overflow-scrolling: touch;
     }
 
     .plus-decoration {
@@ -585,15 +587,15 @@
         </div>
       </section>
 
-      <!-- Level 2: Cloze -->
+      <!-- Level 2: Transformation -->
       <section class="snap-page level-2">
         <div class="plus-decoration" data-level="2"></div>
         <div class="page-content">
           <div id="exercise-2" class="exercise">
             <div class="exercise-progress" id="progress-2">Question 1 / 7</div>
             <div class="exercise-prompt" id="prompt-2">Loading…</div>
-            <div class="exercise-question">Fill in the blank</div>
-            <input type="text" class="exercise-input" id="input-2" placeholder="your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <div class="exercise-question" id="question-2">Rewrite using 'er'</div>
+            "<textarea class="exercise-input" id="input-2" rows="2" placeholder="your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             <button class="submit-button" id="submit-2">Submit</button>
             <div class="exercise-feedback" id="feedback-2">
               <div class="feedback-verdict" id="verdict-2"></div>
@@ -942,6 +944,10 @@
         input.value = '';
         input.classList.remove('disabled');
         document.getElementById('submit-2').classList.remove('disabled');
+        // Update task instruction per question (transformations have different tasks)
+        if (ex.task) {
+          document.getElementById('question-2').textContent = ex.task;
+        }
       } else if (level === 3 || level === 4) {
         const input = document.getElementById(`input-${level}`);
         input.value = '';
