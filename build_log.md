@@ -6,6 +6,25 @@ Newest at the top.
 
 ---
 
+## 2026-05-19 — Step 3: Level 1 exercise — Recognition for Er
+
+First real working exercise. Content for one tile (`er-1-plaatsbijwoord`, Er als plaatsbijwoord) lives in `content/er.json`. Level 1 Recognition flow: 7 prompts of *er* used correctly or incorrectly in context; user taps Correct or Niet correct; tile colours green or red; explanation appears below; tap Next to advance; completion state at the end with score.
+
+For Step 3, every tile on the wall opens the same exercise content. Tile-to-content mapping comes in a later step.
+
+Decisions:
+
+- **JSON for content, not markdown or a database.** Content is structured exercise data (every tile/level/exercise has the same shape), single-user, ships static. JSON parses with one line of code and the structure self-documents. Markdown was right for STRATA (prose); JSON is right for PlusTaal (structured data).
+- **One file per zone** (`content/er.json`, future `content/imperfectum.json`, etc.). Lets each zone be authored and shipped incrementally.
+- **`fetch()` to load content** at app startup. Requires HTTP serving — won't work over `file://`. Local development needs `python3 -m http.server 8000` or testing on the deployed Pages URL.
+- **Feedback uses warm green/red** matching the rest of the palette. Soft sage `#b8dab8` for correct, soft terracotta `#e0a59c` for incorrect — not jarring primaries.
+- **Reset on snap view open.** Every time a tile is tapped, Level 1 starts at Question 1 with score zero. No mid-session persistence yet.
+- **Recognition format chosen for *Er*** specifically because the recurring error patterns in your Dutch are about using *er* (or *daar*, or *naartoe*) in the wrong context. Spotting wrongness in real sentences builds the corrective instinct better than producing the right form would at this stage.
+
+State: full Level 1 loop working end-to-end on phone, deployed. Levels 2-4 still placeholder pages. Mastery state not yet persisted — tile sizes on the wall don't change when a level is completed (Step 5+).
+
+---
+
 ## 2026-05-19 — Step 2: Snap view navigation
 
 Tapping any tile opens a fullscreen four-page snap view: Level 1 Recognition, Level 2 Cloze, Level 3 Simple translation, Level 4 Complex translation. Horizontal scroll-snap (one page per swipe). Back button top-left returns to the wall. Always resets to Level 1 on each open. Aesthetic continuity carried through: same warm-neutral palette, same cream Manrope, plus signs reappearing as low-opacity outlined SVG decorations scattered across each page background.
