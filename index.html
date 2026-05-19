@@ -118,7 +118,6 @@
       left: 0;
     }
 
-    /* Toast notification for inactive tiles */
     .toast {
       position: fixed;
       bottom: max(3rem, env(safe-area-inset-bottom));
@@ -213,25 +212,7 @@
       width: 100%;
     }
 
-    .page-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #f0e9dd;
-      opacity: 0.55;
-      margin-bottom: 1.5rem;
-    }
-
-    .page-title {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: #f0e9dd;
-      line-height: 1.1;
-    }
-
-    /* ===== Level 1 exercise UI ===== */
+    /* ===== Exercise UI — shared ===== */
 
     .exercise {
       width: 100%;
@@ -239,7 +220,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1.75rem;
     }
 
     .exercise-progress {
@@ -252,15 +233,20 @@
     }
 
     .exercise-prompt {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 400;
       line-height: 1.45;
       color: #f0e9dd;
       text-align: center;
-      min-height: 6em;
+      min-height: 4.5em;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .exercise-prompt.smaller {
+      font-size: 17px;
+      min-height: 5.5em;
     }
 
     .exercise-question {
@@ -316,7 +302,7 @@
     }
 
     .exercise-feedback {
-      min-height: 5em;
+      min-height: 4em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -335,13 +321,8 @@
       letter-spacing: 0.02em;
     }
 
-    .feedback-verdict.correct {
-      color: #b8dab8;
-    }
-
-    .feedback-verdict.incorrect {
-      color: #e0a59c;
-    }
+    .feedback-verdict.correct { color: #b8dab8; }
+    .feedback-verdict.incorrect { color: #e0a59c; }
 
     .feedback-explanation {
       font-size: 14px;
@@ -380,7 +361,124 @@
       opacity: 1;
     }
 
-    /* Level complete state */
+    /* ===== Input fields for cloze and translation ===== */
+
+    .exercise-input {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      background: rgba(240, 233, 221, 0.05);
+      border: 1px solid rgba(240, 233, 221, 0.2);
+      border-radius: 12px;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+      outline: none;
+      resize: none;
+      -webkit-user-select: text;
+      user-select: text;
+      transition: border-color 0.2s ease;
+    }
+
+    .exercise-input:focus {
+      border-color: rgba(240, 233, 221, 0.45);
+    }
+
+    .exercise-input::placeholder {
+      color: rgba(240, 233, 221, 0.3);
+    }
+
+    .exercise-input.disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: transparent;
+      border: 1px solid rgba(240, 233, 221, 0.35);
+      border-radius: 999px;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      opacity: 0.85;
+    }
+
+    .submit-button:active {
+      transform: scale(0.97);
+      border-color: rgba(240, 233, 221, 0.6);
+      opacity: 1;
+    }
+
+    .submit-button.disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    /* ===== Self-assessment block (Levels 3-4) ===== */
+
+    .self-assess {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .self-assess.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .answer-block {
+      width: 100%;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      background: rgba(240, 233, 221, 0.04);
+      border-radius: 10px;
+    }
+
+    .answer-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 0.25rem;
+    }
+
+    .answer-text {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #f0e9dd;
+    }
+
+    .answer-text em {
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    .answer-note {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #f0e9dd;
+      opacity: 0.7;
+      padding: 0.25rem 1rem;
+      text-align: left;
+    }
+
+    /* ===== Level complete state ===== */
+
     .level-complete {
       display: none;
       flex-direction: column;
@@ -415,10 +513,6 @@
       font-size: 14px;
       opacity: 0.65;
       font-variant-numeric: tabular-nums;
-    }
-
-    .placeholder-content {
-      text-align: center;
     }
 
     /* Back button */
@@ -465,6 +559,7 @@
 
     <div class="snap-pages" id="snap-pages">
 
+      <!-- Level 1: Recognition -->
       <section class="snap-page level-1">
         <div class="plus-decoration" data-level="1"></div>
         <div class="page-content">
@@ -485,32 +580,100 @@
           <div class="level-complete" id="complete-1">
             <div class="complete-tick">✓</div>
             <div class="complete-text">Level 1 complete</div>
-            <div class="complete-score" id="score-1">7 / 7 correct</div>
+            <div class="complete-score" id="score-1"></div>
           </div>
         </div>
       </section>
 
+      <!-- Level 2: Cloze -->
       <section class="snap-page level-2">
         <div class="plus-decoration" data-level="2"></div>
-        <div class="page-content placeholder-content">
-          <div class="page-label">Level 2 / 4</div>
-          <div class="page-title">Cloze</div>
+        <div class="page-content">
+          <div id="exercise-2" class="exercise">
+            <div class="exercise-progress" id="progress-2">Question 1 / 7</div>
+            <div class="exercise-prompt" id="prompt-2">Loading…</div>
+            <div class="exercise-question">Fill in the blank</div>
+            <input type="text" class="exercise-input" id="input-2" placeholder="your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button class="submit-button" id="submit-2">Submit</button>
+            <div class="exercise-feedback" id="feedback-2">
+              <div class="feedback-verdict" id="verdict-2"></div>
+              <div class="feedback-explanation" id="explanation-2"></div>
+              <button class="next-button" id="next-2">Next →</button>
+            </div>
+          </div>
+          <div class="level-complete" id="complete-2">
+            <div class="complete-tick">✓</div>
+            <div class="complete-text">Level 2 complete</div>
+            <div class="complete-score" id="score-2"></div>
+          </div>
         </div>
       </section>
 
+      <!-- Level 3: Simple translation -->
       <section class="snap-page level-3">
         <div class="plus-decoration" data-level="3"></div>
-        <div class="page-content placeholder-content">
-          <div class="page-label">Level 3 / 4</div>
-          <div class="page-title">Simple translation</div>
+        <div class="page-content">
+          <div id="exercise-3" class="exercise">
+            <div class="exercise-progress" id="progress-3">Question 1 / 5</div>
+            <div class="exercise-prompt smaller" id="prompt-3">Loading…</div>
+            <div class="exercise-question">Translate to Dutch</div>
+            <textarea class="exercise-input" id="input-3" rows="2" placeholder="your translation" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <button class="submit-button" id="submit-3">Submit</button>
+            <div class="self-assess" id="self-assess-3">
+              <div class="answer-block">
+                <div class="answer-label">your answer</div>
+                <div class="answer-text" id="user-answer-3"></div>
+              </div>
+              <div class="answer-block">
+                <div class="answer-label">model answer</div>
+                <div class="answer-text" id="model-answer-3"></div>
+              </div>
+              <div class="answer-note" id="note-3"></div>
+              <div class="exercise-buttons">
+                <button class="exercise-button" id="btn-incorrect-3">Niet helemaal</button>
+                <button class="exercise-button" id="btn-correct-3">Goed</button>
+              </div>
+            </div>
+          </div>
+          <div class="level-complete" id="complete-3">
+            <div class="complete-tick">✓</div>
+            <div class="complete-text">Level 3 complete</div>
+            <div class="complete-score" id="score-3"></div>
+          </div>
         </div>
       </section>
 
+      <!-- Level 4: Complex translation -->
       <section class="snap-page level-4">
         <div class="plus-decoration" data-level="4"></div>
-        <div class="page-content placeholder-content">
-          <div class="page-label">Level 4 / 4</div>
-          <div class="page-title">Complex translation</div>
+        <div class="page-content">
+          <div id="exercise-4" class="exercise">
+            <div class="exercise-progress" id="progress-4">Question 1 / 5</div>
+            <div class="exercise-prompt smaller" id="prompt-4">Loading…</div>
+            <div class="exercise-question">Translate to Dutch</div>
+            <textarea class="exercise-input" id="input-4" rows="3" placeholder="your translation" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <button class="submit-button" id="submit-4">Submit</button>
+            <div class="self-assess" id="self-assess-4">
+              <div class="answer-block">
+                <div class="answer-label">your answer</div>
+                <div class="answer-text" id="user-answer-4"></div>
+              </div>
+              <div class="answer-block">
+                <div class="answer-label">model answer</div>
+                <div class="answer-text" id="model-answer-4"></div>
+              </div>
+              <div class="answer-note" id="note-4"></div>
+              <div class="exercise-buttons">
+                <button class="exercise-button" id="btn-incorrect-4">Niet helemaal</button>
+                <button class="exercise-button" id="btn-correct-4">Goed</button>
+              </div>
+            </div>
+          </div>
+          <div class="level-complete" id="complete-4">
+            <div class="complete-tick">✓</div>
+            <div class="complete-text">Level 4 complete — tile mastered</div>
+            <div class="complete-score" id="score-4"></div>
+          </div>
         </div>
       </section>
 
@@ -518,20 +681,10 @@
   </div>
 
   <script>
-    // ===== State persistence (NEW in Step 4) =====
-    //
-    // All mastery state lives in localStorage under a single key.
-    // The state object looks like:
-    // {
-    //   "er-1-plaatsbijwoord": {
-    //     levelsComplete: 0-4,
-    //     lastPracticed: ISO date string
-    //   }
-    // }
-    // Untouched tiles are absent from this object — absence means untouched.
+    // ===== State persistence =====
 
     const STATE_KEY = 'plustaal:state';
-    const DECAY_PERIOD_MS = 7 * 24 * 60 * 60 * 1000;  // 7 days in milliseconds
+    const DECAY_PERIOD_MS = 7 * 24 * 60 * 60 * 1000;
 
     function loadState() {
       try {
@@ -551,8 +704,6 @@
       }
     }
 
-    // Apply weekly decay: for each tracked tile, if more than 7 days have passed
-    // since last practice, drop one level per 7-day period (down to minimum 0).
     function applyDecay(state) {
       const now = Date.now();
       for (const tileId in state) {
@@ -578,7 +729,6 @@
       if (!state[tileId]) {
         state[tileId] = { levelsComplete: 0, lastPracticed: null };
       }
-      // Only advance if completing the next level in sequence
       if (state[tileId].levelsComplete < level) {
         state[tileId].levelsComplete = level;
       }
@@ -586,7 +736,6 @@
       saveState(state);
     }
 
-    // Apply decay on every app load so the wall reflects time passed
     saveState(applyDecay(loadState()));
 
     // ===== Wall generation =====
@@ -599,14 +748,9 @@
 
     const MASTERY_SIZES = [78, 62, 43, 33, 17];
 
-    // For Step 4: only one tile is active (top-left, index 0).
-    // It maps to the er-1-plaatsbijwoord content.
-    // Future steps: more active tiles as content is written.
     const ACTIVE_TILE_INDEX = 0;
     const ACTIVE_TILE_ID = 'er-1-plaatsbijwoord';
 
-    // Untouched tiles get a position-based size for the halftone gradient effect.
-    // The active tile's size comes from its mastery state.
     function sizeForUntouchedTile(row, col) {
       const positionProgress = (row / (ROWS - 1)) * 0.6 + (col / (COLS - 1)) * 0.4;
       const masteryLevel = Math.round((1 - positionProgress) * 4);
@@ -625,17 +769,8 @@
         const row = Math.floor(i / COLS);
         const col = i % COLS;
 
-        let baseSize;
         const isActive = (i === ACTIVE_TILE_INDEX);
-
-        if (isActive) {
-          baseSize = sizeForActiveTile();
-        } else {
-          baseSize = sizeForUntouchedTile(row, col);
-        }
-
-        // Small variation only for non-active tiles, so the active tile's size
-        // is precise to its mastery state (no random jitter).
+        const baseSize = isActive ? sizeForActiveTile() : sizeForUntouchedTile(row, col);
         const variation = isActive ? 0 : (Math.random() - 0.5) * 6;
         const plusPercent = baseSize + variation;
 
@@ -657,7 +792,7 @@
 
     buildWall();
 
-    // ===== Toast for inactive tiles =====
+    // ===== Toast =====
 
     const toast = document.getElementById('toast');
     let toastTimeout = null;
@@ -680,7 +815,7 @@
 
     function openSnapView() {
       snapPages.scrollLeft = 0;
-      resetLevel1();
+      resetAllLevels();
       wallView.classList.add('hidden');
       snapView.classList.remove('hidden');
     }
@@ -688,11 +823,9 @@
     function closeSnapView() {
       snapView.classList.add('hidden');
       wallView.classList.remove('hidden');
-      // Rebuild wall in case mastery state changed during the session
       buildWall();
     }
 
-    // Tile click handler — branches by active vs inactive
     grid.addEventListener('click', (e) => {
       const tile = e.target.closest('.tile');
       if (!tile) return;
@@ -707,7 +840,7 @@
 
     backButton.addEventListener('click', closeSnapView);
 
-    // ===== Outline plus-sign decorations =====
+    // ===== Outline plus decorations =====
 
     const PLUS_OUTLINE_PATH = 'M 35,0 L 65,0 L 65,35 L 100,35 L 100,65 L 65,65 L 65,100 L 35,100 L 35,65 L 0,65 L 0,35 L 35,35 Z';
 
@@ -727,11 +860,8 @@
         svg.appendChild(path);
 
         const size = 40 + Math.random() * 140;
-        const left = Math.random() * 100;
-        const top = Math.random() * 100;
-
-        svg.style.left = `${left}%`;
-        svg.style.top = `${top}%`;
+        svg.style.left = `${Math.random() * 100}%`;
+        svg.style.top = `${Math.random() * 100}%`;
         svg.style.width = `${size}px`;
         svg.style.height = `${size}px`;
 
@@ -743,100 +873,220 @@
       generatePlusDecorations(container, 18);
     });
 
-    // ===== Level 1 exercise logic =====
+    // ===== Content loading =====
 
     let zoneContent = null;
-    let level1Exercises = null;
-    let currentQuestionIndex = 0;
-    let correctCount = 0;
-
-    const progressEl = document.getElementById('progress-1');
-    const promptEl = document.getElementById('prompt-1');
-    const btnCorrect = document.getElementById('btn-correct-1');
-    const btnIncorrect = document.getElementById('btn-incorrect-1');
-    const feedbackEl = document.getElementById('feedback-1');
-    const verdictEl = document.getElementById('verdict-1');
-    const explanationEl = document.getElementById('explanation-1');
-    const nextBtn = document.getElementById('next-1');
-    const exerciseEl = document.getElementById('exercise-1');
-    const completeEl = document.getElementById('complete-1');
-    const scoreEl = document.getElementById('score-1');
+    let levelExercises = { 1: null, 2: null, 3: null, 4: null };
 
     async function loadContent() {
       try {
         const response = await fetch('content/er.json');
         zoneContent = await response.json();
-        level1Exercises = zoneContent.tiles[0].levels['1'];
-        renderCurrentQuestion();
+        const tile = zoneContent.tiles[0];
+        levelExercises[1] = tile.levels['1'];
+        levelExercises[2] = tile.levels['2'];
+        levelExercises[3] = tile.levels['3'];
+        levelExercises[4] = tile.levels['4'];
+        renderQuestion(1);
+        renderQuestion(2);
+        renderQuestion(3);
+        renderQuestion(4);
       } catch (err) {
         console.error('Could not load content:', err);
-        promptEl.textContent = 'Content failed to load. Run from a local server, not file://';
+        document.getElementById('prompt-1').textContent = 'Content failed to load. Run from a local server.';
       }
     }
 
-    function renderCurrentQuestion() {
-      if (!level1Exercises) return;
-      const exercise = level1Exercises[currentQuestionIndex];
-      progressEl.textContent = `Question ${currentQuestionIndex + 1} / ${level1Exercises.length}`;
-      promptEl.textContent = exercise.prompt;
+    // ===== Per-level state =====
 
-      btnCorrect.className = 'exercise-button';
-      btnIncorrect.className = 'exercise-button';
-      feedbackEl.classList.remove('visible');
-      nextBtn.classList.remove('visible');
+    const levelState = {
+      1: { current: 0, correct: 0 },
+      2: { current: 0, correct: 0 },
+      3: { current: 0, correct: 0 },
+      4: { current: 0, correct: 0 }
+    };
+
+    function resetAllLevels() {
+      [1, 2, 3, 4].forEach(level => {
+        levelState[level].current = 0;
+        levelState[level].correct = 0;
+        document.getElementById(`exercise-${level}`).style.display = '';
+        document.getElementById(`complete-${level}`).classList.remove('visible');
+        if (levelExercises[level]) renderQuestion(level);
+      });
     }
 
-    function handleAnswer(userSaidCorrect) {
-      const exercise = level1Exercises[currentQuestionIndex];
-      const isRight = (userSaidCorrect === exercise.correctUse);
-      if (isRight) correctCount++;
+    // ===== Question rendering — branches by level type =====
 
-      const tappedBtn = userSaidCorrect ? btnCorrect : btnIncorrect;
-      const otherBtn = userSaidCorrect ? btnIncorrect : btnCorrect;
-      tappedBtn.classList.add(isRight ? 'correct' : 'incorrect');
-      otherBtn.classList.add('disabled');
-      btnCorrect.classList.add('disabled');
-      btnIncorrect.classList.add('disabled');
+    function renderQuestion(level) {
+      const exercises = levelExercises[level];
+      if (!exercises) return;
+      const ex = exercises[levelState[level].current];
 
-      verdictEl.textContent = isRight ? 'Goed!' : 'Niet helemaal.';
-      verdictEl.className = 'feedback-verdict ' + (isRight ? 'correct' : 'incorrect');
-      explanationEl.textContent = exercise.explanation;
-      feedbackEl.classList.add('visible');
+      document.getElementById(`progress-${level}`).textContent =
+        `Question ${levelState[level].current + 1} / ${exercises.length}`;
+      document.getElementById(`prompt-${level}`).textContent = ex.prompt;
+
+      // Hide feedback
+      const feedback = document.getElementById(`feedback-${level}`);
+      if (feedback) feedback.classList.remove('visible');
+      const nextBtn = document.getElementById(`next-${level}`);
+      if (nextBtn) nextBtn.classList.remove('visible');
+
+      // Reset per-level UI based on type
+      if (level === 1) {
+        document.getElementById('btn-correct-1').className = 'exercise-button';
+        document.getElementById('btn-incorrect-1').className = 'exercise-button';
+      } else if (level === 2) {
+        const input = document.getElementById('input-2');
+        input.value = '';
+        input.classList.remove('disabled');
+        document.getElementById('submit-2').classList.remove('disabled');
+      } else if (level === 3 || level === 4) {
+        const input = document.getElementById(`input-${level}`);
+        input.value = '';
+        input.classList.remove('disabled');
+        document.getElementById(`submit-${level}`).classList.remove('disabled');
+        document.getElementById(`self-assess-${level}`).classList.remove('visible');
+        document.getElementById(`btn-correct-${level}`).className = 'exercise-button';
+        document.getElementById(`btn-incorrect-${level}`).className = 'exercise-button';
+      }
+    }
+
+    // ===== Advance and complete =====
+
+    function advance(level) {
+      levelState[level].current++;
+      if (levelState[level].current >= levelExercises[level].length) {
+        showComplete(level);
+      } else {
+        renderQuestion(level);
+      }
+    }
+
+    function showComplete(level) {
+      document.getElementById(`exercise-${level}`).style.display = 'none';
+      const completeEl = document.getElementById(`complete-${level}`);
+      completeEl.classList.add('visible');
+      document.getElementById(`score-${level}`).textContent =
+        `${levelState[level].correct} / ${levelExercises[level].length} correct`;
+
+      // Record mastery: mark this level as complete
+      recordLevelComplete(ACTIVE_TILE_ID, level);
+    }
+
+    // ===== Level 1: Recognition =====
+
+    function handleLevel1Answer(userSaidCorrect) {
+      const ex = levelExercises[1][levelState[1].current];
+      const isRight = (userSaidCorrect === ex.correctUse);
+      if (isRight) levelState[1].correct++;
+
+      const tapped = userSaidCorrect ? 'btn-correct-1' : 'btn-incorrect-1';
+      const other = userSaidCorrect ? 'btn-incorrect-1' : 'btn-correct-1';
+      document.getElementById(tapped).classList.add(isRight ? 'correct' : 'incorrect');
+      document.getElementById(other).classList.add('disabled');
+      document.getElementById('btn-correct-1').classList.add('disabled');
+      document.getElementById('btn-incorrect-1').classList.add('disabled');
+
+      const verdict = document.getElementById('verdict-1');
+      verdict.textContent = isRight ? 'Goed!' : 'Niet helemaal.';
+      verdict.className = 'feedback-verdict ' + (isRight ? 'correct' : 'incorrect');
+      document.getElementById('explanation-1').textContent = ex.explanation;
+      document.getElementById('feedback-1').classList.add('visible');
 
       setTimeout(() => {
-        nextBtn.classList.add('visible');
+        document.getElementById('next-1').classList.add('visible');
       }, 300);
     }
 
-    function advance() {
-      currentQuestionIndex++;
-      if (currentQuestionIndex >= level1Exercises.length) {
-        showComplete();
-      } else {
-        renderCurrentQuestion();
+    document.getElementById('btn-correct-1').addEventListener('click', () => handleLevel1Answer(true));
+    document.getElementById('btn-incorrect-1').addEventListener('click', () => handleLevel1Answer(false));
+    document.getElementById('next-1').addEventListener('click', () => advance(1));
+
+    // ===== Level 2: Cloze with lenient auto-check =====
+
+    function normaliseForCheck(s) {
+      return s.trim().toLowerCase().replace(/[.,!?]/g, '');
+    }
+
+    function handleLevel2Submit() {
+      const input = document.getElementById('input-2');
+      const userAnswer = input.value.trim();
+      if (!userAnswer) return;
+
+      const ex = levelExercises[2][levelState[2].current];
+      const normalised = normaliseForCheck(userAnswer);
+      const isRight = ex.acceptedAnswers.some(a => normaliseForCheck(a) === normalised);
+      if (isRight) levelState[2].correct++;
+
+      input.classList.add('disabled');
+      document.getElementById('submit-2').classList.add('disabled');
+
+      const verdict = document.getElementById('verdict-2');
+      verdict.textContent = isRight ? 'Goed!' : `Niet helemaal — antwoord: ${ex.preferred}`;
+      verdict.className = 'feedback-verdict ' + (isRight ? 'correct' : 'incorrect');
+      document.getElementById('explanation-2').textContent = ex.explanation;
+      document.getElementById('feedback-2').classList.add('visible');
+
+      setTimeout(() => {
+        document.getElementById('next-2').classList.add('visible');
+      }, 300);
+    }
+
+    document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
+    document.getElementById('input-2').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleLevel2Submit();
       }
+    });
+    document.getElementById('next-2').addEventListener('click', () => advance(2));
+
+    // ===== Levels 3 and 4: Translation with self-assessment =====
+
+    function handleTranslationSubmit(level) {
+      const input = document.getElementById(`input-${level}`);
+      const userAnswer = input.value.trim();
+      if (!userAnswer) return;
+
+      const ex = levelExercises[level][levelState[level].current];
+
+      input.classList.add('disabled');
+      document.getElementById(`submit-${level}`).classList.add('disabled');
+
+      // Build model answer block including alternatives
+      document.getElementById(`user-answer-${level}`).textContent = userAnswer;
+
+      let modelHtml = ex.modelAnswer;
+      if (ex.alternatives && ex.alternatives.length) {
+        modelHtml += '<br><em>Also acceptable: ' + ex.alternatives.join('; ') + '</em>';
+      }
+      document.getElementById(`model-answer-${level}`).innerHTML = modelHtml;
+      document.getElementById(`note-${level}`).textContent = ex.note || '';
+
+      document.getElementById(`self-assess-${level}`).classList.add('visible');
     }
 
-    function showComplete() {
-      exerciseEl.style.display = 'none';
-      completeEl.classList.add('visible');
-      scoreEl.textContent = `${correctCount} / ${level1Exercises.length} correct`;
+    function handleSelfAssess(level, wasCorrect) {
+      if (wasCorrect) levelState[level].correct++;
 
-      // Save mastery progress: Level 1 complete on the active tile
-      recordLevelComplete(ACTIVE_TILE_ID, 1);
+      const tapped = wasCorrect ? `btn-correct-${level}` : `btn-incorrect-${level}`;
+      const other = wasCorrect ? `btn-incorrect-${level}` : `btn-correct-${level}`;
+      document.getElementById(tapped).classList.add(wasCorrect ? 'correct' : 'incorrect');
+      document.getElementById(other).classList.add('disabled');
+      document.getElementById(`btn-correct-${level}`).classList.add('disabled');
+      document.getElementById(`btn-incorrect-${level}`).classList.add('disabled');
+
+      // Auto-advance after short pause
+      setTimeout(() => advance(level), 800);
     }
 
-    function resetLevel1() {
-      currentQuestionIndex = 0;
-      correctCount = 0;
-      exerciseEl.style.display = '';
-      completeEl.classList.remove('visible');
-      if (level1Exercises) renderCurrentQuestion();
-    }
-
-    btnCorrect.addEventListener('click', () => handleAnswer(true));
-    btnIncorrect.addEventListener('click', () => handleAnswer(false));
-    nextBtn.addEventListener('click', advance);
+    [3, 4].forEach(level => {
+      document.getElementById(`submit-${level}`).addEventListener('click', () => handleTranslationSubmit(level));
+      document.getElementById(`btn-correct-${level}`).addEventListener('click', () => handleSelfAssess(level, true));
+      document.getElementById(`btn-incorrect-${level}`).addEventListener('click', () => handleSelfAssess(level, false));
+    });
 
     loadContent();
 

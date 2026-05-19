@@ -50,6 +50,131 @@
             "correctUse": true,
             "explanation": "Correct. 'Er' refers to the location (at mum's). Natural, idiomatic use."
           }
+        ],
+        "2": [
+          {
+            "type": "cloze",
+            "prompt": "Ik ben gisteren naar Rotterdam geweest. Ik heb ___ gegeten.",
+            "acceptedAnswers": ["er", "daar"],
+            "preferred": "er",
+            "explanation": "Both 'er' and 'daar' work. 'Er' is unmarked and natural; 'daar' adds slight emphasis on the location."
+          },
+          {
+            "type": "cloze",
+            "prompt": "Ze gaat morgen naar Brussel. Ze blijft ___ een week.",
+            "acceptedAnswers": ["er", "daar"],
+            "preferred": "er",
+            "explanation": "Locative reference to Brussel. 'Er' is the default; 'daar' is also fine for emphasis."
+          },
+          {
+            "type": "cloze",
+            "prompt": "Het museum is dicht op maandag. Ik ben ___ vorige week wel geweest.",
+            "acceptedAnswers": ["er", "daar"],
+            "preferred": "er",
+            "explanation": "Standard locative — 'er' refers back to the museum without emphasis."
+          },
+          {
+            "type": "cloze",
+            "prompt": "Wanneer ga je naar Frankrijk? Ik ga ___ in de zomer naartoe.",
+            "acceptedAnswers": ["er"],
+            "preferred": "er",
+            "explanation": "With 'naartoe' (directional), only 'er' works in this position — split construction 'er…naartoe'."
+          },
+          {
+            "type": "cloze",
+            "prompt": "Ken je dat café? Ja, ik kom ___ regelmatig.",
+            "acceptedAnswers": ["er", "daar"],
+            "preferred": "er",
+            "explanation": "Locative — 'er' refers to the café. 'Daar' also works with slight emphasis."
+          },
+          {
+            "type": "cloze",
+            "prompt": "Het restaurant is duur, maar de service is ___ heel goed.",
+            "acceptedAnswers": ["er", "daar"],
+            "preferred": "er",
+            "explanation": "'Er' refers back to the restaurant. 'Daar' also acceptable."
+          },
+          {
+            "type": "cloze",
+            "prompt": "Ze willen naar de bergen. Ze willen ___ deze zomer naartoe.",
+            "acceptedAnswers": ["er"],
+            "preferred": "er",
+            "explanation": "Directional construction 'er…naartoe' — only 'er' works in the split form."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I've been there twice.",
+            "modelAnswer": "Ik ben er twee keer geweest.",
+            "alternatives": ["Ik ben daar twee keer geweest."],
+            "note": "Word order: 'twee keer' sits between 'er' and 'geweest'. 'Daar' is also acceptable with slight emphasis."
+          },
+          {
+            "type": "translation",
+            "prompt": "She works there every day.",
+            "modelAnswer": "Ze werkt er elke dag.",
+            "alternatives": ["Zij werkt er elke dag.", "Ze werkt daar elke dag."],
+            "note": "'Er' is the unmarked form for the location. 'Daar' is acceptable for emphasis."
+          },
+          {
+            "type": "translation",
+            "prompt": "Did you eat there yesterday?",
+            "modelAnswer": "Heb je daar gisteren gegeten?",
+            "alternatives": ["Heb je er gisteren gegeten?"],
+            "note": "Both 'er' and 'daar' work. With a question and a clear time marker, 'daar' often sounds more natural, but 'er' is fine too."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm going there tomorrow.",
+            "modelAnswer": "Ik ga er morgen naartoe.",
+            "alternatives": ["Ik ga er morgen heen.", "Ik ga daar morgen naartoe."],
+            "note": "Directional 'gaan' requires 'naartoe' or 'heen'. The split form 'er…naartoe' is standard."
+          },
+          {
+            "type": "translation",
+            "prompt": "We stayed there for a week.",
+            "modelAnswer": "We zijn er een week gebleven.",
+            "alternatives": ["Wij zijn er een week gebleven.", "We zijn daar een week gebleven."],
+            "note": "'Zijn gebleven' with 'er' — the duration phrase 'een week' sits between."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If I'd known you were coming, I would have stayed there longer.",
+            "modelAnswer": "Als ik had geweten dat je kwam, was ik er langer gebleven.",
+            "alternatives": ["Als ik had geweten dat je zou komen, was ik er langer gebleven.", "Als ik geweten had dat je kwam, was ik er langer gebleven."],
+            "note": "Plusquamperfectum in the 'als' clause ('had geweten'), conditional past in the main clause ('was…gebleven'). 'Er' refers back to the implied location. Word order: 'er langer' before 'gebleven'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I would have eaten there if the restaurant hadn't been closed.",
+            "modelAnswer": "Ik had er gegeten als het restaurant niet gesloten was geweest.",
+            "alternatives": ["Ik zou er hebben gegeten als het restaurant niet gesloten was geweest.", "Als het restaurant niet gesloten was geweest, had ik er gegeten."],
+            "note": "Two plusquamperfectum constructions: 'had…gegeten' and 'was geweest'. Negation 'niet' sits between 'restaurant' and 'gesloten'. 'Er' carries the locative reference."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me she'd been there many times before.",
+            "modelAnswer": "Ze vertelde me dat ze er veel keer was geweest.",
+            "alternatives": ["Ze vertelde me dat ze er al vaak was geweest.", "Zij vertelde mij dat ze er veel keer geweest was."],
+            "note": "Indirect speech in plusquamperfectum: 'was geweest'. Bijzin word order — verbs at the end. 'Veel keer' or 'vaak' both work for 'many times'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We had wanted to go there, but the trains weren't running.",
+            "modelAnswer": "We hadden er naartoe willen gaan, maar de treinen reden niet.",
+            "alternatives": ["We hadden er heen willen gaan, maar de treinen reden niet.", "We wilden er naartoe gaan, maar de treinen reden niet."],
+            "note": "Dubbele infinitief in plusquamperfectum: 'hadden willen gaan' (not 'gewild'). 'Er naartoe' split construction. Past tense 'reden' for ongoing past action."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you go there next week, you'll see that everything has changed.",
+            "modelAnswer": "Als je er volgende week naartoe gaat, zul je zien dat alles is veranderd.",
+            "alternatives": ["Als je er volgende week heengaat, zul je zien dat alles veranderd is.", "Ga je er volgende week naartoe, dan zul je zien dat alles is veranderd."],
+            "note": "Conditional with present-tense bijzin ('als je…gaat'), future in main clause ('zul je zien'), perfectum in the nested bijzin ('is veranderd'). 'Er naartoe' split construction."
+          }
         ]
       }
     }
