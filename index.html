@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -8,7 +9,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <style>
     * {
@@ -17,7 +19,8 @@
       padding: 0;
     }
 
-    html, body {
+    html,
+    body {
       width: 100%;
       height: 100vh;
       overflow: hidden;
@@ -323,8 +326,13 @@
       letter-spacing: 0.02em;
     }
 
-    .feedback-verdict.correct { color: #b8dab8; }
-    .feedback-verdict.incorrect { color: #e0a59c; }
+    .feedback-verdict.correct {
+      color: #b8dab8;
+    }
+
+    .feedback-verdict.incorrect {
+      color: #e0a59c;
+    }
 
     .feedback-explanation {
       font-size: 14px;
@@ -545,6 +553,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="wall-view" id="wall-view">
@@ -595,7 +604,8 @@
             <div class="exercise-progress" id="progress-2">Question 1 / 7</div>
             <div class="exercise-prompt" id="prompt-2">Loading…</div>
             <div class="exercise-question" id="question-2">Rewrite using 'er'</div>
-            "<textarea class="exercise-input" id="input-2" rows="2" placeholder="your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            "<textarea class="exercise-input" id="input-2" rows="2" placeholder="your answer" autocomplete="off"
+              autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             <button class="submit-button" id="submit-2">Submit</button>
             <div class="exercise-feedback" id="feedback-2">
               <div class="feedback-verdict" id="verdict-2"></div>
@@ -619,7 +629,8 @@
             <div class="exercise-progress" id="progress-3">Question 1 / 5</div>
             <div class="exercise-prompt smaller" id="prompt-3">Loading…</div>
             <div class="exercise-question">Translate to Dutch</div>
-            <textarea class="exercise-input" id="input-3" rows="2" placeholder="your translation" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <textarea class="exercise-input" id="input-3" rows="2" placeholder="your translation" autocomplete="off"
+              autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             <button class="submit-button" id="submit-3">Submit</button>
             <div class="self-assess" id="self-assess-3">
               <div class="answer-block">
@@ -653,7 +664,8 @@
             <div class="exercise-progress" id="progress-4">Question 1 / 5</div>
             <div class="exercise-prompt smaller" id="prompt-4">Loading…</div>
             <div class="exercise-question">Translate to Dutch</div>
-            <textarea class="exercise-input" id="input-4" rows="3" placeholder="your translation" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <textarea class="exercise-input" id="input-4" rows="3" placeholder="your translation" autocomplete="off"
+              autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             <button class="submit-button" id="submit-4">Submit</button>
             <div class="self-assess" id="self-assess-4">
               <div class="answer-block">
@@ -1042,6 +1054,11 @@
 
     document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
     document.getElementById('input-2').addEventListener('keydown', (e) => {
+      document.getElementById('input-2').addEventListener('focus', () => {
+        setTimeout(() => {
+          document.getElementById('input-2').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      });
       if (e.key === 'Enter') {
         e.preventDefault();
         handleLevel2Submit();
@@ -1094,8 +1111,16 @@
       document.getElementById(`btn-incorrect-${level}`).addEventListener('click', () => handleSelfAssess(level, false));
     });
 
+    ['input-3', 'input-4'].forEach(id => {
+      document.getElementById(id).addEventListener('focus', () => {
+        setTimeout(() => {
+          document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      });
+    });
     loadContent();
 
   </script>
 </body>
+
 </html>
