@@ -6,16 +6,33 @@ Newest at the top.
 
 ---
 
+## 2026-05-19 — Step 2: Snap view navigation
+
+Tapping any tile opens a fullscreen four-page snap view: Level 1 Recognition, Level 2 Cloze, Level 3 Simple translation, Level 4 Complex translation. Horizontal scroll-snap (one page per swipe). Back button top-left returns to the wall. Always resets to Level 1 on each open. Aesthetic continuity carried through: same warm-neutral palette, same cream Manrope, plus signs reappearing as low-opacity outlined SVG decorations scattered across each page background.
+
+Decisions:
+
+- **Four pages, horizontal scroll-snap with `scroll-snap-stop: always`.** Each swipe locks to one level; can't stop between pages. Mandatory snap behaviour.
+- **Backgrounds get progressively lighter L1→L4** (`#1a1814` → `#252119` → `#302a1f` → `#3b3326`). Subtle but readable signal of difficulty progression.
+- **Outline plus signs as ambient decoration.** Same plus geometry as the wall (30%-thick arms) but rendered as SVG paths with stroke and no fill. 18 per page at random positions and sizes (40-180px), opacity 7%. Each page generates its own scatter — no two pages identical.
+- **Back button is a fixed-position ← arrow** top-left, 44×44 tap target, opacity 0.6 at rest brightening on press. Follows safe-area-inset for notched phones.
+- **Reset to Level 1 on every open.** Each journey into a tile starts at Recognition rather than wherever the user last left off. Predictable.
+- **Page title weight matches wall title weight (700).** Same Manrope Bold across both. Visual voice consistent.
+
+State: navigation skeleton complete. Tapping any tile opens the same placeholder snap view — content varies by level (label and title only) but not yet by tile. Real exercise content lands in Step 3+.
+
+---
+
 ## 2026-05-19 — Step 1: Visual foundation
 
-Halftone wall of 60 plus-sign tiles, 6×10 grid, with "PlusTaal" title in Manrope ExtraBold above. Five discrete mastery sizes determine each plus's scale within its cell. Warm-neutral palette throughout: near-black background `#1a1814`, deeper black wall `#14110d`, cream plus signs `#f0e9dd`. Each tile is a button with a scale-down press animation.
+Halftone wall of 60 plus-sign tiles, 6×10 grid, with "PlusTaal" title in Manrope Bold (700) above. Five discrete mastery sizes determine each plus's scale within its cell. Warm-neutral palette throughout: near-black background `#1a1814`, deeper black wall `#14110d`, cream plus signs `#f0e9dd`. Each tile is a button with a scale-down press animation.
 
 Decisions:
 
 - **60 tiles, 6 cols × 10 rows.** Each grammar topic gets ~5 tiles. Phone-first sizing (~360px wall width). Larger tile counts (200+) considered for true halftone density but rejected due to content authoring cost.
-- **Five mastery sizes:** 78%, 63%, 48%, 33%, 17% (untouched → mastered). Plus ±3% per-tile random variation so the wall doesn't read as mechanically stepped.
+- **Five mastery sizes:** 78%, 62%, 43%, 33%, 17% (untouched → mastered). Plus ±3% per-tile random variation so the wall doesn't read as mechanically stepped.
 - **Halftone aesthetic.** Each plus is the same colour and shape; only the size varies. Larger plus = more "ink" = darker tone. Stand back from the screen and the wall has a real tonal gradient; up close, just plus signs of different sizes. The art works *with* CSS rather than against it.
-- **Manrope title.** ExtraBold (weight 800) at 38px, cream, centred at top. Title and plus signs share the same cream so they read as one composition.
+- **Manrope title.** Bold (weight 700) at 38px, cream, centred at top, tight margin to the wall (0.2rem). Title and plus signs share the same cream so they read as one composition.
 - **Plus geometry.** Two crossed rectangles, each 30% thick. Centred via `(100 - thickness) / 2` left/top values. Pure CSS, no SVG.
 - **Mastery model.** Each tile has 4 levels (recognition → cloze → simple translation → complex translation). Completing a level shrinks the plus to the next discrete size. Tiles also decay over time: not practiced for a while → plus grows back, art stays fluid.
 
