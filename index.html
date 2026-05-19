@@ -6,7 +6,7 @@
 
   <title>PlusTaal</title>
 
-  <!-- Manrope from Google Fonts (matching Cue Card / Fingo identity) -->
+  <!-- Manrope from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,8 @@
 
     html, body {
       width: 100%;
-      min-height: 100vh;
+      height: 100vh;
+      overflow: hidden;
       background: #1a1814;
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #f0e9dd;
@@ -29,23 +30,32 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    .app {
+    /* ===== Wall view (from Step 1) ===== */
+
+    .wall-view {
       width: 100%;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: max(2rem, env(safe-area-inset-top)) 1.5rem max(2rem, env(safe-area-inset-bottom));
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .wall-view.hidden {
+      opacity: 0;
+      transform: scale(0.98);
+      pointer-events: none;
     }
 
     .title {
       font-size: 38px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.04em;
       color: #f0e9dd;
       text-align: center;
       margin-top: 1rem;
-      margin-bottom: 0.2rem;
+      margin-bottom: 3rem;
     }
 
     .wall {
@@ -107,32 +117,193 @@
       top: 35%;
       left: 0;
     }
+
+    /* ===== Snap view (NEW in Step 2) ===== */
+
+    .snap-view {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      z-index: 10;
+    }
+
+    .snap-view.hidden {
+      opacity: 0;
+      transform: scale(1.02);
+      pointer-events: none;
+    }
+
+    /* Horizontal scroll-snap container — swipe left/right between levels */
+    .snap-pages {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .snap-pages::-webkit-scrollbar {
+      display: none;
+    }
+
+    .snap-page {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    /* Progressively lighter backgrounds — L1 darkest (same as wall), L4 lightest */
+    .snap-page.level-1 { background: #1a1814; }
+    .snap-page.level-2 { background: #252119; }
+    .snap-page.level-3 { background: #302a1f; }
+    .snap-page.level-4 { background: #3b3326; }
+
+    /* Decorative outline plus signs in background */
+    .plus-decoration {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .decoration-plus {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      opacity: 0.07;
+    }
+
+    /* Page content sits above decoration */
+    .page-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 320px;
+    }
+
+    .page-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f0e9dd;
+      opacity: 0.55;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-title {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #f0e9dd;
+      line-height: 1.1;
+    }
+
+    /* Back button — top-left, restrained, follows safe area */
+    .back-button {
+      position: fixed;
+      top: max(1rem, env(safe-area-inset-top));
+      left: 1rem;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      color: #f0e9dd;
+      font-size: 22px;
+      font-family: inherit;
+      cursor: pointer;
+      z-index: 20;
+      opacity: 0.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .back-button:active {
+      opacity: 1;
+      transform: scale(0.9);
+    }
   </style>
 </head>
 <body>
-  <div class="app">
+
+  <!-- Wall view: the 60-tile halftone wall -->
+  <div class="wall-view" id="wall-view">
     <h1 class="title">PlusTaal</h1>
     <div class="wall">
       <div class="grid" id="tile-grid"></div>
     </div>
   </div>
 
+  <!-- Snap view: appears when a tile is tapped -->
+  <div class="snap-view hidden" id="snap-view">
+    <button class="back-button" id="back-button" aria-label="back to wall">←</button>
+
+    <div class="snap-pages" id="snap-pages">
+      <section class="snap-page level-1">
+        <div class="plus-decoration" data-level="1"></div>
+        <div class="page-content">
+          <div class="page-label">Level 1 / 4</div>
+          <div class="page-title">Recognition</div>
+        </div>
+      </section>
+
+      <section class="snap-page level-2">
+        <div class="plus-decoration" data-level="2"></div>
+        <div class="page-content">
+          <div class="page-label">Level 2 / 4</div>
+          <div class="page-title">Cloze</div>
+        </div>
+      </section>
+
+      <section class="snap-page level-3">
+        <div class="plus-decoration" data-level="3"></div>
+        <div class="page-content">
+          <div class="page-label">Level 3 / 4</div>
+          <div class="page-title">Simple translation</div>
+        </div>
+      </section>
+
+      <section class="snap-page level-4">
+        <div class="plus-decoration" data-level="4"></div>
+        <div class="page-content">
+          <div class="page-label">Level 4 / 4</div>
+          <div class="page-title">Complex translation</div>
+        </div>
+      </section>
+    </div>
+  </div>
+
   <script>
+    // ===== Wall generation (Step 1) =====
+
     const grid = document.getElementById('tile-grid');
     const COLS = 6;
     const ROWS = 10;
 
     grid.style.gridTemplateColumns = `repeat(${COLS}, 1fr)`;
 
-    // 5 discrete mastery sizes: untouched → 1/4 → 2/4 → 3/4 → mastered
-    const MASTERY_SIZES = [78, 62, 43, 33, 17];
+    // Five discrete mastery sizes: untouched → 1/4 → 2/4 → 3/4 → mastered
+    const MASTERY_SIZES = [78, 63, 48, 33, 17];
 
-    // Demo state — distribute tiles across mastery levels so the halftone reads.
-    // Position-based: top-left tiles tend to be more mastered (smaller),
-    //                 bottom-right tiles tend to be untouched (larger).
     function masteryForPosition(row, col) {
       const positionProgress = (row / (ROWS - 1)) * 0.6 + (col / (COLS - 1)) * 0.4;
-      // Map 0-1 to discrete mastery levels (4 = mastered, 0 = untouched)
       const masteryLevel = Math.round((1 - positionProgress) * 4);
       return Math.max(0, Math.min(4, masteryLevel));
     }
@@ -143,14 +314,13 @@
 
       const masteryLevel = masteryForPosition(row, col);
       const baseSize = MASTERY_SIZES[masteryLevel];
-
-      // Small per-tile variation so it doesn't look mechanically stepped
-      const variation = (Math.random() - 0.5) * 6;  // ±3%
+      const variation = (Math.random() - 0.5) * 6;
       const plusPercent = baseSize + variation;
 
       const tile = document.createElement('button');
       tile.className = 'tile';
-      tile.setAttribute('aria-label', `tile ${i + 1}, mastery level ${4 - masteryLevel}/4`);
+      tile.dataset.index = i;
+      tile.setAttribute('aria-label', `tile ${i + 1}`);
 
       const plus = document.createElement('span');
       plus.className = 'tile-plus';
@@ -160,6 +330,80 @@
       tile.appendChild(plus);
       grid.appendChild(tile);
     }
+
+    // ===== Snap view navigation (NEW in Step 2) =====
+
+    const wallView = document.getElementById('wall-view');
+    const snapView = document.getElementById('snap-view');
+    const snapPages = document.getElementById('snap-pages');
+    const backButton = document.getElementById('back-button');
+
+    function openSnapView(tileIndex) {
+      // Reset scroll to Level 1 every time, so user always starts from the beginning
+      snapPages.scrollLeft = 0;
+
+      wallView.classList.add('hidden');
+      snapView.classList.remove('hidden');
+    }
+
+    function closeSnapView() {
+      snapView.classList.add('hidden');
+      wallView.classList.remove('hidden');
+    }
+
+    // Wire up every tile to open the snap view
+    document.querySelectorAll('.tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        const tileIndex = parseInt(tile.dataset.index, 10);
+        openSnapView(tileIndex);
+      });
+    });
+
+    backButton.addEventListener('click', closeSnapView);
+
+    // ===== Outline plus-sign decorations =====
+    //
+    // Each snap page gets a scattering of low-opacity outlined plus signs as
+    // ambient background visual. Different random scatter per page — they're
+    // generated once on page load and stay put. The outline geometry traces
+    // the perimeter of a plus shape with 30%-thick arms.
+
+    const PLUS_OUTLINE_PATH = 'M 35,0 L 65,0 L 65,35 L 100,35 L 100,65 L 65,65 L 65,100 L 35,100 L 35,65 L 0,65 L 0,35 L 35,35 Z';
+
+    function generatePlusDecorations(container, count) {
+      for (let i = 0; i < count; i++) {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '0 0 100 100');
+        svg.setAttribute('class', 'decoration-plus');
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', PLUS_OUTLINE_PATH);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', '#f0e9dd');
+        path.setAttribute('stroke-width', '2');
+        path.setAttribute('stroke-linejoin', 'round');
+
+        svg.appendChild(path);
+
+        // Random position and size — varied for visual interest
+        const size = 40 + Math.random() * 140;  // 40-180px
+        const left = Math.random() * 100;         // 0-100%
+        const top = Math.random() * 100;
+
+        svg.style.left = `${left}%`;
+        svg.style.top = `${top}%`;
+        svg.style.width = `${size}px`;
+        svg.style.height = `${size}px`;
+
+        container.appendChild(svg);
+      }
+    }
+
+    // Populate each level page with its own random scatter
+    document.querySelectorAll('.plus-decoration').forEach(container => {
+      generatePlusDecorations(container, 18);
+    });
+
   </script>
 </body>
 </html>
