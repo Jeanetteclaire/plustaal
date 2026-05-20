@@ -83,7 +83,7 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       padding: 0;
       transition: transform 0.15s ease;
       font: inherit;
@@ -188,7 +188,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       padding: max(4rem, env(safe-area-inset-top)) 1.5rem max(2rem, env(safe-area-inset-bottom));
       overflow-y: auto;
       overflow-x: hidden;
@@ -604,7 +604,7 @@
             <div class="exercise-progress" id="progress-2">Question 1 / 7</div>
             <div class="exercise-prompt" id="prompt-2">Loading…</div>
             <div class="exercise-question" id="question-2">Rewrite using 'er'</div>
-            "<textarea class="exercise-input" id="input-2" rows="2" placeholder="your answer" autocomplete="off"
+            <textarea class="exercise-input" id="input-2" rows="2" placeholder="your answer" autocomplete="off"
               autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             <button class="submit-button" id="submit-2">Submit</button>
             <div class="exercise-feedback" id="feedback-2">
@@ -1053,17 +1053,17 @@
     }
 
     document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleLevel2Submit();
+      }
+    });
     document.getElementById('input-2').addEventListener('keydown', (e) => {
       document.getElementById('input-2').addEventListener('focus', () => {
         setTimeout(() => {
           document.getElementById('input-2').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 300);
       });
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        handleLevel2Submit();
-      }
-    });
     document.getElementById('next-2').addEventListener('click', () => advance(2));
 
     // ===== Levels 3 and 4: Translation with self-assessment =====
