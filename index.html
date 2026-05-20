@@ -12,6 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#1a1814">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PlusTaal">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="./icon-512.png">  
+
   <style>
     * {
       box-sizing: border-box;
@@ -59,6 +68,32 @@
       margin-top: 1rem;
       margin-bottom: 0.2rem;
     }
+
+    .reset-button {
+      background: transparent;
+      border: none;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.2;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      margin-top: 0.5rem;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .reset-button:active {
+      opacity: 0.5;
+    }
+
+    .reset-button.confirming {
+      opacity: 0.8;
+      color: #e0a59c;
+    } 
 
     .wall {
       width: 100%;
@@ -561,6 +596,7 @@
     <div class="wall">
       <div class="grid" id="tile-grid"></div>
     </div>
+    <button class="reset-button" id="reset-button" aria-label="reset progress">reset progress</button>
   </div>
 
   <div class="toast" id="toast"></div>
@@ -853,6 +889,34 @@
     });
 
     backButton.addEventListener('click', closeSnapView);
+    
+    // ===== Reset progress =====
+    // Double-tap pattern: first tap shows "tap again to confirm", second tap within 3 seconds wipes state.
+
+    const resetButton = document.getElementById('reset-button');
+    let resetConfirming = false;
+    let resetTimeout = null;
+
+    resetButton.addEventListener('click', () => {
+      if (!resetConfirming) {
+        resetConfirming = true;
+        resetButton.textContent = 'tap again to confirm';
+        resetButton.classList.add('confirming');
+        resetTimeout = setTimeout(() => {
+          resetConfirming = false;
+          resetButton.textContent = 'reset progress';
+          resetButton.classList.remove('confirming');
+        }, 3000);
+      } else {
+        // Confirmed — wipe state and rebuild wall
+        clearTimeout(resetTimeout);
+        localStorage.removeItem(STATE_KEY);
+        resetConfirming = false;
+        resetButton.textContent = 'reset progress';
+        resetButton.classList.remove('confirming');
+        buildWall();
+      }
+    });
 
     // ===== Outline plus decorations =====
 

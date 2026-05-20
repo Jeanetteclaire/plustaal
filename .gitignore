@@ -1,0 +1,7 @@
+.DS_Store
+files.zip
+files/
+.vscode/
+.idea/
+*.swp
+*~
