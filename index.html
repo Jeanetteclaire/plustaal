@@ -1051,21 +1051,23 @@
         document.getElementById('next-2').classList.add('visible');
       }, 300);
     }
+      document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
 
-    document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
+    document.getElementById('input-2').addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
         handleLevel2Submit();
       }
     });
-    document.getElementById('input-2').addEventListener('keydown', (e) => {
-      document.getElementById('input-2').addEventListener('focus', () => {
-        setTimeout(() => {
-          document.getElementById('input-2').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 300);
-      });
-    document.getElementById('next-2').addEventListener('click', () => advance(2));
 
+    document.getElementById('input-2').addEventListener('focus', () => {
+      setTimeout(() => {
+        document.getElementById('input-2').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 300);
+    });
+
+    document.getElementById('next-2').addEventListener('click', () => advance(2));
+    
     // ===== Levels 3 and 4: Translation with self-assessment =====
 
     function handleTranslationSubmit(level) {
