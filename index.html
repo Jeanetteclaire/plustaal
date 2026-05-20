@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="PlusTaal">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="./icon-512.png">  
+  <link rel="apple-touch-icon" sizes="512x512" href="./icon-512.png">
 
   <style>
     * {
@@ -69,6 +69,36 @@
       margin-bottom: 0.2rem;
     }
 
+    /* Queue link — top-right of wall view */
+    .queue-link {
+      position: fixed;
+      top: max(1rem, env(safe-area-inset-top));
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 15;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.2s ease;
+    }
+
+    .queue-link:active {
+      opacity: 1;
+    }
+
+    .queue-count {
+      margin-left: 0.25em;
+      font-variant-numeric: tabular-nums;
+    }
+
     .reset-button {
       background: transparent;
       border: none;
@@ -93,7 +123,7 @@
     .reset-button.confirming {
       opacity: 0.8;
       color: #e0a59c;
-    } 
+    }
 
     .wall {
       width: 100%;
@@ -406,6 +436,37 @@
       opacity: 1;
     }
 
+    /* ===== Save-to-queue button (used on every level's feedback) ===== */
+
+    .save-to-queue {
+      background: transparent;
+      border: none;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.45;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      transition: opacity 0.2s ease, color 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .save-to-queue:active {
+      opacity: 0.85;
+    }
+
+    .save-to-queue.saved {
+      color: #b8dab8;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .save-to-queue.hidden {
+      display: none;
+    }
+
     /* ===== Input fields for cloze and translation ===== */
 
     .exercise-input {
@@ -560,7 +621,7 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* Back button */
+    /* Back button (snap view and queue view) */
     .back-button {
       position: fixed;
       top: max(1rem, env(safe-area-inset-top));
@@ -586,6 +647,195 @@
       opacity: 1;
       transform: scale(0.9);
     }
+
+    /* ===== Queue view ===== */
+
+    .queue-view {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      background: #1a1814;
+      padding: max(4rem, env(safe-area-inset-top)) 1.25rem max(2rem, env(safe-area-inset-bottom));
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      z-index: 10;
+    }
+
+    .queue-view.hidden {
+      opacity: 0;
+      transform: scale(1.02);
+      pointer-events: none;
+    }
+
+    .queue-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #f0e9dd;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .queue-empty {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #f0e9dd;
+      opacity: 0.5;
+      max-width: 320px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .queue-list {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .queue-item {
+      background: rgba(240, 233, 221, 0.04);
+      border: 1px solid rgba(240, 233, 221, 0.08);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      transition: opacity 0.3s ease, border-color 0.2s ease;
+    }
+
+    .queue-item.researched {
+      opacity: 0.4;
+    }
+
+    .queue-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .queue-item-meta {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f0e9dd;
+      opacity: 0.5;
+      flex: 1;
+    }
+
+    .queue-tick {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      background: transparent;
+      border: 1.5px solid rgba(240, 233, 221, 0.4);
+      border-radius: 50%;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .queue-tick:active {
+      background: rgba(240, 233, 221, 0.1);
+    }
+
+    .queue-item.researched .queue-tick {
+      background: rgba(150, 200, 150, 0.25);
+      border-color: rgba(150, 200, 150, 0.6);
+    }
+
+    .queue-item-prompt {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #f0e9dd;
+      margin-bottom: 0.5rem;
+    }
+
+    .queue-item-body {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #f0e9dd;
+      opacity: 0.75;
+    }
+
+    .queue-item-body em {
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .queue-item-expanded {
+      display: none;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(240, 233, 221, 0.08);
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .queue-item.expanded .queue-item-expanded {
+      display: flex;
+    }
+
+    .queue-note-input {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      background: rgba(240, 233, 221, 0.04);
+      border: 1px solid rgba(240, 233, 221, 0.15);
+      border-radius: 8px;
+      color: #f0e9dd;
+      font: inherit;
+      font-size: 13px;
+      line-height: 1.4;
+      outline: none;
+      resize: vertical;
+      min-height: 4.5em;
+      -webkit-user-select: text;
+      user-select: text;
+      transition: border-color 0.2s ease;
+    }
+
+    .queue-note-input:focus {
+      border-color: rgba(240, 233, 221, 0.35);
+    }
+
+    .queue-note-input::placeholder {
+      color: rgba(240, 233, 221, 0.3);
+    }
+
+    .queue-delete {
+      align-self: flex-end;
+      background: transparent;
+      border: none;
+      color: #e0a59c;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .queue-delete:active {
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -593,6 +843,9 @@
 
   <div class="wall-view" id="wall-view">
     <h1 class="title">PlusTaal</h1>
+    <button class="queue-link" id="queue-link" aria-label="open work queue">
+      queue<span class="queue-count" id="queue-count"></span>
+    </button>
     <div class="wall">
       <div class="grid" id="tile-grid"></div>
     </div>
@@ -621,6 +874,7 @@
             <div class="exercise-feedback" id="feedback-1">
               <div class="feedback-verdict" id="verdict-1"></div>
               <div class="feedback-explanation" id="explanation-1"></div>
+              <button class="save-to-queue" id="save-to-queue-1">+ save to queue</button>
               <button class="next-button" id="next-1">Next →</button>
             </div>
           </div>
@@ -646,6 +900,7 @@
             <div class="exercise-feedback" id="feedback-2">
               <div class="feedback-verdict" id="verdict-2"></div>
               <div class="feedback-explanation" id="explanation-2"></div>
+              <button class="save-to-queue" id="save-to-queue-2">+ save to queue</button>
               <button class="next-button" id="next-2">Next →</button>
             </div>
           </div>
@@ -678,6 +933,7 @@
                 <div class="answer-text" id="model-answer-3"></div>
               </div>
               <div class="answer-note" id="note-3"></div>
+              <button class="save-to-queue" id="save-to-queue-3">+ save to queue</button>
               <div class="exercise-buttons">
                 <button class="exercise-button" id="btn-incorrect-3">Niet helemaal</button>
                 <button class="exercise-button" id="btn-correct-3">Goed</button>
@@ -713,6 +969,7 @@
                 <div class="answer-text" id="model-answer-4"></div>
               </div>
               <div class="answer-note" id="note-4"></div>
+              <button class="save-to-queue" id="save-to-queue-4">+ save to queue</button>
               <div class="exercise-buttons">
                 <button class="exercise-button" id="btn-incorrect-4">Niet helemaal</button>
                 <button class="exercise-button" id="btn-correct-4">Goed</button>
@@ -730,8 +987,18 @@
     </div>
   </div>
 
+  <!-- Queue view -->
+  <div class="queue-view hidden" id="queue-view">
+    <button class="back-button" id="queue-back-button" aria-label="back to wall">←</button>
+    <h2 class="queue-title">Work queue</h2>
+    <div class="queue-empty" id="queue-empty">
+      Nothing saved yet. Tap "+ save to queue" below any explanation to flag it for later research.
+    </div>
+    <div class="queue-list" id="queue-list"></div>
+  </div>
+
   <script>
-    // ===== State persistence =====
+    // ===== State persistence (mastery) =====
 
     const STATE_KEY = 'plustaal:state';
     const DECAY_PERIOD_MS = 7 * 24 * 60 * 60 * 1000;
@@ -788,6 +1055,80 @@
 
     saveState(applyDecay(loadState()));
 
+    // ===== Queue state =====
+    //
+    // Queue items are saved snippets the user wants to research later.
+    // Each item: { id, tileId, theme, level, type, prompt, task?, modelAnswer?, alternatives?, correctUse?, explanation?, note?, savedAt, researched, userNote }
+
+    const QUEUE_KEY = 'plustaal:queue';
+
+    function loadQueue() {
+      try {
+        const raw = localStorage.getItem(QUEUE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (err) {
+        console.error('Queue load failed:', err);
+        return [];
+      }
+    }
+
+    function saveQueue(queue) {
+      try {
+        localStorage.setItem(QUEUE_KEY, JSON.stringify(queue));
+      } catch (err) {
+        console.error('Queue save failed:', err);
+      }
+    }
+
+    function addToQueue(item) {
+      const queue = loadQueue();
+      const newItem = {
+        id: 'q-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+        savedAt: new Date().toISOString(),
+        researched: false,
+        userNote: '',
+        ...item
+      };
+      queue.unshift(newItem);  // newest first
+      saveQueue(queue);
+      updateQueueCount();
+      return newItem;
+    }
+
+    function removeFromQueue(itemId) {
+      const queue = loadQueue().filter(item => item.id !== itemId);
+      saveQueue(queue);
+      updateQueueCount();
+    }
+
+    function toggleResearched(itemId) {
+      const queue = loadQueue();
+      const item = queue.find(i => i.id === itemId);
+      if (item) {
+        item.researched = !item.researched;
+        saveQueue(queue);
+      }
+    }
+
+    function updateUserNote(itemId, text) {
+      const queue = loadQueue();
+      const item = queue.find(i => i.id === itemId);
+      if (item) {
+        item.userNote = text;
+        saveQueue(queue);
+      }
+    }
+
+    function updateQueueCount() {
+      const queue = loadQueue();
+      const countEl = document.getElementById('queue-count');
+      if (queue.length > 0) {
+        countEl.textContent = ` (${queue.length})`;
+      } else {
+        countEl.textContent = '';
+      }
+    }
+
     // ===== Wall generation =====
 
     const grid = document.getElementById('tile-grid');
@@ -841,6 +1182,7 @@
     }
 
     buildWall();
+    updateQueueCount();
 
     // ===== Toast =====
 
@@ -889,9 +1231,8 @@
     });
 
     backButton.addEventListener('click', closeSnapView);
-    
+
     // ===== Reset progress =====
-    // Double-tap pattern: first tap shows "tap again to confirm", second tap within 3 seconds wipes state.
 
     const resetButton = document.getElementById('reset-button');
     let resetConfirming = false;
@@ -908,7 +1249,6 @@
           resetButton.classList.remove('confirming');
         }, 3000);
       } else {
-        // Confirmed — wipe state and rebuild wall
         clearTimeout(resetTimeout);
         localStorage.removeItem(STATE_KEY);
         resetConfirming = false;
@@ -917,6 +1257,151 @@
         buildWall();
       }
     });
+
+    // ===== Queue view navigation =====
+
+    const queueView = document.getElementById('queue-view');
+    const queueLink = document.getElementById('queue-link');
+    const queueBackButton = document.getElementById('queue-back-button');
+    const queueList = document.getElementById('queue-list');
+    const queueEmpty = document.getElementById('queue-empty');
+
+    function openQueueView() {
+      renderQueueList();
+      wallView.classList.add('hidden');
+      queueView.classList.remove('hidden');
+    }
+
+    function closeQueueView() {
+      queueView.classList.add('hidden');
+      wallView.classList.remove('hidden');
+      buildWall();  // rebuild in case anything affecting display changed
+      updateQueueCount();
+    }
+
+    queueLink.addEventListener('click', openQueueView);
+    queueBackButton.addEventListener('click', closeQueueView);
+
+    // ===== Queue rendering =====
+
+    function relativeTime(isoString) {
+      const then = new Date(isoString);
+      const now = new Date();
+      const diffMs = now - then;
+      const seconds = Math.floor(diffMs / 1000);
+      if (seconds < 60) return 'just now';
+      const minutes = Math.floor(seconds / 60);
+      if (minutes < 60) return `${minutes}m ago`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}h ago`;
+      const days = Math.floor(hours / 24);
+      if (days < 7) return `${days}d ago`;
+      return then.toLocaleDateString();
+    }
+
+    function escapeHtml(text) {
+      if (text == null) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function buildItemBodyHtml(item) {
+      // Build the body shown in the queue item — varies by level type
+      let body = '';
+      if (item.type === 'recognition') {
+        body = escapeHtml(item.explanation || '');
+      } else if (item.type === 'transformation') {
+        body = '';
+        if (item.task) {
+          body += `<em>${escapeHtml(item.task)}</em><br>`;
+        }
+        if (item.modelAnswer) {
+          body += `→ ${escapeHtml(item.modelAnswer)}<br>`;
+        }
+        if (item.explanation) {
+          body += escapeHtml(item.explanation);
+        }
+      } else if (item.type === 'translation') {
+        body = '';
+        if (item.modelAnswer) {
+          body += `→ ${escapeHtml(item.modelAnswer)}<br>`;
+        }
+        if (item.alternatives && item.alternatives.length) {
+          body += `<em>Also: ${escapeHtml(item.alternatives.join('; '))}</em><br>`;
+        }
+        if (item.note) {
+          body += escapeHtml(item.note);
+        }
+      }
+      return body;
+    }
+
+    function renderQueueList() {
+      const queue = loadQueue();
+
+      if (queue.length === 0) {
+        queueEmpty.style.display = '';
+        queueList.innerHTML = '';
+        return;
+      }
+
+      queueEmpty.style.display = 'none';
+      queueList.innerHTML = '';
+
+      queue.forEach(item => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'queue-item' + (item.researched ? ' researched' : '');
+        itemEl.dataset.id = item.id;
+
+        const meta = `Level ${item.level} · ${escapeHtml(item.theme || '')} · ${relativeTime(item.savedAt)}`;
+        const promptHtml = escapeHtml(item.prompt || '');
+        const bodyHtml = buildItemBodyHtml(item);
+
+        itemEl.innerHTML = `
+          <div class="queue-item-header">
+            <div class="queue-item-meta">${meta}</div>
+            <button class="queue-tick" aria-label="${item.researched ? 'mark as unresearched' : 'mark as researched'}">${item.researched ? '✓' : ''}</button>
+          </div>
+          <div class="queue-item-prompt">${promptHtml}</div>
+          <div class="queue-item-body">${bodyHtml}</div>
+          <div class="queue-item-expanded">
+            <textarea class="queue-note-input" placeholder="your research notes…">${escapeHtml(item.userNote || '')}</textarea>
+            <button class="queue-delete">Delete</button>
+          </div>
+        `;
+
+        // Tap to expand (but not on the tick or controls inside expanded area)
+        itemEl.addEventListener('click', (e) => {
+          if (e.target.closest('.queue-tick')) return;
+          if (e.target.closest('.queue-item-expanded')) return;
+          itemEl.classList.toggle('expanded');
+        });
+
+        // Tick
+        itemEl.querySelector('.queue-tick').addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleResearched(item.id);
+          renderQueueList();
+        });
+
+        // Note input
+        itemEl.querySelector('.queue-note-input').addEventListener('input', (e) => {
+          updateUserNote(item.id, e.target.value);
+        });
+
+        // Delete
+        itemEl.querySelector('.queue-delete').addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (confirm('Delete this queue item?')) {
+            removeFromQueue(item.id);
+            renderQueueList();
+          }
+        });
+
+        queueList.appendChild(itemEl);
+      });
+    }
 
     // ===== Outline plus decorations =====
 
@@ -954,6 +1439,7 @@
     // ===== Content loading =====
 
     let zoneContent = null;
+    let activeTileTheme = '';
     let levelExercises = { 1: null, 2: null, 3: null, 4: null };
 
     async function loadContent() {
@@ -961,6 +1447,7 @@
         const response = await fetch('content/er.json');
         zoneContent = await response.json();
         const tile = zoneContent.tiles[0];
+        activeTileTheme = tile.theme;
         levelExercises[1] = tile.levels['1'];
         levelExercises[2] = tile.levels['2'];
         levelExercises[3] = tile.levels['3'];
@@ -1011,6 +1498,13 @@
       const nextBtn = document.getElementById(`next-${level}`);
       if (nextBtn) nextBtn.classList.remove('visible');
 
+      // Reset save-to-queue button for this question
+      const saveBtn = document.getElementById(`save-to-queue-${level}`);
+      if (saveBtn) {
+        saveBtn.textContent = '+ save to queue';
+        saveBtn.classList.remove('saved');
+      }
+
       // Reset per-level UI based on type
       if (level === 1) {
         document.getElementById('btn-correct-1').className = 'exercise-button';
@@ -1020,7 +1514,6 @@
         input.value = '';
         input.classList.remove('disabled');
         document.getElementById('submit-2').classList.remove('disabled');
-        // Update task instruction per question (transformations have different tasks)
         if (ex.task) {
           document.getElementById('question-2').textContent = ex.task;
         }
@@ -1052,10 +1545,43 @@
       completeEl.classList.add('visible');
       document.getElementById(`score-${level}`).textContent =
         `${levelState[level].correct} / ${levelExercises[level].length} correct`;
-
-      // Record mastery: mark this level as complete
       recordLevelComplete(ACTIVE_TILE_ID, level);
     }
+
+    // ===== Save-to-queue handler (shared across all levels) =====
+
+    function handleSaveToQueue(level) {
+      const ex = levelExercises[level][levelState[level].current];
+      if (!ex) return;
+
+      // Build queue item with whatever fields exist on this exercise
+      const item = {
+        tileId: ACTIVE_TILE_ID,
+        theme: activeTileTheme,
+        level: level,
+        type: ex.type,
+        prompt: ex.prompt
+      };
+      if (ex.task) item.task = ex.task;
+      if (ex.modelAnswer) item.modelAnswer = ex.modelAnswer;
+      if (ex.preferred) item.modelAnswer = ex.preferred;  // L2 uses 'preferred' for the canonical answer
+      if (ex.alternatives) item.alternatives = ex.alternatives;
+      if (typeof ex.correctUse !== 'undefined') item.correctUse = ex.correctUse;
+      if (ex.explanation) item.explanation = ex.explanation;
+      if (ex.note) item.note = ex.note;
+
+      addToQueue(item);
+
+      // Visual feedback on the button
+      const saveBtn = document.getElementById(`save-to-queue-${level}`);
+      saveBtn.textContent = 'saved ✓';
+      saveBtn.classList.add('saved');
+    }
+
+    // Wire save buttons for all four levels
+    [1, 2, 3, 4].forEach(level => {
+      document.getElementById(`save-to-queue-${level}`).addEventListener('click', () => handleSaveToQueue(level));
+    });
 
     // ===== Level 1: Recognition =====
 
@@ -1086,7 +1612,7 @@
     document.getElementById('btn-incorrect-1').addEventListener('click', () => handleLevel1Answer(false));
     document.getElementById('next-1').addEventListener('click', () => advance(1));
 
-    // ===== Level 2: Cloze with lenient auto-check =====
+    // ===== Level 2: Transformation with lenient auto-check =====
 
     function normaliseForCheck(s) {
       return s.trim().toLowerCase().replace(/[.,!?]/g, '');
@@ -1115,7 +1641,8 @@
         document.getElementById('next-2').classList.add('visible');
       }, 300);
     }
-      document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
+
+    document.getElementById('submit-2').addEventListener('click', handleLevel2Submit);
 
     document.getElementById('input-2').addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
@@ -1131,7 +1658,7 @@
     });
 
     document.getElementById('next-2').addEventListener('click', () => advance(2));
-    
+
     // ===== Levels 3 and 4: Translation with self-assessment =====
 
     function handleTranslationSubmit(level) {
@@ -1144,7 +1671,6 @@
       input.classList.add('disabled');
       document.getElementById(`submit-${level}`).classList.add('disabled');
 
-      // Build model answer block including alternatives
       document.getElementById(`user-answer-${level}`).textContent = userAnswer;
 
       let modelHtml = ex.modelAnswer;
@@ -1167,7 +1693,6 @@
       document.getElementById(`btn-correct-${level}`).classList.add('disabled');
       document.getElementById(`btn-incorrect-${level}`).classList.add('disabled');
 
-      // Auto-advance after short pause
       setTimeout(() => advance(level), 800);
     }
 
@@ -1184,6 +1709,7 @@
         }, 300);
       });
     });
+
     loadContent();
 
   </script>
