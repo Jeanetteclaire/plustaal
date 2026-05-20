@@ -6,6 +6,86 @@ Newest at the top.
 
 ---
 
+## 2026-05-20 — Step 6: PWA wrapper + reset progress button
+
+PlusTaal now installs as a proper home-screen app. Tapping the cream-plus icon launches the app full-screen with no Safari chrome, matching the Cue Card pattern. A small "reset progress" link at the bottom of the wall view lets the user wipe all mastery state with a double-tap confirmation pattern.
+
+Decisions:
+
+- **Icon design: pure plus sign, cream on warm-black.** 60% of the canvas, 30% thick arms — same proportions as the tile pluses in the app itself. The home-screen icon IS a tile of the wall. No wordmark, no decoration. iOS rounds the corners automatically.
+- **Two icon sizes (192px and 512px) generated with Pillow** rather than commissioned. Single colour fill + two rectangles is trivial code, doesn't need a designer, looks identical to a hand-drawn version at this aesthetic. The 512px also serves as the maskable purpose for Android.
+- **Reset button is small, low-opacity (20%), at the bottom of the wall.** Discoverable on inspection but invisible during normal use. Double-tap pattern instead of `confirm()` dialog — feels native to the app rather than a browser interruption.
+- **Confirmation text brightens to terracotta** (`#e0a59c`) for the 3-second confirmation window. Re-uses the same red the app uses for incorrect answers, so the warning colour is already familiar.
+- **`.gitignore` added** to keep `.DS_Store` and editor metadata out of the repo. Also `files.zip` and `files/` patterns so accidental drag-drop unzips don't pollute future commits.
+- **Content brief committed to repo** as `plustaal_content_brief.md`. Self-contained authoring prompt — pasteable into any fresh Claude conversation to generate one tile of content at a time. Includes schema, full er-1 example, all 13 topics with sub-tile IDs, writing guidelines, user profile with recurring errors.
+
+State: app is fully installable and resettable. Pre-3-months phase complete except for the work queue feature (next session). After that, content authoring across 59 remaining tiles is the bulk of the work, parallel to actually using the app.
+
+---
+
+## 2026-05-20 — Step 5b: Level 2 rewrite as transformation + bug fixes
+
+The original Level 2 cloze format had a structural flaw: when every question is about *er*, the answer is always "er", and the user can win without thinking. Rewrote Level 2 as **transformation** — given a Dutch sentence, rewrite it applying the rule. The trivial-answer trap is broken because the transformations require word-order changes, choosing between `er` / `daar` / `er…naartoe`, and recognising verb subcategories (directional vs locative).
+
+The same pattern works for every grammar topic in the app: present-tense → imperfectum, active → passive, simple → bijzin, etc. Locked in as the Level 2 design across the whole app.
+
+Decisions:
+
+- **Transformation over multi-choice or "fix the wrong word".** Both alternatives considered. Transformation forces real production and word-order thinking, which is the actual B2 muscle. Multi-choice is too easy. "Fix the wrong word" tests proofreading rather than construction.
+- **Multiple accepted answers per question** (2-4 typically). Pronoun variants (`we`/`wij`, `ze`/`zij`), word-order alternatives, `er` vs `daar` where both work.
+- **Lenient auto-check** (trim, lowercase, strip punctuation) is sufficient because transformations are bounded — the set of valid outputs is enumerable.
+
+Bug fixes batched in same step:
+
+- Stray `"` character before the Level 2 textarea — the "''" mystery in earlier screenshots was a literal typo rendering as floating text.
+- Level 2 focus listener was nested inside the keydown listener, meaning the scroll-into-view never fired on first focus and accumulated extra listeners on each keypress. Unnested.
+- iOS keyboard was pushing prompt content off the top of the screen because the snap pages used `justify-content: center` — content centred in the full viewport, but only half was visible above the keyboard. Changed to `justify-content: flex-start` so content anchors to the top of each page. iOS keyboard appearance no longer displaces the prompt.
+
+Workflow decision: **targeted diffs over full-file rewrites** for small changes (1-30 lines). Each turn names exactly what changes and where. Substantial changes (new features, big restructures) still go full-file but the user pastes their current state first so I'm not working from a stale model.
+
+State: Level 2 now genuinely tests grammar rather than allowing trivial bypass. Keyboard behaviour stable across Levels 2-4 on iOS. All four levels working end-to-end on phone.
+
+---
+
+## 2026-05-19 — Step 5: All four levels populated for er-1
+
+Levels 2, 3, and 4 of `er-1-plaatsbijwoord` now have content and working UI. Tapping the active tile opens a four-page swipe sequence with real exercises at every level. Completing all four marks the tile as mastered (plus shrinks to 17%, smallest of the five mastery sizes).
+
+Level designs:
+
+- **Level 2 — Cloze (later rewritten as Transformation in Step 5b).** 7 fill-in-the-blanks with `acceptedAnswers` arrays for lenient checking.
+- **Level 3 — Simple translation.** 5 English sentences requiring one targeted *er* construction. Self-assessment flow: user types translation, sees model answer + alternatives + teaching note, taps Goed (correct) or Niet helemaal (not quite). Trust-based — the user's developing judgement is the real test, not exact string matching.
+- **Level 4 — Complex translation.** 5 English sentences requiring multiple constructions: plusquamperfectum + *er* + word order; dubbele infinitief in plusquamperfectum; nested bijzinnen with `is veranderd`; etc. Real B2 muscle.
+
+Decisions:
+
+- **Self-assessment for translation levels, not auto-check.** Translation has too much valid variation for string matching to work — multiple right answers, near-rights that are wrong, alternate word orders. The user's own judgement is more accurate than the app's. Honesty risk acknowledged and accepted — the practice itself is the value, not the score.
+- **Alternative answers shown inline.** Below the model answer in italics: "Also acceptable: …". The user sees that translation has multiple right answers in real time, which itself teaches a meta-skill (Dutch flexibility).
+- **Note field per question.** Brief teaching paragraph alongside the model answer explaining the structural rules at play. Especially valuable on Level 4 where multiple constructions interact.
+- **Question counts: 7/7/5/5 across the four levels.** Recognition and Cloze are similar effort. Translations get fewer because each takes longer mentally.
+
+State: full tile complete. The app is now a real, working Dutch grammar practice loop for one topic.
+
+---
+
+## 2026-05-19 — Step 4: State persistence — the wall remembers
+
+The wall is no longer static. Mastery state for each tile saves to localStorage under `plustaal:state`. Completing a level on the active tile shrinks the tile's plus to the next size (78% → 62% → 43% → 33% → 17%). On every app load, weekly decay is applied: tiles not practiced for 7+ days drop one mastery level per overdue week.
+
+For Step 4, only one tile on the wall is "active" — the top-left position (`er-1-plaatsbijwoord`). The other 59 show a "Coming soon — content in progress" toast when tapped. This avoids fake-mapping 60 tiles to the same content.
+
+Decisions:
+
+- **One active tile, the rest are honest about being incomplete.** Two options considered. Option A: all 60 tiles open the same content (all mastery effects apply to that one). Option B: only the active tile opens content, others show "coming soon" toast. Option B chosen — more honest, mastery is tracked per-tile correctly, and the user can visually see their one real tile shrinking as proof the model works.
+- **Weekly decay over daily or logarithmic.** Daily was too aggressive — losing progress for missing a single day would feel punishing. Logarithmic was the "real" memory model but complex to reason about and build. Weekly is simple, has consequence, and survives normal life.
+- **Tile sizes animate smoothly** on the wall when state changes. CSS `transition: width 0.5s ease, height 0.5s ease` on `.tile-plus`. After completing a level and tapping back to the wall, the tile visibly shrinks — subtle reward, reinforces the "art produced by practice" idea.
+- **State shape:** `{ tileId: { levelsComplete: 0-4, lastPracticed: ISODate } }`. Absent tiles = untouched. Tracked tiles have a number and a date.
+- **Background-progression-by-level stripped.** Original design had each level page slightly different shade. Reading as decoration that didn't earn its place — the content already signals difficulty. All four level pages now use the same `#1a1814` as the wall.
+
+State: PlusTaal is no longer "Cue Card for Dutch." The wall is a living artefact of practice — it remembers, it decays, it rewards return visits with visible change. This is the move that made PlusTaal into what it was supposed to be.
+
+---
+
 ## 2026-05-19 — Step 3: Level 1 exercise — Recognition for Er
 
 First real working exercise. Content for one tile (`er-1-plaatsbijwoord`, Er als plaatsbijwoord) lives in `content/er.json`. Level 1 Recognition flow: 7 prompts of *er* used correctly or incorrectly in context; user taps Correct or Niet correct; tile colours green or red; explanation appears below; tap Next to advance; completion state at the end with score.
