@@ -6,6 +6,53 @@ Newest at the top.
 
 ---
 
+## 2026-05-20 — Recognition question now content-driven
+
+The Level 1 question label ("Is this use of er correct?") was the last piece of er-specific text hardcoded in the UI. Now each tile declares its own via an optional `recognitionQuestion` field in its JSON, with a generic "Is this correct?" fallback if absent. The passief tile can ask "Is this passive construction correct?", the inversie tile "Is the word order correct?", and so on.
+
+Decisions:
+
+- **Optional field with fallback, not required.** A tile that omits `recognitionQuestion` still works — falls back to generic text. No tile can break for lacking it.
+- **Caught before bulk content authoring.** Adding the field to the schema now (rather than after 59 tiles exist) means every generated tile includes it from the start. Retrofitting 59 files would have been painful. Schema decisions are cheapest before the content exists.
+- Content brief updated to document the field and show it in the er-1 reference example.
+
+State: the UI is now fully topic-agnostic. Every piece of topic-specific text — prompts, explanations, notes, and now the recognition question — flows from content. The app no longer assumes it is about *er*.
+
+---
+
+## 2026-05-20 — Step 8: Tile-mapping architecture
+
+The big structural change: from "one hardcoded active tile" to "every grid position maps to its own content file, loaded on demand." Tapping any tile now attempts to load `content/<tileId>.json`; if the file exists, the tile opens; if not, a "coming soon" toast appears. Adding content to the app is now a single action — drop a correctly-named JSON file into `content/`. No code editing required to light up a tile.
+
+Decisions:
+
+- **`TILE_MAP` array maps the 60 positions to tile IDs**, grouped by topic so the wall reads as regions (all 5 *er* tiles adjacent, all imperfectum adjacent, etc.). Pre-filled with all 60 planned tile IDs from the content brief. To rearrange the wall, reorder the array; to leave a gap, use null.
+- **Content loads on tap, not at startup.** Previously `loadContent()` ran once at boot and fetched `er.json`. Now `loadContent(tileId)` is called when a tile is tapped, fetches that tile's file, and returns true/false. A failed fetch (file not yet authored) returns false → "coming soon" toast. No wasteful pre-fetching of 60 files.
+- **One file per tile**, named `<tileId>.json` (e.g. `er-1-plaatsbijwoord.json`). Existing `er.json` renamed to match. Matches what the content brief instructs the authoring instance to produce — one tile per file, addable incrementally.
+- **Wall is now a true mastery map (the honest version of the original vision).** Previously the 59 inactive tiles showed a decorative position-gradient (small top-left → large bottom-right) that was never tied to anything. Now every tile sizes by its actual mastery: untouched = 78% (largest), mastered = 17% (smallest). The wall starts bold and near-uniform, and develops texture purely from practice. Trade-off accepted: less pretty on day one, but every tile's shrink-on-mastery is now visible and meaningful, and the texture the user eventually sees is entirely theirs. Considered keeping the decorative gradient (Option Y) but rejected — it made mastery unreadable from size and muted the reward of mastering top-left tiles.
+- **Mastery state survives the change** because it was always keyed by tileId, not by position. The *er* tile moved from position 0 to position 19 (into the er region) without losing progress.
+
+State: PlusTaal is now content-scalable. The architecture supports all 60 tiles; only the content files remain to be authored. Adding a tile = adding a file. This is the structural foundation for the 3-month content build.
+
+---
+
+## 2026-05-20 — Step 7: Work queue
+
+A place to flag explanations for later research without breaking practice flow. A "+ save to queue" button sits below the feedback on every level. Tapping it saves that question's full context (prompt, model answer, explanation/note, tile, level, timestamp) to a queue. A "queue" link top-right of the wall (with a live count) opens a dedicated queue view: a chronological list, newest first, where each item can be expanded to add the user's own research notes, ticked as researched (greys out but stays as an audit trail), or deleted.
+
+Decisions:
+
+- **Save the whole block, not a text selection.** Selecting specific text is fiddly on a phone and breaks flow. Saving the entire explanation block is one tap; the user adds their own notes later when researching.
+- **Separate localStorage key (`plustaal:queue`)** from mastery state (`plustaal:state`). Different lifecycles — mastery decays, queue items persist until manually cleared. The reset-progress button wipes mastery but leaves the queue intact.
+- **Researched items grey out rather than delete.** The trail of what's been investigated is itself useful. Explicit delete (with confirmation) for genuine removal.
+- **Research notes auto-save on input.** Type in an item's textarea, navigate away, notes persist. No save button needed.
+- **No deduplication.** Saving the same question twice across sessions creates two entries — intentional, since the user may want to re-flag something as understanding shifts. Duplicates can be deleted manually.
+- **Per-level save button resets per question.** Each new question gets a fresh "+ save to queue" button; tapping shows "saved ✓" for the remainder of that question.
+
+State: the research-capture loop is complete. The app now serves the Thinking Gym principle directly — flag the thing, keep practising, investigate properly later. The tool supports the user's own thinking rather than substituting for it.
+
+---
+
 ## 2026-05-20 — Step 6: PWA wrapper + reset progress button
 
 PlusTaal now installs as a proper home-screen app. Tapping the cream-plus icon launches the app full-screen with no Safari chrome, matching the Cue Card pattern. A small "reset progress" link at the bottom of the wall view lets the user wipe all mastery state with a double-tap confirmation pattern.
