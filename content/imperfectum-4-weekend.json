@@ -1,0 +1,248 @@
+{
+  "zone": "imperfectum",
+  "zoneName": "Imperfectum vs Perfectum",
+  "tiles": [
+    {
+      "id": "imperfectum-4-weekend",
+      "theme": "Weekend",
+      "themeEnglish": "Weekends — choosing between imperfectum (was doing) and perfectum (have done)",
+      "recognitionQuestion": "Is the right past tense used here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Afgelopen zaterdag heb ik lekker uitgeslapen en daarna op het terras ontbeten.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum for a specific past weekend: 'heb uitgeslapen ... ontbeten'. The second auxiliary 'heb' is dropped because the subject is the same. 'Uitslapen' takes 'hebben'. Inversion after 'Afgelopen zaterdag'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik maakte net de keuken schoon, dus kom er nog even niet in.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Net' plus the present-relevant result ('dus kom er niet in') calls for perfectum: 'Ik heb net de keuken schoongemaakt'. Imperfectum 'maakte schoon' describes a past situation without the just-completed, still-relevant sense the sentence needs."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen de kinderen klein waren, gingen we elke zondag naar het zwembad.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'gingen' for a sustained past habit ('elke zondag'). 'Toen de kinderen klein waren' is a bijzin (finite verb 'waren' at the end), so the main clause inverts: 'gingen we'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De ramen hebben afgelopen zaterdag eindelijk gewassen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The windows don't wash themselves — this needs a passive with 'zijn': 'De ramen zijn afgelopen zaterdag eindelijk gewassen.' Or go active: 'Ik heb de ramen gewassen.' Using 'hebben' here builds a broken active construction with no one doing the washing."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je dit weekend nog iets leuks gedaan?",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum question 'heb je gedaan' for a just-finished period. 'Doen' is sterk: deed-gedaan. The particle 'nog' softens it to 'anything at all', and 'iets leuks' takes -s on the adjective after 'iets'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Op zondagochtend lazen we vroeger samen de krant en luierden we tot een uur of elf.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'lazen ... luierden' for a recurring past habit ('vroeger'). 'Lezen' sterk (las-lazen); 'luieren' zwak (-r → 'luierde/luierden'). Inversion after 'Op zondagochtend'. 'Een uur of elf' = elevenish — a nice idiomatic vagueness."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben dit weekend eindelijk de schuur willen opgeruimd.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dubbele infinitief: after 'hebben ... willen', the second verb stays infinitive — 'willen opruimen', not 'willen opgeruimd'. Correct: 'We hebben dit weekend eindelijk de schuur willen opruimen.' The participle only appears when the modal stands alone."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik slaap in het weekend altijd uit.",
+            "task": "Zet in de imperfectum, beginnend met 'Vroeger'.",
+            "acceptedAnswers": [
+              "Vroeger sliep ik in het weekend altijd uit.",
+              "Vroeger sliep ik altijd uit in het weekend.",
+              "Vroeger sliep ik in het weekend altijd lekker uit."
+            ],
+            "preferred": "Vroeger sliep ik in het weekend altijd uit.",
+            "explanation": "'Uitslapen' sterk + scheidbaar: slaap uit - sliep uit - uitgeslapen. Imperfectum 'sliep ... uit', with 'uit' at the clause end. Inversion after 'Vroeger': 'sliep ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We spreken zaterdag met vrienden af.",
+            "task": "Zet in de perfectum.",
+            "acceptedAnswers": [
+              "We hebben zaterdag met vrienden afgesproken.",
+              "Wij hebben zaterdag met vrienden afgesproken.",
+              "Zaterdag hebben we met vrienden afgesproken."
+            ],
+            "preferred": "We hebben zaterdag met vrienden afgesproken.",
+            "explanation": "'Afspreken' sterk + scheidbaar: spreek af - sprak af - afgesproken. Auxiliary 'hebben'. The prefix rejoins in the participle: 'afgesproken' as one word."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij heeft het hele weekend in huis geklust.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Hij kluste het hele weekend in huis.",
+              "Het hele weekend kluste hij in huis.",
+              "Hij kluste het hele weekend thuis."
+            ],
+            "preferred": "Hij kluste het hele weekend in huis.",
+            "explanation": "From perfectum to imperfectum. 'Klussen' zwak; stem 'klus-' ends in -s (kofschip) → imperfectum 'kluste', participle 'geklust'. 'Klussen' = doing DIY / odd jobs around the house."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je bent dit weekend naar het festival geweest.",
+            "task": "Maak er een ja/nee-vraag van.",
+            "acceptedAnswers": [
+              "Ben je dit weekend naar het festival geweest?",
+              "Ben jij dit weekend naar het festival geweest?",
+              "Ben je dit weekend nog naar het festival geweest?"
+            ],
+            "preferred": "Ben je dit weekend naar het festival geweest?",
+            "explanation": "A yes/no question puts the persoonsvorm first: 'Ben je ...?'. Perfectum of 'zijn' (here = to go/be somewhere): ben-was-geweest, with 'zijn' as auxiliary. Turning a statement into a question simply swaps subject and finite verb."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze gaan zondag naar de bioscoop.",
+            "task": "Zet in de perfectum, beginnend met 'Afgelopen zondag'.",
+            "acceptedAnswers": [
+              "Afgelopen zondag zijn ze naar de bioscoop gegaan.",
+              "Afgelopen zondag zijn zij naar de bioscoop geweest.",
+              "Afgelopen zondag zijn ze naar de film geweest."
+            ],
+            "preferred": "Afgelopen zondag zijn ze naar de bioscoop gegaan.",
+            "explanation": "'Gaan' sterk: ga-ging-gegaan; with direction → auxiliary 'zijn'. Inversion after 'Afgelopen zondag'. 'Naar de bioscoop geweest' is an equally idiomatic alternative — Dutch often uses 'geweest' for 'went to'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kom bij mijn zus langs.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Ik kwam bij mijn zus langs.",
+              "Bij mijn zus kwam ik langs.",
+              "Ik kwam even bij mijn zus langs."
+            ],
+            "preferred": "Ik kwam bij mijn zus langs.",
+            "explanation": "'Langskomen' sterk + scheidbaar: kom langs - kwam langs - langsgekomen. Imperfectum 'kwam ... langs', with 'langs' at the end. (Perfectum would be 'ben ... langsgekomen', taking 'zijn'.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben zaterdagavond een borrel gehad.",
+            "task": "Zet in de imperfectum als vaste gewoonte.",
+            "acceptedAnswers": [
+              "We hadden zaterdagavond altijd een borrel.",
+              "Vroeger hadden we zaterdagavond altijd een borrel.",
+              "Zaterdagavond hadden we altijd een borrel."
+            ],
+            "preferred": "We hadden zaterdagavond altijd een borrel.",
+            "explanation": "From perfectum to habitual imperfectum. 'Hebben' → 'had/hadden'; plural 'hadden'. Adding 'altijd' makes the recurring reading explicit. 'Borrel' = an informal drinks gathering — thoroughly Dutch."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Last Saturday I slept in and read all morning.",
+            "modelAnswer": "Afgelopen zaterdag heb ik uitgeslapen en de hele ochtend gelezen.",
+            "alternatives": [
+              "Afgelopen zaterdag heb ik lekker uitgeslapen en de hele ochtend zitten lezen.",
+              "Zaterdag heb ik uitgeslapen en de hele ochtend gelezen."
+            ],
+            "note": "Perfectum for a specific past weekend: 'heb uitgeslapen ... gelezen', with the second 'heb' dropped (shared auxiliary, same subject). 'Uitslapen' takes 'hebben'. Inversion after the fronted time phrase. 'Zitten lezen' (sat reading) adds a natural durative flavour Dutch loves."
+          },
+          {
+            "type": "translation",
+            "prompt": "When the children were small, we always went to the playground on Sundays.",
+            "modelAnswer": "Toen de kinderen klein waren, gingen we 's zondags altijd naar de speeltuin.",
+            "alternatives": [
+              "Toen de kinderen klein waren, gingen we op zondag altijd naar de speeltuin.",
+              "Toen de kinderen klein waren, gingen we elke zondag naar de speeltuin."
+            ],
+            "note": "'Toen'-bijzin (finite verb 'waren' at the end). Habitual imperfectum 'gingen'. Inversion after the bijzin: 'gingen we'. ''s Zondags' = 'op zondag / elke zondag' — the same ''s ...s' idiom as ''s avonds', ''s zomers'. 'Speeltuin' = playground."
+          },
+          {
+            "type": "translation",
+            "prompt": "Have you done anything fun this weekend?",
+            "modelAnswer": "Heb je dit weekend nog iets leuks gedaan?",
+            "alternatives": [
+              "Heb je dit weekend iets leuks gedaan?",
+              "Heb je nog iets leuks gedaan dit weekend?"
+            ],
+            "note": "Perfectum question 'heb ... gedaan' ('doen' sterk: deed-gedaan). The little particle 'nog' nudges it toward 'anything at all' — extremely common in speech and easy for a learner to drop. After 'iets', the adjective takes -s: 'iets leuks'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We used to have a drink on the terrace every Friday.",
+            "modelAnswer": "We pakten vroeger elke vrijdag een terrasje.",
+            "alternatives": [
+              "Vroeger pakten we elke vrijdag een terrasje.",
+              "We dronken vroeger elke vrijdag wat op een terras."
+            ],
+            "note": "Habitual imperfectum. 'Een terrasje pakken' is the idiomatic Dutch for going out for a drink on a café terrace — it resists literal translation. 'Pakken' zwak; stem 'pak-' on -k (kofschip) → 'pakte/pakten'; plural here. Fronting 'vroeger' triggers inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "On Sunday we walked along the canal for two hours.",
+            "modelAnswer": "Op zondag hebben we twee uur langs de gracht gewandeld.",
+            "alternatives": [
+              "Op zondag liepen we twee uur langs de gracht.",
+              "Zondag hebben we twee uur langs de gracht gewandeld."
+            ],
+            "note": "Perfectum 'hebben gewandeld' for a completed weekend activity, or narrative imperfectum 'liepen' — both natural. 'Wandelen' zwak; stem 'wandel-' ends in -l (not kofschip) → -de: 'wandelde', 'gewandeld'. Inversion after 'Op zondag'. 'Langs de gracht' — about as Amsterdam as it gets."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'd already cleaned the whole house before the guests arrived on Saturday.",
+            "modelAnswer": "Ik had het hele huis al schoongemaakt voordat de gasten zaterdag aankwamen.",
+            "alternatives": [
+              "Ik had het hele huis al schoongemaakt voordat de gasten op zaterdag arriveerden.",
+              "Voordat de gasten zaterdag aankwamen, had ik het hele huis al schoongemaakt."
+            ],
+            "note": "Plusquamperfectum 'had schoongemaakt' for an action completed before another past event. 'Voordat'-bijzin (finite verb at the end — scheidbaar 'aankomen' rejoins: 'aankwamen'). 'Schoonmaken' zwak scheidbaar: maakte schoon / schoongemaakt. 'Al' sits between auxiliary and participle. Fronting the bijzin (third option) inverts the main clause: 'had ik'."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was younger, I used to go out every Saturday, but now I'd rather stay home.",
+            "modelAnswer": "Toen ik jonger was, ging ik elke zaterdag uit, maar nu blijf ik liever thuis.",
+            "alternatives": [
+              "Toen ik jonger was, ging ik elke zaterdag stappen, maar nu blijf ik liever thuis.",
+              "Toen ik jonger was, ging ik elke zaterdag uit, maar tegenwoordig blijf ik liever thuis."
+            ],
+            "note": "'Toen'-bijzin (finite verb 'was'). Habitual imperfectum 'ging ... uit' ('uitgaan' scheidbaar) — no 'used to' form in Dutch. Contrast with 'maar'; fronted 'nu' triggers inversion: 'blijf ik'. 'Liever' = 'd rather'. 'Stappen' is the lively colloquial verb for a night out drinking/clubbing."
+          },
+          {
+            "type": "translation",
+            "prompt": "If it hadn't rained all weekend, we would have gone cycling in the dunes.",
+            "modelAnswer": "Als het niet het hele weekend had geregend, waren we in de duinen gaan fietsen.",
+            "alternatives": [
+              "Als het niet het hele weekend geregend had, waren we gaan fietsen in de duinen.",
+              "Als het niet het hele weekend had geregend, hadden we een fietstocht door de duinen gemaakt."
+            ],
+            "note": "Plusquamperfectum in the 'als'-clause: 'had geregend' / 'geregend had'. The main clause is conditioneel verleden with 'gaan + infinitief', which takes 'zijn': 'waren we ... gaan fietsen' — NOT 'hadden'. Inversion after the 'als'-clause. The third option sidesteps 'gaan fietsen' with 'een fietstocht maken' (which takes 'hebben'). 'De duinen' — the coastal dunes."
+          },
+          {
+            "type": "translation",
+            "prompt": "My sister called to say she'd been working in the garden all afternoon.",
+            "modelAnswer": "Mijn zus belde om te zeggen dat ze de hele middag in de tuin had gewerkt.",
+            "alternatives": [
+              "Mijn zus belde om te zeggen dat ze de hele middag in de tuin had zitten werken.",
+              "Mijn zus belde om te vertellen dat ze de hele middag in de tuin had gewerkt."
+            ],
+            "note": "Imperfectum 'belde' for the reporting action ('bellen' zwak, -l → 'belde', 'gebeld'). 'Om te zeggen' is a purpose clause (om ... te). The 'dat'-bijzin holds a plusquamperfectum 'had gewerkt' — the working precedes the calling. 'Had zitten werken' (sat working) is the idiomatic durative alternative. Three constructions stacked."
+          },
+          {
+            "type": "translation",
+            "prompt": "We were going to have a barbecue, but it had started raining, so we ate inside.",
+            "modelAnswer": "We zouden barbecueën, maar het was gaan regenen, dus aten we binnen.",
+            "alternatives": [
+              "We zouden gaan barbecueën, maar het was beginnen te regenen, dus aten we binnen.",
+              "We wilden barbecueën, maar het was gaan regenen, dus zijn we binnen gaan eten."
+            ],
+            "note": "'Zouden' marks a past intention ('were going to'). Contrast with 'maar'. Plusquamperfectum 'was gaan regenen' — 'gaan + infinitief' takes 'zijn', so the past perfect is 'was gaan regenen', not 'had'. 'Dus' triggers inversion: 'aten we'. Imperfectum 'aten' (eten sterk: at-aten) for the final action. Note the trema on 'barbecueën'."
+          }
+        ]
+      }
+    }
+  ]
+}
