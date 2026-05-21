@@ -6,6 +6,7 @@
       "id": "er-1-plaatsbijwoord",
       "theme": "Er als plaatsbijwoord",
       "themeEnglish": "Er as locative adverb (referring to a place)",
+      "recognitionQuestion": "Is this use of 'er' correct?",
       "levels": {
         "1": [
           {

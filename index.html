@@ -866,7 +866,7 @@
           <div id="exercise-1" class="exercise">
             <div class="exercise-progress" id="progress-1">Question 1 / 7</div>
             <div class="exercise-prompt" id="prompt-1">Loading…</div>
-            <div class="exercise-question">Is this use of <em>er</em> correct?</div>
+            <div class="exercise-question" id="question-1">Is this correct?</div>
             <div class="exercise-buttons">
               <button class="exercise-button" id="btn-incorrect-1">Niet correct</button>
               <button class="exercise-button" id="btn-correct-1">Correct</button>
@@ -1223,6 +1223,7 @@
     // Which tile is currently open (set when a tile is tapped)
     let currentTileId = null;
     let currentTileTheme = '';
+    let currentRecognitionQuestion = 'Is this correct?';
 
     function buildWall() {
       grid.innerHTML = '';
@@ -1530,6 +1531,7 @@
         zoneContent = await response.json();
         const tile = zoneContent.tiles[0];
         currentTileTheme = tile.theme || '';
+        currentRecognitionQuestion = tile.recognitionQuestion || 'Is this correct?';
         levelExercises[1] = tile.levels['1'];
         levelExercises[2] = tile.levels['2'];
         levelExercises[3] = tile.levels['3'];
@@ -1586,6 +1588,7 @@
 
       // Reset per-level UI based on type
       if (level === 1) {
+        document.getElementById('question-1').textContent = currentRecognitionQuestion;
         document.getElementById('btn-correct-1').className = 'exercise-button';
         document.getElementById('btn-incorrect-1').className = 'exercise-button';
       } else if (level === 2) {
