@@ -1,0 +1,249 @@
+{
+  "zone": "imperfectum",
+  "zoneName": "Imperfectum vs Perfectum",
+  "tiles": [
+    {
+      "id": "imperfectum-2-reizen",
+      "theme": "Reizen",
+      "themeEnglish": "Travelling — choosing between imperfectum (was doing) and perfectum (have done)",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Vorig jaar zijn we drie weken door Italië gereisd.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum 'zijn gereisd' for a completed past trip. 'Reizen' with a clear directional element ('door Italië') typically takes 'zijn'; the activity-only sense ('Ik heb veel gereisd') takes 'hebben'. Inversion after 'Vorig jaar'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vorige zomer wij gingen kamperen in de Ardennen.",
+            "correctUse": false,
+            "explanation": "Niet correct. Inversion error after the fronted time phrase. Correct: 'Vorige zomer gingen wij kamperen in de Ardennen.' Whenever a sentence opens with anything other than the subject, the persoonsvorm moves in front of the subject."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mijn ouders gingen vroeger elk jaar met de caravan naar Frankrijk.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'gingen' for a sustained past habit ('vroeger elk jaar'). 'Gaan' is sterk: ga-ging-gegaan. Subject-first word order, so no inversion needed. Note 'met de caravan' — Dutch uses 'met' for means of transport."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger zijn we elke zomer naar Texel geweest met de boot.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Vroeger... elke zomer' establishes a habit — imperfectum needed, not perfectum. Correct: 'Vroeger gingen we elke zomer met de boot naar Texel.' Perfectum reports completion of a specific event; habits live in the imperfectum."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Op de heenreis hebben we tussen Antwerpen en Brussel nog snel even getankt.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum 'hebben getankt' for a completed action on a specific journey. 'Tanken' zwak; stem 'tank-' ends in -k (kofschip) → 'getankt' with -t. 'Heenreis' = outbound journey ('terugreis' = return)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je vorige week nog naar Brussel kunnen gaan, of werd het te druk op het werk?",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum with modal: 'heb je kunnen gaan' — dubbele infinitief, NOT 'heb je gekund'. When a modal in perfectum carries another verb, both appear as infinitives. Second clause uses 'werd' (became) — the action of becoming busy, not the static state 'was'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb in Berlijn niet alle musea kunnen bezocht.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dubbele infinitief error. After 'heb...kunnen', the second verb stays in the infinitive: 'kunnen bezoeken', not 'kunnen bezocht'. Correct: 'Ik heb in Berlijn niet alle musea kunnen bezoeken.' The participle form ('bezocht') only appears when the modal stands alone."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ga met de trein naar Maastricht.",
+            "task": "Zet in de perfectum, beginnend met 'Gisteren'.",
+            "acceptedAnswers": [
+              "Gisteren ben ik met de trein naar Maastricht gegaan.",
+              "Gisteren ben ik met de trein naar Maastricht gereisd.",
+              "Gisteren ben ik met de trein naar Maastricht toe gegaan."
+            ],
+            "preferred": "Gisteren ben ik met de trein naar Maastricht gegaan.",
+            "explanation": "Sterk werkwoord 'gaan': ga-ging-gegaan. With direction → auxiliary 'zijn'. Inversion after 'Gisteren': 'ben ik'. 'Gereisd' (gereisd, from 'reizen') is an equally natural alternative for travel by train."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn ouders maken vaak een lange wandeling in de bergen.",
+            "task": "Zet in de imperfectum als herinnering aan vroeger.",
+            "acceptedAnswers": [
+              "Mijn ouders maakten vaak een lange wandeling in de bergen.",
+              "Vroeger maakten mijn ouders vaak een lange wandeling in de bergen.",
+              "Mijn ouders maakten vroeger vaak een lange wandeling in de bergen."
+            ],
+            "preferred": "Mijn ouders maakten vaak een lange wandeling in de bergen.",
+            "explanation": "Zwak werkwoord 'maken'. Stem 'maak-' ends in -k (kofschip) → imperfectum 'maakte/maakten'. Plural here. 'Vroeger' is optional but reinforces the habitual reading; fronting it triggers inversion."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben elke avond in een ander restaurant gegeten.",
+            "task": "Zet in de imperfectum (vakantieverhaal).",
+            "acceptedAnswers": [
+              "We aten elke avond in een ander restaurant.",
+              "Elke avond aten we in een ander restaurant.",
+              "Wij aten elke avond in een ander restaurant."
+            ],
+            "preferred": "We aten elke avond in een ander restaurant.",
+            "explanation": "From perfectum to narrative imperfectum. 'Eten' sterk: eet-at-gegeten; plural imperfectum 'aten'. Within a defined past period (a holiday), Dutch tends to use imperfectum for recurring actions — perfectum sounds more like a tally."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het vliegtuig vertrekt om half zeven.",
+            "task": "Zet in de perfectum.",
+            "acceptedAnswers": [
+              "Het vliegtuig is om half zeven vertrokken.",
+              "Het vliegtuig is om halfzeven vertrokken.",
+              "Om half zeven is het vliegtuig vertrokken."
+            ],
+            "preferred": "Het vliegtuig is om half zeven vertrokken.",
+            "explanation": "'Vertrekken' sterk: vertrek-vertrok-vertrokken. Movement/event → auxiliary 'zijn'. No 'ge-' in the voltooid deelwoord because 'ver-' is non-separable. 'Half zeven' is standard; 'halfzeven' as one word also occurs."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik verlies mijn paspoort op het station.",
+            "task": "Zet in de perfectum, beginnend met 'Een keer'.",
+            "acceptedAnswers": [
+              "Een keer heb ik mijn paspoort op het station verloren.",
+              "Een keer heb ik op het station mijn paspoort verloren.",
+              "Ik heb een keer mijn paspoort op het station verloren."
+            ],
+            "preferred": "Een keer heb ik mijn paspoort op het station verloren.",
+            "explanation": "'Verliezen' sterk: verlies-verloor-verloren. Auxiliary 'hebben' (no movement). No 'ge-' because 'ver-' is non-separable. Inversion after 'Een keer': 'heb ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We staan vroeg op om de zonsopgang te zien.",
+            "task": "Zet in de perfectum voor één specifieke ochtend.",
+            "acceptedAnswers": [
+              "We zijn vroeg opgestaan om de zonsopgang te zien.",
+              "Wij zijn vroeg opgestaan om de zonsopgang te zien.",
+              "We zijn die ochtend vroeg opgestaan om de zonsopgang te zien."
+            ],
+            "preferred": "We zijn vroeg opgestaan om de zonsopgang te zien.",
+            "explanation": "'Opstaan' sterk + scheidbaar: opstaan-stond op-opgestaan. Auxiliary 'zijn' (verandering van toestand). The 'om...te'-clause is unchanged. In the voltooid deelwoord the prefix joins back: 'opgestaan' as one word."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze plant elke vakantie tot in detail.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Ze plande elke vakantie tot in detail.",
+              "Zij plande elke vakantie tot in detail.",
+              "Elke vakantie plande ze tot in detail."
+            ],
+            "preferred": "Ze plande elke vakantie tot in detail.",
+            "explanation": "'Plannen' zwak. Stem 'plan-' ends in -n, which is NOT in 't kofschip → imperfectum takes -de/-den: 'plande/planden'. Past participle 'gepland'. Useful contrast with kofschip verbs ending in 'k' or 's' that take -te."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "We flew to Barcelona last summer.",
+            "modelAnswer": "We zijn vorige zomer naar Barcelona gevlogen.",
+            "alternatives": [
+              "Vorige zomer zijn we naar Barcelona gevlogen.",
+              "We vlogen vorige zomer naar Barcelona."
+            ],
+            "note": "Perfectum 'zijn gevlogen' for a completed past event — 'vliegen' with direction takes 'zijn'. Sterk werkwoord: vliegen-vloog-gevlogen. Both perfectum (more typical in spoken Dutch) and imperfectum (more narrative) work. Where English uses simple past, Dutch often prefers perfectum in conversation."
+          },
+          {
+            "type": "translation",
+            "prompt": "When we lived in Amsterdam, we often cycled to the beach in summer.",
+            "modelAnswer": "Toen we in Amsterdam woonden, fietsten we 's zomers vaak naar het strand.",
+            "alternatives": [
+              "Toen we in Amsterdam woonden, fietsten we in de zomer vaak naar het strand.",
+              "Toen we in Amsterdam woonden, gingen we 's zomers vaak op de fiets naar het strand."
+            ],
+            "note": "Bijzin with 'toen' for a defined past period (finite verb 'woonden' at the end). Imperfectum 'fietsten' for habit. ''s Zomers' = 'in de zomer' — a typical Dutch idiom (also ''s winters', ''s avonds'). Inversion after the fronted bijzin: 'fietsten we'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I lost my luggage on the way back from Greece.",
+            "modelAnswer": "Ik heb mijn bagage verloren op de terugweg uit Griekenland.",
+            "alternatives": [
+              "Op de terugweg uit Griekenland heb ik mijn bagage verloren.",
+              "Ik heb mijn koffer verloren op de terugreis uit Griekenland."
+            ],
+            "note": "Perfectum 'heb verloren' for completed past event. 'Verliezen' sterk: verlies-verloor-verloren. Takes 'hebben'. No 'ge-' (ver- non-separable). 'Terugweg' or 'terugreis' both work; 'uit' (from) suits coming from a country, as opposed to 'van'."
+          },
+          {
+            "type": "translation",
+            "prompt": "How long did you stay in Rome?",
+            "modelAnswer": "Hoe lang ben je in Rome gebleven?",
+            "alternatives": [
+              "Hoelang ben je in Rome gebleven?",
+              "Hoe lang zijn jullie in Rome gebleven?",
+              "Hoe lang ben je in Rome geweest?"
+            ],
+            "note": "Perfectum question 'ben gebleven'. 'Blijven' sterk: blijf-bleef-gebleven, takes 'zijn'. 'Hoe lang' (two words) or 'hoelang' (one) both accepted. 'Geweest' (zijn-was-geweest) is a softer alternative — 'how long were you there'. Persoonsvorm comes second after the question word."
+          },
+          {
+            "type": "translation",
+            "prompt": "My parents always travelled by car in those days.",
+            "modelAnswer": "Mijn ouders reisden in die tijd altijd met de auto.",
+            "alternatives": [
+              "In die tijd reisden mijn ouders altijd met de auto.",
+              "Mijn ouders gingen in die tijd altijd met de auto.",
+              "Vroeger reisden mijn ouders altijd met de auto."
+            ],
+            "note": "Imperfectum 'reisden' for past habit. 'Reizen' is regular zwak — but watch the spelling: 'z' in the infinitive becomes 's' when not between vowels, so imperfectum is 'reisde/reisden', past participle 'gereisd'. The underlying 'z' is NOT in 't kofschip → takes -de, not -te."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "We had already missed our train when we realised we'd forgotten the tickets.",
+            "modelAnswer": "We hadden onze trein al gemist toen we beseften dat we de kaartjes vergeten waren.",
+            "alternatives": [
+              "We hadden onze trein al gemist toen we beseften dat we de kaartjes waren vergeten.",
+              "We hadden de trein al gemist toen we ons realiseerden dat we de kaartjes vergeten waren."
+            ],
+            "note": "Plusquamperfectum 'hadden gemist' for an action completed before another past action. 'Toen' opens a bijzin (finite verb 'beseften' at end). A second bijzin nested inside with 'dat' — another plusquamperfectum: 'vergeten waren' / 'waren vergeten' (both orders fine — rode/groene volgorde). 'Missen' zwak; stem 'mis-' on -s (kofschip) → 'gemist'. 'Beseffen' is more idiomatic than 'realiseren' here."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was younger, I used to travel through Asia with just a backpack.",
+            "modelAnswer": "Toen ik jonger was, reisde ik met alleen een rugzak door Azië.",
+            "alternatives": [
+              "Toen ik jonger was, reisde ik door Azië met alleen een rugzak.",
+              "Toen ik jonger was, ging ik met alleen een rugzak door Azië reizen."
+            ],
+            "note": "Bijzin with 'toen' (finite verb 'was' at end). Imperfectum 'reisde' for habitual past — Dutch has no separate 'used to' construction. Inversion after the bijzin: 'reisde ik'. 'Door Azië' uses 'door' for travelling through a region. 'Met alleen een rugzak' = 'with just a backpack' — 'alleen' as restrictive modifier."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I'd known the train was delayed, I would have taken a later bus.",
+            "modelAnswer": "Als ik had geweten dat de trein vertraagd was, had ik een latere bus genomen.",
+            "alternatives": [
+              "Als ik had geweten dat de trein vertraging had, had ik een latere bus genomen.",
+              "Als ik geweten had dat de trein vertraagd was, had ik een latere bus genomen."
+            ],
+            "note": "Plusquamperfectum in the 'als'-clause ('had geweten') for hypothetical past. Nested bijzin with 'dat': 'vertraagd was' (delayed + zijn) — or alternative 'vertraging had' (had a delay). Conditioneel verleden 'had genomen' in the main clause — note inversion 'had ik' because the 'als'-clause comes first. 'Nemen' sterk: neem-nam-genomen."
+          },
+          {
+            "type": "translation",
+            "prompt": "We used to fly to Spain every year, but we haven't been there since the children left home.",
+            "modelAnswer": "We vlogen vroeger elk jaar naar Spanje, maar we zijn er niet meer geweest sinds de kinderen het huis uit zijn.",
+            "alternatives": [
+              "Vroeger vlogen we elk jaar naar Spanje, maar sinds de kinderen het huis uit zijn, zijn we er niet meer geweest.",
+              "We gingen vroeger elk jaar naar Spanje, maar sinds de kinderen uit huis zijn, zijn we er niet meer geweest."
+            ],
+            "note": "Imperfectum 'vlogen' for habit; perfectum 'zijn geweest' for the period of absence. 'Sinds'-bijzin uses present tense 'zijn' — for an ongoing state, Dutch uses present where English uses present perfect ('have moved out'). 'Het huis uit zijn' / 'uit huis zijn' are both idiomatic for adult children having moved out."
+          },
+          {
+            "type": "translation",
+            "prompt": "When we arrived in Berlin, it had already started snowing, so we couldn't visit the museum.",
+            "modelAnswer": "Toen we in Berlijn aankwamen, was het al begonnen met sneeuwen, dus konden we het museum niet bezoeken.",
+            "alternatives": [
+              "Toen we in Berlijn aankwamen, was het al gaan sneeuwen, dus konden we het museum niet bezoeken.",
+              "Toen we in Berlijn aankwamen, sneeuwde het al, dus hebben we het museum niet kunnen bezoeken."
+            ],
+            "note": "Bijzin with 'toen' — scheidbaar verb 'aankomen' rejoins at the end of the bijzin: 'aankwamen' as one word. Plusquamperfectum 'was begonnen' for an event already underway. 'Dus' triggers inversion: 'konden we'. The third alternative uses perfectum with dubbele infinitief — 'hebben kunnen bezoeken', not 'hebben kunnen bezocht'."
+          }
+        ]
+      }
+    }
+  ]
+}

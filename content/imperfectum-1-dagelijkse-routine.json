@@ -1,0 +1,247 @@
+{
+  "zone": "imperfectum",
+  "zoneName": "Imperfectum vs Perfectum",
+  "tiles": [
+    {
+      "id": "imperfectum-1-dagelijkse-routine",
+      "theme": "Dagelijkse routine",
+      "themeEnglish": "Daily routines — choosing between imperfectum (was doing) and perfectum (have done)",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Vroeger fietste ik elke ochtend langs de gracht naar mijn werk.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'fietste' for a habitual past action ('elke ochtend'). 'Vroeger' triggers inversion — persoonsvorm before subject. Kofschip: stem 'fiets-' ends in -s, so the imperfectum takes -te/-ten."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Gisteren ik ben vroeg opgestaan om bij de bakker brood te halen.",
+            "correctUse": false,
+            "explanation": "Niet correct. Inversion error. When a time adverb like 'gisteren' opens the sentence, the persoonsvorm comes before the subject: 'Gisteren ben ik vroeg opgestaan om...'. The perfectum construction itself is fine."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vanochtend heb ik snel een bakkie koffie gedronken voordat ik naar mijn werk ging.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum 'heb gedronken' for a completed action this morning. Inversion after 'vanochtend': 'heb ik', not 'ik heb'. The 'voordat'-bijzin places the finite verb 'ging' at the end (werkwoord achteraan in bijzin)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen ik klein was, heb ik altijd om half acht ontbeten.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Toen ik klein was' combined with 'altijd' establishes a habitual past — imperfectum needed, not perfectum. Correct: 'Toen ik klein was, ontbeet ik altijd om half acht.' Sterk werkwoord: ontbijten-ontbeet-ontbeten."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mijn buurvrouw maakte elke zondag soep en gaf ons altijd een grote kom.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum for a sustained past habit ('elke zondag... altijd'). 'Maakte' zwak (kofschip: stem 'maak-' ends in -k → -te), 'gaf' sterk (geven-gaf-gegeven). Two different conjugation patterns sitting comfortably side by side."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je vanochtend al ontbeten, of zullen we straks samen koffie drinken?",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum question for a (possibly) completed action this morning. 'Heb' as persoonsvorm at the start; 'ontbeten' as voltooid deelwoord at the end. No 'ge-' because 'ont-' is a non-separable prefix."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je gisteren nog met je moeder gebelt over het feestje?",
+            "correctUse": false,
+            "explanation": "Niet correct. Kofschip error in the voltooid deelwoord. 'Bellen' is regelmatig zwak; stem 'bel-' ends in -l, which is NOT in 't kofschip → past participle takes -d: 'gebeld'. The -t ending applies only when the stem ends in t/k/f/s/ch/p."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik sta elke ochtend om zeven uur op.",
+            "task": "Zet in de imperfectum, beginnend met 'Vroeger'.",
+            "acceptedAnswers": [
+              "Vroeger stond ik elke ochtend om zeven uur op.",
+              "Vroeger stond ik elke morgen om zeven uur op.",
+              "Vroeger stond ik om zeven uur op."
+            ],
+            "preferred": "Vroeger stond ik elke ochtend om zeven uur op.",
+            "explanation": "Imperfectum of sterk werkwoord 'staan': staan-stond-gestaan. 'Opstaan' is scheidbaar — 'op' moves to the end of the main clause. Inversion after 'Vroeger': persoonsvorm 'stond' before subject 'ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik drink koffie en lees de krant.",
+            "task": "Zet in de perfectum, beginnend met 'Vanmorgen'.",
+            "acceptedAnswers": [
+              "Vanmorgen heb ik koffie gedronken en de krant gelezen.",
+              "Vanmorgen heb ik koffie gedronken en heb ik de krant gelezen.",
+              "Vanmorgen heb ik een kopje koffie gedronken en de krant gelezen."
+            ],
+            "preferred": "Vanmorgen heb ik koffie gedronken en de krant gelezen.",
+            "explanation": "Two sterk werkwoorden in perfectum: drinken-gedronken, lezen-gelezen. With 'en' joining clauses and the same subject, the second 'heb' is usually dropped. Inversion after 'Vanmorgen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We fietsen elke zondag naar het Vondelpark.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "We fietsten elke zondag naar het Vondelpark.",
+              "Wij fietsten elke zondag naar het Vondelpark.",
+              "Elke zondag fietsten we naar het Vondelpark."
+            ],
+            "preferred": "We fietsten elke zondag naar het Vondelpark.",
+            "explanation": "'Fietsen' is regelmatig zwak. Stem 'fiets-' ends in -s, which IS in 't kofschip → imperfectum takes -te (singular) or -ten (plural): 'fietste/fietsten'. If you front 'elke zondag', the verb inverts to before the subject."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb mijn brood al opgegeten.",
+            "task": "Maak er een dagelijkse gewoonte in het verleden van (imperfectum).",
+            "acceptedAnswers": [
+              "Ik at mijn brood altijd op.",
+              "Ik at mijn brood meestal op.",
+              "Vroeger at ik mijn brood altijd op."
+            ],
+            "preferred": "Ik at mijn brood altijd op.",
+            "explanation": "From perfectum to habitual imperfectum. 'Eten' is sterk: eet-at-gegeten. Singular imperfectum 'at', plural 'aten'. 'Opeten' is scheidbaar — in a main clause the 'op' lands at the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn vader leest 's avonds altijd de krant.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Mijn vader las 's avonds altijd de krant.",
+              "'s Avonds las mijn vader altijd de krant.",
+              "Mijn vader las altijd 's avonds de krant."
+            ],
+            "preferred": "Mijn vader las 's avonds altijd de krant.",
+            "explanation": "'Lezen' is sterk: lees-las-gelezen. Singular imperfectum 'las', plural 'lazen'. Habitual past calls for imperfectum. Fronting ''s avonds' triggers inversion: 'las mijn vader'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kook bijna elke avond zelf.",
+            "task": "Zet in de perfectum voor één specifieke avond, beginnend met 'Gisteren'.",
+            "acceptedAnswers": [
+              "Gisteren heb ik zelf gekookt.",
+              "Gisteren heb ik zelf gekookt voor ons.",
+              "Gisteren heb ik 's avonds zelf gekookt."
+            ],
+            "preferred": "Gisteren heb ik zelf gekookt.",
+            "explanation": "'Koken' regelmatig zwak. Stem 'kook-' ends in -k (kofschip) → past participle 'gekookt' with -t. Perfectum for a single completed event. Inversion after 'Gisteren'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij werkt al jaren bij dezelfde bank.",
+            "task": "Zet in de imperfectum, beginnend met 'Destijds'.",
+            "acceptedAnswers": [
+              "Destijds werkte hij al jaren bij dezelfde bank.",
+              "Destijds werkte hij bij dezelfde bank.",
+              "Destijds werkte hij al jaren voor dezelfde bank."
+            ],
+            "preferred": "Destijds werkte hij al jaren bij dezelfde bank.",
+            "explanation": "'Werken' regelmatig zwak. Stem 'werk-' ends in -k (kofschip) → imperfectum 'werkte'. 'Destijds' (back then) sets a past frame and triggers inversion: 'werkte hij'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "When I was young, I always cycled to school.",
+            "modelAnswer": "Toen ik jong was, fietste ik altijd naar school.",
+            "alternatives": [
+              "Toen ik klein was, fietste ik altijd naar school.",
+              "Toen ik jong was, ging ik altijd op de fiets naar school."
+            ],
+            "note": "Imperfectum 'fietste' for a habit in the past. 'Toen' opens a bijzin with finite verb 'was' at the end. After a fronted bijzin the main clause inverts: 'fietste ik'. 'Fietsen' is zwak; stem 'fiets-' ends in -s (in 't kofschip), so imperfectum takes -te/-ten."
+          },
+          {
+            "type": "translation",
+            "prompt": "This morning I drank two cups of coffee.",
+            "modelAnswer": "Vanochtend heb ik twee koppen koffie gedronken.",
+            "alternatives": [
+              "Vanochtend heb ik twee kopjes koffie gedronken.",
+              "Ik heb vanochtend twee koppen koffie gedronken."
+            ],
+            "note": "Perfectum 'heb gedronken' for a completed action today — natural in Dutch even where English uses simple past. Inversion after 'Vanochtend': 'heb ik'. 'Drinken' is sterk: drink-dronk-gedronken. 'Koppen' suggests proper mugs; 'kopjes' is the cosier register — both heard daily."
+          },
+          {
+            "type": "translation",
+            "prompt": "We used to eat together every Sunday.",
+            "modelAnswer": "Vroeger aten we elke zondag samen.",
+            "alternatives": [
+              "We aten vroeger elke zondag samen.",
+              "Vroeger aten wij elke zondag samen."
+            ],
+            "note": "Imperfectum for a recurring past habit — Dutch has no separate 'used to' form. 'Eten' is sterk: eet-at-gegeten; plural imperfectum 'aten'. Inversion after 'Vroeger'. 'We' (unstressed) is more natural in spoken Dutch; use 'wij' only to emphasise the subject."
+          },
+          {
+            "type": "translation",
+            "prompt": "Have you read the paper yet today?",
+            "modelAnswer": "Heb je vandaag de krant al gelezen?",
+            "alternatives": [
+              "Heb je de krant vandaag al gelezen?",
+              "Heb je vandaag al de krant gelezen?"
+            ],
+            "note": "Perfectum 'heb gelezen' — a clean fit for English 'have you read'. 'Lezen' is sterk: lees-las-gelezen. 'Al' (already/yet) pairs naturally with the perfectum. The finite verb 'heb' opens the vraag. 'Vandaag' and 'al' both sit flexibly mid-sentence."
+          },
+          {
+            "type": "translation",
+            "prompt": "My mother always made pancakes on Saturday.",
+            "modelAnswer": "Mijn moeder bakte op zaterdag altijd pannenkoeken.",
+            "alternatives": [
+              "Mijn moeder maakte op zaterdag altijd pannenkoeken.",
+              "Op zaterdag bakte mijn moeder altijd pannenkoeken."
+            ],
+            "note": "Imperfectum for a sustained past habit. 'Bakken' is more idiomatic for pannenkoeken than 'maken' — Dutch speakers bake them. Both verbs are zwak with stems in -k (kofschip): 'bakte', 'maakte'. Fronting 'op zaterdag' triggers inversion."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "Yesterday I cycled to the market because I'd forgotten to buy bread.",
+            "modelAnswer": "Gisteren ben ik naar de markt gefietst omdat ik vergeten was brood te kopen.",
+            "alternatives": [
+              "Gisteren fietste ik naar de markt omdat ik was vergeten brood te kopen.",
+              "Gisteren ben ik naar de markt gefietst omdat ik vergeten was om brood te kopen."
+            ],
+            "note": "Several constructions in one go: perfectum 'ben gefietst' (fietsen with direction takes 'zijn') or narrative imperfectum 'fietste'; bijzin with 'omdat' (finite verb at the end); plusquamperfectum 'vergeten was' / 'was vergeten' for the earlier action; 'te + infinitief' for 'to buy', with 'om' optional after 'vergeten'. Inversion after 'Gisteren'."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I lived in London, I always drank tea, but now I prefer coffee.",
+            "modelAnswer": "Toen ik in Londen woonde, dronk ik altijd thee, maar tegenwoordig drink ik liever koffie.",
+            "alternatives": [
+              "Toen ik in Londen woonde, dronk ik altijd thee, maar nu heb ik liever koffie.",
+              "Toen ik nog in Londen woonde, dronk ik altijd thee, maar nu drink ik liever koffie."
+            ],
+            "note": "Bijzin with 'toen' for a defined past period — finite verb 'woonde' at the end. Imperfectum 'dronk' for habit. 'Maar' is a nevenschikkend voegwoord — no inversion after it on its own. But 'tegenwoordig' / 'nu' fronted in the next clause does trigger inversion: 'drink ik liever'. 'Liever' = 'prefer' adverbially. Adding 'nog' ('still then') sounds very natural."
+          },
+          {
+            "type": "translation",
+            "prompt": "This morning I had already eaten before my partner woke up.",
+            "modelAnswer": "Vanochtend had ik al gegeten voordat mijn partner wakker werd.",
+            "alternatives": [
+              "Ik had vanochtend al gegeten voordat mijn partner wakker werd.",
+              "Vanochtend had ik al ontbeten voordat mijn partner wakker werd."
+            ],
+            "note": "Plusquamperfectum 'had gegeten' for an action completed before another past action — maps directly onto English 'had already eaten'. 'Voordat' opens a bijzin; finite verb 'werd' goes to the end. 'Wakker worden' = to wake up; the imperfectum is 'werd' (worden-werd-geworden), NOT 'was' — a common slip worth pinning down. Inversion after 'Vanochtend'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We used to walk to the bakery every Saturday, but it closed two years ago.",
+            "modelAnswer": "We liepen vroeger elke zaterdag naar de bakker, maar die is twee jaar geleden dichtgegaan.",
+            "alternatives": [
+              "Vroeger liepen we elke zaterdag naar de bakker, maar twee jaar geleden is hij dichtgegaan.",
+              "Vroeger liepen wij elke zaterdag naar de bakker, maar die is twee jaar geleden dichtgegaan."
+            ],
+            "note": "Imperfectum 'liepen' (lopen-liep-gelopen, sterk) for a habit. Perfectum 'is dichtgegaan' for a completed past event — 'dichtgaan' takes 'zijn' (verandering van toestand) and is scheidbaar, so the voltooid deelwoord is written as one word with 'ge' inside: 'dicht-ge-gaan'. 'Die' refers back to 'de bakker'; in spoken Dutch 'die' is far more common than 'hij' for shops and things."
+          },
+          {
+            "type": "translation",
+            "prompt": "I usually had breakfast at seven, but yesterday I overslept.",
+            "modelAnswer": "Ik ontbeet meestal om zeven uur, maar gisteren heb ik me verslapen.",
+            "alternatives": [
+              "Meestal ontbeet ik om zeven uur, maar gisteren heb ik me verslapen.",
+              "Ik ontbeet meestal om zeven uur, maar gisteren versliep ik me."
+            ],
+            "note": "Imperfectum 'ontbeet' for the habit (ontbijten is sterk: ontbijt-ontbeet-ontbeten). For 'overslept' both perfectum 'heb me verslapen' and imperfectum 'versliep me' work. 'Zich verslapen' is reflexief. Crucially, 'ver-' is a non-separable prefix → NO 'ge-' in the voltooid deelwoord: 'verslapen', not 'geverslapen'. Inversion after 'gisteren'; reflexive pronoun 'me' lands just after the persoonsvorm."
+          }
+        ]
+      }
+    }
+  ]
+}

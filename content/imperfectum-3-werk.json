@@ -1,0 +1,247 @@
+{
+  "zone": "imperfectum",
+  "zoneName": "Imperfectum vs Perfectum",
+  "tiles": [
+    {
+      "id": "imperfectum-3-werk",
+      "theme": "Werk",
+      "themeEnglish": "Work — choosing between imperfectum (was doing) and perfectum (have done)",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Toen ik net begon, werkte ik vaak in de nachtdienst.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'werkte' for a habitual situation in the past. 'Toen ik net begon' is a bijzin (finite verb 'begon' at the end), so the main clause inverts: 'werkte ik'. 'Werken' zwak; stem 'werk-' on -k (kofschip) → 'werkte'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vorige week ik heb een lastig project afgerond.",
+            "correctUse": false,
+            "explanation": "Niet correct. Inversion error after the fronted time phrase. Correct: 'Vorige week heb ik een lastig project afgerond.' Anything other than the subject in first position pushes the persoonsvorm in front of the subject."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vanochtend heb ik drie vergaderingen achter elkaar gehad.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum 'heb gehad' for a sequence of completed events this morning. 'Hebben' as both auxiliary and main verb here. Inversion after 'Vanochtend'. 'Achter elkaar' = back to back — a natural Dutch turn of phrase."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Tijdens de vergadering was er hard aan de nieuwe planning gewerkt.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Tijdens' (during) signals an ongoing process, which needs the worden-passive: 'werd er hard gewerkt'. 'Was gewerkt' is a plusquamperfectum-passive meaning the work had already been done beforehand — that clashes with 'tijdens'. Worden = the action unfolding; zijn = the result/state."
+          },
+          {
+            "type": "recognition",
+            "prompt": "In mijn eerste baan werden we elke maandag door de manager toegesproken.",
+            "correctUse": true,
+            "explanation": "Correct. Passive imperfectum with 'worden': 'werden toegesproken' for a recurring past action. Plural 'werden'; agent introduced with 'door'. Worden (not zijn) is right because the focus is the repeated event. Inversion after 'In mijn eerste baan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb dit weekend helaas moeten overwerken.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum with modal: 'heb moeten overwerken' — dubbele infinitief, NOT 'heb gemoeten overwerken'. When a modal in perfectum carries another verb, both stand as infinitives, and the modal sits before the main verb at the clause end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn baas gisteren een lange mail gestuurt over het probleem.",
+            "correctUse": false,
+            "explanation": "Niet correct. Kofschip error. 'Sturen' is regular zwak; stem 'stuur-' ends in -r, which is NOT in 't kofschip → past participle takes -d: 'gestuurd'. The -t form would only apply after t/k/f/s/ch/p."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik los het probleem snel op.",
+            "task": "Zet in de perfectum, beginnend met 'Gisteren'.",
+            "acceptedAnswers": [
+              "Gisteren heb ik het probleem snel opgelost.",
+              "Ik heb het probleem gisteren snel opgelost.",
+              "Gisteren heb ik het probleem meteen opgelost."
+            ],
+            "preferred": "Gisteren heb ik het probleem snel opgelost.",
+            "explanation": "'Oplossen' zwak en scheidbaar. Stem 'los-' ends in -s (kofschip) → past participle 'opgelost' with -t, prefix rejoined. Inversion after 'Gisteren': 'heb ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij solliciteert op een nieuwe functie.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Hij solliciteerde op een nieuwe functie.",
+              "Hij solliciteerde naar een nieuwe functie.",
+              "Hij solliciteerde op een nieuwe baan."
+            ],
+            "preferred": "Hij solliciteerde op een nieuwe functie.",
+            "explanation": "'Solliciteren' zwak. Stem 'solliciteer-' ends in -r (not in 't kofschip) → imperfectum -de: 'solliciteerde'. Both 'solliciteren op' and 'solliciteren naar' een functie are heard."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben elke vrijdag een teamoverleg gehad.",
+            "task": "Zet in de imperfectum (vaste gewoonte).",
+            "acceptedAnswers": [
+              "We hadden elke vrijdag een teamoverleg.",
+              "Elke vrijdag hadden we een teamoverleg.",
+              "Wij hadden elke vrijdag een teamoverleg."
+            ],
+            "preferred": "We hadden elke vrijdag een teamoverleg.",
+            "explanation": "'Hebben' → imperfectum 'had/hadden'; plural 'hadden'. For a fixed recurring arrangement, imperfectum reads more naturally than perfectum, which would frame it as a finished tally. Fronting 'elke vrijdag' triggers inversion."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De directeur geeft een presentatie.",
+            "task": "Zet in de passieve imperfectum (met 'worden').",
+            "acceptedAnswers": [
+              "De presentatie werd door de directeur gegeven.",
+              "Er werd door de directeur een presentatie gegeven.",
+              "Door de directeur werd een presentatie gegeven."
+            ],
+            "preferred": "De presentatie werd door de directeur gegeven.",
+            "explanation": "Passive imperfectum uses 'worden': 'werd gegeven'. The object becomes the subject; the agent gets 'door'. 'Geven' sterk: gaf-gegeven. Worden carries the action — using 'was gegeven' would shift the meaning to a completed prior state."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik krijg een vaste aanstelling.",
+            "task": "Zet in de perfectum.",
+            "acceptedAnswers": [
+              "Ik heb een vaste aanstelling gekregen.",
+              "Ik heb een vast contract gekregen.",
+              "Ik heb een vaste baan gekregen."
+            ],
+            "preferred": "Ik heb een vaste aanstelling gekregen.",
+            "explanation": "'Krijgen' sterk: krijg-kreeg-gekregen. Auxiliary 'hebben' (no movement, no change of state of the subject itself). 'Vaste aanstelling' / 'vast contract' = permanent position."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn loopbaan begint bij een klein bedrijf.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Mijn loopbaan begon bij een klein bedrijf.",
+              "Mijn carrière begon bij een klein bedrijf.",
+              "Mijn loopbaan begon bij een kleine onderneming."
+            ],
+            "preferred": "Mijn loopbaan begon bij een klein bedrijf.",
+            "explanation": "'Beginnen' sterk: begin-begon-begonnen. As the finite verb in imperfectum it's simply 'begon' — no auxiliary needed. (Perfectum would be 'is begonnen', with 'zijn'.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze bespreekt de planning met haar team.",
+            "task": "Zet in de perfectum, beginnend met 'Vanmiddag'.",
+            "acceptedAnswers": [
+              "Vanmiddag heeft ze de planning met haar team besproken.",
+              "Vanmiddag heeft zij de planning met haar team besproken.",
+              "Vanmiddag heeft ze met haar team de planning besproken."
+            ],
+            "preferred": "Vanmiddag heeft ze de planning met haar team besproken.",
+            "explanation": "'Bespreken' sterk: bespreek-besprak-besproken. No 'ge-' in the participle because 'be-' is non-separable. Inversion after 'Vanmiddag': 'heeft ze'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I worked night shifts for ten years.",
+            "modelAnswer": "Ik heb tien jaar nachtdiensten gedraaid.",
+            "alternatives": [
+              "Ik heb tien jaar lang nachtdiensten gedraaid.",
+              "Ik werkte tien jaar in de nachtdienst."
+            ],
+            "note": "'Nachtdiensten draaien' is the idiomatic Dutch for working shifts — Dutch 'draaien' (literally 'turn') is the verb of choice for shift work. Perfectum 'heb gedraaid' for a completed stretch, or imperfectum 'werkte' for the descriptive period — both fine. 'Draaien' zwak: draai-draaide-gedraaid."
+          },
+          {
+            "type": "translation",
+            "prompt": "When did you start at this company?",
+            "modelAnswer": "Wanneer ben je bij dit bedrijf begonnen?",
+            "alternatives": [
+              "Wanneer ben je bij dit bedrijf gaan werken?",
+              "Wanneer ben je hier komen werken?"
+            ],
+            "note": "Perfectum question 'ben begonnen' — 'beginnen' is sterk and takes 'zijn'. Question word 'wanneer' first, persoonsvorm 'ben' second. 'Gaan/komen werken' uses dubbele infinitief, also with 'zijn' as auxiliary — a very natural alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "My colleague has just sent the report.",
+            "modelAnswer": "Mijn collega heeft het rapport net verstuurd.",
+            "alternatives": [
+              "Mijn collega heeft net het rapport verstuurd.",
+              "Mijn collega heeft het rapport zojuist verstuurd."
+            ],
+            "note": "Perfectum 'heeft verstuurd' for a just-completed action; 'net' / 'zojuist' = just. 'Versturen' zwak; stem 'verstuur-' ends in -r (not kofschip) → 'verstuurd' with -d, no 'ge-' because 'ver-' is non-separable. The slip 'verstuurt' is a classic kofschip trap — resist it."
+          },
+          {
+            "type": "translation",
+            "prompt": "In those days we were paid in cash every week.",
+            "modelAnswer": "In die tijd werden we elke week contant uitbetaald.",
+            "alternatives": [
+              "In die tijd werden we elke week cash uitbetaald.",
+              "Vroeger werden we elke week contant betaald."
+            ],
+            "note": "Passive imperfectum with 'worden': 'werden uitbetaald' — a recurring action of being paid takes 'worden', not 'zijn'. Plural 'werden'. Inversion after 'In die tijd'. 'Contant' is the formal word; 'cash' is extremely common in everyday speech. 'Uitbetalen' (pay out) is scheidbaar: uitbetaald."
+          },
+          {
+            "type": "translation",
+            "prompt": "Did you have to work last weekend?",
+            "modelAnswer": "Heb je afgelopen weekend moeten werken?",
+            "alternatives": [
+              "Moest je afgelopen weekend werken?",
+              "Heb je vorig weekend moeten werken?"
+            ],
+            "note": "Two idiomatic routes: perfectum with dubbele infinitief 'heb...moeten werken' (NOT 'gemoeten werken'), or plain imperfectum 'moest...werken'. Both common in speech. The modal carries the obligation; the main verb 'werken' stays in the infinitive. 'Afgelopen/vorig weekend' = last weekend."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'd already finished the report when my manager asked me to redo it.",
+            "modelAnswer": "Ik had het rapport al afgerond toen mijn manager me vroeg om het opnieuw te doen.",
+            "alternatives": [
+              "Ik was al klaar met het rapport toen mijn manager me vroeg het over te doen.",
+              "Ik had het rapport al af toen mijn manager vroeg of ik het opnieuw wilde doen."
+            ],
+            "note": "Plusquamperfectum 'had afgerond' for the earlier completed action. 'Toen'-bijzin (finite verb 'vroeg' at the end). 'Om...te'-construction for the request: 'om het opnieuw te doen'. 'Afronden' zwak scheidbaar: rondde af / afgerond (stem 'rond-' on -d → -de, written -dde in imperfectum). 'Het over te doen' (overdoen) is a tidy alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I started, we still wrote everything by hand, but now everything is done digitally.",
+            "modelAnswer": "Toen ik begon, schreven we nog alles met de hand, maar nu wordt alles digitaal gedaan.",
+            "alternatives": [
+              "Toen ik begon, schreven we alles nog met de hand, maar tegenwoordig gaat alles digitaal.",
+              "Toen ik begon, deden we alles nog op papier, maar nu wordt alles digitaal gedaan."
+            ],
+            "note": "'Toen'-bijzin (finite verb 'begon' at the end). Imperfectum 'schreven' (schrijven sterk: schreef-geschreven) for the past habit. 'Maar' coordinates; fronted 'nu' triggers inversion. Present passive 'wordt gedaan' uses 'worden' — an ongoing process, not 'is gedaan' (a finished result). Past habit (imperfectum) set against present passive."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the system hadn't crashed, we would have been able to finish on time.",
+            "modelAnswer": "Als het systeem niet was gecrasht, hadden we op tijd kunnen afronden.",
+            "alternatives": [
+              "Als het systeem niet gecrasht was, hadden we het op tijd kunnen afronden.",
+              "Als het systeem niet was uitgevallen, hadden we op tijd klaar kunnen zijn."
+            ],
+            "note": "Plusquamperfectum in the 'als'-clause: 'was gecrasht' / 'gecrasht was' (crashing is a change of state → 'zijn'). Conditioneel verleden in the main clause with dubbele infinitief: 'hadden...kunnen afronden' — NOT 'kunnen afgerond'. Inversion after the 'als'-clause: 'hadden we'. 'Uitvallen' is the idiomatic Dutch alternative to the loanword 'crashen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "My boss told me yesterday that I'd been chosen for the new position.",
+            "modelAnswer": "Mijn baas vertelde me gisteren dat ik voor de nieuwe functie was gekozen.",
+            "alternatives": [
+              "Mijn baas vertelde me gisteren dat ik voor de nieuwe functie gekozen was.",
+              "Mijn baas zei gisteren tegen me dat ik de nieuwe functie had gekregen."
+            ],
+            "note": "Imperfectum 'vertelde' for the reporting verb. 'Dat'-bijzin with a passive plusquamperfectum: 'was gekozen' / 'gekozen was' — being chosen is an action, so it's a worden-passive ('koos-gekozen', kiezen sterk), here in the past perfect. The third option dodges the passive altogether with active 'had gekregen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I used to enjoy my work, but in the last few years it had become too stressful.",
+            "modelAnswer": "Vroeger had ik plezier in mijn werk, maar de laatste jaren was het te stressvol geworden.",
+            "alternatives": [
+              "Vroeger genoot ik van mijn werk, maar de laatste jaren was het te stressvol geworden.",
+              "Ik had vroeger plezier in mijn werk, maar de afgelopen jaren was het te stressvol geworden."
+            ],
+            "note": "Imperfectum for the past state/habit: 'had plezier' or 'genoot' (genieten sterk: genoot-genoten). 'Maar' marks the contrast. Plusquamperfectum 'was geworden' — 'worden' for becoming, and worden takes 'zijn' as its auxiliary (worden-werd-geworden). Fronted 'de laatste jaren' → inversion 'was het'. 'Plezier hebben in' and 'genieten van' are both idiomatic."
+          }
+        ]
+      }
+    }
+  ]
+}

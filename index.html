@@ -1139,37 +1139,109 @@
 
     const MASTERY_SIZES = [78, 62, 43, 33, 17];
 
-    const ACTIVE_TILE_INDEX = 0;
-    const ACTIVE_TILE_ID = 'er-1-plaatsbijwoord';
+    // TILE_MAP — which grid position (0-59) maps to which content file.
+    // The content file for any tile is content/<tileId>.json
+    // Tiles are grouped by topic so the wall reads as regions.
+    // To add content: create the JSON file named after the tileId below.
+    // To rearrange the wall: reorder this array. To leave a position empty: use null.
+    const TILE_MAP = [
+      // Imperfectum (positions 0-4)
+      'imperfectum-1-dagelijkse-routine',
+      'imperfectum-2-reizen',
+      'imperfectum-3-werk',
+      'imperfectum-4-weekend',
+      'imperfectum-5-eten-koken',
+      // Plusquamperfectum (5-8)
+      'plusquamperfectum-1-sequentieel',
+      'plusquamperfectum-2-spijt-en-regret',
+      'plusquamperfectum-3-indirecte-rede',
+      'plusquamperfectum-4-conditioneel-verleden',
+      // Passief (9-13)
+      'passief-1-nieuwsberichten',
+      'passief-2-recepten-en-processen',
+      'passief-3-officieel-taalgebruik',
+      'passief-4-worden-vs-zijn',
+      'passief-5-passief-perfectum',
+      // Modaal + dubbele infinitief (14-18)
+      'modaal-1-kunnen',
+      'modaal-2-moeten',
+      'modaal-3-mogen-en-willen',
+      'modaal-4-dubbele-infinitief',
+      'modaal-5-modaal-in-bijzin',
+      // Er (19-23) — er-1 is the one with content today
+      'er-1-plaatsbijwoord',
+      'er-2-er-plus-voorzetsel',
+      'er-3-er-plus-getal',
+      'er-4-er-als-plaatshouder',
+      'er-5-er-gemengd-en-foutjes',
+      // Werkwoord + voorzetsel (24-28)
+      'vwvz-1-denken-aan-praten-over',
+      'vwvz-2-houden-van-zorgen-voor',
+      'vwvz-3-wachten-op-rekenen-op',
+      'vwvz-4-zich-verheugen-op-zich-ergeren-aan',
+      'vwvz-5-gemengd',
+      // Inversie (29-32)
+      'inversie-1-tijd-vooraan',
+      'inversie-2-plaats-vooraan',
+      'inversie-3-na-voegwoord',
+      'inversie-4-in-vraag',
+      // Bijzinnen (33-37)
+      'bijzin-1-omdat-want',
+      'bijzin-2-dat-of',
+      'bijzin-3-hoewel-ondanks',
+      'bijzin-4-terwijl-toen-voordat',
+      'bijzin-5-bijzin-met-modaal',
+      // Om...te (38-41)
+      'omte-1-doel',
+      'omte-2-na-werkwoorden',
+      'omte-3-na-adjectieven',
+      'omte-4-met-ontkenning',
+      // Zouden + conditional (42-45)
+      'zouden-1-hypothetisch',
+      'zouden-2-beleefd-verzoek',
+      'zouden-3-advies',
+      'zouden-4-indirecte-rede',
+      // Reflexief (46-49)
+      'reflexief-1-echt-reflexief',
+      'reflexief-2-optioneel-reflexief',
+      'reflexief-3-lichaamsverzorging',
+      'reflexief-4-emoties',
+      // Scheidbaar (50-54)
+      'scheidbaar-1-aankomen-vertrekken',
+      'scheidbaar-2-opstaan-uitgaan',
+      'scheidbaar-3-meegaan-meekomen',
+      'scheidbaar-4-uitnodigen-uitzoeken',
+      'scheidbaar-5-perfectum-scheidbaar',
+      // Foutjesgids (55-59)
+      'foutjes-1-inversie-na-tijd',
+      'foutjes-2-enige-spelling',
+      'foutjes-3-worden-zijn-passief',
+      'foutjes-4-voltooid-vs-infinitief-dubbel',
+      'foutjes-5-kofschip'
+    ];
 
-    function sizeForUntouchedTile(row, col) {
-      const positionProgress = (row / (ROWS - 1)) * 0.6 + (col / (COLS - 1)) * 0.4;
-      const masteryLevel = Math.round((1 - positionProgress) * 4);
-      return MASTERY_SIZES[Math.max(0, Math.min(4, masteryLevel))];
-    }
-
-    function sizeForActiveTile() {
-      const levelsComplete = getMasteryForTile(ACTIVE_TILE_ID);
-      return MASTERY_SIZES[levelsComplete];
-    }
+    // Which tile is currently open (set when a tile is tapped)
+    let currentTileId = null;
+    let currentTileTheme = '';
 
     function buildWall() {
       grid.innerHTML = '';
 
       for (let i = 0; i < COLS * ROWS; i++) {
-        const row = Math.floor(i / COLS);
-        const col = i % COLS;
+        const tileId = TILE_MAP[i] || null;
 
-        const isActive = (i === ACTIVE_TILE_INDEX);
-        const baseSize = isActive ? sizeForActiveTile() : sizeForUntouchedTile(row, col);
-        const variation = isActive ? 0 : (Math.random() - 0.5) * 6;
+        // Size by this tile's mastery. Untouched (mastery 0) = largest (78%).
+        // As the tile is practised, its plus shrinks. The wall is a map of practice.
+        const mastery = tileId ? getMasteryForTile(tileId) : 0;
+        const baseSize = MASTERY_SIZES[mastery];
+        const variation = (Math.random() - 0.5) * 3;
         const plusPercent = baseSize + variation;
 
         const tile = document.createElement('button');
         tile.className = 'tile';
         tile.dataset.index = i;
-        tile.dataset.active = isActive;
-        tile.setAttribute('aria-label', `tile ${i + 1}${isActive ? ', active' : ', coming soon'}`);
+        if (tileId) tile.dataset.tileId = tileId;
+        tile.setAttribute('aria-label', tileId ? `tile ${i + 1}: ${tileId}` : `tile ${i + 1}, empty`);
 
         const plus = document.createElement('span');
         plus.className = 'tile-plus';
@@ -1212,6 +1284,17 @@
       snapView.classList.remove('hidden');
     }
 
+    // Open a tile: load its content file, and only open the snap view if it exists.
+    async function openTile(tileId) {
+      const loaded = await loadContent(tileId);
+      if (!loaded) {
+        showToast('Coming soon — content in progress');
+        return;
+      }
+      currentTileId = tileId;
+      openSnapView();
+    }
+
     function closeSnapView() {
       snapView.classList.add('hidden');
       wallView.classList.remove('hidden');
@@ -1221,12 +1304,9 @@
     grid.addEventListener('click', (e) => {
       const tile = e.target.closest('.tile');
       if (!tile) return;
-      const tileIndex = parseInt(tile.dataset.index, 10);
-
-      if (tileIndex === ACTIVE_TILE_INDEX) {
-        openSnapView();
-      } else {
-        showToast('Coming soon — content in progress');
+      const tileId = tile.dataset.tileId;
+      if (tileId) {
+        openTile(tileId);
       }
     });
 
@@ -1439,26 +1519,25 @@
     // ===== Content loading =====
 
     let zoneContent = null;
-    let activeTileTheme = '';
     let levelExercises = { 1: null, 2: null, 3: null, 4: null };
 
-    async function loadContent() {
+    // Load content for a given tile. Returns true on success, false if the file
+    // doesn't exist yet (tile not authored) or fails to parse.
+    async function loadContent(tileId) {
       try {
-        const response = await fetch('content/er.json');
+        const response = await fetch('content/' + tileId + '.json');
+        if (!response.ok) return false;
         zoneContent = await response.json();
         const tile = zoneContent.tiles[0];
-        activeTileTheme = tile.theme;
+        currentTileTheme = tile.theme || '';
         levelExercises[1] = tile.levels['1'];
         levelExercises[2] = tile.levels['2'];
         levelExercises[3] = tile.levels['3'];
         levelExercises[4] = tile.levels['4'];
-        renderQuestion(1);
-        renderQuestion(2);
-        renderQuestion(3);
-        renderQuestion(4);
+        return true;
       } catch (err) {
-        console.error('Could not load content:', err);
-        document.getElementById('prompt-1').textContent = 'Content failed to load. Run from a local server.';
+        console.error('Could not load content for', tileId, err);
+        return false;
       }
     }
 
@@ -1545,7 +1624,7 @@
       completeEl.classList.add('visible');
       document.getElementById(`score-${level}`).textContent =
         `${levelState[level].correct} / ${levelExercises[level].length} correct`;
-      recordLevelComplete(ACTIVE_TILE_ID, level);
+      recordLevelComplete(currentTileId, level);
     }
 
     // ===== Save-to-queue handler (shared across all levels) =====
@@ -1556,8 +1635,8 @@
 
       // Build queue item with whatever fields exist on this exercise
       const item = {
-        tileId: ACTIVE_TILE_ID,
-        theme: activeTileTheme,
+        tileId: currentTileId,
+        theme: currentTileTheme,
         level: level,
         type: ex.type,
         prompt: ex.prompt
@@ -1709,8 +1788,6 @@
         }, 300);
       });
     });
-
-    loadContent();
 
   </script>
 </body>
