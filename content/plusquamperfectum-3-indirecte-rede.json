@@ -1,0 +1,248 @@
+{
+  "zone": "plusquamperfectum",
+  "zoneName": "Plusquamperfectum",
+  "tiles": [
+    {
+      "id": "plusquamperfectum-3-indirecte-rede",
+      "theme": "Indirecte rede",
+      "themeEnglish": "Reported speech — the plusquamperfectum for what someone said had (already) happened",
+      "recognitionQuestion": "Is the plusquamperfectum used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Hij vertelde dat hij de hele nacht had doorgewerkt.",
+            "correctUse": true,
+            "explanation": "Correct. Under the past reporting verb 'vertelde', the anterior action backshifts to the plusquamperfectum: 'had doorgewerkt' ('doorwerken' scheidbaar, kofschip -k → 'doorgewerkt', hebben). The verb cluster sits at the end of the 'dat'-bijzin."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze zei dat ze haar sleutels heeft verloren.",
+            "correctUse": false,
+            "explanation": "Niet correct. Backshift failure. Under the past reporting verb 'zei', the losing must move to the plusquamperfectum: 'dat ze haar sleutels had verloren'. Perfectum 'heeft verloren' clashes with the past standpoint of the report."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze vroeg of ik al naar huis was gegaan.",
+            "correctUse": true,
+            "explanation": "Correct. An indirect yes/no question uses 'of', with the verb cluster at the end: 'was gegaan' ('gaan', movement → 'zijn'). 'Al' (already) marks the anterior event. The plusquamperfectum is the natural tense under the past 'vroeg'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij beweerde dat hij nooit in Parijs had geweest.",
+            "correctUse": false,
+            "explanation": "Niet correct. Wrong auxiliary. 'Zijn' (to be) forms its own perfect with 'zijn', so the plusquamperfectum is 'was geweest', not 'had geweest': 'dat hij nooit in Parijs was geweest'. 'Beweren' = to claim. Tense and word order are otherwise fine."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze legde uit dat ze door de file niet op tijd had kunnen komen.",
+            "correctUse": true,
+            "explanation": "Correct. Reported plusquamperfectum with a modal → dubbele infinitief: 'had kunnen komen', not 'had kunnen gekomen'. 'Uitleggen' is the reporting verb; 'door de file' = because of the traffic jam. The whole verb cluster closes the bijzin."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik dacht dat je allang vertrokken was.",
+            "correctUse": true,
+            "explanation": "Correct. 'Dacht dat ...' reports a past thought, so the anterior action takes the plusquamperfectum: 'vertrokken was' ('vertrekken', zijn). In the bijzin the cluster can be 'was vertrokken' or 'vertrokken was'. 'Allang' = long since."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij gaf toe dat hij het niet alleen had kunnen opgelost.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dubbele infinitief error in reported speech. After 'had kunnen' the second verb stays infinitive: 'kunnen oplossen', not 'kunnen opgelost'. Correct: 'Hij gaf toe dat hij het niet alleen had kunnen oplossen.'"
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "\"Ik heb de hele taart opgegeten,\" zei hij.",
+            "task": "Maak indirecte rede, beginnend met 'Hij zei dat ...'.",
+            "acceptedAnswers": [
+              "Hij zei dat hij de hele taart had opgegeten.",
+              "Hij zei dat hij de hele taart op had gegeten.",
+              "Hij zei dat hij de hele taart helemaal had opgegeten."
+            ],
+            "preferred": "Hij zei dat hij de hele taart had opgegeten.",
+            "explanation": "Direct perfectum 'heb opgegeten' backshifts to plusquamperfectum under the past reporting verb: 'had opgegeten'. 'Opeten' scheidbaar → 'opgegeten'. The cluster goes to the bijzin end; 'op had gegeten' is the alternative order."
+          },
+          {
+            "type": "transformation",
+            "prompt": "\"Ik ben gevallen op de gladde stoep,\" gaf ze toe.",
+            "task": "Maak indirecte rede, beginnend met 'Ze gaf toe dat ...'.",
+            "acceptedAnswers": [
+              "Ze gaf toe dat ze op de gladde stoep was gevallen.",
+              "Ze gaf toe dat ze op de gladde stoep gevallen was.",
+              "Ze gaf toe dat ze op het gladde trottoir was gevallen."
+            ],
+            "preferred": "Ze gaf toe dat ze op de gladde stoep was gevallen.",
+            "explanation": "Reported anterior event with 'vallen' (change of position) → plusquamperfectum with 'zijn': 'was gevallen' (vallen sterk: viel-gevallen). The pronoun shifts 'ik' → 'ze'. 'Stoep' / 'trottoir' = pavement."
+          },
+          {
+            "type": "transformation",
+            "prompt": "\"Ik heb je gisteren gebeld,\" zei mijn moeder.",
+            "task": "Maak indirecte rede, beginnend met 'Mijn moeder zei dat ...'.",
+            "acceptedAnswers": [
+              "Mijn moeder zei dat ze me de dag ervoor had gebeld.",
+              "Mijn moeder zei dat ze me de vorige dag had gebeld.",
+              "Mijn moeder zei dat ze me daags ervoor had gebeld."
+            ],
+            "preferred": "Mijn moeder zei dat ze me de dag ervoor had gebeld.",
+            "explanation": "Two shifts: 'heb gebeld' → plusquamperfectum 'had gebeld', and the time word 'gisteren' → 'de dag ervoor' once you report from a past standpoint. 'Bellen' → 'gebeld' (kofschip: -l → -d, never 'gebelt')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "\"Heb je de deur op slot gedaan?\" vroeg hij.",
+            "task": "Maak een indirecte vraag, beginnend met 'Hij vroeg of ...'.",
+            "acceptedAnswers": [
+              "Hij vroeg of ik de deur op slot had gedaan.",
+              "Hij vroeg of ik de deur op slot gedaan had.",
+              "Hij vroeg of ik de voordeur op slot had gedaan."
+            ],
+            "preferred": "Hij vroeg of ik de deur op slot had gedaan.",
+            "explanation": "A direct yes/no question becomes an indirect question with 'of', verb cluster to the end: 'had gedaan'. The perfectum 'heb je gedaan' backshifts to the plusquamperfectum. 'Op slot doen' = to lock."
+          },
+          {
+            "type": "transformation",
+            "prompt": "\"Waarom ben je niet gekomen?\" vroeg ze.",
+            "task": "Maak een indirecte vraag, beginnend met 'Ze vroeg waarom ...'.",
+            "acceptedAnswers": [
+              "Ze vroeg waarom ik niet was gekomen.",
+              "Ze vroeg waarom ik niet gekomen was.",
+              "Ze vroeg waarom ik niet was komen opdagen."
+            ],
+            "preferred": "Ze vroeg waarom ik niet was gekomen.",
+            "explanation": "A 'wh'-question becomes indirect with the question word ('waarom') acting as the conjunction and the verb at the end: 'was gekomen' ('komen', movement → 'zijn'). 'Niet was komen opdagen' (hadn't shown up) is a colloquial alternative with a dubbele infinitief."
+          },
+          {
+            "type": "transformation",
+            "prompt": "\"Ik kon hem niet bereiken,\" legde ze uit.",
+            "task": "Maak indirecte rede in de plusquamperfectum, beginnend met 'Ze legde uit dat ...'.",
+            "acceptedAnswers": [
+              "Ze legde uit dat ze hem niet had kunnen bereiken.",
+              "Ze legde uit dat ze hem maar niet had kunnen bereiken.",
+              "Ze legde uit dat ze hem niet had weten te bereiken."
+            ],
+            "preferred": "Ze legde uit dat ze hem niet had kunnen bereiken.",
+            "explanation": "Direct imperfectum-modal 'kon ... bereiken' backshifts to plusquamperfectum-modal: 'had kunnen bereiken' — dubbele infinitief, 'kunnen bereiken' not 'kunnen bereikt'. 'Had weten te bereiken' (had managed to reach) is a natural alternative."
+          },
+          {
+            "type": "transformation",
+            "prompt": "\"Ik heb mijn belofte gehouden,\" hield hij vol.",
+            "task": "Maak indirecte rede, beginnend met 'Hij hield vol dat ...'.",
+            "acceptedAnswers": [
+              "Hij hield vol dat hij zijn belofte had gehouden.",
+              "Hij hield vol dat hij zich aan zijn belofte had gehouden.",
+              "Hij hield vol dat hij woord had gehouden."
+            ],
+            "preferred": "Hij hield vol dat hij zijn belofte had gehouden.",
+            "explanation": "'Volhouden' (to insist/maintain) is the reporting verb. Perfectum 'heb gehouden' → plusquamperfectum 'had gehouden' ('houden' sterk: hield-gehouden). 'Zich aan een belofte houden' and 'woord houden' both mean to keep one's word."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "He said he had already eaten.",
+            "modelAnswer": "Hij zei dat hij al had gegeten.",
+            "alternatives": [
+              "Hij zei dat hij al gegeten had.",
+              "Hij zei dat hij allang had gegeten."
+            ],
+            "note": "Reported speech with backshift: the eating preceded the saying, so 'had gegeten' under the past reporting verb 'zei'. The 'dat'-bijzin sends the cluster to the end, in either order ('had gegeten' / 'gegeten had'). 'Eten' takes 'hebben'. 'Allang' = long since."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me she had never been to Italy.",
+            "modelAnswer": "Ze vertelde me dat ze nog nooit in Italië was geweest.",
+            "alternatives": [
+              "Ze vertelde me dat ze nog nooit in Italië geweest was.",
+              "Ze vertelde dat ze nooit eerder in Italië was geweest."
+            ],
+            "note": "Plusquamperfectum 'was geweest' — 'zijn' serves as both the verb (to be) and its own auxiliary. 'Nog nooit' = never (before then). 'Vertellen' usually takes an object ('me'). This is exactly where 'had geweest' slips in by mistake; it must be 'was geweest'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I thought you had left already.",
+            "modelAnswer": "Ik dacht dat je al weg was.",
+            "alternatives": [
+              "Ik dacht dat je al was vertrokken.",
+              "Ik dacht dat je allang weg was."
+            ],
+            "note": "'Dacht dat ...' reports a past thought, so an anterior action goes to the plusquamperfectum: 'was vertrokken' ('vertrekken', zijn). The model uses the lighter 'al weg was' (already gone), which Dutch reaches for constantly in speech — 'weg zijn' standing in for the fuller plusquamperfectum. Both are natural."
+          },
+          {
+            "type": "translation",
+            "prompt": "They claimed they hadn't seen anything.",
+            "modelAnswer": "Ze beweerden dat ze niets hadden gezien.",
+            "alternatives": [
+              "Ze beweerden dat ze niets gezien hadden.",
+              "Ze hielden vol dat ze niets hadden gezien."
+            ],
+            "note": "Plural plusquamperfectum 'hadden gezien' ('zien' sterk: zag-gezien, takes 'hebben'). 'Beweren' (to claim) and 'volhouden' (to insist) both carry a faint note of doubt — useful reporting verbs. Verb cluster at the bijzin end, either order. 'Niets' covers English 'nothing / anything' here."
+          },
+          {
+            "type": "translation",
+            "prompt": "She asked whether I had finished the work.",
+            "modelAnswer": "Ze vroeg of ik het werk af had.",
+            "alternatives": [
+              "Ze vroeg of ik het werk had afgemaakt.",
+              "Ze vroeg of ik klaar was met het werk."
+            ],
+            "note": "An indirect yes/no question with 'of', verb cluster to the end. 'Had afgemaakt' is the full plusquamperfectum ('afmaken' scheidbaar → 'afgemaakt'); 'af had' (had it finished) and 'klaar was met' (was done with) are the lighter, very common spoken equivalents. 'Of' = whether."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "He explained that he had missed the train because he'd overslept that morning.",
+            "modelAnswer": "Hij legde uit dat hij de trein had gemist omdat hij zich die ochtend had verslapen.",
+            "alternatives": [
+              "Hij legde uit dat hij de trein had gemist doordat hij zich die ochtend had verslapen.",
+              "Hij legde uit dat hij de trein gemist had omdat hij zich die ochtend verslapen had."
+            ],
+            "note": "Reporting verb 'legde uit' (imperfectum). 'Dat'-bijzin with plusquamperfectum 'had gemist' ('missen', kofschip -s → 'gemist'). Nested 'omdat'-bijzin with a second plusquamperfectum 'had verslapen' — reflexive 'zich verslapen', and 'ver-' is non-separable, so no 'ge-'. Two layered reported-anterior events."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me that she would have called if she had known I was home.",
+            "modelAnswer": "Ze vertelde me dat ze gebeld zou hebben als ze had geweten dat ik thuis was.",
+            "alternatives": [
+              "Ze vertelde me dat ze zou hebben gebeld als ze had geweten dat ik thuis was.",
+              "Ze zei dat ze me gebeld zou hebben als ze had geweten dat ik thuis was."
+            ],
+            "note": "Reported conditional: 'zou hebben gebeld' (would have called) in the reported main clause. An 'als'-clause with plusquamperfectum 'had geweten', then a further nested 'dat'-bijzin 'dat ik thuis was'. Three levels of subordination — proper B2 stacking. 'Gebeld zou hebben' and 'zou hebben gebeld' are both correct orders."
+          },
+          {
+            "type": "translation",
+            "prompt": "I asked her why she hadn't told anyone what had happened.",
+            "modelAnswer": "Ik vroeg haar waarom ze niemand had verteld wat er was gebeurd.",
+            "alternatives": [
+              "Ik vroeg haar waarom ze aan niemand had verteld wat er gebeurd was.",
+              "Ik vroeg waarom ze niemand verteld had wat er was gebeurd."
+            ],
+            "note": "Indirect 'waarom'-question with plusquamperfectum 'had verteld' ('vertellen', hebben). Inside it, a second indirect question 'wat er was gebeurd' — itself a plusquamperfectum with 'zijn' (gebeuren). Two anterior reported events nested. 'Iemand iets vertellen' alternates with 'iets aan iemand vertellen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The neighbour mentioned that the package had been delivered while we were away.",
+            "modelAnswer": "De buurman zei dat het pakket was bezorgd terwijl we weg waren.",
+            "alternatives": [
+              "De buurman zei dat het pakket bezorgd was terwijl we weg waren.",
+              "De buurman liet weten dat het pakket was afgeleverd toen we weg waren."
+            ],
+            "note": "Reported passive plusquamperfectum: 'was bezorgd' — past passive 'werd bezorgd' shifts to 'was bezorgd', because the passive perfect uses 'zijn', not 'hebben'. That's the worden→zijn point in action. 'Terwijl we weg waren' (while we were away) sets the simultaneous frame with imperfectum 'waren'. 'Bezorgen' / 'afleveren' = to deliver; 'iets laten weten' = to let know."
+          },
+          {
+            "type": "translation",
+            "prompt": "He admitted afterwards that he had known all along but hadn't dared to say anything.",
+            "modelAnswer": "Hij gaf achteraf toe dat hij het al die tijd had geweten, maar niets had durven zeggen.",
+            "alternatives": [
+              "Hij gaf achteraf toe dat hij het de hele tijd had geweten, maar niets had durven zeggen.",
+              "Hij bekende achteraf dat hij het al die tijd had geweten, maar dat hij niets had durven zeggen."
+            ],
+            "note": "Reporting verb 'gaf toe' ('toegeven' scheidbaar). Two plusquamperfectums in the 'dat'-bijzin: 'had geweten' (weten, hebben) and 'had durven zeggen' — 'durven' behaves like a modal here and forms a dubbele infinitief ('durven zeggen', not 'durven gezegd'). 'Al die tijd' = all along. 'Bekennen' is a stronger 'confess'."
+          }
+        ]
+      }
+    }
+  ]
+}
