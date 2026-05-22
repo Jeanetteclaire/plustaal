@@ -1,0 +1,248 @@
+{
+  "zone": "plusquamperfectum",
+  "zoneName": "Plusquamperfectum",
+  "tiles": [
+    {
+      "id": "plusquamperfectum-1-sequentieel",
+      "theme": "Volgorde in het verleden",
+      "themeEnglish": "Sequential past — the plusquamperfectum (had done) for an action completed before another past action",
+      "recognitionQuestion": "Is the plusquamperfectum used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Toen ik op het station aankwam, was de trein al vertrokken.",
+            "correctUse": true,
+            "explanation": "Correct. The departure happened before the arrival, so it takes the plusquamperfectum: 'was vertrokken' ('vertrekken' takes 'zijn'). 'Toen ik aankwam' frames the later point in the imperfectum. 'Al' (already) underlines the order. Inversion after the bijzin: 'was de trein'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen we bij het restaurant aankwamen, hebben ze onze tafel al weggegeven.",
+            "correctUse": false,
+            "explanation": "Niet correct. The table was given away before we arrived, so it needs the plusquamperfectum, not the perfectum: 'hadden ze onze tafel al weggegeven'. Perfectum ('hebben weggegeven') puts both events on the same level and loses the 'this happened first' sequence."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze had de hele dag niets gegeten en rammelde van de honger.",
+            "correctUse": true,
+            "explanation": "Correct. Plusquamperfectum 'had gegeten' for the state leading up to the moment described ('eten' takes 'hebben'), then imperfectum 'rammelde'. 'Rammelen van de honger' = to be ravenous — a vivid native idiom for being absolutely starving."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen de gasten arriveerden, had iedereen al naar huis gegaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. Wrong auxiliary. 'Naar huis gaan' is movement, so the plusquamperfectum takes 'zijn', not 'hebben': 'was iedereen al naar huis gegaan'. The tense and sequence are right; only 'had' should be 'was'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik wist meteen wat er was gebeurd, want ik had het allemaal zien aankomen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Was gebeurd' is a plusquamperfectum with 'zijn' (gebeuren). 'Had ... zien aankomen' is plusquamperfectum with a dubbele infinitief — 'zien' and 'aankomen' both stay infinitive, never 'had gezien'. 'Het zien aankomen' = to see it coming."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Nadat hij zich had aangekleed, ging hij naar beneden voor het ontbijt.",
+            "correctUse": true,
+            "explanation": "Correct. 'Nadat' (after) is the classic trigger for the plusquamperfectum on the earlier action: 'had aangekleed' ('zich aankleden', reflexive + scheidbaar, takes 'hebben'). The later action follows in the imperfectum, with inversion after the bijzin: 'ging hij'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hadden de film al willen gezien, maar de kaartjes waren uitverkocht.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dubbele infinitief in the plusquamperfectum: after 'hadden ... willen' the second verb stays infinitive — 'willen zien', not 'willen gezien'. Correct: 'We hadden de film al willen zien, maar de kaartjes waren uitverkocht.'"
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik heb mijn huiswerk gemaakt. Daarna ben ik gaan slapen.",
+            "task": "Combineer tot één zin met 'nadat' en de plusquamperfectum.",
+            "acceptedAnswers": [
+              "Nadat ik mijn huiswerk had gemaakt, ben ik gaan slapen.",
+              "Nadat ik mijn huiswerk gemaakt had, ben ik gaan slapen.",
+              "Ik ben gaan slapen nadat ik mijn huiswerk had gemaakt."
+            ],
+            "preferred": "Nadat ik mijn huiswerk had gemaakt, ben ik gaan slapen.",
+            "explanation": "'Nadat' marks the earlier action → plusquamperfectum 'had gemaakt'. The later action keeps its perfectum 'ben gaan slapen' ('gaan slapen' takes 'zijn'). Inversion after the fronted bijzin: 'ben ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De film begon. Wij kwamen te laat binnen.",
+            "task": "Zet de eerste handeling in de plusquamperfectum en verbind met 'toen'.",
+            "acceptedAnswers": [
+              "De film was al begonnen toen wij binnenkwamen.",
+              "Toen wij binnenkwamen, was de film al begonnen.",
+              "De film was al begonnen toen we te laat binnenkwamen."
+            ],
+            "preferred": "De film was al begonnen toen wij binnenkwamen.",
+            "explanation": "The film starting comes first → plusquamperfectum 'was begonnen' ('beginnen' takes 'zijn'). 'Toen' frames the later arrival in the imperfectum 'binnenkwamen' (scheidbaar, rejoined in the bijzin). 'Al' marks the sequence."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij belt zijn moeder op.",
+            "task": "Zet in de plusquamperfectum.",
+            "acceptedAnswers": [
+              "Hij had zijn moeder opgebeld.",
+              "Hij had zijn moeder gebeld.",
+              "Hij had zijn moeder net opgebeld."
+            ],
+            "preferred": "Hij had zijn moeder opgebeld.",
+            "explanation": "Plusquamperfectum = imperfectum of 'hebben' (had) + participle. 'Opbellen' scheidbaar → 'opgebeld'; plain 'bellen' → 'gebeld' (kofschip: stem 'bel-' on -l → -d, not 'gebelt')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze is naar de markt gegaan.",
+            "task": "Zet in de plusquamperfectum.",
+            "acceptedAnswers": [
+              "Ze was naar de markt gegaan.",
+              "Zij was naar de markt gegaan.",
+              "Ze was al naar de markt gegaan."
+            ],
+            "preferred": "Ze was naar de markt gegaan.",
+            "explanation": "From perfectum to plusquamperfectum you only shift the auxiliary into the imperfectum: 'is' → 'was'. 'Gaan' takes 'zijn' (movement), so 'was gegaan'. The participle is unchanged. Contrast this with item three, where 'hebben' → 'had'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik wil hem waarschuwen, maar het is te laat.",
+            "task": "Zet in het verleden met de plusquamperfectum.",
+            "acceptedAnswers": [
+              "Ik had hem willen waarschuwen, maar het was te laat.",
+              "Ik had hem nog willen waarschuwen, maar het was te laat.",
+              "Ik had hem willen waarschuwen, maar het was al te laat."
+            ],
+            "preferred": "Ik had hem willen waarschuwen, maar het was te laat.",
+            "explanation": "Plusquamperfectum with a modal → dubbele infinitief: 'had ... willen waarschuwen', NOT 'had willen gewaarschuwd'. Both verbs stay infinitive. The second clause shifts to imperfectum 'was'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Eerst maakte ik het eten klaar. Toen kwamen de gasten.",
+            "task": "Zet de eerste handeling in de plusquamperfectum, met de gasten als referentiepunt.",
+            "acceptedAnswers": [
+              "Ik had het eten al klaargemaakt toen de gasten kwamen.",
+              "Toen de gasten kwamen, had ik het eten al klaargemaakt.",
+              "Ik had het eten al klaargemaakt toen de gasten arriveerden."
+            ],
+            "preferred": "Ik had het eten al klaargemaakt toen de gasten kwamen.",
+            "explanation": "The cooking precedes the guests' arrival → plusquamperfectum 'had klaargemaakt' ('klaarmaken' scheidbaar, kofschip -k → 'klaargemaakt'). 'Toen' frames the reference point in the imperfectum 'kwamen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De brief werd geschreven.",
+            "task": "Zet in de plusquamperfectum (passief).",
+            "acceptedAnswers": [
+              "De brief was geschreven.",
+              "De brief was al geschreven.",
+              "De brief was toen al geschreven."
+            ],
+            "preferred": "De brief was geschreven.",
+            "explanation": "Passive plusquamperfectum = 'was/waren' + participle (the 'geworden' is dropped in standard usage). 'Schrijven' sterk → 'geschreven'. So 'werd geschreven' (past passive) becomes 'was geschreven'. This is exactly where 'zijn' — not 'hebben' — carries the passive perfect."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "When I got home, my husband had already cooked.",
+            "modelAnswer": "Toen ik thuiskwam, had mijn man al gekookt.",
+            "alternatives": [
+              "Mijn man had al gekookt toen ik thuiskwam.",
+              "Toen ik thuiskwam, had mijn man het eten al gemaakt."
+            ],
+            "note": "Plusquamperfectum 'had gekookt' for the earlier action — the cooking was done before the arrival ('koken', hebben). 'Toen'-bijzin with imperfectum 'thuiskwam' ('thuiskomen' scheidbaar, rejoined in the bijzin). Inversion after the fronted bijzin: 'had mijn man'. 'Al' is almost obligatory to signal the sequence."
+          },
+          {
+            "type": "translation",
+            "prompt": "She had never seen the sea before that summer.",
+            "modelAnswer": "Ze had de zee nog nooit gezien voor die zomer.",
+            "alternatives": [
+              "Zij had de zee nog nooit gezien voor die zomer.",
+              "Voor die zomer had ze de zee nog nooit gezien."
+            ],
+            "note": "Plusquamperfectum 'had gezien' for a state extending up to a past point ('zien' sterk: zag-gezien, takes 'hebben'). 'Nog nooit' = never (up to then). Fronting 'voor die zomer' triggers inversion: 'had ze'. No movement, so 'hebben', not 'zijn'."
+          },
+          {
+            "type": "translation",
+            "prompt": "By the time the police arrived, the thief had disappeared.",
+            "modelAnswer": "Tegen de tijd dat de politie arriveerde, was de dief verdwenen.",
+            "alternatives": [
+              "Toen de politie arriveerde, was de dief al verdwenen.",
+              "Tegen de tijd dat de politie er was, was de dief verdwenen."
+            ],
+            "note": "Plusquamperfectum 'was verdwenen' — 'verdwijnen' (to disappear) is a change of state, so 'zijn'. 'Tegen de tijd dat' = by the time (that), a bijzin with the finite verb at the end ('arriveerde'). The disappearing precedes the arriving. 'Al' (already) is optional but natural."
+          },
+          {
+            "type": "translation",
+            "prompt": "I realised I had forgotten my keys.",
+            "modelAnswer": "Ik besefte dat ik mijn sleutels was vergeten.",
+            "alternatives": [
+              "Ik besefte dat ik mijn sleutels vergeten was.",
+              "Ik realiseerde me dat ik mijn sleutels was vergeten."
+            ],
+            "note": "Imperfectum 'besefte' (the realising) plus a plusquamperfectum in the 'dat'-bijzin: the forgetting came first. In the 'left something behind' sense, 'vergeten' takes 'zijn' — 'was vergeten' — and has no 'ge-'. Bijzin word order allows both 'was vergeten' and 'vergeten was'. 'Beseffen' is more idiomatic than 'realiseren'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We had just eaten when the phone rang.",
+            "modelAnswer": "We hadden net gegeten toen de telefoon ging.",
+            "alternatives": [
+              "We hadden net gegeten toen de telefoon overging.",
+              "Net toen we hadden gegeten, ging de telefoon."
+            ],
+            "note": "Plusquamperfectum 'hadden gegeten' for the action just completed before the call ('eten', hebben). 'Net' = just. 'Toen'-bijzin with imperfectum 'ging' / 'overging' — a phone 'gaat (over)'. The eating precedes the ringing, which is what the plusquamperfectum pins down."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "By the time I understood what had happened, everyone had already gone home.",
+            "modelAnswer": "Tegen de tijd dat ik begreep wat er was gebeurd, was iedereen al naar huis gegaan.",
+            "alternatives": [
+              "Tegen de tijd dat ik doorhad wat er was gebeurd, was iedereen al naar huis gegaan.",
+              "Toen ik eenmaal begreep wat er gebeurd was, was iedereen al naar huis gegaan."
+            ],
+            "note": "Two plusquamperfectums with 'zijn': 'was gebeurd' (gebeuren) and 'was gegaan' (naar huis gaan = movement). 'Tegen de tijd dat' opens a bijzin (finite verb 'begreep' at the end), with a nested 'wat'-bijzin 'wat er was gebeurd'. The main clause inverts after the fronted bijzin: 'was iedereen'. Sequencing layered across three clauses."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me that she had already left before he even arrived.",
+            "modelAnswer": "Ze vertelde me dat ze al was vertrokken voordat hij überhaupt aankwam.",
+            "alternatives": [
+              "Ze vertelde me dat ze al vertrokken was voordat hij überhaupt aankwam.",
+              "Ze zei dat ze al was weggegaan voordat hij er zelfs maar was."
+            ],
+            "note": "Imperfectum 'vertelde' (reporting verb). 'Dat'-bijzin with plusquamperfectum 'was vertrokken' / 'vertrokken was' ('vertrekken', zijn, no 'ge-'). Innermost 'voordat'-bijzin with imperfectum 'aankwam'. 'Überhaupt' / 'zelfs maar' = even (at all) — a flavour particle Dutch borrows from German. Indirect speech plus a double sequence."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I had checked the recipe earlier, I wouldn't have burnt the sauce.",
+            "modelAnswer": "Als ik het recept eerder had bekeken, had ik de saus niet laten aanbranden.",
+            "alternatives": [
+              "Als ik het recept eerder had gelezen, had ik de saus niet laten aanbranden.",
+              "Als ik eerder naar het recept had gekeken, was de saus niet aangebrand."
+            ],
+            "note": "Plusquamperfectum in the 'als'-clause ('had bekeken'). Conditioneel verleden in the main clause with a dubbele infinitief: 'had ... laten aanbranden' (let it burn), NOT 'laten aangebrand'. Inversion 'had ik' after the fronted 'als'-clause. The last alternative recasts it as 'was aangebrand' — the sauce simply burnt ('aanbranden' with 'zijn') — sidestepping the causative 'laten'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He looked exhausted because he hadn't slept at all the night before.",
+            "modelAnswer": "Hij zag er uitgeput uit omdat hij de nacht ervoor helemaal niet had geslapen.",
+            "alternatives": [
+              "Hij zag er doodmoe uit omdat hij de nacht ervoor geen oog had dichtgedaan.",
+              "Hij zag er uitgeput uit, want hij had de nacht ervoor helemaal niet geslapen."
+            ],
+            "note": "Imperfectum 'zag er ... uit' ('eruitzien' scheidbaar: 'zag eruit'). 'Omdat'-bijzin with plusquamperfectum 'had geslapen' ('slapen', hebben), finite verb to the clause end: 'niet had geslapen'. 'De nacht ervoor' = the night before. 'Geen oog dichtdoen' (not sleep a wink) is a lovely native idiom. With 'want' (coordinating) there's no inversion and the verb cluster keeps main-clause order."
+          },
+          {
+            "type": "translation",
+            "prompt": "By the time we found the restaurant she'd recommended, it had already closed.",
+            "modelAnswer": "Tegen de tijd dat we het restaurant vonden dat ze had aangeraden, was het al dichtgegaan.",
+            "alternatives": [
+              "Toen we eindelijk het restaurant vonden dat ze had aangeraden, was het al gesloten.",
+              "Tegen de tijd dat we het restaurant hadden gevonden dat ze had aangeraden, was het al dicht."
+            ],
+            "note": "Three time-layers in one sentence: she recommended (earliest) → we found (middle) → and by then it had closed. The relative bijzin 'dat ze had aangeraden' carries its own plusquamperfectum ('aanraden' → 'aangeraden'). 'Was al dichtgegaan' ('dichtgaan' = to close, change of state → 'zijn') is the crisp plusquamperfectum; 'was al gesloten / dicht' express the resultant state."
+          }
+        ]
+      }
+    }
+  ]
+}
