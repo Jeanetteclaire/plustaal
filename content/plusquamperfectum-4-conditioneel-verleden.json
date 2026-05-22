@@ -1,0 +1,248 @@
+{
+  "zone": "plusquamperfectum",
+  "zoneName": "Plusquamperfectum",
+  "tiles": [
+    {
+      "id": "plusquamperfectum-4-conditioneel-verleden",
+      "theme": "Conditioneel verleden",
+      "themeEnglish": "Conditional past — 'if I had..., I would have...', with the plusquamperfectum in the if-clause",
+      "recognitionQuestion": "Is this conditional past correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Als ik het eerder had geweten, had ik je meteen gebeld.",
+            "correctUse": true,
+            "explanation": "Correct. The canonical counterfactual: 'als' + plusquamperfectum ('had geweten') in the condition, conditioneel verleden in the main clause. Dutch lets the result use the short 'had ik gebeld' form. Inversion after the als-clause: 'had ik'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik dat zou hebben geweten, was ik thuisgebleven.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dutch does not put 'zou' in the if-clause — the condition is a plain plusquamperfectum: 'Als ik dat had geweten, was ik thuisgebleven.' The 'zou'-form belongs in the result clause, not the condition. This is a common anglicism."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als je me had gewaarschuwd, zou ik nooit zijn gegaan.",
+            "correctUse": true,
+            "explanation": "Correct. Condition in plusquamperfectum ('had gewaarschuwd'); result in the full conditioneel verleden 'zou ik ... zijn gegaan' ('gaan' takes 'zijn'). This is the 'zou'-form of the result — fully interchangeable with the short 'was ik nooit gegaan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ze niet zo hard had gereden, had het ongeluk niet gebeurd.",
+            "correctUse": false,
+            "explanation": "Niet correct. Wrong auxiliary in the result. 'Gebeuren' takes 'zijn', so it must be 'was het ongeluk niet gebeurd'. The condition 'had gereden' (manner, hebben) is fine; only the main-clause 'had' should be 'was'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik beter had opgelet, had ik die fout kunnen voorkomen.",
+            "correctUse": true,
+            "explanation": "Correct. Condition 'had opgelet' (opletten, kofschip -t → 'opgelet'); result with a modal → dubbele infinitief: 'had ik ... kunnen voorkomen', never 'kunnen voorkomen' as a participle. 'Voorkomen' (to prevent) is inseparable, so no 'ge-'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Had ik geweten dat je kwam, dan had ik wat lekkers gehaald.",
+            "correctUse": true,
+            "explanation": "Correct. The verb-first conditional drops 'als': 'Had ik geweten ..., dan had ik ...'. The finite verb opens the condition, and 'dan' picks up the result. Both clauses are plusquamperfectum/conditioneel verleden. 'Wat lekkers halen' = grab something nice."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik rijk was geweest, zou ik een groot huis kopen.",
+            "correctUse": false,
+            "explanation": "Niet correct. Tense mismatch. A counterfactual past condition ('was geweest') needs a past result too: 'zou ik een groot huis hebben gekocht' (or 'had ik ... gekocht'). 'Zou ik kopen' is the present/future conditional and clashes with the past condition."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik wist het niet, dus ik heb je niet gebeld.",
+            "task": "Maak er een irreële voorwaarde van (conditioneel verleden).",
+            "acceptedAnswers": [
+              "Als ik het had geweten, had ik je gebeld.",
+              "Als ik het geweten had, had ik je gebeld.",
+              "Als ik het had geweten, zou ik je hebben gebeld."
+            ],
+            "preferred": "Als ik het had geweten, had ik je gebeld.",
+            "explanation": "A counterfactual past: 'als' + plusquamperfectum ('had geweten') in the condition, conditioneel verleden in the result. Dutch allows both the short 'had ik gebeld' and the full 'zou ik hebben gebeld'. Inversion after the als-clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het regende, dus we zijn niet naar het strand gegaan.",
+            "task": "Maak er een irreële voorwaarde van.",
+            "acceptedAnswers": [
+              "Als het niet had geregend, waren we naar het strand gegaan.",
+              "Als het niet geregend had, waren we naar het strand gegaan.",
+              "Als het niet had geregend, zouden we naar het strand zijn gegaan."
+            ],
+            "preferred": "Als het niet had geregend, waren we naar het strand gegaan.",
+            "explanation": "'Als het niet had geregend' (plusquamperfectum) sets the counterfactual; 'waren we ... gegaan' is the conditioneel verleden with 'zijn' (movement). The full form is 'zouden we ... zijn gegaan'. The 'niet' flips the real outcome."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb te weinig geoefend, dus ik ben gezakt voor mijn examen.",
+            "task": "Maak er een irreële voorwaarde van.",
+            "acceptedAnswers": [
+              "Als ik meer had geoefend, was ik geslaagd voor mijn examen.",
+              "Als ik meer geoefend had, was ik niet gezakt voor mijn examen.",
+              "Als ik meer had geoefend, zou ik zijn geslaagd."
+            ],
+            "preferred": "Als ik meer had geoefend, was ik geslaagd voor mijn examen.",
+            "explanation": "Plusquamperfectum 'had geoefend' in the condition; 'was geslaagd' in the result. Note that both 'slagen' (to pass) and 'zakken' (to fail) an exam take 'zijn'. 'Oefenen' zwak → 'geoefend'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb je gisteren niet kunnen helpen.",
+            "task": "Maak er een irreële voorwaarde van met 'meer tijd'.",
+            "acceptedAnswers": [
+              "Als ik meer tijd had gehad, had ik je kunnen helpen.",
+              "Met meer tijd had ik je kunnen helpen.",
+              "Als ik meer tijd had gehad, zou ik je hebben kunnen helpen."
+            ],
+            "preferred": "Als ik meer tijd had gehad, had ik je kunnen helpen.",
+            "explanation": "Conditional past with a modal → dubbele infinitief: 'had ik je kunnen helpen', not 'kunnen geholpen'. The full form stacks three verbs: 'zou ik je hebben kunnen helpen'. 'Had gehad' is the plusquamperfectum of 'hebben' itself."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij is gevallen omdat hij niet oplette.",
+            "task": "Maak er een irreële voorwaarde van.",
+            "acceptedAnswers": [
+              "Als hij had opgelet, was hij niet gevallen.",
+              "Als hij beter had opgelet, was hij niet gevallen.",
+              "Had hij opgelet, dan was hij niet gevallen."
+            ],
+            "preferred": "Als hij had opgelet, was hij niet gevallen.",
+            "explanation": "Plusquamperfectum 'had opgelet' ('opletten', kofschip stem 'let-' on -t → 'opgelet'); result 'was gevallen' ('vallen', zijn). The third option drops 'als' for the verb-first conditional with 'dan': 'Had hij opgelet, dan was hij ...'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Als ik het geweten had, had ik niets gezegd.",
+            "task": "Zet de hoofdzin om naar de 'zou'-vorm.",
+            "acceptedAnswers": [
+              "Als ik het geweten had, zou ik niets hebben gezegd.",
+              "Als ik het had geweten, zou ik niets gezegd hebben.",
+              "Als ik het geweten had, zou ik niets gezegd hebben."
+            ],
+            "preferred": "Als ik het geweten had, zou ik niets hebben gezegd.",
+            "explanation": "The two conditioneel-verleden results are interchangeable: 'had ik niets gezegd' ↔ 'zou ik niets hebben gezegd'. The condition stays the same. In the 'zou'-form the cluster is 'hebben gezegd' or 'gezegd hebben' — either order is fine."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze heeft de waarheid niet verteld, en daardoor is alles misgegaan.",
+            "task": "Maak er een irreële voorwaarde van.",
+            "acceptedAnswers": [
+              "Als ze de waarheid had verteld, was alles niet misgegaan.",
+              "Als ze de waarheid had verteld, zou alles niet zijn misgegaan.",
+              "Had ze de waarheid verteld, dan was alles goed gegaan."
+            ],
+            "preferred": "Als ze de waarheid had verteld, was alles niet misgegaan.",
+            "explanation": "Plusquamperfectum 'had verteld' in the condition; result 'was misgegaan' ('misgaan' = to go wrong, change of state → 'zijn'). The verb-first form 'Had ze de waarheid verteld, dan ...' drops 'als'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "If I had known, I would have come earlier.",
+            "modelAnswer": "Als ik het had geweten, was ik eerder gekomen.",
+            "alternatives": [
+              "Als ik het had geweten, zou ik eerder zijn gekomen.",
+              "Als ik het geweten had, was ik eerder gekomen."
+            ],
+            "note": "Counterfactual past: 'als' + plusquamperfectum 'had geweten', then conditioneel verleden. Dutch offers two equal results — the short 'was ik ... gekomen' ('komen', zijn) or the full 'zou ik ... zijn gekomen'. Inversion after the als-clause. English 'would have' maps onto either Dutch form."
+          },
+          {
+            "type": "translation",
+            "prompt": "She would have passed if she had studied more.",
+            "modelAnswer": "Ze was geslaagd als ze meer had gestudeerd.",
+            "alternatives": [
+              "Ze zou geslaagd zijn als ze meer had gestudeerd.",
+              "Als ze meer had gestudeerd, was ze geslaagd."
+            ],
+            "note": "Here the result leads: 'was geslaagd' ('slagen' = to pass, takes 'zijn'), with the 'als'-condition in plusquamperfectum 'had gestudeerd'. When the main clause comes first there's no inversion in it — the als-clause simply follows. 'Studeren' and 'leren' both serve for 'study'."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you hadn't helped me, I would never have finished.",
+            "modelAnswer": "Als jij me niet had geholpen, was ik nooit klaar geweest.",
+            "alternatives": [
+              "Als jij me niet had geholpen, had ik het nooit afgekregen.",
+              "Zonder jouw hulp was ik nooit klaar geweest."
+            ],
+            "note": "Plusquamperfectum 'had geholpen' (helpen sterk: hielp-geholpen). The result is 'was ... klaar geweest' (would have been done) or 'had ... afgekregen' ('afkrijgen' scheidbaar = to get finished). 'Zonder jouw hulp' compresses the whole condition into a single phrase."
+          },
+          {
+            "type": "translation",
+            "prompt": "We would have missed the flight if we had left any later.",
+            "modelAnswer": "We hadden de vlucht gemist als we later waren vertrokken.",
+            "alternatives": [
+              "We zouden de vlucht hebben gemist als we later waren vertrokken.",
+              "Als we later waren vertrokken, hadden we de vlucht gemist."
+            ],
+            "note": "Result 'hadden ... gemist' ('missen', hebben; kofschip -s → 'gemist') or the full 'zouden ... hebben gemist'. Condition 'waren vertrokken' (vertrekken, zijn). 'Any later' simply becomes 'later'. When the result leads, the als-clause follows without forcing inversion in the main clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "If they had listened, this never would have happened.",
+            "modelAnswer": "Als ze hadden geluisterd, was dit nooit gebeurd.",
+            "alternatives": [
+              "Als ze hadden geluisterd, zou dit nooit zijn gebeurd.",
+              "Hadden ze geluisterd, dan was dit nooit gebeurd."
+            ],
+            "note": "Plural plusquamperfectum 'hadden geluisterd' in the condition; result 'was ... gebeurd' (gebeuren → 'zijn') or 'zou ... zijn gebeurd'. The verb-first conditional 'Hadden ze geluisterd, dan ...' drops 'als' — common and a touch more dramatic. 'Nooit' = never."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If I had realised how late it was, I would have gone home long ago.",
+            "modelAnswer": "Als ik had beseft hoe laat het was, was ik allang naar huis gegaan.",
+            "alternatives": [
+              "Als ik me had gerealiseerd hoe laat het al was, was ik allang naar huis gegaan.",
+              "Als ik had beseft hoe laat het was, zou ik allang naar huis zijn gegaan."
+            ],
+            "note": "Counterfactual: 'als' + plusquamperfectum 'had beseft' ('beseffen', kofschip -f → 'beseft'), with a nested 'hoe'-bijzin 'hoe laat het was'. Result 'was ... naar huis gegaan' (gaan, zijn) or the 'zou'-form. 'Allang' = long ago. Three clauses interlocking."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me that if he had asked, she would have said yes.",
+            "modelAnswer": "Ze vertelde me dat ze ja had gezegd als hij het had gevraagd.",
+            "alternatives": [
+              "Ze vertelde me dat ze ja zou hebben gezegd als hij het had gevraagd.",
+              "Ze zei dat ze ja had gezegd als hij het gevraagd had."
+            ],
+            "note": "Reported speech ('vertelde ... dat') wrapping a counterfactual past. The condition 'als hij het had gevraagd' (plusquamperfectum) and the result 'ze had ja gezegd' / 'zou ja hebben gezegd' both sit inside the 'dat'-bijzin. Indirect speech plus a third conditional — two of this zone's threads at once."
+          },
+          {
+            "type": "translation",
+            "prompt": "Had we known about the strike, we would have taken the car instead of the train.",
+            "modelAnswer": "Hadden we van de staking geweten, dan hadden we de auto genomen in plaats van de trein.",
+            "alternatives": [
+              "Als we van de staking hadden geweten, hadden we de auto genomen in plaats van de trein.",
+              "Als we van de staking hadden geweten, waren we met de auto gegaan in plaats van met de trein."
+            ],
+            "note": "Verb-first conditional (no 'als'): 'Hadden we ... geweten, dan ...'. Plusquamperfectum/conditioneel verleden in both clauses ('hadden geweten', 'hadden genomen'). 'In plaats van' = instead of. 'Een staking' = a strike. The last variant swaps the result to 'waren we met de auto gegaan' (went by car)."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the weather had been better, we could have eaten outside on the terrace.",
+            "modelAnswer": "Als het weer beter was geweest, hadden we buiten op het terras kunnen eten.",
+            "alternatives": [
+              "Als het weer beter was geweest, zouden we buiten op het terras hebben kunnen eten.",
+              "Was het weer beter geweest, dan hadden we op het terras kunnen eten."
+            ],
+            "note": "Condition 'was ... geweest' (zijn). Result with a modal → dubbele infinitief: 'hadden we ... kunnen eten', never 'kunnen gegeten'. The full form stacks three verbs: 'zouden ... hebben kunnen eten'. The verb-first 'Was het weer beter geweest, dan ...' drops 'als'. 'Op het terras' anchors it."
+          },
+          {
+            "type": "translation",
+            "prompt": "He admitted that he would have done things differently if he had had the chance to start over.",
+            "modelAnswer": "Hij gaf toe dat hij het anders had aangepakt als hij de kans had gehad om opnieuw te beginnen.",
+            "alternatives": [
+              "Hij gaf toe dat hij het anders zou hebben aangepakt als hij de kans had gehad om opnieuw te beginnen.",
+              "Hij bekende dat hij het anders had gedaan als hij opnieuw had kunnen beginnen."
+            ],
+            "note": "Reported speech ('gaf toe dat') around a counterfactual: result 'had aangepakt' / 'zou hebben aangepakt' ('aanpakken' scheidbaar → 'aangepakt'), condition 'als hij de kans had gehad', plus an 'om...te'-clause 'om opnieuw te beginnen'. The last variant folds the chance into 'had kunnen beginnen' (dubbele infinitief). Four constructions woven together — the top of the B2 range."
+          }
+        ]
+      }
+    }
+  ]
+}
