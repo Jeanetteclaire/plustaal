@@ -1,0 +1,248 @@
+{
+  "zone": "plusquamperfectum",
+  "zoneName": "Plusquamperfectum",
+  "tiles": [
+    {
+      "id": "plusquamperfectum-2-spijt-en-regret",
+      "theme": "Spijt en berouw",
+      "themeEnglish": "Regret — using the plusquamperfectum (and 'had moeten/kunnen') to express what you wish had or hadn't happened",
+      "recognitionQuestion": "Is the plusquamperfectum used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik had die laatste borrel niet moeten nemen; nu heb ik barstende koppijn.",
+            "correctUse": true,
+            "explanation": "Correct. Regret via plusquamperfectum + modal: 'had niet moeten nemen' — dubbele infinitief, so 'moeten nemen', never 'moeten genomen'. Both verbs stay infinitive at the clause end. 'Barstende koppijn' = a splitting headache."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Achteraf gezien had ik beter thuis kunnen gebleven.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dubbele infinitief error. After 'had ... kunnen' the second verb stays infinitive: 'kunnen blijven', not 'kunnen gebleven'. Correct: 'Achteraf gezien had ik beter thuis kunnen blijven.' 'Achteraf gezien' = in hindsight."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Had ik maar beter naar mijn ouders geluisterd.",
+            "correctUse": true,
+            "explanation": "Correct. 'Had ik maar ...' = if only I had — the wish puts the finite verb 'had' first. Plusquamperfectum 'had geluisterd' ('luisteren naar', takes 'hebben'). 'Maar' carries the wishful weight that English packs into 'if only'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik wou dat ik nooit naar dat feest had gegaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. Wrong auxiliary. 'Naar dat feest gaan' is movement, so the plusquamperfectum takes 'zijn': 'dat ik nooit naar dat feest was gegaan'. The regret frame ('Ik wou dat ik ...') and word order are fine; only 'had' should be 'was'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik had beter even kunnen bellen voordat ik langskwam.",
+            "correctUse": true,
+            "explanation": "Correct. 'Had beter ... kunnen + infinitief' = would have been better to. Dubbele infinitief: 'kunnen bellen', not 'kunnen gebeld'. The 'voordat'-bijzin has its verb at the end: 'langskwam' ('langskomen' scheidbaar, rejoined in the bijzin)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze wou dat ze die opmerking nooit had gemaakt.",
+            "correctUse": true,
+            "explanation": "Correct. 'Ze wou dat ze ...' takes the plusquamperfectum in the bijzin: 'had gemaakt' ('maken', hebben), with the verb at the clause end. 'Wou' is the everyday spoken past of 'willen' (alongside 'wilde'). A clean regret-about-something-done."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik baalde enorm dat ik mijn paraplu thuis heb gelaten.",
+            "correctUse": false,
+            "explanation": "Niet correct. The leaving-behind happened before the annoyance, so the bijzin needs the plusquamperfectum, not the perfectum: 'dat ik mijn paraplu thuis had gelaten'. 'Heb gelaten' breaks the sequence. 'Balen' = to be fed up — very Dutch."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik heb te veel gegeten.",
+            "task": "Maak er een spijtbetuiging van met 'had ... niet moeten'.",
+            "acceptedAnswers": [
+              "Ik had niet zoveel moeten eten.",
+              "Ik had niet zo veel moeten eten.",
+              "Ik had niet te veel moeten eten."
+            ],
+            "preferred": "Ik had niet zoveel moeten eten.",
+            "explanation": "Regret via plusquamperfectum + modal: 'had niet ... moeten eten'. Dubbele infinitief, so 'moeten eten', never 'moeten gegeten'. Both verbs sit as infinitives at the clause end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben niet naar de dokter gegaan.",
+            "task": "Druk spijt uit met 'Ik wou dat ik ...' in de plusquamperfectum.",
+            "acceptedAnswers": [
+              "Ik wou dat ik wel naar de dokter was gegaan.",
+              "Ik wilde dat ik wel naar de dokter was gegaan.",
+              "Ik wou dat ik toch naar de dokter was gegaan."
+            ],
+            "preferred": "Ik wou dat ik wel naar de dokter was gegaan.",
+            "explanation": "'Ik wou dat ik ...' takes the plusquamperfectum in the bijzin. 'Gaan' is movement → 'was gegaan'. The little word 'wel' (or 'toch') flips it to the regretted opposite of what actually happened."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb het hem verteld.",
+            "task": "Maak er een 'Had ik ... maar'-wens van (spijt dat je het wél deed).",
+            "acceptedAnswers": [
+              "Had ik het hem maar nooit verteld.",
+              "Had ik het hem maar niet verteld.",
+              "Had ik hem dat maar nooit verteld."
+            ],
+            "preferred": "Had ik het hem maar nooit verteld.",
+            "explanation": "'Had ik ... maar (niet/nooit)' = if only I hadn't. The wish puts the finite verb 'had' first. Plusquamperfectum 'had verteld' ('vertellen', hebben). 'Maar' does the regretful lifting."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben te laat vertrokken.",
+            "task": "Druk spijt uit met 'had beter ... kunnen' (eerder vertrekken).",
+            "acceptedAnswers": [
+              "Ik had beter eerder kunnen vertrekken.",
+              "Ik had beter wat eerder kunnen vertrekken.",
+              "Ik had beter op tijd kunnen vertrekken."
+            ],
+            "preferred": "Ik had beter eerder kunnen vertrekken.",
+            "explanation": "'Had beter ... kunnen + infinitief' = would have been better to. Dubbele infinitief: 'kunnen vertrekken', not 'kunnen vertrokken'. The infinitive 'vertrekken' closes the clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben dat huis niet gekocht.",
+            "task": "Druk spijt uit met 'Achteraf gezien hadden we ... moeten'.",
+            "acceptedAnswers": [
+              "Achteraf gezien hadden we dat huis moeten kopen.",
+              "Achteraf gezien hadden we dat huis wel moeten kopen.",
+              "Achteraf gezien hadden we dat huis toch moeten kopen."
+            ],
+            "preferred": "Achteraf gezien hadden we dat huis moeten kopen.",
+            "explanation": "'Achteraf gezien' (in hindsight) + plusquamperfectum-modal. Plural 'hadden ... moeten kopen' — dubbele infinitief, 'moeten kopen' not 'moeten gekocht'. Inversion after the fronted phrase: 'hadden we'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze heeft de waarschuwing genegeerd.",
+            "task": "Maak er een spijtzin van met 'Als ... maar'.",
+            "acceptedAnswers": [
+              "Als ze de waarschuwing maar niet had genegeerd.",
+              "Als ze de waarschuwing maar serieus had genomen.",
+              "Had ze de waarschuwing maar niet genegeerd."
+            ],
+            "preferred": "Als ze de waarschuwing maar niet had genegeerd.",
+            "explanation": "'Als ... maar' (if only) is another regret frame, with the plusquamperfectum at the clause end: 'had genegeerd' ('negeren' → 'genegeerd'). 'Had ze ... maar' (verb first) is the equivalent that drops 'als'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb mijn oude auto verkocht.",
+            "task": "Druk spijt uit met 'had ... beter niet moeten'.",
+            "acceptedAnswers": [
+              "Ik had mijn oude auto beter niet moeten verkopen.",
+              "Ik had mijn oude auto niet moeten verkopen.",
+              "Ik had mijn oude auto beter kunnen houden."
+            ],
+            "preferred": "Ik had mijn oude auto beter niet moeten verkopen.",
+            "explanation": "'Had beter niet moeten + infinitief' for regretting something you did do. Dubbele infinitief: 'moeten verkopen', not 'moeten verkocht'. The last variant flips to the positive verb: 'beter kunnen houden' (would have done better to keep)."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I shouldn't have said that.",
+            "modelAnswer": "Dat had ik niet moeten zeggen.",
+            "alternatives": [
+              "Ik had dat niet moeten zeggen.",
+              "Dat had ik beter niet kunnen zeggen."
+            ],
+            "note": "Plusquamperfectum + modal for regret: 'had niet moeten zeggen' — dubbele infinitief, 'moeten zeggen' not 'moeten gezegd'. Fronting 'dat' triggers inversion: 'had ik'. 'Beter niet kunnen zeggen' (would have done better not to say) is a softer variant of the same regret."
+          },
+          {
+            "type": "translation",
+            "prompt": "If only I had listened to you.",
+            "modelAnswer": "Had ik maar naar je geluisterd.",
+            "alternatives": [
+              "Ik wou dat ik naar je had geluisterd.",
+              "Ik wou dat ik wel naar je had geluisterd."
+            ],
+            "note": "'Had ik maar ...' = if only I had — the wish puts the finite verb first. Plusquamperfectum 'had geluisterd'; note 'luisteren naar', not 'aan'. 'Ik wou dat ik ... had geluisterd' is the fuller frame. 'Luisteren' takes 'hebben', so never 'was ... geluisterd'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We should have left earlier.",
+            "modelAnswer": "We hadden eerder moeten vertrekken.",
+            "alternatives": [
+              "We hadden eerder weg moeten gaan.",
+              "We hadden beter eerder kunnen vertrekken."
+            ],
+            "note": "Plural plusquamperfectum + modal: 'hadden moeten vertrekken' — dubbele infinitief, with the infinitive 'vertrekken' at the end, never 'moeten vertrokken'. 'Weg moeten gaan' (had to leave) is the everyday phrasing. 'Beter kunnen' softens 'should' to 'would have been better to'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She regretted not having brought a coat.",
+            "modelAnswer": "Ze had er spijt van dat ze geen jas had meegenomen.",
+            "alternatives": [
+              "Ze betreurde dat ze geen jas had meegenomen.",
+              "Ze had er spijt van dat ze geen jas mee had genomen."
+            ],
+            "note": "'Spijt hebben van' (to regret) in the imperfectum, 'had spijt van', plus a 'dat'-bijzin with plusquamperfectum 'had meegenomen' — the not-bringing came first. 'Meenemen' scheidbaar → 'meegenomen'; the bijzin allows 'had meegenomen' or 'mee had genomen'. 'Betreuren' is the more formal verb for regret."
+          },
+          {
+            "type": "translation",
+            "prompt": "In hindsight, I would have done better to stay home.",
+            "modelAnswer": "Achteraf gezien had ik beter thuis kunnen blijven.",
+            "alternatives": [
+              "Achteraf gezien was ik beter thuisgebleven.",
+              "Achteraf gezien had ik beter thuis moeten blijven."
+            ],
+            "note": "'Achteraf gezien' = in hindsight. 'Had beter ... kunnen blijven' — plusquamperfectum-modal, dubbele infinitief ('kunnen blijven', not 'kunnen gebleven'). The alternative 'was ... beter thuisgebleven' uses 'blijven' directly with 'zijn' and drops the modal — also idiomatic. Inversion after the fronted phrase: 'had ik' / 'was ik'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If I had known how expensive it would be, I would never have agreed to it.",
+            "modelAnswer": "Als ik had geweten hoe duur het zou worden, had ik er nooit mee ingestemd.",
+            "alternatives": [
+              "Als ik had geweten hoe duur het zou zijn, had ik er nooit mee ingestemd.",
+              "Had ik geweten hoe duur het zou worden, dan had ik er nooit mee ingestemd."
+            ],
+            "note": "Plusquamperfectum in the 'als'-clause ('had geweten'). Nested 'hoe'-bijzin with future-in-the-past 'zou worden / zijn'. Conditioneel verleden in the main clause: 'had ... ingestemd' ('ergens mee instemmen', scheidbaar, with 'er ... mee' split). Inversion 'had ik'. The third option drops 'als' for a verb-first conditional picked up by 'dan'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me afterwards that she had regretted it the moment she pressed send.",
+            "modelAnswer": "Ze vertelde me achteraf dat ze er spijt van had gehad op het moment dat ze op verzenden drukte.",
+            "alternatives": [
+              "Ze vertelde me achteraf dat ze er meteen spijt van had toen ze op verzenden drukte.",
+              "Ze zei achteraf dat ze er al spijt van had op het moment dat ze het verstuurde."
+            ],
+            "note": "Imperfectum 'vertelde' (reporting). 'Dat'-bijzin with plusquamperfectum 'had gehad' (the regret predates the telling) — or imperfectum 'had' for the ongoing feeling, both fine. 'Op het moment dat ...' opens a time-bijzin with imperfectum 'drukte' / 'verstuurde'. 'Op verzenden drukken' = to press send. Indirect speech plus stacked time clauses."
+          },
+          {
+            "type": "translation",
+            "prompt": "He admitted that he should have asked for help much sooner.",
+            "modelAnswer": "Hij gaf toe dat hij veel eerder om hulp had moeten vragen.",
+            "alternatives": [
+              "Hij gaf toe dat hij veel eerder hulp had moeten vragen.",
+              "Hij bekende dat hij veel eerder om hulp had moeten vragen."
+            ],
+            "note": "Imperfectum 'gaf toe' ('toegeven' scheidbaar: gaf toe). 'Dat'-bijzin with plusquamperfectum-modal 'had moeten vragen' — dubbele infinitief, the whole verb cluster at the clause end, never 'had moeten gevraagd'. 'Om hulp vragen' = to ask for help. 'Bekennen' is a stronger 'admit / confess'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I wish I hadn't waited so long before I finally went to see a doctor.",
+            "modelAnswer": "Ik wou dat ik niet zo lang had gewacht voordat ik eindelijk naar de dokter ging.",
+            "alternatives": [
+              "Ik wou dat ik niet zo lang had gewacht voordat ik eindelijk naar een dokter ging.",
+              "Was ik maar niet zo lang blijven wachten voordat ik naar de dokter ging."
+            ],
+            "note": "'Ik wou dat ik ...' takes the plusquamperfectum: 'had gewacht' ('wachten', hebben; kofschip: stem 'wacht-' on -t → 'gewacht'). 'Voordat'-bijzin with imperfectum 'ging'. The second alternative uses the verb-first wish 'Was ik maar ... blijven wachten', where 'blijven + infinitief' takes 'zijn'. Regret frame plus a 'voordat' sequence."
+          },
+          {
+            "type": "translation",
+            "prompt": "By the time she realised her mistake, she'd already sent the email and there was nothing she could do.",
+            "modelAnswer": "Tegen de tijd dat ze haar fout besefte, had ze de mail al verstuurd en was er niets meer aan te doen.",
+            "alternatives": [
+              "Tegen de tijd dat ze haar fout doorhad, had ze de mail al verzonden en kon ze er niets meer aan doen.",
+              "Toen ze haar fout eenmaal besefte, had ze de mail al verstuurd en viel er niets meer aan te doen."
+            ],
+            "note": "'Tegen de tijd dat ...'-bijzin with imperfectum 'besefte'. Plusquamperfectum 'had verstuurd' — the sending preceded the realising ('versturen' → 'verstuurd' with -d, never 'verstuurt'). Coordinated 'en'-clause with the fixed idiom 'er is niets aan te doen' (there's nothing to be done): 'was er niets meer aan te doen'. Layered sequence plus a regret-flavoured idiom."
+          }
+        ]
+      }
+    }
+  ]
+}
