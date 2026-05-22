@@ -1,0 +1,248 @@
+{
+  "zone": "imperfectum",
+  "zoneName": "Imperfectum vs Perfectum",
+  "tiles": [
+    {
+      "id": "imperfectum-5-eten-koken",
+      "theme": "Eten en koken",
+      "themeEnglish": "Food and cooking — choosing between imperfectum (was doing) and perfectum (have done)",
+      "recognitionQuestion": "Is the right past tense used here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Vanavond heb ik voor het eerst zelf bitterballen gemaakt.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum 'heb gemaakt' for a completed action this evening. Inversion after 'Vanavond'. 'Maken' zwak; stem 'maak-' on -k (kofschip) → 'gemaakt'. 'Voor het eerst zelf' = for the first time, from scratch."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mijn oma maakte met Sinterklaas altijd zelf pepernoten.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'maakte' for a sustained past habit ('altijd'). 'Met Sinterklaas' = at Sinterklaas-time. Subject-first, so no inversion. The recurring tradition lives naturally in the imperfectum."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Terwijl ik heb gekookt, heeft mijn man de tafel gedekt.",
+            "correctUse": false,
+            "explanation": "Niet correct. Two simultaneous ongoing past actions ('terwijl' = while) want the imperfectum, not the perfectum: 'Terwijl ik kookte, dekte mijn man de tafel.' The perfectum frames each as a finished event, which breaks the 'while these were both happening' relationship."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je het vlees al uit de vriezer gehaald?",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum question 'heb je gehaald' for a (possibly) just-completed action. 'Halen' zwak; stem 'haal-' on -l (not kofschip) → 'gehaald'. 'Al' = already/yet, a natural fit with the perfectum. 'Vriezer' = freezer."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je de soep al geproeft of zal ik er nog wat zout bij doen?",
+            "correctUse": false,
+            "explanation": "Niet correct. Kofschip trap. 'Proeven' looks like it ends in -f, but the underlying consonant is the voiced 'v' (not in 't kofschip) → the participle takes -d: 'geproefd', not 'geproeft'. Same logic as leven → geleefd, verhuizen → verhuisd."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen ik nog thuis woonde, heb ik elke zondag voor het hele gezin gekookt.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Toen ik nog thuis woonde' plus 'elke zondag' sets a habitual past — imperfectum needed: 'Toen ik nog thuis woonde, kookte ik elke zondag voor het hele gezin.' Perfectum reports a finished event; the recurring routine belongs in the imperfectum."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger aten we op vrijdag altijd vis, dat hoorde gewoon zo.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'aten' for a long-standing past habit ('altijd'). 'Eten' sterk: at-aten. Inversion after 'Vroeger'. 'Dat hoorde gewoon zo' = 'that's just how it was' — a very natural Dutch turn of phrase."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik kook elke dag vers.",
+            "task": "Zet in de imperfectum, beginnend met 'Vroeger'.",
+            "acceptedAnswers": [
+              "Vroeger kookte ik elke dag vers.",
+              "Vroeger kookte ik iedere dag vers.",
+              "Vroeger kookte ik elke dag vers."
+            ],
+            "preferred": "Vroeger kookte ik elke dag vers.",
+            "explanation": "'Koken' zwak; stem 'kook-' ends in -k (kofschip) → imperfectum 'kookte'. Inversion after 'Vroeger': 'kookte ik'. 'Vers koken' = to cook fresh, from scratch."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij snijdt de uien heel fijn.",
+            "task": "Zet in de perfectum.",
+            "acceptedAnswers": [
+              "Hij heeft de uien heel fijn gesneden.",
+              "Hij heeft de uien heel fijn gehakt.",
+              "Hij heeft de uitjes heel fijn gesneden."
+            ],
+            "preferred": "Hij heeft de uien heel fijn gesneden.",
+            "explanation": "'Snijden' sterk: snijd-sneed-gesneden. Auxiliary 'hebben'. 'Hakken' (to chop) is the natural alternative for chopping very fine. 'Uitjes' is the affectionate diminutive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben gisteren bij de Italiaan gegeten.",
+            "task": "Maak er een gewoonte van vroeger van, in de imperfectum.",
+            "acceptedAnswers": [
+              "We aten vroeger vaak bij de Italiaan.",
+              "Vroeger aten we vaak bij de Italiaan.",
+              "We aten vroeger elke week bij de Italiaan."
+            ],
+            "preferred": "We aten vroeger vaak bij de Italiaan.",
+            "explanation": "From a single perfectum event to a habitual imperfectum. 'Eten' sterk: at-aten. Adding 'vroeger vaak' makes the recurring sense explicit. 'Bij de Italiaan (eten)' = at the Italian restaurant — standard Dutch shorthand."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik warm de restjes op in de magnetron.",
+            "task": "Zet in de perfectum, beginnend met 'Gisteravond'.",
+            "acceptedAnswers": [
+              "Gisteravond heb ik de restjes in de magnetron opgewarmd.",
+              "Gisteravond heb ik de restjes opgewarmd in de magnetron.",
+              "Gisteravond heb ik de restjes even opgewarmd in de magnetron."
+            ],
+            "preferred": "Gisteravond heb ik de restjes in de magnetron opgewarmd.",
+            "explanation": "'Opwarmen' zwak + scheidbaar; stem 'warm-' ends in -m (not kofschip) → -d: 'opgewarmd'. Inversion after 'Gisteravond'. 'Restjes' = leftovers; 'magnetron' = microwave."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Proef je even of er genoeg zout in zit?",
+            "task": "Zet in de perfectum.",
+            "acceptedAnswers": [
+              "Heb je even geproefd of er genoeg zout in zat?",
+              "Heb je even geproefd of er genoeg zout in zit?",
+              "Heb je al even geproefd of er genoeg zout in zat?"
+            ],
+            "preferred": "Heb je even geproefd of er genoeg zout in zat?",
+            "explanation": "'Proeven' zwak; the underlying 'v' is NOT in 't kofschip → 'geproefd' with -d (mind the trap 'geproeft'). The 'of'-bijzin can shift to the past too: 'zat' (zitten-zat), though present 'zit' is also heard for a state that still holds."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn moeder bakt de lekkerste appeltaart.",
+            "task": "Zet in de imperfectum.",
+            "acceptedAnswers": [
+              "Mijn moeder bakte de lekkerste appeltaart.",
+              "Vroeger bakte mijn moeder de lekkerste appeltaart.",
+              "Mijn moeder bakte altijd de lekkerste appeltaart."
+            ],
+            "preferred": "Mijn moeder bakte de lekkerste appeltaart.",
+            "explanation": "'Bakken' is a split-personality verb: regular in the imperfectum (kofschip -k → 'bakte'), but strong in the participle ('gebakken'). Here only the imperfectum is needed, so 'bakte'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik dek de tafel en steek de kaarsen aan.",
+            "task": "Zet in de perfectum.",
+            "acceptedAnswers": [
+              "Ik heb de tafel gedekt en de kaarsen aangestoken.",
+              "Ik heb de tafel gedekt en heb de kaarsen aangestoken.",
+              "Ik heb de tafel gedekt en de kaarsjes aangestoken."
+            ],
+            "preferred": "Ik heb de tafel gedekt en de kaarsen aangestoken.",
+            "explanation": "Two verbs: 'dekken' zwak (kofschip -k → 'gedekt') and 'aansteken' sterk + scheidbaar (stak aan - aangestoken). Same subject, so the second auxiliary 'heb' is dropped. 'De tafel dekken' = set the table."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I made soup for the whole family yesterday.",
+            "modelAnswer": "Ik heb gisteren soep voor het hele gezin gemaakt.",
+            "alternatives": [
+              "Gisteren heb ik soep voor het hele gezin gemaakt.",
+              "Ik heb gisteren voor het hele gezin soep gekookt."
+            ],
+            "note": "Perfectum 'heb gemaakt' for a completed action — Dutch leans on perfectum in conversation where English uses the simple past. 'Maken' zwak (kofschip -k → 'gemaakt'). 'Soep koken' is equally idiomatic. 'Gezin' = the immediate household, distinct from 'familie' (the wider relatives)."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was a student, I ate a lot of pasta.",
+            "modelAnswer": "Toen ik studeerde, at ik veel pasta.",
+            "alternatives": [
+              "Toen ik student was, at ik veel pasta.",
+              "Als student at ik veel pasta."
+            ],
+            "note": "'Toen'-bijzin (finite verb 'studeerde' / 'was' at the end). Habitual imperfectum 'at' (eten sterk: at-aten). Inversion after the bijzin: 'at ik'. 'Als student' (as a student) is a tidy compression that drops the clause entirely while keeping the imperfectum."
+          },
+          {
+            "type": "translation",
+            "prompt": "Have you already tasted the sauce?",
+            "modelAnswer": "Heb je de saus al geproefd?",
+            "alternatives": [
+              "Heb je al van de saus geproefd?",
+              "Heb je de saus al even geproefd?"
+            ],
+            "note": "Perfectum question 'heb ... geproefd'. The kofschip trap again: 'proeven' has an underlying voiced 'v' (not in 't kofschip), so the participle takes -d — 'geproefd', never 'geproeft'. 'Proeven van' (taste some of) is a common variant with 'van'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We cooked together every Sunday evening.",
+            "modelAnswer": "We kookten elke zondagavond samen.",
+            "alternatives": [
+              "Elke zondagavond kookten we samen.",
+              "Vroeger kookten we elke zondagavond samen."
+            ],
+            "note": "Habitual imperfectum 'kookten' ('koken', kofschip -k → -te; plural -ten). For a recurring past routine, imperfectum is the natural choice over perfectum, which would read as a finished tally. Fronting 'elke zondagavond' triggers inversion: 'kookten we'."
+          },
+          {
+            "type": "translation",
+            "prompt": "My grandmother always baked her own bread.",
+            "modelAnswer": "Mijn oma bakte altijd haar eigen brood.",
+            "alternatives": [
+              "Mijn oma bakte vroeger altijd haar eigen brood.",
+              "Vroeger bakte mijn oma altijd zelf brood."
+            ],
+            "note": "Habitual imperfectum 'bakte' — 'bakken' takes the regular -te in the imperfectum (kofschip -k), even though its participle is the strong 'gebakken'. A useful verb to know splits like that. 'Haar eigen brood' / 'zelf brood bakken' are both natural."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'd already eaten when she called to ask if I wanted to come for dinner.",
+            "modelAnswer": "Ik had al gegeten toen ze belde om te vragen of ik kwam eten.",
+            "alternatives": [
+              "Ik had al gegeten toen ze belde om te vragen of ik wilde komen eten.",
+              "Ik had al gegeten toen ze opbelde om te vragen of ik kwam eten."
+            ],
+            "note": "Plusquamperfectum 'had gegeten' — the eating was finished before the call. 'Toen'-bijzin (finite verb 'belde' at the end). Purpose clause 'om te vragen'. Nested 'of'-bijzin: 'of ik kwam eten', or 'of ik wilde komen eten' with the dubbele infinitief 'komen eten'. Four constructions stacked — proper B2 territory."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was younger I never cooked, but now I make dinner almost every evening.",
+            "modelAnswer": "Toen ik jonger was, kookte ik nooit, maar nu maak ik bijna elke avond het eten.",
+            "alternatives": [
+              "Toen ik jonger was, kookte ik nooit, maar tegenwoordig kook ik bijna elke avond.",
+              "Vroeger kookte ik nooit, maar nu maak ik bijna elke avond het avondeten."
+            ],
+            "note": "'Toen'-bijzin (finite verb 'was'). Habitual imperfectum 'kookte' with 'nooit'. Contrast with 'maar'; fronted 'nu' triggers inversion: 'maak ik'. 'Het eten / het avondeten maken' = make dinner. A past habit set directly against a present one."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I had known you were vegetarian, I would have made something else.",
+            "modelAnswer": "Als ik had geweten dat je vegetariër was, had ik iets anders gemaakt.",
+            "alternatives": [
+              "Als ik geweten had dat je vegetariër bent, had ik iets anders gemaakt.",
+              "Als ik had geweten dat je vegetarisch eet, had ik iets anders klaargemaakt."
+            ],
+            "note": "Plusquamperfectum in the 'als'-clause ('had geweten'). Nested 'dat'-bijzin: 'dat je vegetariër was' (reported → imperfectum) or 'bent' (still true → present). Conditioneel verleden in the main clause 'had gemaakt', with inversion 'had ik' because the 'als'-clause comes first. 'Iets anders klaarmaken' is a natural alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "The pan had burnt because I'd completely forgotten that the soup was still on the stove.",
+            "modelAnswer": "De pan was aangebrand omdat ik helemaal vergeten was dat de soep nog op het vuur stond.",
+            "alternatives": [
+              "De pan was aangebrand doordat ik helemaal was vergeten dat de soep nog op het fornuis stond.",
+              "De pan was aangebrand omdat ik helemaal was vergeten dat de soep nog op het vuur stond."
+            ],
+            "note": "Plusquamperfectum 'was aangebrand' — 'aanbranden' (to catch/burn) is a change of state, so it takes 'zijn'. 'Omdat'-bijzin holds a second plusquamperfectum, 'vergeten was' / 'was vergeten' (no 'ge-' on 'vergeten'). The innermost 'dat'-bijzin has imperfectum 'stond' for the simultaneous background. 'Doordat' (mechanical cause) is arguably sharper than 'omdat' here."
+          },
+          {
+            "type": "translation",
+            "prompt": "She told me she had never tasted stamppot before she moved to the Netherlands.",
+            "modelAnswer": "Ze vertelde me dat ze nog nooit stamppot had geproefd voordat ze naar Nederland verhuisde.",
+            "alternatives": [
+              "Ze vertelde me dat ze nog nooit stamppot had gegeten voordat ze naar Nederland verhuisde.",
+              "Ze zei dat ze nog nooit stamppot had geproefd voordat ze naar Nederland kwam."
+            ],
+            "note": "Imperfectum 'vertelde' for the reporting verb. 'Dat'-bijzin with plusquamperfectum 'had geproefd' — an action prior to another past point — and again the kofschip -d in 'geproefd'. Innermost 'voordat'-bijzin with imperfectum 'verhuisde' / 'kwam'. Indirect speech plus a sequence of past tenses. 'Stamppot' anchors it culturally."
+          }
+        ]
+      }
+    }
+  ]
+}
