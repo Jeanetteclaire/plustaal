@@ -1,0 +1,248 @@
+{
+  "zone": "passief",
+  "zoneName": "Passief",
+  "tiles": [
+    {
+      "id": "passief-5-passief-perfectum",
+      "theme": "Passief perfectum",
+      "themeEnglish": "The perfect and past-perfect passive — 'is/zijn' and 'was/waren' + participle, and why 'geworden' is dropped",
+      "recognitionQuestion": "Is this perfect passive correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Dit kasteel is in de zestiende eeuw gebouwd.",
+            "correctUse": true,
+            "explanation": "Correct. Perfect passive = 'zijn' + participle: 'is gebouwd'. This is how Dutch states when something was built, even centuries ago. 'Bouwen' → 'gebouwd'. Note 'is', never 'heeft', in the passive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De nieuwe brug is vorig jaar geopend geworden.",
+            "correctUse": false,
+            "explanation": "Niet correct. The 'geworden' must go. Dutch forms the perfect passive with just 'zijn' + participle: 'is vorig jaar geopend'. 'Is geopend geworden' is a Germanism — correct in German ('ist eröffnet worden'), wrong in Dutch."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het schilderij was al verkocht voordat de tentoonstelling opende.",
+            "correctUse": true,
+            "explanation": "Correct. Past perfect passive = 'was/waren' + participle: 'was verkocht' — the selling was complete before another past event. 'Verkopen' → 'verkocht'. 'Was', never 'had', for the past perfect passive. The 'voordat'-bijzin closes with 'opende'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het verdrag heeft in 1648 ondertekend.",
+            "correctUse": false,
+            "explanation": "Niet correct. The passive perfect uses 'zijn': 'Het verdrag is in 1648 ondertekend.' 'Heeft ondertekend' is active and needs someone doing the signing. 'Ondertekenen' → 'ondertekend' (no 'ge-', inseparable). The Peace of 1648, fittingly Dutch."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De schade moet inmiddels wel hersteld zijn.",
+            "correctUse": true,
+            "explanation": "Correct. A modal plus perfect passive: 'moet ... hersteld zijn' (must have been repaired by now). 'Zijn', not 'hebben', under the modal. 'Herstellen' → 'hersteld'. 'Inmiddels' = by now; 'wel' adds the speaker's confidence."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De krant meldde dat de daders inmiddels waren opgepakt.",
+            "correctUse": true,
+            "explanation": "Correct. A past perfect passive in reported speech: 'waren opgepakt' (had been arrested), plural. 'Oppakken' → 'opgepakt'. 'Melden' is the reporting verb. The arrest preceded the report, so the past perfect passive with 'waren'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Alle muren zijn vorige week opnieuw geverft.",
+            "correctUse": false,
+            "explanation": "Niet correct. Kofschip trap. 'Verven' has an underlying voiced 'v' (not in 't kofschip), so the participle takes -d: 'geverfd', not 'geverft'. The passive frame ('zijn ... opnieuw') is right; only the participle's final consonant is wrong."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "De aannemer bouwt het huis.",
+            "task": "Maak passief in de perfectum (afgerond).",
+            "acceptedAnswers": [
+              "Het huis is door de aannemer gebouwd.",
+              "Het huis is gebouwd door de aannemer.",
+              "Door de aannemer is het huis gebouwd."
+            ],
+            "preferred": "Het huis is door de aannemer gebouwd.",
+            "explanation": "Perfect passive = 'zijn' + participle: 'is gebouwd', not 'heeft gebouwd'. Agent 'de aannemer' (the contractor) takes 'door'. The full 'is gebouwd geworden' is never used — the 'geworden' is always dropped."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De gemeente had de weg al afgesloten.",
+            "task": "Maak passief (plusquamperfectum).",
+            "acceptedAnswers": [
+              "De weg was al door de gemeente afgesloten.",
+              "De weg was al afgesloten door de gemeente.",
+              "Door de gemeente was de weg al afgesloten."
+            ],
+            "preferred": "De weg was al door de gemeente afgesloten.",
+            "explanation": "Past perfect passive = 'was/waren' + participle: 'was afgesloten'. The active 'had afgesloten' becomes passive 'was afgesloten' — 'was', never 'had'. 'Afsluiten' → 'afgesloten'. 'Al' = already."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het bericht is verstuurd geworden.",
+            "task": "Verbeter de zin (haal de fout eruit).",
+            "acceptedAnswers": [
+              "Het bericht is verstuurd.",
+              "Het bericht is al verstuurd.",
+              "Het bericht is verzonden."
+            ],
+            "preferred": "Het bericht is verstuurd.",
+            "explanation": "The 'geworden' has to go. Dutch forms the perfect passive with just 'zijn' + participle: 'is verstuurd'. 'Is verstuurd geworden' is a Germanism — correct German, wrong Dutch. 'Versturen' → 'verstuurd'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Iemand heeft mijn fiets gestolen.",
+            "task": "Maak passief in de perfectum (zonder dader).",
+            "acceptedAnswers": [
+              "Mijn fiets is gestolen.",
+              "Mijn fiets is helaas gestolen.",
+              "Mijn fiets is gisteren gestolen."
+            ],
+            "preferred": "Mijn fiets is gestolen.",
+            "explanation": "Perfect passive with 'zijn': 'is gestolen' ('stelen' sterk → 'gestolen'). The vague 'iemand' drops out. A very Amsterdam sentence — and note it's 'is gestolen', never 'heeft gestolen', which would need a named thief."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze hebben het probleem opgelost.",
+            "task": "Maak passief in de perfectum.",
+            "acceptedAnswers": [
+              "Het probleem is opgelost.",
+              "Het probleem is inmiddels opgelost.",
+              "Het probleem is door hen opgelost."
+            ],
+            "preferred": "Het probleem is opgelost.",
+            "explanation": "Perfect passive 'is opgelost' ('oplossen' scheidbaar, kofschip -s → 'opgelost'). The vague 'ze' (they) can drop out. 'Het probleem is opgelost' = the problem has been solved — a result that still holds."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men moet het rapport voor vrijdag inleveren.",
+            "task": "Maak passief met een modaal werkwoord (perfectum-passief).",
+            "acceptedAnswers": [
+              "Het rapport moet voor vrijdag zijn ingeleverd.",
+              "Het rapport moet voor vrijdag ingeleverd zijn.",
+              "Het rapport dient voor vrijdag te zijn ingeleverd."
+            ],
+            "preferred": "Het rapport moet voor vrijdag zijn ingeleverd.",
+            "explanation": "A modal plus perfect passive: 'moet ... zijn ingeleverd' (must have been submitted by Friday). 'Inleveren' → 'ingeleverd'. The cluster 'zijn ingeleverd' / 'ingeleverd zijn' flips freely. Note 'zijn', not 'hebben', even under the modal."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De brand had het hele gebouw verwoest.",
+            "task": "Maak passief (plusquamperfectum).",
+            "acceptedAnswers": [
+              "Het hele gebouw was door de brand verwoest.",
+              "Het hele gebouw was verwoest door de brand.",
+              "Door de brand was het hele gebouw verwoest."
+            ],
+            "preferred": "Het hele gebouw was door de brand verwoest.",
+            "explanation": "Past perfect passive = 'was/waren' + participle: 'was verwoest' ('verwoesten' → 'verwoest'). The fire is the cause/agent → 'door de brand'. Active 'had verwoest' becomes passive 'was verwoest' — 'was', not 'had'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "This church was built in the fifteenth century.",
+            "modelAnswer": "Deze kerk is in de vijftiende eeuw gebouwd.",
+            "alternatives": [
+              "Deze kerk werd in de vijftiende eeuw gebouwd.",
+              "In de vijftiende eeuw is deze kerk gebouwd."
+            ],
+            "note": "Perfect passive with 'zijn': 'is gebouwd' — the standard way Dutch states when something was built, even for the distant past. Imperfectum passive 'werd gebouwd' is also fine, with a more narrative feel. Never 'heeft gebouwd'. 'Bouwen' → 'gebouwd'."
+          },
+          {
+            "type": "translation",
+            "prompt": "My bike has been stolen.",
+            "modelAnswer": "Mijn fiets is gestolen.",
+            "alternatives": [
+              "Mijn fiets is gisteren gestolen.",
+              "Ze hebben mijn fiets gestolen."
+            ],
+            "note": "Perfect passive 'is gestolen' ('stelen' sterk → 'gestolen'). It's 'is', not 'heeft' — 'heeft gestolen' would need a named thief. The active 'ze hebben mijn fiets gestolen' (with vague 'ze') is the everyday spoken alternative when you skip the passive."
+          },
+          {
+            "type": "translation",
+            "prompt": "The documents had already been signed.",
+            "modelAnswer": "De documenten waren al ondertekend.",
+            "alternatives": [
+              "De documenten waren al getekend.",
+              "De stukken waren al ondertekend."
+            ],
+            "note": "Past perfect passive = 'was/waren' + participle: 'waren ondertekend' (plural). 'Was/waren', never 'had/hadden', for the past perfect passive. 'Ondertekenen' → 'ondertekend' (no 'ge-', inseparable). 'Tekenen' is the everyday short form; 'stukken' a common word for documents."
+          },
+          {
+            "type": "translation",
+            "prompt": "The whole village had been destroyed by the flood.",
+            "modelAnswer": "Het hele dorp was door de overstroming verwoest.",
+            "alternatives": [
+              "Het hele dorp was verwoest door de overstroming.",
+              "Door de overstroming was het hele dorp verwoest."
+            ],
+            "note": "Past perfect passive 'was verwoest' ('verwoesten' → 'verwoest'). The flood is the cause/agent → 'door de overstroming'. 'Was', not 'had'. 'Het hele dorp' = the whole village. A natural force takes 'door' just like a human agent."
+          },
+          {
+            "type": "translation",
+            "prompt": "By six o'clock, all the work had been finished.",
+            "modelAnswer": "Om zes uur was al het werk afgerond.",
+            "alternatives": [
+              "Tegen zessen was al het werk klaar.",
+              "Om zes uur was al het werk af."
+            ],
+            "note": "Past perfect passive 'was afgerond' ('afronden' → 'afgerond'). 'Al het werk' = all the work. The lighter 'was klaar' / 'was af' (was done/finished) express the resulting state and are extremely common in speech. 'Tegen zessen' = by around six."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "He said that the results had already been published before the meeting started.",
+            "modelAnswer": "Hij zei dat de resultaten al waren gepubliceerd voordat de vergadering begon.",
+            "alternatives": [
+              "Hij zei dat de resultaten al gepubliceerd waren voordat de vergadering begon.",
+              "Hij meldde dat de resultaten al waren gepubliceerd voordat de vergadering van start ging."
+            ],
+            "note": "Reported speech ('zei dat') with a past perfect passive 'waren gepubliceerd' (plural) — the publishing preceded the meeting. 'Voordat'-bijzin with imperfectum 'begon'. 'Publiceren' → 'gepubliceerd'. Past perfect passive = 'waren', not 'hadden'. 'Van start gaan' = to get under way."
+          },
+          {
+            "type": "translation",
+            "prompt": "The bridge must have been damaged during the storm, because it has now been closed.",
+            "modelAnswer": "De brug moet tijdens de storm beschadigd zijn, want hij is nu afgesloten.",
+            "alternatives": [
+              "De brug moet tijdens de storm beschadigd zijn geraakt, want hij is nu afgesloten.",
+              "De brug moet door de storm beschadigd zijn, want hij is nu gesloten."
+            ],
+            "note": "A modal plus perfect passive: 'moet ... beschadigd zijn' (must have been damaged) — 'zijn', not 'hebben', under the modal. Then a 'want'-clause with a present result 'is afgesloten'. 'Beschadigen' → 'beschadigd'; 'beschadigd raken' = to get damaged. 'Want' coordinates, so no inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "After the report had been approved, it was sent to all the members.",
+            "modelAnswer": "Nadat het rapport was goedgekeurd, werd het naar alle leden gestuurd.",
+            "alternatives": [
+              "Nadat het rapport goedgekeurd was, werd het naar alle leden verstuurd.",
+              "Nadat het rapport was goedgekeurd, is het naar alle leden gestuurd."
+            ],
+            "note": "Two passives across a 'nadat'-sequence. 'Nadat'-bijzin with past perfect passive 'was goedgekeurd' (the approval came first). Main clause imperfectum passive 'werd gestuurd' — or perfect 'is gestuurd'. 'Goedkeuren' → 'goedgekeurd'; 'sturen' → 'gestuurd'. Inversion after the bijzin: 'werd het'."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the alarm had been switched on, the burglary could have been prevented.",
+            "modelAnswer": "Als het alarm aan had gestaan, had de inbraak voorkomen kunnen worden.",
+            "alternatives": [
+              "Als het alarm ingeschakeld was geweest, had de inbraak voorkomen kunnen worden.",
+              "Was het alarm aan geweest, dan had de inbraak voorkomen kunnen worden."
+            ],
+            "note": "A counterfactual touching the passive. The 'als'-clause uses the active state 'aan had gestaan' (had been on) or the passive 'ingeschakeld was geweest'. The main clause is a conditioneel verleden passive with a modal: 'had ... voorkomen kunnen worden' — participle + 'kunnen' + 'worden', a heavy cluster. 'Een inbraak voorkomen' = to prevent a burglary."
+          },
+          {
+            "type": "translation",
+            "prompt": "It was reported that several people had been injured and that the area had been evacuated.",
+            "modelAnswer": "Er werd gemeld dat er meerdere mensen gewond waren geraakt en dat het gebied was ontruimd.",
+            "alternatives": [
+              "Er werd gemeld dat meerdere mensen gewond waren geraakt en dat het gebied was geëvacueerd.",
+              "Gemeld werd dat er meerdere gewonden waren gevallen en dat het gebied was ontruimd."
+            ],
+            "note": "Impersonal passive 'Er werd gemeld' plus two 'dat'-bijzinnen. The first uses 'gewond raken' (to get injured) in the past perfect — 'waren geraakt', not a 'worden'-passive (a recurring false friend). The second is a true past perfect passive: 'was ontruimd' / 'was geëvacueerd'. 'Er zijn gewonden gevallen' is the idiomatic news phrasing for casualties."
+          }
+        ]
+      }
+    }
+  ]
+}

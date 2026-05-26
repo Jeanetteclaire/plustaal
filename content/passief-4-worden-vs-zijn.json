@@ -1,0 +1,248 @@
+{
+  "zone": "passief",
+  "zoneName": "Passief",
+  "tiles": [
+    {
+      "id": "passief-4-worden-vs-zijn",
+      "theme": "Worden vs zijn",
+      "themeEnglish": "Choosing between 'worden' (the action passive) and 'zijn' (the result/state and perfect passive)",
+      "recognitionQuestion": "Is 'worden' or 'zijn' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Kijk, het nieuwe zwembad wordt op dit moment gebouwd.",
+            "correctUse": true,
+            "explanation": "Correct. The building is happening right now — an action in progress — so 'worden': 'wordt gebouwd'. 'Op dit moment' makes the ongoing event explicit. Whenever the action is unfolding rather than finished, you reach for 'worden'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Wees voorzichtig, de vloer is net gedweild en nog nat.",
+            "correctUse": true,
+            "explanation": "Correct. Here 'is gedweild' marks the resulting state — the floor has just been mopped and is now wet. 'Zijn' points at the result, not the act of mopping. 'Dweilen' → 'gedweild' (kofschip: stem 'dweil-' on -l → -d)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Momenteel is de brug gerenoveerd, dus we moeten omrijden.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Momenteel' (currently) signals an ongoing action, which needs 'worden': 'wordt de brug gerenoveerd'. 'Is gerenoveerd' says the work is finished — which contradicts having to detour because it's still going on."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het rapport is vorige week al naar alle leden gestuurd.",
+            "correctUse": true,
+            "explanation": "Correct. A completed action → perfect passive with 'zijn': 'is gestuurd'. The sending is done and dusted. 'Sturen' → 'gestuurd'. Note it's 'is', never 'heeft', in the passive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het oude stadhuis heeft vorig jaar volledig gerenoveerd.",
+            "correctUse": false,
+            "explanation": "Niet correct. The passive perfect uses 'zijn', not 'hebben': 'Het oude stadhuis is vorig jaar volledig gerenoveerd.' English 'has been renovated' tempts you toward 'heeft', but 'heeft gerenoveerd' is active and needs someone doing the renovating."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Terwijl het huis werd geschilderd, logeerden we bij vrienden.",
+            "correctUse": true,
+            "explanation": "Correct. 'Terwijl' (while) frames two simultaneous past events, so the painting is an ongoing past action → 'werd geschilderd'. Worden in the imperfectum. 'Schilderen' → 'geschilderd'. The action ran on while you stayed elsewhere."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Let op: het museum wordt op maandag gesloten, dus kom op een andere dag.",
+            "correctUse": false,
+            "explanation": "Niet correct. The standing state of being shut needs 'zijn': 'het museum is op maandag gesloten'. 'Wordt gesloten' describes the act of closing (someone shutting it at a moment), not the fact that it stays closed on Mondays. For opening hours, use 'is gesloten'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Men schildert nu de gevel.",
+            "task": "Maak passief (de handeling is nu bezig).",
+            "acceptedAnswers": [
+              "De gevel wordt nu geschilderd.",
+              "Nu wordt de gevel geschilderd.",
+              "De gevel wordt op dit moment geschilderd."
+            ],
+            "preferred": "De gevel wordt nu geschilderd.",
+            "explanation": "Action in progress → 'worden'. Present passive 'wordt geschilderd' ('schilderen' → 'geschilderd'). 'Nu' / 'op dit moment' signals the ongoing event, which is exactly when you choose 'worden' over 'zijn'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men heeft de gevel vorige maand geschilderd.",
+            "task": "Maak passief (afgeronde handeling).",
+            "acceptedAnswers": [
+              "De gevel is vorige maand geschilderd.",
+              "Vorige maand is de gevel geschilderd.",
+              "De gevel is vorige maand al geschilderd."
+            ],
+            "preferred": "De gevel is vorige maand geschilderd.",
+            "explanation": "A completed action → perfect passive with 'zijn': 'is geschilderd', NOT 'heeft geschilderd'. The contrast with the previous item is the whole lesson: 'wordt' while it's happening, 'is' once it's done."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Iemand heeft het raam gebroken; het is nu kapot.",
+            "task": "Beschrijf de huidige toestand in de passief (het raam ...).",
+            "acceptedAnswers": [
+              "Het raam is gebroken.",
+              "Het raam is kapot.",
+              "Het raam is stuk."
+            ],
+            "preferred": "Het raam is gebroken.",
+            "explanation": "Here 'is gebroken' describes the resulting state — the window is broken now. 'Zijn' marks the result; you'd use 'wordt gebroken' only for the moment of breaking itself. State, not action → 'zijn'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De winkel sluit elke dag om zes uur.",
+            "task": "Beschrijf de toestand 's avonds (de winkel ... na zessen).",
+            "acceptedAnswers": [
+              "De winkel is na zessen gesloten.",
+              "Na zessen is de winkel gesloten.",
+              "'s Avonds is de winkel gesloten."
+            ],
+            "preferred": "De winkel is na zessen gesloten.",
+            "explanation": "The standing state of being shut → 'is gesloten'. 'Wordt gesloten' would describe the act of closing at six. For 'closed' states and opening hours, Dutch uses the stative 'zijn'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De brandweer redde gisteren twee katten.",
+            "task": "Maak passief (verleden tijd, handeling).",
+            "acceptedAnswers": [
+              "Gisteren werden er twee katten gered door de brandweer.",
+              "Twee katten werden gisteren door de brandweer gered.",
+              "Gisteren werden twee katten door de brandweer gered."
+            ],
+            "preferred": "Gisteren werden er twee katten gered door de brandweer.",
+            "explanation": "A past action → imperfectum passive with 'werd(en)'. Plural 'werden' for 'twee katten'. 'Redden' → 'gered' (the d+d collapses to one in spelling). Agent 'de brandweer' takes 'door'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het pakket — de bezorger heeft het net afgeleverd.",
+            "task": "Maak een perfectum-passiefzin (het pakket ...).",
+            "acceptedAnswers": [
+              "Het pakket is net afgeleverd.",
+              "Het pakket is net bezorgd.",
+              "Het pakket is zojuist afgeleverd."
+            ],
+            "preferred": "Het pakket is net afgeleverd.",
+            "explanation": "Completed action → perfect passive with 'zijn': 'is afgeleverd' ('afleveren' → 'afgeleverd'), not 'heeft afgeleverd'. 'Net' / 'zojuist' = just now. 'Worden' would force the ongoing action ('wordt afgeleverd' = is being delivered)."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De wegen sluiten ze morgen af vanwege de marathon.",
+            "task": "Maak passief (toekomstige handeling).",
+            "acceptedAnswers": [
+              "De wegen worden morgen afgesloten vanwege de marathon.",
+              "Morgen worden de wegen afgesloten vanwege de marathon.",
+              "Vanwege de marathon worden de wegen morgen afgesloten."
+            ],
+            "preferred": "De wegen worden morgen afgesloten vanwege de marathon.",
+            "explanation": "A future action → present passive with 'worden' plus a time word: 'worden morgen afgesloten'. Plural 'worden'. The action is still to happen, so 'worden', not the stative 'zijn'. 'Afsluiten' → 'afgesloten'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "The bridge is being renovated at the moment.",
+            "modelAnswer": "De brug wordt op dit moment gerenoveerd.",
+            "alternatives": [
+              "De brug wordt momenteel gerenoveerd.",
+              "Op dit moment wordt de brug gerenoveerd."
+            ],
+            "note": "'Is being renovated' = an action in progress → 'worden': 'wordt gerenoveerd'. English's continuous maps onto plain Dutch 'wordt' + participle. 'Op dit moment' / 'momenteel' flag the ongoing event. Reach for 'worden' whenever the action is happening, not finished."
+          },
+          {
+            "type": "translation",
+            "prompt": "The bridge has been renovated.",
+            "modelAnswer": "De brug is gerenoveerd.",
+            "alternatives": [
+              "De brug is inmiddels gerenoveerd.",
+              "De brug is al gerenoveerd."
+            ],
+            "note": "'Has been renovated' = a completed action → perfect passive with 'zijn': 'is gerenoveerd'. Never 'heeft gerenoveerd' (that's active). Hold this against the previous sentence: 'wordt' while it's happening, 'is' once it's done. 'Inmiddels' = by now."
+          },
+          {
+            "type": "translation",
+            "prompt": "The museum is closed on Mondays.",
+            "modelAnswer": "Op maandag is het museum gesloten.",
+            "alternatives": [
+              "Het museum is op maandag gesloten.",
+              "Op maandag is het museum dicht."
+            ],
+            "note": "A standing state → 'zijn': 'is gesloten' (or simply 'is dicht'). 'Wordt gesloten' would mean the act of closing happens on Monday, not that it stands shut. For opening hours and 'closed' states, Dutch uses 'is', not 'wordt'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Two people were rescued from the water.",
+            "modelAnswer": "Er werden twee mensen uit het water gered.",
+            "alternatives": [
+              "Twee mensen werden uit het water gered.",
+              "Uit het water werden twee mensen gered."
+            ],
+            "note": "A past action → imperfectum passive with 'werden' (plural). 'Redden' → 'gered'. With an indefinite count subject ('twee mensen'), Dutch often opens with placeholder 'er'. The rescuing is an event, so 'worden', here past 'werden'."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I arrived, the table had already been set.",
+            "modelAnswer": "Toen ik aankwam, was de tafel al gedekt.",
+            "alternatives": [
+              "Toen ik aankwam, was de tafel al klaargezet.",
+              "De tafel was al gedekt toen ik aankwam."
+            ],
+            "note": "'Had already been set' → past perfect passive with 'zijn' (the past version of the perfect passive): 'was gedekt'. This doubles as the resulting state — the table stood ready. 'Toen'-bijzin with imperfectum 'aankwam'. 'De tafel dekken' → 'gedekt'. Past perfect passive always uses 'was/waren', never 'had'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "The house is still being built, but the garden has already been laid out.",
+            "modelAnswer": "Het huis wordt nog gebouwd, maar de tuin is al aangelegd.",
+            "alternatives": [
+              "Het huis is nog in aanbouw, maar de tuin is al aangelegd.",
+              "Het huis wordt nog gebouwd, terwijl de tuin al is aangelegd."
+            ],
+            "note": "A worden/zijn contrast inside one sentence: 'wordt gebouwd' (action still ongoing) versus 'is aangelegd' (completed result). 'Nog' = still; 'al' = already. 'Aanleggen' scheidbaar → 'aangelegd'. 'In aanbouw' (under construction) is the idiomatic noun phrase for the first half."
+          },
+          {
+            "type": "translation",
+            "prompt": "The letter must be signed before it can be sent.",
+            "modelAnswer": "De brief moet worden ondertekend voordat hij kan worden verstuurd.",
+            "alternatives": [
+              "De brief moet ondertekend worden voordat hij verstuurd kan worden.",
+              "De brief moet worden getekend voordat hij verzonden kan worden."
+            ],
+            "note": "Two modal passives, both with 'worden' because both are actions: 'moet worden ondertekend' and 'kan worden verstuurd'. 'Ondertekenen' → 'ondertekend'; 'versturen' → 'verstuurd'. The 'voordat'-bijzin sends the cluster to the end. 'De brief' is 'hij'. Both clusters flip order freely."
+          },
+          {
+            "type": "translation",
+            "prompt": "By the time the guests arrived, the food had been prepared and the table had been set.",
+            "modelAnswer": "Tegen de tijd dat de gasten aankwamen, was het eten klaargemaakt en was de tafel gedekt.",
+            "alternatives": [
+              "Toen de gasten aankwamen, was het eten klaargemaakt en de tafel gedekt.",
+              "Tegen de tijd dat de gasten arriveerden, was alles al klaar."
+            ],
+            "note": "Two past perfect passives with 'zijn' (both completed before the arrival): 'was klaargemaakt', 'was gedekt' — results in place by the reference moment. 'Tegen de tijd dat' opens a bijzin with imperfectum 'aankwamen'. 'Klaarmaken' → 'klaargemaakt'; 'dekken' → 'gedekt'. Past perfect passive = 'was/waren', not 'had'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The road was closed for weeks because it was being repaired after the flood.",
+            "modelAnswer": "De weg was wekenlang afgesloten omdat hij werd gerepareerd na de overstroming.",
+            "alternatives": [
+              "De weg was wekenlang dicht omdat hij na de overstroming werd gerepareerd.",
+              "De weg bleef wekenlang afgesloten omdat hij werd gerepareerd na de overstroming."
+            ],
+            "note": "A telling worden/zijn pairing: 'was afgesloten' (the standing state of being closed, for weeks) versus 'werd gerepareerd' (the ongoing action that caused it). The state persisted; the action ran alongside. 'Omdat'-bijzin with the verb at the end. 'Wekenlang' = for weeks; 'overstroming' = flood."
+          },
+          {
+            "type": "translation",
+            "prompt": "It was announced that the stadium would be demolished and that a park would be built in its place.",
+            "modelAnswer": "Er werd aangekondigd dat het stadion zou worden gesloopt en dat er op die plek een park zou worden aangelegd.",
+            "alternatives": [
+              "Er werd aangekondigd dat het stadion gesloopt zou worden en dat er op die plek een park aangelegd zou worden.",
+              "Er werd aangekondigd dat het stadion zou worden gesloopt en dat er in plaats daarvan een park zou worden aangelegd."
+            ],
+            "note": "An impersonal passive 'Er werd aangekondigd' plus two future passives, both with 'worden' as they're future actions: 'zou worden gesloopt' and 'zou worden aangelegd'. 'Slopen' → 'gesloopt'; 'aanleggen' → 'aangelegd'. 'Op die plek' / 'in plaats daarvan' (in its place) — the second uses one of the daar-words. Two parallel 'dat'-bijzinnen with stacked 'zou worden' clusters."
+          }
+        ]
+      }
+    }
+  ]
+}

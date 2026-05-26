@@ -1,0 +1,248 @@
+{
+  "zone": "passief",
+  "zoneName": "Passief",
+  "tiles": [
+    {
+      "id": "passief-3-officieel-taalgebruik",
+      "theme": "Officieel taalgebruik",
+      "themeEnglish": "The passive in formal and official language — letters, regulations and notices",
+      "recognitionQuestion": "Is this passive construction correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "U wordt verzocht het formulier volledig in te vullen.",
+            "correctUse": true,
+            "explanation": "Correct. The set formal passive 'U wordt verzocht ...' (you are requested to), followed by a 'te'-clause: 'in te vullen' ('invullen' scheidbaar, 'te' slots between 'in' and 'vullen'). 'Verzoeken' → 'verzocht'. Pure officialese."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Uw aanvraag is op dit moment door onze afdeling behandeld.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Op dit moment' (right now) signals an ongoing action, which needs 'worden': 'wordt op dit moment behandeld'. 'Is behandeld' says the processing is finished, which contradicts 'op dit moment'. Worden = the action in progress; zijn = the completed result."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De betaling dient binnen veertien dagen te worden voldaan.",
+            "correctUse": true,
+            "explanation": "Correct. A formal modal passive: 'dienen te worden + participle' — 'dient te worden voldaan' ('voldoen' → 'voldaan'). 'Dienen te' is the officialese version of 'moeten'. The cluster can also run 'voldaan te worden'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De boete dient binnen de gestelde termijn te worden betaalt.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Betaalt' is the finite present-tense form; the participle is 'betaald' (kofschip: stem 'betaal-' on -l → -d). It should read 'te worden betaald'. The betaalt/betaald slip is one of the most common in Dutch. 'De gestelde termijn' = the set deadline."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Uw bezwaar is na beoordeling gegrond verklaard.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum passive with 'zijn': 'is ... verklaard' ('verklaren' → 'verklaard'). 'Een bezwaar gegrond verklaren' = to declare an objection well-founded — proper administrative Dutch. 'Na beoordeling' = after assessment."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Tegen dit besluit kan binnen zes weken bezwaar worden gemaakt.",
+            "correctUse": true,
+            "explanation": "Correct. An impersonal modal passive: 'kan ... bezwaar worden gemaakt' ('kunnen' + 'worden' + participle). 'Bezwaar maken' → 'gemaakt'. Fronting 'tegen dit besluit' triggers inversion. This is the standard appeal clause at the foot of any official decision."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De aanvraag heeft helaas niet op tijd ontvangen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The passive perfectum uses 'zijn', not 'hebben': 'De aanvraag is helaas niet op tijd ontvangen.' 'Heeft ontvangen' would be active and needs someone doing the receiving. 'Ontvangen' keeps no 'ge-' (inseparable 'ont-')."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Wij verzoeken u het bedrag over te maken.",
+            "task": "Maak passief (formeel: 'U wordt verzocht ...').",
+            "acceptedAnswers": [
+              "U wordt verzocht het bedrag over te maken.",
+              "U wordt verzocht om het bedrag over te maken.",
+              "U wordt vriendelijk verzocht het bedrag over te maken."
+            ],
+            "preferred": "U wordt verzocht het bedrag over te maken.",
+            "explanation": "Formal passive of a request: 'U wordt verzocht ...' ('verzoeken' → 'verzocht'). The 'te'-clause follows: 'het bedrag over te maken' ('overmaken' scheidbaar — 'te' slots between 'over' and 'maken'). 'Vriendelijk' often softens it."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De gemeente heeft de vergunning verleend.",
+            "task": "Maak passief (perfectum).",
+            "acceptedAnswers": [
+              "De vergunning is door de gemeente verleend.",
+              "De vergunning is verleend door de gemeente.",
+              "Door de gemeente is de vergunning verleend."
+            ],
+            "preferred": "De vergunning is door de gemeente verleend.",
+            "explanation": "Perfectum passive with 'zijn': 'is verleend' ('verlenen' → 'verleend', stem on -n → -d). Agent 'de gemeente' takes 'door'. 'Een vergunning verlenen' = to grant a permit — standard official Dutch."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men moet de boete binnen dertig dagen betalen.",
+            "task": "Maak passief met 'dienen' (formeel).",
+            "acceptedAnswers": [
+              "De boete dient binnen dertig dagen te worden betaald.",
+              "De boete dient binnen dertig dagen betaald te worden.",
+              "De boete moet binnen dertig dagen worden betaald."
+            ],
+            "preferred": "De boete dient binnen dertig dagen te worden betaald.",
+            "explanation": "Formal modal passive: 'dienen te worden + participle' — 'dient te worden betaald' ('betalen' → 'betaald', not 'betaalt'). The cluster runs 'te worden betaald' or 'betaald te worden'. 'Dienen te' is the officialese 'moeten'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De commissie wijst uw verzoek af.",
+            "task": "Maak passief (tegenwoordige tijd).",
+            "acceptedAnswers": [
+              "Uw verzoek wordt door de commissie afgewezen.",
+              "Uw verzoek wordt afgewezen door de commissie.",
+              "Uw verzoek wordt afgewezen."
+            ],
+            "preferred": "Uw verzoek wordt door de commissie afgewezen.",
+            "explanation": "Present passive 'wordt afgewezen' ('afwijzen' sterk + scheidbaar → 'afgewezen'). Agent 'de commissie' takes 'door'. 'Een verzoek afwijzen' = to reject a request; its opposite is 'toewijzen' (to grant)."
+          },
+          {
+            "type": "transformation",
+            "prompt": "U kunt tegen dit besluit bezwaar maken.",
+            "task": "Maak er een onpersoonlijke passieve zin van.",
+            "acceptedAnswers": [
+              "Tegen dit besluit kan bezwaar worden gemaakt.",
+              "Er kan tegen dit besluit bezwaar worden gemaakt.",
+              "Tegen dit besluit kan bezwaar gemaakt worden."
+            ],
+            "preferred": "Tegen dit besluit kan bezwaar worden gemaakt.",
+            "explanation": "An impersonal modal passive: 'kan bezwaar worden gemaakt' ('kunnen' + 'worden' + participle). 'Bezwaar maken' → 'gemaakt'. Fronting 'tegen dit besluit' triggers inversion: 'kan bezwaar'. Pure legal-notice Dutch."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De afdeling behandelt uw klacht zo snel mogelijk.",
+            "task": "Maak passief.",
+            "acceptedAnswers": [
+              "Uw klacht wordt zo snel mogelijk behandeld.",
+              "Uw klacht wordt zo snel mogelijk door de afdeling behandeld.",
+              "Zo snel mogelijk wordt uw klacht behandeld."
+            ],
+            "preferred": "Uw klacht wordt zo snel mogelijk behandeld.",
+            "explanation": "Present passive 'wordt behandeld' ('behandelen' → 'behandeld'). The agent 'de afdeling' can stay with 'door' or drop in a formal notice. 'Een klacht behandelen' = to deal with a complaint. 'Zo snel mogelijk' = as soon as possible."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men heeft het pakket op het verkeerde adres bezorgd.",
+            "task": "Maak passief (perfectum).",
+            "acceptedAnswers": [
+              "Het pakket is op het verkeerde adres bezorgd.",
+              "Het pakket is op het verkeerde adres afgeleverd.",
+              "Op het verkeerde adres is het pakket bezorgd."
+            ],
+            "preferred": "Het pakket is op het verkeerde adres bezorgd.",
+            "explanation": "'Men' drops out; perfectum passive with 'zijn': 'is bezorgd' ('bezorgen' → 'bezorgd', no 'ge-' because 'be-' is inseparable). 'Afleveren' → 'afgeleverd' is the alternative. A completed action, hence 'zijn'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "You are kindly requested to fill in the form completely.",
+            "modelAnswer": "U wordt vriendelijk verzocht het formulier volledig in te vullen.",
+            "alternatives": [
+              "U wordt vriendelijk verzocht om het formulier volledig in te vullen.",
+              "Wij verzoeken u vriendelijk het formulier volledig in te vullen."
+            ],
+            "note": "The set formal passive 'U wordt (vriendelijk) verzocht ...' ('verzoeken' → 'verzocht'), followed by a 'te'-clause: 'in te vullen' ('invullen' scheidbaar, 'te' between 'in' and 'vullen'). The active alternative 'Wij verzoeken u ...' is equally formal. 'Volledig' = completely."
+          },
+          {
+            "type": "translation",
+            "prompt": "The application has been rejected by the committee.",
+            "modelAnswer": "De aanvraag is door de commissie afgewezen.",
+            "alternatives": [
+              "De aanvraag is afgewezen door de commissie.",
+              "Het verzoek is door de commissie afgewezen."
+            ],
+            "note": "Perfectum passive with 'zijn': 'is afgewezen' ('afwijzen' sterk + scheidbaar → 'afgewezen'). Agent 'de commissie' takes 'door'. 'Aanvraag' (application) and 'verzoek' (request) are near-synonyms in official Dutch; both are rejected with 'afwijzen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The amount must be transferred within fourteen days.",
+            "modelAnswer": "Het bedrag dient binnen veertien dagen te worden overgemaakt.",
+            "alternatives": [
+              "Het bedrag dient binnen veertien dagen overgemaakt te worden.",
+              "Het bedrag moet binnen veertien dagen worden overgemaakt."
+            ],
+            "note": "Formal modal passive 'dienen te worden + participle': 'dient te worden overgemaakt' ('overmaken' scheidbaar → 'overgemaakt'). The cluster runs 'te worden overgemaakt' or 'overgemaakt te worden'. 'Dienen te' is the officialese 'moeten'. 'Een bedrag overmaken' = to transfer an amount."
+          },
+          {
+            "type": "translation",
+            "prompt": "Objections can be submitted within six weeks.",
+            "modelAnswer": "Bezwaar kan binnen zes weken worden ingediend.",
+            "alternatives": [
+              "Er kan binnen zes weken bezwaar worden ingediend.",
+              "Bezwaar kan binnen zes weken ingediend worden."
+            ],
+            "note": "Impersonal modal passive: 'kan ... worden ingediend' ('indienen' scheidbaar → 'ingediend'). 'Bezwaar indienen' / 'bezwaar maken' = to lodge an objection. The cluster 'worden ingediend' / 'ingediend worden' goes either order. Classic appeal-clause Dutch."
+          },
+          {
+            "type": "translation",
+            "prompt": "The permit was granted after the plans had been approved.",
+            "modelAnswer": "De vergunning werd verleend nadat de plannen waren goedgekeurd.",
+            "alternatives": [
+              "De vergunning werd verleend nadat de plannen goedgekeurd waren.",
+              "De vergunning is verleend nadat de plannen waren goedgekeurd."
+            ],
+            "note": "Two passives across a sequence. Main clause imperfectum passive 'werd verleend' ('verlenen' → 'verleend'). 'Nadat'-bijzin with plusquamperfectum passive 'waren goedgekeurd' — the approving came first, plural 'waren'. 'Goedkeuren' scheidbaar → 'goedgekeurd'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "Once your application has been received, it will be processed within ten working days.",
+            "modelAnswer": "Zodra uw aanvraag is ontvangen, wordt deze binnen tien werkdagen behandeld.",
+            "alternatives": [
+              "Zodra uw aanvraag ontvangen is, wordt deze binnen tien werkdagen behandeld.",
+              "Nadat uw aanvraag is ontvangen, zal deze binnen tien werkdagen worden behandeld."
+            ],
+            "note": "'Zodra'-bijzin with perfectum passive 'is ontvangen' (the receiving is complete; 'ontvangen' keeps no 'ge-'). Main clause present or future passive 'wordt behandeld' / 'zal worden behandeld'. 'Deze' refers back to 'uw aanvraag' (formal 'it'). The worden/zijn split: 'zijn' for the finished precondition, 'worden' for the action still to come."
+          },
+          {
+            "type": "translation",
+            "prompt": "It is not permitted to park here unless a valid permit has been displayed.",
+            "modelAnswer": "Het is niet toegestaan hier te parkeren tenzij een geldige vergunning is getoond.",
+            "alternatives": [
+              "Het is niet toegestaan om hier te parkeren tenzij een geldige vergunning zichtbaar is.",
+              "Hier mag niet worden geparkeerd tenzij een geldige vergunning is getoond."
+            ],
+            "note": "'Het is niet toegestaan ... te + infinitief' (it is not permitted to) — 'toestaan' → 'toegestaan'. A 'tenzij' (unless) bijzin with perfectum passive 'is getoond' ('tonen' → 'getoond'). The last alternative recasts the main clause as an impersonal modal passive 'mag niet worden geparkeerd'. Dense notice-board Dutch."
+          },
+          {
+            "type": "translation",
+            "prompt": "The council announced that the road would be closed while the bridge was being repaired.",
+            "modelAnswer": "De gemeente kondigde aan dat de weg zou worden afgesloten terwijl de brug werd gerepareerd.",
+            "alternatives": [
+              "De gemeente kondigde aan dat de weg afgesloten zou worden terwijl de brug werd gerepareerd.",
+              "De gemeente liet weten dat de weg zou worden afgesloten zolang de brug werd hersteld."
+            ],
+            "note": "Reported speech ('kondigde aan dat') wrapping two passives: a future passive 'zou worden afgesloten' (would be closed) and a simultaneous imperfectum passive 'werd gerepareerd' in a 'terwijl'-clause. 'Aankondigen' is scheidbaar (finite 'kondigde aan'). 'Herstellen' → 'hersteld' is the formal alternative to 'repareren'."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the regulations had been observed, the fine would not have been imposed.",
+            "modelAnswer": "Als de regels waren nageleefd, was de boete niet opgelegd.",
+            "alternatives": [
+              "Als de regels nageleefd waren, zou de boete niet zijn opgelegd.",
+              "Waren de regels nageleefd, dan was de boete niet opgelegd."
+            ],
+            "note": "A counterfactual on passives. The 'als'-clause has a plusquamperfectum passive 'waren nageleefd' ('naleven' scheidbaar → 'nageleefd', plural 'waren'). The main clause is conditioneel verleden passive 'was ... opgelegd' / 'zou ... zijn opgelegd' ('opleggen' scheidbaar → 'opgelegd'). 'Een boete opleggen' = to impose a fine. The verb-first variant drops 'als'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Applicants are hereby informed that all submitted documents will be treated as confidential.",
+            "modelAnswer": "Aanvragers worden hierbij geïnformeerd dat alle ingediende documenten vertrouwelijk worden behandeld.",
+            "alternatives": [
+              "Aanvragers worden hierbij ervan op de hoogte gesteld dat alle ingediende documenten vertrouwelijk worden behandeld.",
+              "Hierbij worden aanvragers geïnformeerd dat alle ingediende stukken vertrouwelijk zullen worden behandeld."
+            ],
+            "note": "Present passive 'worden geïnformeerd' ('informeren' → 'geïnformeerd', trema on the ï) plus a 'dat'-bijzin with another present/future passive 'worden behandeld' / 'zullen worden behandeld'. 'Hierbij' (hereby) is one of the hier-words — here meaning 'with this notice'. 'Ingediende' is an attributive participle ('submitted documents'). 'Iemand ergens van op de hoogte stellen' = to inform someone of something."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "zone": "passief",
+  "zoneName": "Passief",
+  "tiles": [
+    {
+      "id": "passief-2-recepten-en-processen",
+      "theme": "Recepten en processen",
+      "themeEnglish": "The passive in recipes and step-by-step processes — instructions and 'how it's done'",
+      "recognitionQuestion": "Is this passive construction correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Eerst worden de uien fijngesneden en in de pan gebakken.",
+            "correctUse": true,
+            "explanation": "Correct. Recipe present passive, plural 'worden fijngesneden ... gebakken'. The second 'worden' is dropped — both participles share it. 'Fijnsnijden' → 'fijngesneden'; 'bakken' → 'gebakken'. This impersonal present passive is the standard recipe voice."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De saus is op laag vuur ingekookt totdat hij dik wordt.",
+            "correctUse": false,
+            "explanation": "Niet correct. A recipe instruction is an ongoing procedure, so it needs 'worden': 'De saus wordt op laag vuur ingekookt totdat hij dik wordt.' 'Is ingekookt' means the reducing is already finished, which clashes with the present 'totdat hij dik wordt'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het oude papier wordt gesorteerd en daarna tot nieuw papier verwerkt.",
+            "correctUse": true,
+            "explanation": "Correct. Present passive describing a general process: 'wordt gesorteerd ... verwerkt'. 'Daarna' (after that) links the steps. 'Verwerken tot' = to process into. A clean two-step process passive, the way a recycling plant would be described."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De slagroom wordt stijf geklopd voordat hij door het beslag gaat.",
+            "correctUse": false,
+            "explanation": "Niet correct. Kofschip error in the participle. 'Kloppen' has a stem ending in -p (in 't kofschip), so the participle takes -t: 'geklopt', not 'geklopd'. The passive itself ('wordt ... stijf geklopt') is built correctly. 'Slagroom stijf kloppen' = to whip cream stiff."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zodra het glas is gesmolten, wordt het in vormen gegoten.",
+            "correctUse": true,
+            "explanation": "Correct, and a clean worden/zijn pairing: 'is gesmolten' (zijn — the melting is complete, a resultative state) in the 'zodra'-clause, then 'wordt gegoten' (worden — the ongoing next step). 'Smelten' → 'gesmolten'; 'gieten' → 'gegoten'. 'Zodra' = as soon as."
+          },
+          {
+            "type": "recognition",
+            "prompt": "In deze fabriek worden de producten zorgvuldig gecontroleerd voordat ze worden verpakt.",
+            "correctUse": true,
+            "explanation": "Correct. Two present passives in a process description: 'worden gecontroleerd' and 'worden verpakt', plural for 'de producten / ze'. 'Controleren' → 'gecontroleerd'; 'verpakken' → 'verpakt'. The 'voordat'-bijzin sends its verb to the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De groenten hebben eerst gewassen en daarna in stukjes gesneden.",
+            "correctUse": false,
+            "explanation": "Niet correct. The passive perfectum uses 'zijn', not 'hebben': 'De groenten zijn eerst gewassen en daarna in stukjes gesneden.' 'Hebben gewassen' reads as an active construction with no one doing the washing. 'Wassen' → 'gewassen', 'snijden' → 'gesneden'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Je snijdt de ui in kleine stukjes.",
+            "task": "Maak passief (recept, tegenwoordige tijd).",
+            "acceptedAnswers": [
+              "De ui wordt in kleine stukjes gesneden.",
+              "De ui wordt in kleine stukjes gehakt.",
+              "De uien worden in kleine stukjes gesneden."
+            ],
+            "preferred": "De ui wordt in kleine stukjes gesneden.",
+            "explanation": "Recipes drop the 'je' and use the present passive: 'wordt gesneden'. The object 'de ui' becomes the subject. 'Snijden' sterk → 'gesneden'; 'hakken' (to chop) → 'gehakt'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men voegt vervolgens een snufje zout toe.",
+            "task": "Maak passief.",
+            "acceptedAnswers": [
+              "Vervolgens wordt er een snufje zout toegevoegd.",
+              "Er wordt vervolgens een snufje zout toegevoegd.",
+              "Vervolgens wordt een snufje zout toegevoegd."
+            ],
+            "preferred": "Vervolgens wordt er een snufje zout toegevoegd.",
+            "explanation": "'Men' disappears in the passive. 'Toevoegen' scheidbaar → 'toegevoegd'. With the indefinite 'een snufje zout', 'er' often fills the subject slot. 'Vervolgens' (next) up front triggers inversion. 'Een snufje' = a pinch."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je klopt de eieren goed los.",
+            "task": "Maak passief.",
+            "acceptedAnswers": [
+              "De eieren worden goed losgeklopt.",
+              "De eieren worden goed geklopt.",
+              "Eerst worden de eieren losgeklopt."
+            ],
+            "preferred": "De eieren worden goed losgeklopt.",
+            "explanation": "Present passive 'worden losgeklopt', plural for 'de eieren'. 'Loskloppen' scheidbaar → 'losgeklopt' (kofschip: stem 'klop-' on -p → -t). Recipe instructions favour this impersonal present passive over 'je'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De fabriek heeft het afval gescheiden.",
+            "task": "Maak passief (perfectum).",
+            "acceptedAnswers": [
+              "Het afval is door de fabriek gescheiden.",
+              "Het afval is gescheiden door de fabriek.",
+              "Door de fabriek is het afval gescheiden."
+            ],
+            "preferred": "Het afval is door de fabriek gescheiden.",
+            "explanation": "Perfectum passive with 'zijn': 'is gescheiden' ('scheiden' sterk → 'gescheiden'). Agent 'de fabriek' takes 'door'. The active 'heeft gescheiden' becomes passive 'is gescheiden'. 'Afval scheiden' = to separate waste."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Eerst verwarmt men de oven voor op 180 graden.",
+            "task": "Maak passief.",
+            "acceptedAnswers": [
+              "Eerst wordt de oven voorverwarmd op 180 graden.",
+              "De oven wordt eerst voorverwarmd op 180 graden.",
+              "Eerst wordt de oven op 180 graden voorverwarmd."
+            ],
+            "preferred": "Eerst wordt de oven voorverwarmd op 180 graden.",
+            "explanation": "'Men' drops out; present passive 'wordt voorverwarmd' ('voorverwarmen' scheidbaar → 'voorverwarmd', kofschip stem 'warm-' on -m → -d). 'Eerst' up front triggers inversion. The opening line of nearly every Dutch recipe."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Daarna giet je het water af.",
+            "task": "Maak passief.",
+            "acceptedAnswers": [
+              "Daarna wordt het water afgegoten.",
+              "Het water wordt daarna afgegoten.",
+              "Daarna wordt het water afgegoten en weggegooid."
+            ],
+            "preferred": "Daarna wordt het water afgegoten.",
+            "explanation": "Present passive 'wordt afgegoten' ('afgieten' scheidbaar, sterk → 'afgegoten'). 'Daarna' (after that) up front triggers inversion: 'wordt het water'. 'Het water afgieten' = to drain the water."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De arbeiders verwerken de grondstoffen tot plastic.",
+            "task": "Maak passief (tegenwoordige tijd).",
+            "acceptedAnswers": [
+              "De grondstoffen worden tot plastic verwerkt.",
+              "De grondstoffen worden door de arbeiders tot plastic verwerkt.",
+              "Tot plastic worden de grondstoffen verwerkt."
+            ],
+            "preferred": "De grondstoffen worden tot plastic verwerkt.",
+            "explanation": "Present passive plural 'worden verwerkt' ('verwerken' → 'verwerkt', kofschip -k → -t). The agent 'de arbeiders' can stay with 'door' or drop out in a general process description. 'Grondstoffen' = raw materials; 'iets tot X verwerken' = to process into X."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "The vegetables are washed and cut into pieces.",
+            "modelAnswer": "De groenten worden gewassen en in stukjes gesneden.",
+            "alternatives": [
+              "De groenten worden gewassen en in stukken gesneden.",
+              "Eerst worden de groenten gewassen en gesneden."
+            ],
+            "note": "Recipe present passive, plural 'worden gewassen ... gesneden'. The second 'worden' is dropped — both participles share it. 'Wassen' → 'gewassen', 'snijden' → 'gesneden'. 'In stukjes/stukken' = into pieces. English's 'are washed' maps onto a plain Dutch present passive, with no continuous form."
+          },
+          {
+            "type": "translation",
+            "prompt": "The dough is left to rise for an hour.",
+            "modelAnswer": "Het deeg wordt een uur met rust gelaten om te rijzen.",
+            "alternatives": [
+              "Het deeg moet een uur rijzen.",
+              "Laat het deeg een uur rijzen."
+            ],
+            "note": "Dutch handles 'is left to rise' in a few ways. The passive 'wordt met rust gelaten' (is left alone) plus 'om te rijzen', or — more naturally for recipes — the modal 'moet ... rijzen' or the imperative 'laat ... rijzen'. Recipes slide freely between passive and imperative; all three feel native."
+          },
+          {
+            "type": "translation",
+            "prompt": "The glass is melted and then poured into moulds.",
+            "modelAnswer": "Het glas wordt gesmolten en daarna in vormen gegoten.",
+            "alternatives": [
+              "Het glas wordt gesmolten en vervolgens in mallen gegoten.",
+              "Daarna wordt het gesmolten glas in vormen gegoten."
+            ],
+            "note": "Process present passive: 'wordt gesmolten ... gegoten'. Here 'smelten' is transitive (to melt something) → 'gesmolten'; 'gieten' → 'gegoten'. 'Daarna' / 'vervolgens' = then/next. 'Vormen' / 'mallen' = moulds. A clean two-step process passive."
+          },
+          {
+            "type": "translation",
+            "prompt": "The data has been processed by the system.",
+            "modelAnswer": "De gegevens zijn door het systeem verwerkt.",
+            "alternatives": [
+              "De gegevens zijn verwerkt door het systeem.",
+              "De data is door het systeem verwerkt."
+            ],
+            "note": "Perfectum passive with 'zijn': 'zijn verwerkt' — plural, because 'gegevens' is plural. 'Verwerken' → 'verwerkt'. Agent 'het systeem' takes 'door'. Note that 'data' is treated as singular ('de data is') while 'gegevens' is plural ('de gegevens zijn') — both are in common use."
+          },
+          {
+            "type": "translation",
+            "prompt": "Once the sauce has thickened, it is served immediately.",
+            "modelAnswer": "Zodra de saus is ingedikt, wordt hij meteen geserveerd.",
+            "alternatives": [
+              "Zodra de saus dik is geworden, wordt hij meteen geserveerd.",
+              "Zodra de saus is ingedikt, wordt hij meteen opgediend."
+            ],
+            "note": "A worden/zijn pairing in one sentence: 'is ingedikt' (zijn — the thickening is complete, a resultative) in the 'zodra'-clause, then 'wordt geserveerd' (worden — the ongoing serving step). 'Indikken' → 'ingedikt'. 'Zodra' = as soon as. The sauce is 'hij' ('de saus' is a de-word). 'Opdienen' / 'serveren' both = to serve."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "Before the cake is put in the oven, the batter has to be beaten until smooth.",
+            "modelAnswer": "Voordat de taart in de oven wordt gezet, moet het beslag glad worden geklopt.",
+            "alternatives": [
+              "Voordat de taart in de oven gezet wordt, moet het beslag glad worden geklopt.",
+              "Voordat de taart de oven in gaat, moet het beslag glad geklopt worden."
+            ],
+            "note": "Two passives across a 'voordat'-sequence. The 'voordat'-bijzin has present passive 'wordt gezet' (verb at the end). The main clause is a modal-passive: 'moet ... worden geklopt' — 'moeten' + 'worden' + participle. 'Kloppen' → 'geklopt' (kofschip -p → -t). 'Glad' = smooth. The cluster 'worden geklopt' / 'geklopt worden' goes either order."
+          },
+          {
+            "type": "translation",
+            "prompt": "It is recommended that the meat be marinated for at least two hours.",
+            "modelAnswer": "Het wordt aangeraden om het vlees minstens twee uur te marineren.",
+            "alternatives": [
+              "Aangeraden wordt om het vlees minstens twee uur te marineren.",
+              "Het is aan te raden het vlees minstens twee uur te marineren."
+            ],
+            "note": "An impersonal passive 'Het wordt aangeraden' (it is recommended) plus an 'om ... te'-clause: 'om het vlees ... te marineren'. 'Aanraden' → 'aangeraden'. The alternative 'het is aan te raden' uses the 'is ... te + infinitief' pattern (is to be recommended). 'Minstens' = at least."
+          },
+          {
+            "type": "translation",
+            "prompt": "The waste is first separated and then processed so that it can be recycled.",
+            "modelAnswer": "Het afval wordt eerst gescheiden en daarna verwerkt zodat het gerecycled kan worden.",
+            "alternatives": [
+              "Het afval wordt eerst gescheiden en vervolgens verwerkt zodat het kan worden gerecycled.",
+              "Eerst wordt het afval gescheiden en daarna verwerkt, zodat het hergebruikt kan worden."
+            ],
+            "note": "Three passives. Two present passives 'wordt gescheiden ... verwerkt', then a 'zodat'-clause with a modal-passive 'kan worden gerecycled' / 'gerecycled kan worden' ('kunnen' + 'worden' + participle). 'Zodat' = so that. 'Recyclen' → 'gerecycled'; 'hergebruiken' (to reuse) → 'hergebruikt' is the native alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the oven had been preheated properly, the bread would have risen better.",
+            "modelAnswer": "Als de oven goed was voorverwarmd, was het brood beter gerezen.",
+            "alternatives": [
+              "Als de oven goed voorverwarmd was, zou het brood beter zijn gerezen.",
+              "Was de oven goed voorverwarmd, dan was het brood beter gerezen."
+            ],
+            "note": "A counterfactual built partly on a passive. The 'als'-clause has a plusquamperfectum passive 'was voorverwarmd' ('voorverwarmen' → 'voorverwarmd'). The main clause is conditioneel verleden 'was ... gerezen' — but 'rijzen' (to rise) is intransitive and takes 'zijn', so this part is active, not passive. A useful reminder that not every English-looking passive is passive in Dutch. The verb-first variant drops 'als'."
+          },
+          {
+            "type": "translation",
+            "prompt": "According to the manufacturer, every product is tested by hand before it is packed and shipped.",
+            "modelAnswer": "Volgens de fabrikant wordt elk product met de hand getest voordat het wordt verpakt en verzonden.",
+            "alternatives": [
+              "Volgens de fabrikant wordt elk product handmatig getest voordat het wordt ingepakt en verstuurd.",
+              "Volgens de fabrikant wordt ieder product met de hand gecontroleerd voordat het verpakt en verzonden wordt."
+            ],
+            "note": "Three present passives. Main clause 'wordt getest' (an agentless general procedure), then a 'voordat'-bijzin with two more: 'wordt verpakt en verzonden' (the second 'wordt' may be dropped). 'Volgens de fabrikant' = according to the manufacturer. 'Met de hand' / 'handmatig' = by hand. 'Testen' → 'getest'; 'verpakken' → 'verpakt'; 'verzenden' → 'verzonden'."
+          }
+        ]
+      }
+    }
+  ]
+}
