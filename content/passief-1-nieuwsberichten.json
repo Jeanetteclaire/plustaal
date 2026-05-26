@@ -1,0 +1,248 @@
+{
+  "zone": "passief",
+  "zoneName": "Passief",
+  "tiles": [
+    {
+      "id": "passief-1-nieuwsberichten",
+      "theme": "Nieuwsberichten",
+      "themeEnglish": "The passive in news reports — 'worden' and 'zijn' passives, and the agent with 'door'",
+      "recognitionQuestion": "Is this passive construction correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "De verdachte wordt vanmiddag voor de rechter geleid.",
+            "correctUse": true,
+            "explanation": "Correct. Present passive with 'worden': 'wordt geleid' for a scheduled, ongoing action. 'Iemand voor de rechter leiden' = to bring someone before the judge — standard news Dutch. The participle 'geleid' closes the clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De dader heeft gisteren in Rotterdam aangehouden.",
+            "correctUse": false,
+            "explanation": "Niet correct. The passive perfectum uses 'zijn', not 'hebben': 'De dader is gisteren in Rotterdam aangehouden.' 'Heeft aangehouden' would be active and needs someone doing the detaining. 'Aanhouden' = to detain/arrest."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het rapport is vanochtend door de commissie gepubliceerd.",
+            "correctUse": true,
+            "explanation": "Correct. Perfectum passive with 'zijn': 'is gepubliceerd'. The agent takes 'door': 'door de commissie'. 'Publiceren' → 'gepubliceerd'. This is the completed-action passive, fitting for a finished event reported this morning."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het gewonde slachtoffer is op dit moment in het ziekenhuis behandeld.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Op dit moment' (right now) signals an ongoing action, which needs 'worden': 'wordt op dit moment behandeld'. 'Is behandeld' means the treatment is finished — it clashes with 'op dit moment'. Worden = the action unfolding; zijn = the result."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er wordt een onderzoek ingesteld naar de oorzaak van de brand.",
+            "correctUse": true,
+            "explanation": "Correct. An impersonal passive with placeholder 'er' and 'worden': 'Er wordt ... ingesteld'. No agent is named — typical of news reports. 'Een onderzoek instellen' = to launch an investigation ('instellen' scheidbaar → 'ingesteld')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De wegen rond het centrum werden gisteren afgesloten vanwege de demonstratie.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum passive, plural 'werden afgesloten' ('afsluiten' scheidbaar → 'afgesloten') for a past action. 'Vanwege' (because of) introduces the cause as a noun phrase. A clean past-tense news passive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De brand werd snel geblusd door de brandweer.",
+            "correctUse": false,
+            "explanation": "Niet correct. Kofschip error in the participle. 'Blussen' has a stem ending in -s (in 't kofschip), so the participle takes -t: 'geblust', not 'geblusd'. The passive itself ('werd ... door de brandweer') is built correctly."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "De politie arresteerde de verdachte.",
+            "task": "Maak passief (imperfectum).",
+            "acceptedAnswers": [
+              "De verdachte werd door de politie gearresteerd.",
+              "De verdachte werd gearresteerd door de politie.",
+              "Door de politie werd de verdachte gearresteerd."
+            ],
+            "preferred": "De verdachte werd door de politie gearresteerd.",
+            "explanation": "Active → passive: the object 'de verdachte' becomes the subject, the verb becomes 'worden' + participle ('werd gearresteerd'), and the agent takes 'door'. Imperfectum 'werd' for the past action; 'arresteren' → 'gearresteerd'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men sluit vanavond de tunnel af.",
+            "task": "Maak passief (tegenwoordige tijd).",
+            "acceptedAnswers": [
+              "De tunnel wordt vanavond afgesloten.",
+              "Vanavond wordt de tunnel afgesloten.",
+              "De tunnel wordt vanavond door de wegbeheerder afgesloten."
+            ],
+            "preferred": "De tunnel wordt vanavond afgesloten.",
+            "explanation": "'Men' (one/they) simply disappears in the passive — no 'door'-agent needed. Present passive 'wordt afgesloten' ('afsluiten' scheidbaar → 'afgesloten'). Fronting 'vanavond' triggers inversion: 'wordt de tunnel'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De brandweer heeft het vuur geblust.",
+            "task": "Maak passief (perfectum).",
+            "acceptedAnswers": [
+              "Het vuur is door de brandweer geblust.",
+              "Het vuur is geblust door de brandweer.",
+              "Het vuur is door de brandweer gedoofd."
+            ],
+            "preferred": "Het vuur is door de brandweer geblust.",
+            "explanation": "Perfectum passive uses 'zijn', not 'hebben': 'is geblust'. 'Blussen' → 'geblust' (kofschip -s → -t). 'Doven' (to extinguish) is the natural alternative. The active 'heeft geblust' becomes passive 'is geblust'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De gemeente gaat volgend jaar een nieuw zwembad bouwen.",
+            "task": "Maak passief (met 'worden').",
+            "acceptedAnswers": [
+              "Er wordt volgend jaar een nieuw zwembad gebouwd.",
+              "Volgend jaar wordt er een nieuw zwembad gebouwd.",
+              "Een nieuw zwembad wordt volgend jaar gebouwd."
+            ],
+            "preferred": "Er wordt volgend jaar een nieuw zwembad gebouwd.",
+            "explanation": "With an indefinite object ('een nieuw zwembad'), the passive often opens with placeholder 'er': 'Er wordt ... gebouwd'. The future sense rides on 'wordt' plus the time phrase — no 'zal' required. 'Bouwen' → 'gebouwd'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze hebben de minister geïnterviewd.",
+            "task": "Maak passief (perfectum, zonder agent).",
+            "acceptedAnswers": [
+              "De minister is geïnterviewd.",
+              "De minister is geïnterviewd door de pers.",
+              "De minister werd geïnterviewd."
+            ],
+            "preferred": "De minister is geïnterviewd.",
+            "explanation": "When the agent is vague ('ze' = they), drop it in the passive: 'De minister is geïnterviewd'. Perfectum passive with 'zijn'. 'Interviewen' → 'geïnterviewd' (note the trema on the ï after the vowel)."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De jury koos haar tot winnaar.",
+            "task": "Maak passief (imperfectum).",
+            "acceptedAnswers": [
+              "Ze werd door de jury tot winnaar gekozen.",
+              "Zij werd door de jury tot winnaar gekozen.",
+              "Door de jury werd ze tot winnaar gekozen."
+            ],
+            "preferred": "Ze werd door de jury tot winnaar gekozen.",
+            "explanation": "'Kiezen' sterk → 'gekozen'. Imperfectum passive 'werd gekozen'. The object 'haar' becomes the subject 'ze/zij'. 'Tot winnaar kiezen' = to choose as winner; the agent 'de jury' takes 'door'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De storm heeft veel schade veroorzaakt.",
+            "task": "Maak passief (perfectum).",
+            "acceptedAnswers": [
+              "Er is veel schade veroorzaakt door de storm.",
+              "Veel schade is door de storm veroorzaakt.",
+              "Door de storm is veel schade aangericht."
+            ],
+            "preferred": "Er is veel schade veroorzaakt door de storm.",
+            "explanation": "Perfectum passive with 'zijn': 'is veroorzaakt'. With an indefinite, mass-like object ('veel schade'), 'er' often opens the clause. 'Veroorzaken' → 'veroorzaakt'. For a natural force, 'door' is still the right agent marker. 'Schade aanrichten' is the idiomatic news alternative."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "The suspect was arrested yesterday.",
+            "modelAnswer": "De verdachte werd gisteren gearresteerd.",
+            "alternatives": [
+              "De verdachte is gisteren gearresteerd.",
+              "Gisteren werd de verdachte gearresteerd."
+            ],
+            "note": "Passive with 'worden': imperfectum 'werd gearresteerd' for the news-narrative past, or perfectum 'is gearresteerd' (very common in headlines and speech). No agent is given, so none is needed. 'Arresteren' → 'gearresteerd'. Fronting 'gisteren' triggers inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "A new bridge is being built over the river.",
+            "modelAnswer": "Er wordt een nieuwe brug over de rivier gebouwd.",
+            "alternatives": [
+              "Een nieuwe brug wordt over de rivier gebouwd.",
+              "Over de rivier wordt een nieuwe brug gebouwd."
+            ],
+            "note": "'Is being built' = present passive 'wordt gebouwd' — English's progressive maps straight onto Dutch 'wordt' + participle, with no separate continuous form. With the indefinite 'een nieuwe brug', Dutch likes to open with placeholder 'er'. 'Bouwen' → 'gebouwd'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The report has been published by the committee.",
+            "modelAnswer": "Het rapport is door de commissie gepubliceerd.",
+            "alternatives": [
+              "Het rapport is gepubliceerd door de commissie.",
+              "Door de commissie is het rapport gepubliceerd."
+            ],
+            "note": "Perfectum passive uses 'zijn': 'is gepubliceerd' — never 'heeft gepubliceerd' in the passive. The agent takes 'door': 'door de commissie'. 'Publiceren' → 'gepubliceerd'. Word order is flexible as long as the participle stays at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "The roads were closed because of the snow.",
+            "modelAnswer": "De wegen werden afgesloten vanwege de sneeuw.",
+            "alternatives": [
+              "De wegen werden vanwege de sneeuw afgesloten.",
+              "Vanwege de sneeuw werden de wegen afgesloten."
+            ],
+            "note": "Imperfectum passive, plural 'werden afgesloten' ('afsluiten' scheidbaar → 'afgesloten'). 'Vanwege' = because of, with a noun; for a full clause you'd switch to 'omdat'. The snow is a cause, not a deliberate agent, so 'vanwege', not 'door'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Three people were injured in the accident.",
+            "modelAnswer": "Drie mensen raakten gewond bij het ongeluk.",
+            "alternatives": [
+              "Drie mensen zijn gewond geraakt bij het ongeluk.",
+              "Bij het ongeluk raakten drie mensen gewond."
+            ],
+            "note": "A false-friend trap: English 'were injured' looks passive, but Dutch uses the fixed expression 'gewond raken' (to get injured), not a 'worden'-passive. 'Raakten gewond' (imperfectum) or 'zijn gewond geraakt' (perfectum). 'Bij het ongeluk' = in the accident. Worth knowing where Dutch resists the passive."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "After the fire had been extinguished, the cause was investigated.",
+            "modelAnswer": "Nadat de brand was geblust, werd de oorzaak onderzocht.",
+            "alternatives": [
+              "Nadat de brand geblust was, werd de oorzaak onderzocht.",
+              "Nadat het vuur was gedoofd, werd er onderzoek gedaan naar de oorzaak."
+            ],
+            "note": "Two passives plus a sequence. 'Nadat'-bijzin with plusquamperfectum passive 'was geblust' (the extinguishing came first; the passive perfect uses 'zijn'). Main clause imperfectum passive 'werd onderzocht' ('onderzoeken' → 'onderzocht', no 'ge-' because 'onder-' is inseparable here). Inversion after the bijzin: 'werd de oorzaak'."
+          },
+          {
+            "type": "translation",
+            "prompt": "It was announced that the airport would be closed for two days.",
+            "modelAnswer": "Er werd aangekondigd dat het vliegveld twee dagen zou worden gesloten.",
+            "alternatives": [
+              "Er werd aangekondigd dat het vliegveld twee dagen gesloten zou worden.",
+              "Er werd aangekondigd dat het vliegveld twee dagen dicht zou gaan."
+            ],
+            "note": "An impersonal passive 'Er werd aangekondigd' (it was announced) wrapping a 'dat'-bijzin that contains a future passive: 'zou worden gesloten' (would be closed) — 'zou' + 'worden' + participle, in either order with 'worden'. 'Aankondigen' → 'aangekondigd'. The last alternative swaps to the active 'dicht zou gaan' (would close)."
+          },
+          {
+            "type": "translation",
+            "prompt": "The victims were taken to hospital while the area was being evacuated.",
+            "modelAnswer": "De slachtoffers werden naar het ziekenhuis gebracht terwijl het gebied werd geëvacueerd.",
+            "alternatives": [
+              "De slachtoffers zijn naar het ziekenhuis gebracht terwijl het gebied werd ontruimd.",
+              "Terwijl het gebied werd geëvacueerd, werden de slachtoffers naar het ziekenhuis gebracht."
+            ],
+            "note": "Two simultaneous imperfectum passives joined by 'terwijl' (while): 'werden gebracht' and 'werd geëvacueerd'. 'Brengen' sterk → 'gebracht'; 'evacueren' → 'geëvacueerd' (trema on the ë). 'Ontruimen' (to clear) is the common native alternative to the loanword. 'Terwijl' wants the imperfectum passive for both ongoing actions."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the warning had been taken seriously, the disaster could have been prevented.",
+            "modelAnswer": "Als de waarschuwing serieus was genomen, had de ramp voorkomen kunnen worden.",
+            "alternatives": [
+              "Als de waarschuwing serieus was genomen, was de ramp te voorkomen geweest.",
+              "Was de waarschuwing serieus genomen, dan had de ramp voorkomen kunnen worden."
+            ],
+            "note": "A counterfactual built on passives. The 'als'-clause has a plusquamperfectum passive 'was genomen' ('serieus nemen' → 'was genomen'). The main clause is a conditioneel verleden passive with a modal: 'had ... voorkomen kunnen worden' — participle 'voorkomen' + modal 'kunnen' + passive 'worden', one of the heaviest clusters Dutch builds. 'Te voorkomen geweest' (would have been preventable) sidesteps it."
+          },
+          {
+            "type": "translation",
+            "prompt": "According to the police, the stolen paintings had already been sold abroad before the gang was arrested.",
+            "modelAnswer": "Volgens de politie waren de gestolen schilderijen al in het buitenland verkocht voordat de bende werd opgepakt.",
+            "alternatives": [
+              "Volgens de politie waren de gestolen schilderijen al naar het buitenland verkocht voordat de bende werd aangehouden.",
+              "Volgens de politie waren de gestolen schilderijen in het buitenland verkocht voordat de bende was opgepakt."
+            ],
+            "note": "'Volgens de politie' = according to the police (news framing). Plusquamperfectum passive 'waren ... verkocht' — the selling preceded the arrest, and the passive perfect uses 'zijn' (plural 'waren'). 'Voordat'-bijzin with imperfectum passive 'werd opgepakt' / 'werd aangehouden' (to be rounded up/arrested). 'Gestolen' is an attributive past participle ('the stolen paintings'). Two passives across a sequence."
+          }
+        ]
+      }
+    }
+  ]
+}
