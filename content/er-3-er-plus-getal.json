@@ -1,0 +1,244 @@
+{
+  "zone": "er",
+  "zoneName": "Er",
+  "tiles": [
+    {
+      "id": "er-3-er-plus-getal",
+      "theme": "Er + getal of hoeveelheid",
+      "themeEnglish": "The quantitative 'er' — standing in for 'of them' when a noun is dropped and replaced by a number or quantity word (ik heb er drie)",
+      "recognitionQuestion": "Is 'er' used correctly with this number or quantity?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Hoeveel kinderen heb je? Ik heb er twee.",
+            "correctUse": true,
+            "explanation": "Correct. When you drop the noun ('kinderen') and answer with a number, Dutch needs 'er' to stand in for 'of them': 'Ik heb er twee.' English just says 'I have two'; Dutch can't leave the gap empty — 'er' fills it."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Wil je nog koekjes? Nee dank je, ik heb er al genoeg gehad.",
+            "correctUse": true,
+            "explanation": "Correct. The quantity word 'genoeg' triggers the same 'er': 'ik heb er al genoeg gehad' (I've had enough of them). 'Er' works with quantity words (genoeg, veel, weinig, een paar), not only with bare numbers."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je nog appels? Ja, ik heb drie.",
+            "correctUse": false,
+            "explanation": "Niet correct. With the noun dropped, the number needs 'er': 'Ik heb er drie.' 'Ik heb drie' leaves the slot empty, which Dutch doesn't allow. Correct: 'Ja, ik heb er drie.' This dropped 'er' is the single most common slip here."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zijn er nog vragen? Ja, ik heb er nog één.",
+            "correctUse": true,
+            "explanation": "Correct. 'Er ... één' = one (of them). 'Ik heb er nog één' = I still have one. The quantitative 'er' works just as well with 'één' as with bigger numbers; 'nog' (still) slots in front of it."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hoeveel wil je hebben? Ik wil graag vijf.",
+            "correctUse": false,
+            "explanation": "Niet correct. The noun is dropped, so the number needs 'er': 'Ik wil er graag vijf (hebben).' Correct: 'Ik wil er graag vijf.' Without 'er' the sentence feels unfinished to a Dutch ear — 'vijf' of what?"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er waren veel mensen, maar er kwamen er nog meer bij.",
+            "correctUse": true,
+            "explanation": "Correct — and a glimpse of the DOUBLE 'er'. 'Er kwamen er nog meer bij' has two: the first 'er' is the placeholder ('there'), the second is the quantitative 'er' ('of them'). 'Erbij komen' = to be added. Two jobs, two little words."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je nog postzegels? Nee, ik heb er geen meer.",
+            "correctUse": true,
+            "explanation": "Correct. 'Geen' is a quantity word too, so it takes 'er': 'ik heb er geen meer' (I have none left). The pattern 'er geen (meer)' is the standard way to say you've run out of something countable."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hoeveel broers heb je? (antwoord: 2)",
+            "task": "Geef het antwoord met 'er'.",
+            "acceptedAnswers": [
+              "Ik heb er twee.",
+              "Ik heb er twee."
+            ],
+            "preferred": "Ik heb er twee.",
+            "explanation": "Drop the noun 'broers', keep the number, and add 'er' to stand in for 'of them': 'Ik heb er twee.' The 'er' is obligatory the moment the noun disappears."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hoeveel glazen wil je? (antwoord: 1)",
+            "task": "Geef het antwoord met 'er'.",
+            "acceptedAnswers": [
+              "Ik wil er één.",
+              "Ik wil er eentje.",
+              "Ik wil er graag één."
+            ],
+            "preferred": "Ik wil er één.",
+            "explanation": "'Er ... één' = one (of them). 'Eentje' is the cosy spoken diminutive: 'ik wil er eentje'. Either way the 'er' is needed once 'glazen' is dropped."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Heb je veel boeken? (antwoord: ja, veel)",
+            "task": "Geef het antwoord met 'er'.",
+            "acceptedAnswers": [
+              "Ja, ik heb er veel.",
+              "Ja, ik heb er heel veel."
+            ],
+            "preferred": "Ja, ik heb er veel.",
+            "explanation": "Quantity word 'veel' with the noun dropped → 'er veel': 'Ja, ik heb er veel.' Same mechanism as with numbers: 'er' covers the missing 'boeken'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Heb je nog koekjes? (antwoord: nee, op)",
+            "task": "Geef het antwoord met 'er ... geen meer'.",
+            "acceptedAnswers": [
+              "Nee, ik heb er geen meer.",
+              "Nee, ik heb er helaas geen meer."
+            ],
+            "preferred": "Nee, ik heb er geen meer.",
+            "explanation": "'Er geen meer' = none left. 'Nee, ik heb er geen meer' is the standard 'I've run out'. The 'meer' here means 'any more', not 'more'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Heb je een pen voor me? (antwoord: ja, een paar)",
+            "task": "Geef het antwoord met 'er'.",
+            "acceptedAnswers": [
+              "Ja, ik heb er een paar.",
+              "Ja, ik heb er een paar.",
+              "Ja, ik heb er wel een paar."
+            ],
+            "preferred": "Ja, ik heb er een paar.",
+            "explanation": "'Een paar' (a few) is a quantity expression, so it takes 'er': 'ik heb er een paar'. The 'er' stands in for the dropped 'pennen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mag ik twee kaartjes? (vraag beleefd, laat 'kaartjes' weg)",
+            "task": "Herschrijf de vraag met 'er'.",
+            "acceptedAnswers": [
+              "Mag ik er twee?",
+              "Mag ik er twee, alsjeblieft?",
+              "Zou ik er twee mogen?"
+            ],
+            "preferred": "Mag ik er twee, alsjeblieft?",
+            "explanation": "Drop 'kaartjes' and the number needs 'er': 'Mag ik er twee?' This works in questions just as in statements — the 'er' marks that you mean 'two of them'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hoeveel mensen waren er op het feest? (antwoord: ongeveer 20)",
+            "task": "Geef het antwoord met een dubbele 'er'.",
+            "acceptedAnswers": [
+              "Er waren er ongeveer twintig.",
+              "Er waren er ongeveer twintig."
+            ],
+            "preferred": "Er waren er ongeveer twintig.",
+            "explanation": "Two 'er's: the placeholder 'Er waren ...' (there were) plus the quantitative 'er' standing in for 'mensen' → 'Er waren er ongeveer twintig.' Both functions surface as separate words when they don't sit directly side by side."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "How many do you have? I have three.",
+            "modelAnswer": "Hoeveel heb je er? Ik heb er drie.",
+            "alternatives": [
+              "Hoeveel heb je er? Ik heb er drie.",
+              "Hoeveel heb je er? Er zijn er drie."
+            ],
+            "note": "Both the question and the answer take 'er' once the noun is dropped: 'Hoeveel heb je er?' / 'Ik heb er drie.' English leaves the gap empty ('I have three'); Dutch fills it with 'er'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Do you want any apples? Yes, I'd like five.",
+            "modelAnswer": "Wil je appels? Ja, ik wil er graag vijf.",
+            "alternatives": [
+              "Wil je appels? Ja, ik wil er graag vijf.",
+              "Wil je appels? Ja, ik zou er graag vijf willen."
+            ],
+            "note": "The answer drops 'appels' and needs 'er': 'ik wil er graag vijf.' 'Graag' adds the politeness ('I'd like'). The 'zou ... willen' version is a notch more formal."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't have any of them left.",
+            "modelAnswer": "Ik heb er geen meer.",
+            "alternatives": [
+              "Ik heb er geen meer.",
+              "Ik heb er helaas geen meer."
+            ],
+            "note": "'Er geen meer' = none left / not any more (of them). The 'meer' means 'any longer' here. This is the standard way to say you've run out of something countable."
+          },
+          {
+            "type": "translation",
+            "prompt": "There were a lot of them.",
+            "modelAnswer": "Er waren er veel.",
+            "alternatives": [
+              "Er waren er veel.",
+              "Er waren er heel veel."
+            ],
+            "note": "The double 'er' again: placeholder 'Er waren ...' (there were) + quantitative 'er' (of them) → 'Er waren er veel.' It looks odd at first, but both little words are doing real, separate work."
+          },
+          {
+            "type": "translation",
+            "prompt": "Could I have two, please?",
+            "modelAnswer": "Mag ik er twee, alsjeblieft?",
+            "alternatives": [
+              "Mag ik er twee, alsjeblieft?",
+              "Zou ik er twee mogen?"
+            ],
+            "note": "Drop the noun, keep the number, add 'er': 'Mag ik er twee?' The 'er' signals 'two of them'. 'Zou ik er twee mogen?' is the extra-polite version."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I used to have a lot of books, but I gave most of them away, so now I only have a few left.",
+            "modelAnswer": "Vroeger had ik veel boeken, maar ik heb de meeste weggegeven, dus nu heb ik er nog maar een paar.",
+            "alternatives": [
+              "Vroeger had ik veel boeken, maar ik heb de meeste weggegeven, dus nu heb ik er nog maar een paar.",
+              "Vroeger had ik veel boeken, maar ik heb de meeste weggegeven, dus nu heb ik er nog maar een paar over."
+            ],
+            "note": "The quantitative 'er ... een paar' closes the sentence (the dropped noun is 'boeken'). Note the inversion after 'Vroeger' ('had ik') and after 'dus' ('heb ik'). 'Weggeven' (separable) → 'weggegeven'. 'Nog maar' = only ... left."
+          },
+          {
+            "type": "translation",
+            "prompt": "She asked how many tickets I needed, and I said I needed four.",
+            "modelAnswer": "Ze vroeg hoeveel kaartjes ik nodig had, en ik zei dat ik er vier nodig had.",
+            "alternatives": [
+              "Ze vroeg hoeveel kaartjes ik nodig had, en ik zei dat ik er vier nodig had.",
+              "Ze vroeg hoeveel kaartjes ik nodig had, en ik antwoordde dat ik er vier nodig had."
+            ],
+            "note": "In the answering 'dat'-bijzin the noun is dropped, so 'er' appears, and the finite verb 'had' goes to the end: '...dat ik er vier nodig had.' 'Nodig hebben' = to need; the 'er' sits before 'vier nodig'."
+          },
+          {
+            "type": "translation",
+            "prompt": "There were three left, but now there are only two.",
+            "modelAnswer": "Er waren er nog drie, maar nu zijn er nog maar twee.",
+            "alternatives": [
+              "Er waren er nog drie over, maar nu zijn er nog maar twee.",
+              "Er waren er nog drie, maar nu zijn er nog maar twee over."
+            ],
+            "note": "First clause has the full double 'er' ('Er waren er nog drie'). In the second, after fronting 'nu', the placeholder and quantitative 'er' sit side by side and merge into a single 'er': 'nu zijn er nog maar twee.' When the two would collide, Dutch keeps just one."
+          },
+          {
+            "type": "translation",
+            "prompt": "Do you have a pen? I have several — take one.",
+            "modelAnswer": "Heb je een pen? Ik heb er meerdere, neem er maar één.",
+            "alternatives": [
+              "Heb je een pen? Ik heb er meerdere, pak er maar één.",
+              "Heb je een pen? Ik heb er een paar, neem er maar één."
+            ],
+            "note": "Three quantity-'er's in a row: 'er meerdere' (several of them), then the imperative 'neem er maar één' (just take one of them). 'Maar' here softens the imperative to 'go ahead and'. 'Meerdere' = several."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't need any more of them, thank you.",
+            "modelAnswer": "Ik heb er geen meer nodig, dank je.",
+            "alternatives": [
+              "Ik heb er geen meer nodig, dank je.",
+              "Ik heb er verder geen meer nodig, dank je."
+            ],
+            "note": "'Er geen meer nodig hebben' = to not need any more of them. The 'er' covers the dropped noun, 'geen meer' is the quantity, and 'nodig hebben' wraps around it. 'Verder' = further/else, a natural addition."
+          }
+        ]
+      }
+    }
+  ]
+}

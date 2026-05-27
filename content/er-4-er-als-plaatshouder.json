@@ -1,0 +1,241 @@
+{
+  "zone": "er",
+  "zoneName": "Er",
+  "tiles": [
+    {
+      "id": "er-4-er-als-plaatshouder",
+      "theme": "Er als plaatshouder",
+      "themeEnglish": "The placeholder 'er' — the 'there' of existential sentences (er staat een man voor de deur) and the subject of impersonal passives (er wordt gedanst)",
+      "recognitionQuestion": "Is the placeholder 'er' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Er staat een man voor de deur.",
+            "correctUse": true,
+            "explanation": "Correct. Presentative 'er' introduces an indefinite subject: 'Er staat een man voor de deur' = there's a man at the door. Dutch fills the front slot with 'er' and puts the real, indefinite subject ('een man') after the verb. This is the 'there is/are' of Dutch."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er wordt in de keuken gekookt.",
+            "correctUse": true,
+            "explanation": "Correct. The impersonal passive: when there's no real subject, 'er' holds the slot. 'Er wordt gekookt' = cooking is going on / someone's cooking. This construction focuses on the activity, not the doer — very common in Dutch."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Is een probleem met de verwarming.",
+            "correctUse": false,
+            "explanation": "Niet correct. An indefinite subject ('een probleem') needs the placeholder 'er': 'Er is een probleem met de verwarming.' Without 'er' the sentence has nothing in the front slot and collapses. Correct: 'Er is een probleem met de verwarming.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Gisteren was er een groot feest in het dorp.",
+            "correctUse": true,
+            "explanation": "Correct. When something else opens the sentence ('Gisteren'), the verb inverts and 'er' slides in just after it: 'Gisteren was er een groot feest.' The indefinite subject ('een groot feest') still needs its placeholder. Note the inversion: 'was er', not 'er was'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er komt de bus zo aan.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'De bus' is a DEFINITE subject, so it takes no presentative 'er': 'De bus komt zo aan.' The placeholder 'er' is for indefinite subjects ('er komt een bus aan'). With 'de bus', drop the 'er' and let the subject lead."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zijn er nog kaartjes voor het concert?",
+            "correctUse": true,
+            "explanation": "Correct. In a yes/no question the verb leads and 'er' follows: 'Zijn er nog kaartjes?' = are there any tickets left? The indefinite subject ('kaartjes') wants its placeholder 'er' here just as in a statement."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er zaten veel mensen in de wachtkamer.",
+            "correctUse": true,
+            "explanation": "Correct. Presentative 'er' with an indefinite plural subject: 'Er zaten veel mensen in de wachtkamer' = there were a lot of people in the waiting room. The verb 'zaten' (sat/were) agrees with the real subject 'veel mensen'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Een man staat voor de deur.",
+            "task": "Herschrijf met 'er' (presentatief).",
+            "acceptedAnswers": [
+              "Er staat een man voor de deur.",
+              "Er staat een man voor de deur."
+            ],
+            "preferred": "Er staat een man voor de deur.",
+            "explanation": "An indefinite subject ('een man') reads more naturally introduced by 'er': 'Er staat een man voor de deur.' The subject moves behind the verb; 'er' takes the front slot. This is how Dutch presents something new."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men danst op het feest.",
+            "task": "Maak een onpersoonlijke passief met 'er'.",
+            "acceptedAnswers": [
+              "Er wordt op het feest gedanst.",
+              "Er wordt op het feest gedanst."
+            ],
+            "preferred": "Er wordt op het feest gedanst.",
+            "explanation": "The impersonal passive drops the vague 'men' and uses 'er' as a dummy subject: 'Er wordt op het feest gedanst' = there's dancing at the party. The participle 'gedanst' closes the clause. No real subject — 'er' holds the place."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Is nog soep over?",
+            "task": "Verbeter de zin (voeg 'er' toe).",
+            "acceptedAnswers": [
+              "Is er nog soep over?",
+              "Is er nog soep over?"
+            ],
+            "preferred": "Is er nog soep over?",
+            "explanation": "The indefinite subject ('soep') needs the placeholder, even in a question: 'Is er nog soep over?' The verb leads ('Is'), then 'er', then the subject. Without 'er' the question has an empty subject slot."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Een ongeluk gebeurde gisteren op de snelweg.",
+            "task": "Begin met 'Gisteren' en gebruik 'er'.",
+            "acceptedAnswers": [
+              "Gisteren gebeurde er een ongeluk op de snelweg.",
+              "Gisteren gebeurde er een ongeluk op de snelweg."
+            ],
+            "preferred": "Gisteren gebeurde er een ongeluk op de snelweg.",
+            "explanation": "Fronting 'Gisteren' inverts the verb, and 'er' slips in after it: 'Gisteren gebeurde er een ongeluk.' The indefinite subject ('een ongeluk') follows. Note the inversion — 'gebeurde er', not 'er gebeurde'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Er staat de auto voor de deur.",
+            "task": "Verbeter de zin (de auto is bepaald).",
+            "acceptedAnswers": [
+              "De auto staat voor de deur.",
+              "De auto staat voor de deur."
+            ],
+            "preferred": "De auto staat voor de deur.",
+            "explanation": "'De auto' is definite, so it takes no presentative 'er': 'De auto staat voor de deur.' Keep 'er' for indefinite subjects ('er staat een auto voor de deur'). With a definite subject, it simply leads the sentence."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men lachte veel tijdens de voorstelling.",
+            "task": "Maak een onpersoonlijke passief met 'er' (verleden tijd).",
+            "acceptedAnswers": [
+              "Er werd veel gelachen tijdens de voorstelling.",
+              "Er werd veel gelachen tijdens de voorstelling."
+            ],
+            "preferred": "Er werd veel gelachen tijdens de voorstelling.",
+            "explanation": "Impersonal passive in the past: 'Er werd veel gelachen' = there was a lot of laughing. 'Lachen' → 'gelachen'. The dummy 'er' stands in for the absent subject; 'werd' is the singular past of 'worden'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Veel toeristen komen in de zomer naar Amsterdam.",
+            "task": "Herschrijf met 'er' (presentatief).",
+            "acceptedAnswers": [
+              "Er komen in de zomer veel toeristen naar Amsterdam.",
+              "In de zomer komen er veel toeristen naar Amsterdam."
+            ],
+            "preferred": "In de zomer komen er veel toeristen naar Amsterdam.",
+            "explanation": "Indefinite subject ('veel toeristen') → presentative 'er'. Either 'Er komen ...' or, fronting the time phrase, 'In de zomer komen er ...' (with inversion). The verb 'komen' agrees with the real subject."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "There's someone at the door.",
+            "modelAnswer": "Er staat iemand voor de deur.",
+            "alternatives": [
+              "Er staat iemand voor de deur.",
+              "Er is iemand aan de deur."
+            ],
+            "note": "Presentative 'er' + indefinite subject 'iemand'. Dutch prefers a concrete verb of position ('staat') where English uses 'is'. 'Aan de deur' / 'voor de deur' both work for 'at the door'."
+          },
+          {
+            "type": "translation",
+            "prompt": "There were a lot of people there.",
+            "modelAnswer": "Er waren veel mensen.",
+            "alternatives": [
+              "Er waren veel mensen.",
+              "Er waren daar veel mensen."
+            ],
+            "note": "'Er waren ...' = there were. The verb 'waren' (plural past) agrees with the real subject 'veel mensen'. Add 'daar' for the locational 'there' if you want to pin down the place: 'Er waren daar veel mensen.'"
+          },
+          {
+            "type": "translation",
+            "prompt": "Is there any coffee left?",
+            "modelAnswer": "Is er nog koffie?",
+            "alternatives": [
+              "Is er nog koffie?",
+              "Is er nog koffie over?"
+            ],
+            "note": "Question word order: verb 'Is' first, then 'er', then the indefinite subject 'koffie'. 'Nog' = still/any; 'over' = left over. The placeholder 'er' is needed even though 'koffie' is uncountable here."
+          },
+          {
+            "type": "translation",
+            "prompt": "There's a lot of talking but little action.",
+            "modelAnswer": "Er wordt veel gepraat maar weinig gedaan.",
+            "alternatives": [
+              "Er wordt veel gepraat maar weinig gedaan.",
+              "Er wordt veel gepraat maar weinig ondernomen."
+            ],
+            "note": "Impersonal passive with 'er' as dummy subject: 'Er wordt veel gepraat' (there's a lot of talking). The two participles 'gepraat' and 'gedaan' share the one 'er wordt'. A neat, idiomatic way to comment on all talk and no action."
+          },
+          {
+            "type": "translation",
+            "prompt": "Yesterday there was an accident on the motorway.",
+            "modelAnswer": "Gisteren was er een ongeluk op de snelweg.",
+            "alternatives": [
+              "Gisteren was er een ongeluk op de snelweg.",
+              "Er was gisteren een ongeluk op de snelweg."
+            ],
+            "note": "Front 'Gisteren' and the verb inverts, with 'er' just after it: 'Gisteren was er een ongeluk.' Or keep 'er' first: 'Er was gisteren een ongeluk.' Both fine; the first foregrounds the time."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "There's a man standing on the corner who keeps looking at us.",
+            "modelAnswer": "Er staat een man op de hoek die steeds naar ons kijkt.",
+            "alternatives": [
+              "Er staat een man op de hoek die steeds naar ons kijkt.",
+              "Er staat een man op de hoek die ons steeds aankijkt."
+            ],
+            "note": "Presentative 'er staat een man' plus a relative clause 'die steeds naar ons kijkt' (whose verb 'kijkt' goes to the end). 'Steeds' = keeps (doing). 'Aankijken' (separable) = to look at, if you want the more pointed verb."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't know whether there's still time to change it.",
+            "modelAnswer": "Ik weet niet of er nog tijd is om het te veranderen.",
+            "alternatives": [
+              "Ik weet niet of er nog tijd is om het te veranderen.",
+              "Ik weet niet of er nog tijd is om het aan te passen."
+            ],
+            "note": "The placeholder 'er' lives inside the 'of'-bijzin, where the finite verb 'is' goes to the end: '...of er nog tijd is.' Then an 'om ... te'-clause: 'om het te veranderen' (to change it). 'Aanpassen' (separable) → 'aan te passen' is the alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "There was a lot of dancing and singing at the party.",
+            "modelAnswer": "Er werd veel gedanst en gezongen op het feest.",
+            "alternatives": [
+              "Er werd veel gedanst en gezongen op het feest.",
+              "Er werd op het feest veel gedanst en gezongen."
+            ],
+            "note": "Impersonal passive in the past: 'Er werd veel gedanst en gezongen' — one 'er werd' carrying two participles ('gedanst', 'gezongen'). No real subject; the dummy 'er' holds the slot. 'Zingen' → 'gezongen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "When we arrived, there turned out to be no room left.",
+            "modelAnswer": "Toen we aankwamen, bleek er geen plek meer te zijn.",
+            "alternatives": [
+              "Toen we aankwamen, bleek er geen plek meer te zijn.",
+              "Toen we aankwamen, was er geen plek meer."
+            ],
+            "note": "The 'toen'-bijzin sends 'aankwamen' to the end; then inversion brings 'bleek er' together. 'Blijken' (to turn out) + 'te zijn': 'bleek er geen plek meer te zijn.' The placeholder 'er' anchors the existential 'there'. The simpler version drops 'blijken': 'was er geen plek meer.'"
+          },
+          {
+            "type": "translation",
+            "prompt": "There are still three left, but tomorrow there'll be none.",
+            "modelAnswer": "Er zijn er nog drie, maar morgen zijn er geen meer.",
+            "alternatives": [
+              "Er zijn er nog drie over, maar morgen zijn er geen meer.",
+              "Er zijn er nog drie, maar morgen zijn er geen meer over."
+            ],
+            "note": "This is where the placeholder 'er' meets the counting 'er' from the previous tile. 'Er zijn er nog drie' has both: the presentative 'er' (there are) and the quantitative 'er' (of them). After fronting 'morgen', the two would collide and merge into one: 'morgen zijn er geen meer.'"
+          }
+        ]
+      }
+    }
+  ]
+}
