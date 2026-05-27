@@ -1,0 +1,244 @@
+{
+  "zone": "modaal",
+  "zoneName": "Modale werkwoorden",
+  "tiles": [
+    {
+      "id": "modaal-1-kunnen",
+      "theme": "Kunnen",
+      "themeEnglish": "The modal 'kunnen' (can/be able to) — present, the perfect double infinitive (heb kunnen doen), standalone 'gekund', and 'zou kunnen'",
+      "recognitionQuestion": "Is 'kunnen' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik kan je morgen helpen met de verhuizing.",
+            "correctUse": true,
+            "explanation": "Correct. Present 'kan' (singular) with the second verb as an infinitive at the end: 'kan ... helpen'. The basic modal pattern — finite modal in second position, main verb infinitive at the close of the clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb je gisteren helaas niet kunnen bereiken.",
+            "correctUse": true,
+            "explanation": "Correct, and the key pattern of this tile. In the perfect, a modal with a second verb forms a DOUBLE INFINITIVE: 'heb ... kunnen bereiken' — both verbs as infinitives, never 'gekund'. The auxiliary is 'hebben'. This is the structure to lock in."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb het probleem zelf kunnen opgelost.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second verb must also be an infinitive: 'kunnen oplossen', not the participle 'opgelost'. Correct: 'Ik heb het probleem zelf kunnen oplossen.' In the double infinitive BOTH verbs stay in the infinitive — the participle never appears."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn best gedaan, maar ik heb het niet gekund.",
+            "correctUse": true,
+            "explanation": "Correct — and the exception worth knowing. When 'kunnen' stands ALONE with no second verb, it does take the participle 'gekund': 'ik heb het niet gekund' (I wasn't able to). Compare the double-infinitive sentences above, where a second verb is present and 'gekund' would be wrong."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zou je het raam open kunnen zetten?",
+            "correctUse": true,
+            "explanation": "Correct. 'Zou ... kunnen' softens a request to 'could you ...?'. The cluster 'open kunnen zetten' sits at the end ('openzetten' splits around 'kunnen'). 'Zou kunnen' also expresses possibility: 'Dat zou kunnen' = that could be."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij heeft de wedstrijd niet gekund spelen door een blessure.",
+            "correctUse": false,
+            "explanation": "Niet correct. With a second verb present, use the double infinitive 'kunnen spelen', not 'gekund': 'Hij heeft de wedstrijd niet kunnen spelen door een blessure.' 'Gekund' only when 'kunnen' stands alone. 'Door een blessure' = because of an injury."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger kon ik veel beter zwemmen dan nu.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'kon' (singular past) + infinitive 'zwemmen' at the end. Note the inversion after the opening time word: 'Vroeger kon ik ...', not 'Vroeger ik kon'. Plural past is 'konden'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik help je. (morgen, mogelijkheid)",
+            "task": "Maak een zin met 'kunnen' in de tegenwoordige tijd.",
+            "acceptedAnswers": [
+              "Ik kan je morgen helpen.",
+              "Morgen kan ik je helpen.",
+              "Ik kan je morgen wel helpen."
+            ],
+            "preferred": "Ik kan je morgen helpen.",
+            "explanation": "Present 'kan' + infinitive 'helpen' at the end. If you front 'morgen', invert: 'Morgen kan ik je helpen.' The main verb goes to the close of the clause as an infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kan je niet bereiken.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb je niet kunnen bereiken.",
+              "Ik heb je niet kunnen bereiken."
+            ],
+            "preferred": "Ik heb je niet kunnen bereiken.",
+            "explanation": "Double infinitive: 'heb ... kunnen bereiken'. Auxiliary 'hebben' + two infinitives, in the order modal-then-main ('kunnen bereiken'). Never 'heb ... gekund bereiken' or 'heb ... kunnen bereikt'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Help je me even?",
+            "task": "Maak het beleefder met 'zou ... kunnen'.",
+            "acceptedAnswers": [
+              "Zou je me even kunnen helpen?",
+              "Zou je me even willen helpen?",
+              "Zou je me alsjeblieft even kunnen helpen?"
+            ],
+            "preferred": "Zou je me even kunnen helpen?",
+            "explanation": "'Zou ... kunnen' turns a blunt question into a polite 'could you ...?'. Order: 'Zou je me even kunnen helpen?' — the cluster 'kunnen helpen' closes the sentence. 'Even' = just/for a moment, a softener."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kan niet goed slapen.",
+            "task": "Zet in de onvoltooid verleden tijd (imperfectum).",
+            "acceptedAnswers": [
+              "Ik kon niet goed slapen.",
+              "Ik kon niet goed slapen."
+            ],
+            "preferred": "Ik kon niet goed slapen.",
+            "explanation": "Imperfectum of 'kunnen' is 'kon' (singular) / 'konden' (plural). 'Ik kon niet goed slapen' = I couldn't sleep well. The infinitive 'slapen' stays at the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik probeerde het slot te openen, maar het lukte niet.",
+            "task": "Herschrijf het tweede deel met 'kunnen' in het perfectum (zonder tweede werkwoord).",
+            "acceptedAnswers": [
+              "Ik probeerde het slot te openen, maar ik heb het niet gekund.",
+              "Ik probeerde het slot te openen, maar dat heb ik niet gekund."
+            ],
+            "preferred": "Ik probeerde het slot te openen, maar ik heb het niet gekund.",
+            "explanation": "Here 'kunnen' stands alone — no second verb — so it takes the participle: 'heb het niet gekund'. This is the one place 'gekund' is right. The moment you add a second verb, you'd switch back to the double infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb je niet kunnen bereiken.",
+            "task": "Begin met 'Sorry dat ...' (maak er een bijzin van).",
+            "acceptedAnswers": [
+              "Sorry dat ik je niet heb kunnen bereiken.",
+              "Sorry dat ik je niet kunnen bereiken heb."
+            ],
+            "preferred": "Sorry dat ik je niet heb kunnen bereiken.",
+            "explanation": "In a bijzin the finite auxiliary 'heb' moves toward the end but sits BEFORE the double infinitive: '...dat ik je niet heb kunnen bereiken'. The whole cluster 'heb kunnen bereiken' lands at the close. This ordering trips people up most often."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je kunt me ophalen. (vraag, beleefd)",
+            "task": "Maak er een beleefde vraag van met 'kunnen'.",
+            "acceptedAnswers": [
+              "Kun je me ophalen?",
+              "Zou je me kunnen ophalen?",
+              "Kun je me misschien ophalen?"
+            ],
+            "preferred": "Kun je me ophalen?",
+            "explanation": "Question form fronts the modal: 'Kun je me ophalen?' (note 'kun je', not 'kan je', is the standard polite form with 'je'). 'Ophalen' (separable) stays whole at the end as an infinitive. Add 'zou ... kunnen' for extra politeness."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Can you pick me up tomorrow?",
+            "modelAnswer": "Kun je me morgen ophalen?",
+            "alternatives": [
+              "Kan je me morgen ophalen?",
+              "Zou je me morgen kunnen ophalen?"
+            ],
+            "note": "Question form of 'kunnen': 'Kun je ...?' ('kun je' is the standard form with 'je'; 'kan je' is heard but less tidy). 'Ophalen' (separable) sits whole at the end. The 'zou ... kunnen' version is the polite upgrade."
+          },
+          {
+            "type": "translation",
+            "prompt": "I haven't been able to reach him all day.",
+            "modelAnswer": "Ik heb hem de hele dag niet kunnen bereiken.",
+            "alternatives": [
+              "Ik heb hem de hele dag niet weten te bereiken.",
+              "De hele dag heb ik hem niet kunnen bereiken."
+            ],
+            "note": "Perfect double infinitive: 'heb ... kunnen bereiken' — never 'gekund' with a second verb present. 'De hele dag' = all day. If you front it, invert: 'De hele dag heb ik ...'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Could you open the window, please?",
+            "modelAnswer": "Zou je het raam open kunnen zetten?",
+            "alternatives": [
+              "Zou je het raam kunnen openzetten?",
+              "Kun je het raam even openzetten?"
+            ],
+            "note": "'Zou ... kunnen' = could you. 'Openzetten' (separable, to open a window for air) can split around 'kunnen' ('open kunnen zetten') or stay whole ('kunnen openzetten') — both fine. 'Opendoen' works too."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was young, I could run very fast.",
+            "modelAnswer": "Toen ik jong was, kon ik heel snel rennen.",
+            "alternatives": [
+              "Toen ik jong was, kon ik heel hard lopen.",
+              "Vroeger kon ik heel snel rennen."
+            ],
+            "note": "Imperfectum 'kon' + infinitive. The 'toen'-bijzin ('Toen ik jong was') sends its verb to the end, then the main clause inverts: 'kon ik ...'. 'Heel hard lopen' is the idiomatic Dutch for running fast."
+          },
+          {
+            "type": "translation",
+            "prompt": "I tried, but I just couldn't.",
+            "modelAnswer": "Ik heb het geprobeerd, maar ik kon het gewoon niet.",
+            "alternatives": [
+              "Ik heb het geprobeerd, maar het lukte me gewoon niet.",
+              "Ik heb het geprobeerd, maar ik heb het gewoon niet gekund."
+            ],
+            "note": "'Couldn't' standing alone → imperfectum 'kon het niet' or the standalone perfect 'heb het niet gekund' (participle, because there's no second verb). 'Gewoon' here = just/simply. 'Het lukte me niet' (I didn't manage) is the very natural idiomatic alternative."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'm sorry I couldn't come to your party; I had to work.",
+            "modelAnswer": "Het spijt me dat ik niet naar je feest heb kunnen komen; ik moest werken.",
+            "alternatives": [
+              "Sorry dat ik niet naar je feest heb kunnen komen; ik moest werken.",
+              "Het spijt me dat ik niet naar je feestje heb kunnen komen, want ik moest werken."
+            ],
+            "note": "A 'dat'-bijzin with the double infinitive 'heb kunnen komen' (auxiliary 'heb' before the two infinitives, all at the end), plus 'moeten' in the imperfectum: 'ik moest werken'. Two modals, two structures, in one breath."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you could help me, that would be wonderful.",
+            "modelAnswer": "Als je me zou kunnen helpen, zou dat geweldig zijn.",
+            "alternatives": [
+              "Als je me zou kunnen helpen, zou dat fantastisch zijn.",
+              "Mocht je me kunnen helpen, dan zou dat geweldig zijn."
+            ],
+            "note": "'Zou kunnen' in the 'als'-clause (could) pairs with a 'zou ... zijn' main clause (would be). The 'als'-bijzin sends its cluster to the end ('zou kunnen helpen'); the main clause inverts after the comma: 'zou dat geweldig zijn'. 'Mocht je ...' is an elegant alternative for 'if you should'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He said he hadn't been able to finish the report because the computer had crashed.",
+            "modelAnswer": "Hij zei dat hij het rapport niet had kunnen afmaken omdat de computer was vastgelopen.",
+            "alternatives": [
+              "Hij zei dat hij het rapport niet af had kunnen maken omdat de computer was vastgelopen.",
+              "Hij zei dat hij het rapport niet had kunnen afronden omdat de computer was gecrasht."
+            ],
+            "note": "Reported speech with a PLUSQUAMPERFECTUM double infinitive: 'had kunnen afmaken' (auxiliary 'had' + two infinitives). The 'omdat'-clause adds a past perfect: 'was vastgelopen' (had crashed). 'Afmaken' (separable) can also split as 'af had kunnen maken'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Nobody could explain why the train had been cancelled.",
+            "modelAnswer": "Niemand kon uitleggen waarom de trein was uitgevallen.",
+            "alternatives": [
+              "Niemand kon verklaren waarom de trein was uitgevallen.",
+              "Niemand kon uitleggen waarom de trein was afgelast."
+            ],
+            "note": "Imperfectum 'kon' + infinitive 'uitleggen', then an indirect question 'waarom ...' whose verb goes to the end. 'De trein was uitgevallen' is the past-perfect passive-ish state (trains 'uitvallen' = get cancelled). 'Afgelast' fits events; for trains 'uitgevallen' is more idiomatic."
+          },
+          {
+            "type": "translation",
+            "prompt": "We could have taken the earlier train, but we didn't know it was running.",
+            "modelAnswer": "We hadden de eerdere trein kunnen nemen, maar we wisten niet dat hij reed.",
+            "alternatives": [
+              "We hadden de eerdere trein kunnen pakken, maar we wisten niet dat hij reed.",
+              "We hadden de vroegere trein kunnen nemen, maar we wisten niet dat hij ging rijden."
+            ],
+            "note": "'Could have done' = plusquamperfectum double infinitive: 'hadden ... kunnen nemen' (auxiliary 'had/hadden' + two infinitives). This is the 'missed possibility' structure. 'Maar we wisten niet dat hij reed' — 'rijden' imperfectum 'reed', with the bijzin verb at the end."
+          }
+        ]
+      }
+    }
+  ]
+}

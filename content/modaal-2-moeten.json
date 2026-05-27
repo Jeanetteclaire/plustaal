@@ -1,0 +1,245 @@
+{
+  "zone": "modaal",
+  "zoneName": "Modale werkwoorden",
+  "tiles": [
+    {
+      "id": "modaal-2-moeten",
+      "theme": "Moeten",
+      "themeEnglish": "The modal 'moeten' (must/have to) — obligation, 'had moeten' (should have), the double infinitive, and 'niet hoeven' vs 'niet moeten'",
+      "recognitionQuestion": "Is 'moeten' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik moet vanavond nog boodschappen doen.",
+            "correctUse": true,
+            "explanation": "Correct. Present 'moet' (singular) expressing obligation, with the infinitive cluster 'boodschappen doen' at the end. The everyday 'I have to ...'. Plural is 'moeten': 'wij moeten'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je had me dat eerder moeten vertellen.",
+            "correctUse": true,
+            "explanation": "Correct, and a high-value pattern: 'had moeten + infinitive' = should have (done). 'Je had me dat eerder moeten vertellen' = you should have told me that sooner. The double infinitive 'moeten vertellen' follows the auxiliary 'had'. Reproach or regret lives in this structure."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je moet niet te betalen; het is helemaal gratis.",
+            "correctUse": false,
+            "explanation": "Niet correct, on two counts. For 'you don't have to', Dutch uses 'hoeven ... te', not 'moeten': 'Je hoeft niet te betalen.' (And 'moeten' never takes 'te'.) Note the difference: 'je moet niet betalen' would mean you mustn't pay — a prohibition, not a lack of obligation."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb gisteren heel lang moeten gewacht.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second verb must be an infinitive in the double infinitive: 'heb ... moeten wachten', not the participle 'gewacht'. Correct: 'Ik heb gisteren heel lang moeten wachten.' Both verbs stay infinitive once a second verb is present."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik wilde eigenlijk niet, maar het heeft gemoeten.",
+            "correctUse": true,
+            "explanation": "Correct — the standalone exception. With NO second verb, 'moeten' takes the participle 'gemoeten': 'het heeft gemoeten' (it had to be / there was no choice). Add a second verb and you'd switch to the double infinitive ('heb moeten ...')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Gisteren moest ik al om zes uur opstaan.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'moest' (singular past) + the separable 'opstaan' at the end. Note the inversion after the opening time word: 'Gisteren moest ik ...', not 'Gisteren ik moest'. Plural past is 'moesten'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We moeten nog beslissen waar we naartoe gaan.",
+            "correctUse": true,
+            "explanation": "Correct. Present plural 'moeten' + infinitive 'beslissen', followed by an indirect question 'waar we naartoe gaan' (where we're going) whose verb sits at the end. 'Naartoe' = to (where), the destination word."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik doe vanavond de afwas.",
+            "task": "Maak een zin met 'moeten' (verplichting).",
+            "acceptedAnswers": [
+              "Ik moet vanavond de afwas doen.",
+              "Vanavond moet ik de afwas doen.",
+              "Ik moet vanavond nog de afwas doen."
+            ],
+            "preferred": "Ik moet vanavond de afwas doen.",
+            "explanation": "Present 'moet' + infinitive 'doen' at the end. Front 'vanavond' and you must invert: 'Vanavond moet ik ...'. 'De afwas doen' = to do the dishes."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik moest lang wachten bij de dokter.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb lang moeten wachten bij de dokter.",
+              "Bij de dokter heb ik lang moeten wachten."
+            ],
+            "preferred": "Ik heb lang moeten wachten bij de dokter.",
+            "explanation": "Double infinitive: 'heb ... moeten wachten' — auxiliary 'hebben' + two infinitives, never 'gemoeten' with a second verb. Order is modal-then-main: 'moeten wachten'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb het je niet verteld. (spijt / verwijt)",
+            "task": "Herschrijf met 'had moeten' (= ik betreur het).",
+            "acceptedAnswers": [
+              "Ik had het je moeten vertellen.",
+              "Ik had het je eerder moeten vertellen.",
+              "Ik had het je echt moeten vertellen."
+            ],
+            "preferred": "Ik had het je moeten vertellen.",
+            "explanation": "'Had moeten + infinitive' = should have. 'Ik had het je moeten vertellen' = I should have told you. The plusquamperfectum auxiliary 'had' carries the double infinitive 'moeten vertellen'. This is THE structure for regret and reproach."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je moet niet betalen; het is gratis.",
+            "task": "Verbeter de betekenis: 'het is niet nodig' (gebruik 'hoeven').",
+            "acceptedAnswers": [
+              "Je hoeft niet te betalen; het is gratis.",
+              "Je hoeft niet te betalen, want het is gratis.",
+              "Je hoeft niets te betalen; het is gratis."
+            ],
+            "preferred": "Je hoeft niet te betalen; het is gratis.",
+            "explanation": "For 'don't have to' (no obligation) Dutch uses 'hoeven ... te', not 'moeten': 'Je hoeft niet te betalen.' Crucially, 'je moet niet betalen' means you MUSTN'T pay — a ban. Keep the pair apart: 'niet hoeven te' = needn't; 'niet moeten' = mustn't."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik moet vroeg opstaan.",
+            "task": "Zet in de onvoltooid verleden tijd (imperfectum).",
+            "acceptedAnswers": [
+              "Ik moest vroeg opstaan.",
+              "Ik moest vroeg opstaan."
+            ],
+            "preferred": "Ik moest vroeg opstaan.",
+            "explanation": "Imperfectum of 'moeten' is 'moest' (singular) / 'moesten' (plural). 'Opstaan' (separable) stays whole at the end as an infinitive under the modal: 'moest ... opstaan'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze was geïrriteerd. Ze had heel lang moeten wachten.",
+            "task": "Verbind tot \u00e9\u00e9n zin met 'omdat'.",
+            "acceptedAnswers": [
+              "Ze was geïrriteerd omdat ze heel lang had moeten wachten.",
+              "Ze was geïrriteerd, omdat ze zo lang had moeten wachten."
+            ],
+            "preferred": "Ze was geïrriteerd omdat ze heel lang had moeten wachten.",
+            "explanation": "In the 'omdat'-bijzin the auxiliary 'had' precedes the double infinitive, all at the end: '...omdat ze heel lang had moeten wachten'. The cluster 'had moeten wachten' closes the clause — a plusquamperfectum double infinitive inside a subordinate clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men levert het rapport voor vrijdag in.",
+            "task": "Maak passief met 'moeten' (verplichting).",
+            "acceptedAnswers": [
+              "Het rapport moet voor vrijdag worden ingeleverd.",
+              "Het rapport moet voor vrijdag ingeleverd worden.",
+              "Voor vrijdag moet het rapport worden ingeleverd."
+            ],
+            "preferred": "Het rapport moet voor vrijdag worden ingeleverd.",
+            "explanation": "'Moeten' + passive: 'moet ... worden ingeleverd' (must be submitted). The cluster is modal + 'worden' + participle. 'Inleveren' (separable) → 'ingeleverd'. The two orders 'worden ingeleverd' / 'ingeleverd worden' are interchangeable."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I have to finish this today.",
+            "modelAnswer": "Ik moet dit vandaag afmaken.",
+            "alternatives": [
+              "Ik moet dit vandaag af hebben.",
+              "Vandaag moet ik dit afmaken."
+            ],
+            "note": "Present 'moet' + infinitive 'afmaken' (separable) at the end. 'Af hebben' (to have finished) is a natural idiom: 'ik moet dit vandaag af hebben'. Front 'vandaag' → invert: 'Vandaag moet ik ...'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You should have told me.",
+            "modelAnswer": "Je had het me moeten vertellen.",
+            "alternatives": [
+              "Dat had je me moeten vertellen.",
+              "Je had het me eerder moeten zeggen."
+            ],
+            "note": "'Should have' = 'had moeten + infinitive': 'had het me moeten vertellen'. The double infinitive follows the plusquamperfectum auxiliary 'had'. This is the standard structure for hindsight, regret, or gentle reproach."
+          },
+          {
+            "type": "translation",
+            "prompt": "You don't have to apologise.",
+            "modelAnswer": "Je hoeft je niet te verontschuldigen.",
+            "alternatives": [
+              "Je hoeft geen sorry te zeggen.",
+              "Dat hoeft niet."
+            ],
+            "note": "'Don't have to' = 'hoeven niet te' — NOT 'moeten'. 'Je hoeft je niet te verontschuldigen' (reflexive 'zich verontschuldigen'). Watch the trap: 'je moet je niet verontschuldigen' would mean you mustn't apologise. 'Dat hoeft niet' = there's no need."
+          },
+          {
+            "type": "translation",
+            "prompt": "We had to wait for an hour.",
+            "modelAnswer": "We moesten een uur wachten.",
+            "alternatives": [
+              "We hebben een uur moeten wachten.",
+              "We moesten wel een uur wachten."
+            ],
+            "note": "Imperfectum 'moesten' (plural past) + infinitive, or the perfect double infinitive 'hebben ... moeten wachten'. Both are natural; the imperfectum is lighter, the perfect emphasises the completed ordeal. 'Wel' adds a touch of 'a whole hour'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She had to leave early.",
+            "modelAnswer": "Ze moest vroeg weg.",
+            "alternatives": [
+              "Ze moest vroeg vertrekken.",
+              "Ze moest eerder weg."
+            ],
+            "note": "Imperfectum 'moest'. Dutch happily drops the verb of motion after 'moeten' when direction is clear: 'ze moest vroeg weg' (literally 'she had to early away') = she had to leave early. 'Vertrekken' spells out the verb if you prefer."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I should have called you, but I didn't have your number.",
+            "modelAnswer": "Ik had je moeten bellen, maar ik had je nummer niet.",
+            "alternatives": [
+              "Ik had je moeten bellen, maar ik had je nummer niet bij me.",
+              "Eigenlijk had ik je moeten bellen, maar ik had je nummer niet."
+            ],
+            "note": "'Should have called' = 'had moeten bellen' (plusquamperfectum double infinitive). Paired with a plain past 'had je nummer niet' (didn't have your number). 'Maar' coordinates, so no inversion after it. Front 'eigenlijk' (actually) and invert: 'had ik ...'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You don't have to come if you're tired, but you mustn't cancel at the last minute.",
+            "modelAnswer": "Je hoeft niet te komen als je moe bent, maar je moet niet op het laatste moment afzeggen.",
+            "alternatives": [
+              "Je hoeft niet te komen als je moe bent, maar je mag niet op het laatste moment afzeggen.",
+              "Als je moe bent, hoef je niet te komen, maar je moet niet last-minute afzeggen."
+            ],
+            "note": "The whole hoeven/moeten distinction in one sentence: 'hoeft niet te komen' (don't have to) versus 'moet niet ... afzeggen' (mustn't). The 'als'-bijzin sends 'bent' to the end. 'Mag niet' (may not) is an even clearer prohibition. 'Afzeggen' (separable) = to cancel."
+          },
+          {
+            "type": "translation",
+            "prompt": "He said we had to be there before eight o'clock.",
+            "modelAnswer": "Hij zei dat we er voor achten moesten zijn.",
+            "alternatives": [
+              "Hij zei dat we er voor acht uur moesten zijn.",
+              "Hij zei dat we voor achten aanwezig moesten zijn."
+            ],
+            "note": "Reported speech with 'moeten' in the imperfectum inside a 'dat'-bijzin: 'dat we er voor achten moesten zijn' — verb cluster 'moesten zijn' at the end. 'Voor achten' = before eight (the '-en' form for clock times). 'Aanwezig' = present/there."
+          },
+          {
+            "type": "translation",
+            "prompt": "By the time we arrived, everything had already had to be cleared away.",
+            "modelAnswer": "Tegen de tijd dat we aankwamen, had alles al opgeruimd moeten worden.",
+            "alternatives": [
+              "Tegen de tijd dat we aankwamen, had alles al moeten worden opgeruimd.",
+              "Tegen de tijd dat we er waren, had alles al opgeruimd moeten zijn."
+            ],
+            "note": "A heavy but real cluster: 'moeten' + passive in the plusquamperfectum — 'had ... opgeruimd moeten worden' (had had to be cleared away). The 'tegen de tijd dat'-bijzin uses imperfectum 'aankwamen'. 'Opruimen' (separable) → 'opgeruimd'. The variant 'opgeruimd moeten zijn' stresses the resulting state."
+          },
+          {
+            "type": "translation",
+            "prompt": "I really must apologise — I shouldn't have said that.",
+            "modelAnswer": "Ik moet me echt verontschuldigen \u2014 dat had ik niet moeten zeggen.",
+            "alternatives": [
+              "Ik moet echt mijn excuses aanbieden \u2014 dat had ik niet moeten zeggen.",
+              "Ik moet me echt verontschuldigen, want dat had ik niet mogen zeggen."
+            ],
+            "note": "Present obligation 'moet me ... verontschuldigen' (reflexive) plus the regret structure 'had ... niet moeten zeggen' (shouldn't have said). Fronting 'dat' inverts the clause: 'dat had ik niet moeten zeggen'. 'Mijn excuses aanbieden' = to offer an apology; 'had niet mogen zeggen' = wasn't allowed to / shouldn't have."
+          }
+        ]
+      }
+    }
+  ]
+}
