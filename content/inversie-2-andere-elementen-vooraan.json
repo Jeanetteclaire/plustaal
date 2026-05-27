@@ -1,0 +1,241 @@
+{
+  "zone": "inversie",
+  "zoneName": "Inversie",
+  "tiles": [
+    {
+      "id": "inversie-2-andere-elementen-vooraan",
+      "theme": "Andere elementen vooraan",
+      "themeEnglish": "Inversion after fronting something other than time — an object, a place phrase, or a whole subordinate clause (Omdat het regende, bleven we thuis)",
+      "recognitionQuestion": "Is the word order correct after the fronted element?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Omdat het regende, we bleven de hele dag thuis.",
+            "correctUse": false,
+            "explanation": "Niet correct. A fronted subordinate clause ('Omdat het regende') fills first position, so the main clause must invert: '..., bleven we thuis', not '..., we bleven'. The whole bijzin counts as ONE element — after the comma, the verb comes first. This is the biggest inversion trap at B2."
+          },
+          {
+            "type": "recognition",
+            "prompt": "In Amsterdam wonen veel expats uit allerlei landen.",
+            "correctUse": true,
+            "explanation": "Correct. The place phrase 'In Amsterdam' opens, so the verb 'wonen' comes next and the subject 'veel expats' follows: 'In Amsterdam wonen veel expats.' A fronted location triggers inversion just like a time word."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Dat boek ik heb al twee keer gelezen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The fronted object 'Dat boek' takes first position, so the verb must precede the subject: 'Dat boek heb ik ...', not 'Dat boek ik heb'. Fronting an object for emphasis is fine — but it forces inversion exactly like anything else in first position."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Gelukkig kwam de trein toch nog op tijd.",
+            "correctUse": true,
+            "explanation": "Correct. A comment adverb like 'Gelukkig' (fortunately) counts as the first element, so the verb 'kwam' comes next and the subject 'de trein' follows: 'Gelukkig kwam de trein ...'. The same goes for 'helaas', 'misschien', 'natuurlijk'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als je moe bent, moet je gewoon even rusten.",
+            "correctUse": true,
+            "explanation": "Correct. The 'als'-bijzin ('Als je moe bent') is the fronted element, so the main clause inverts: 'moet je ...'. The sub-clause itself is verb-final ('bent'), and after the comma the main verb leads. 'Als ..., (dan) verb-subject' is the pattern."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen we aankwamen, het was al helemaal donker.",
+            "correctUse": false,
+            "explanation": "Niet correct. The 'toen'-bijzin ('Toen we aankwamen') fills first position, so the main clause must invert: '..., was het al donker', not '..., het was'. Even with the dummy subject 'het', the verb comes before the subject after a fronted sub-clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Met de auto ben je er een stuk sneller.",
+            "correctUse": true,
+            "explanation": "Correct. The fronted means-phrase 'Met de auto' opens, so the verb 'ben' comes next, subject 'je' after: 'Met de auto ben je er sneller.' A 'by car / on foot' phrase counts as one first element and triggers inversion."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik heb dat boek al gelezen.",
+            "task": "Begin de zin met 'Dat boek' (nadruk op het object).",
+            "acceptedAnswers": [
+              "Dat boek heb ik al gelezen.",
+              "Dat boek heb ik al gelezen."
+            ],
+            "preferred": "Dat boek heb ik al gelezen.",
+            "explanation": "Fronting the object 'Dat boek' forces the verb before the subject: 'Dat boek heb ik ...'. Dutch fronts objects for emphasis far more readily than English, but always with inversion."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Veel toeristen komen in de zomer naar Amsterdam.",
+            "task": "Begin de zin met 'In de zomer'.",
+            "acceptedAnswers": [
+              "In de zomer komen veel toeristen naar Amsterdam.",
+              "In de zomer komen veel toeristen naar Amsterdam."
+            ],
+            "preferred": "In de zomer komen veel toeristen naar Amsterdam.",
+            "explanation": "'In de zomer' (a time phrase, but the principle is general) opens → 'komen veel toeristen'. Verb second, subject third. The fronted element can be time, place or anything else — the inversion is the same."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We bleven thuis omdat het regende.",
+            "task": "Begin de zin met de bijzin 'Omdat het regende'.",
+            "acceptedAnswers": [
+              "Omdat het regende, bleven we thuis.",
+              "Omdat het regende, bleven we thuis."
+            ],
+            "preferred": "Omdat het regende, bleven we thuis.",
+            "explanation": "Move the whole 'omdat'-clause to the front and it counts as the first element, so the main clause inverts: '..., bleven we thuis.' The comma marks the boundary; the main verb leads straight after it."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je kunt blijven als je dat wilt.",
+            "task": "Begin de zin met 'Als je dat wilt'.",
+            "acceptedAnswers": [
+              "Als je dat wilt, kun je blijven.",
+              "Als je dat wilt, kun je blijven."
+            ],
+            "preferred": "Als je dat wilt, kun je blijven.",
+            "explanation": "Front the 'als'-clause and the main clause inverts: '..., kun je blijven.' The sub-clause is verb-final ('wilt'); the main clause then leads with its verb. You may insert 'dan': 'Als je dat wilt, dan kun je blijven.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij kwam gelukkig op tijd voor de afspraak.",
+            "task": "Begin de zin met 'Gelukkig'.",
+            "acceptedAnswers": [
+              "Gelukkig kwam hij op tijd voor de afspraak.",
+              "Gelukkig kwam hij op tijd voor de afspraak."
+            ],
+            "preferred": "Gelukkig kwam hij op tijd voor de afspraak.",
+            "explanation": "The comment adverb 'Gelukkig' opens → 'kwam hij'. Verb second, subject third. 'Helaas', 'misschien' and 'natuurlijk' behave identically when fronted."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het was al donker toen we aankwamen.",
+            "task": "Begin de zin met de bijzin 'Toen we aankwamen'.",
+            "acceptedAnswers": [
+              "Toen we aankwamen, was het al donker.",
+              "Toen we aankwamen, was het al donker."
+            ],
+            "preferred": "Toen we aankwamen, was het al donker.",
+            "explanation": "Front the 'toen'-clause and the main clause inverts: '..., was het al donker.' The sub-clause ends in its verb ('aankwamen'); after the comma the main verb 'was' leads, even before the dummy 'het'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ga met de fiets naar mijn werk.",
+            "task": "Begin de zin met 'Met de fiets'.",
+            "acceptedAnswers": [
+              "Met de fiets ga ik naar mijn werk.",
+              "Met de fiets ga ik naar mijn werk."
+            ],
+            "preferred": "Met de fiets ga ik naar mijn werk.",
+            "explanation": "The means-phrase 'Met de fiets' opens → 'ga ik'. Verb second, subject third: 'Met de fiets ga ik ...'. Very Dutch, and very Amsterdam."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I've already read that book.",
+            "modelAnswer": "Dat boek heb ik al gelezen.",
+            "alternatives": [
+              "Dat boek heb ik al gelezen.",
+              "Ik heb dat boek al gelezen."
+            ],
+            "note": "Fronting the object 'Dat boek' (for emphasis: that one I've already read) forces inversion: 'Dat boek heb ik ...'. The neutral order 'Ik heb dat boek al gelezen' is equally fine — but once the object leads, the verb must come second."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you want, you can stay.",
+            "modelAnswer": "Als je wilt, kun je blijven.",
+            "alternatives": [
+              "Als je wilt, kun je blijven.",
+              "Als je wilt, dan kun je blijven."
+            ],
+            "note": "The 'als'-clause is the fronted element, so the main clause inverts: 'kun je blijven'. Optional 'dan' bridges the two: 'Als je wilt, dan kun je blijven.' The sub-clause is verb-final ('wilt')."
+          },
+          {
+            "type": "translation",
+            "prompt": "Because it was raining, we stayed home.",
+            "modelAnswer": "Omdat het regende, bleven we thuis.",
+            "alternatives": [
+              "Omdat het regende, bleven we thuis.",
+              "We bleven thuis omdat het regende."
+            ],
+            "note": "Front the 'omdat'-clause and the main clause inverts: '..., bleven we thuis.' Put it second instead ('We bleven thuis omdat ...') and there's no inversion, because the subject 'we' is back in first position."
+          },
+          {
+            "type": "translation",
+            "prompt": "Fortunately, the train came on time.",
+            "modelAnswer": "Gelukkig kwam de trein op tijd.",
+            "alternatives": [
+              "Gelukkig kwam de trein op tijd.",
+              "Gelukkig was de trein op tijd."
+            ],
+            "note": "'Gelukkig' (fortunately) is a comment adverb in first position, so the verb leads: 'Gelukkig kwam de trein ...'. Not 'Gelukkig de trein kwam'."
+          },
+          {
+            "type": "translation",
+            "prompt": "In summer it's very busy here.",
+            "modelAnswer": "In de zomer is het hier heel druk.",
+            "alternatives": [
+              "In de zomer is het hier heel druk.",
+              "'s Zomers is het hier heel druk."
+            ],
+            "note": "The fronted phrase 'In de zomer' triggers inversion: 'is het hier'. ''s Zomers' is the neat one-word equivalent of 'in summer', and behaves the same way."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "When the film was over, we went for a drink, and after that I cycled home.",
+            "modelAnswer": "Toen de film afgelopen was, gingen we wat drinken, en daarna fietste ik naar huis.",
+            "alternatives": [
+              "Toen de film afgelopen was, gingen we wat drinken, en daarna fietste ik naar huis.",
+              "Toen de film was afgelopen, gingen we iets drinken, en daarna fietste ik naar huis."
+            ],
+            "note": "Two inversions from two different triggers: a fronted 'toen'-bijzin ('gingen we') and a fronted time word ('daarna fietste ik'). The sub-clause is verb-final ('afgelopen was'). 'Wat / iets drinken' = to go for a drink."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you don't have time, we can do it tomorrow.",
+            "modelAnswer": "Als je geen tijd hebt, kunnen we het morgen doen.",
+            "alternatives": [
+              "Als je geen tijd hebt, kunnen we het morgen doen.",
+              "Als je geen tijd hebt, dan kunnen we het morgen doen."
+            ],
+            "note": "Fronted 'als'-clause → main clause inverts: 'kunnen we'. The modal sends 'doen' to the end: 'kunnen we het morgen doen'. The sub-clause is verb-final ('hebt'). Optional bridging 'dan'."
+          },
+          {
+            "type": "translation",
+            "prompt": "That I'd completely forgotten.",
+            "modelAnswer": "Dat was ik helemaal vergeten.",
+            "alternatives": [
+              "Dat was ik helemaal vergeten.",
+              "Dat was ik totaal vergeten."
+            ],
+            "note": "Fronting the object 'Dat' forces inversion: 'Dat was ik ... vergeten.' Note 'vergeten' here takes 'zijn' ('was ik vergeten') in the sense of having something slip your mind. Emphatic object-fronting is very natural in spoken Dutch."
+          },
+          {
+            "type": "translation",
+            "prompt": "Because the road was closed, we had to take a detour, which cost us an hour.",
+            "modelAnswer": "Omdat de weg afgesloten was, moesten we omrijden, wat ons een uur kostte.",
+            "alternatives": [
+              "Omdat de weg afgesloten was, moesten we omrijden, wat ons een uur kostte.",
+              "Omdat de weg was afgesloten, moesten we omrijden, wat ons een uur kostte."
+            ],
+            "note": "Fronted 'omdat'-bijzin → main clause inverts: 'moesten we'. The modal sends 'omrijden' to the end. 'Wat ons een uur kostte' is a relative clause referring back to the whole idea (the detour). The sub-clause is verb-final ('afgesloten was')."
+          },
+          {
+            "type": "translation",
+            "prompt": "Although it was expensive, I still bought it, because I'd been looking forward to it for so long.",
+            "modelAnswer": "Hoewel het duur was, heb ik het toch gekocht, omdat ik er zo lang naar had uitgekeken.",
+            "alternatives": [
+              "Hoewel het duur was, heb ik het toch gekocht, omdat ik er zo lang naar had uitgekeken.",
+              "Hoewel het duur was, heb ik het toch gekocht, want ik had er zo lang naar uitgekeken."
+            ],
+            "note": "A fronted 'hoewel'-bijzin inverts the main clause: 'heb ik het toch gekocht'. Then an 'omdat'-bijzin (verb-final) folds in 'uitkijken naar' as 'er ... naar had uitgekeken' — a callback to the er + voorzetsel work. 'Toch' = still/anyway; 'want' would also work but doesn't subordinate."
+          }
+        ]
+      }
+    }
+  ]
+}

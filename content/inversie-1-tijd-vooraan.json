@@ -1,0 +1,241 @@
+{
+  "zone": "inversie",
+  "zoneName": "Inversie",
+  "tiles": [
+    {
+      "id": "inversie-1-tijd-vooraan",
+      "theme": "Tijdsbepaling vooraan",
+      "themeEnglish": "Inversion after a fronted time word — when 'gisteren', 'nu' or 'morgen' opens the sentence, the verb comes before the subject",
+      "recognitionQuestion": "Is the word order correct after the fronted time word?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Morgen ga ik naar de tandarts.",
+            "correctUse": true,
+            "explanation": "Correct. Dutch is a verb-second language: when a time word ('Morgen') takes first position, the finite verb comes straight after it, then the subject — 'ga ik', not 'ik ga'. 'Morgen ga ik ...' is the model to internalise."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Gisteren hebben we een goede film gezien.",
+            "correctUse": true,
+            "explanation": "Correct. 'Gisteren' opens, so the verb 'hebben' comes next and the subject 'we' follows: 'Gisteren hebben we ...'. The participle 'gezien' still goes to the end. Verb-second holds even in the perfect."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Nu begrijp ik eindelijk wat je bedoelt.",
+            "correctUse": true,
+            "explanation": "Correct. 'Nu' first → verb 'begrijp' second, subject 'ik' third: 'Nu begrijp ik ...'. The indirect question 'wat je bedoelt' sends its own verb to the end. Inversion in the main clause, verb-final in the sub-clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger ik woonde in een klein dorp bij Utrecht.",
+            "correctUse": false,
+            "explanation": "Niet correct. With 'Vroeger' in first position, the verb must come before the subject: 'Vroeger woonde ik ...', not 'Vroeger ik woonde'. This is the classic slip — keeping English subject-verb order after a fronted time word. The verb has to be second."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Om acht uur begint de vergadering.",
+            "correctUse": true,
+            "explanation": "Correct. The time phrase 'Om acht uur' fills first position, so the verb 'begint' comes next and the subject 'de vergadering' follows: 'Om acht uur begint de vergadering.' A clock time counts as one fronted element."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Volgend jaar gaan we eindelijk naar Canada.",
+            "correctUse": true,
+            "explanation": "Correct. 'Volgend jaar' opens → verb 'gaan' second, subject 'we' third: 'Volgend jaar gaan we ...'. A future-time phrase triggers exactly the same inversion as a past one."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Daarna we gingen met z'n allen naar huis.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Daarna' (after that) is a fronted time word, so the verb must precede the subject: 'Daarna gingen we ...', not 'Daarna we gingen'. Sequencing words like 'daarna', 'toen', 'vervolgens' all force inversion — a frequent stumbling point in storytelling."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ga morgen naar de markt.",
+            "task": "Begin de zin met 'Morgen'.",
+            "acceptedAnswers": [
+              "Morgen ga ik naar de markt.",
+              "Morgen ga ik naar de markt."
+            ],
+            "preferred": "Morgen ga ik naar de markt.",
+            "explanation": "Fronting 'Morgen' pushes the verb to second position and the subject to third: 'Morgen ga ik ...'. The neutral 'Ik ga morgen ...' becomes 'Morgen ga ik ...' — verb and subject swap."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben gisteren heel hard gewerkt.",
+            "task": "Begin de zin met 'Gisteren'.",
+            "acceptedAnswers": [
+              "Gisteren hebben we heel hard gewerkt.",
+              "Gisteren hebben we heel hard gewerkt."
+            ],
+            "preferred": "Gisteren hebben we heel hard gewerkt.",
+            "explanation": "'Gisteren' first → 'hebben we' (verb before subject). The participle 'gewerkt' stays at the end. 'Gisteren hebben we ... gewerkt.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik begrijp het nu.",
+            "task": "Begin de zin met 'Nu'.",
+            "acceptedAnswers": [
+              "Nu begrijp ik het.",
+              "Nu begrijp ik het."
+            ],
+            "preferred": "Nu begrijp ik het.",
+            "explanation": "'Nu' first → 'begrijp ik'. Verb second, subject third: 'Nu begrijp ik het.' The little word 'het' follows the subject."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze komt straks nog even langs.",
+            "task": "Begin de zin met 'Straks'.",
+            "acceptedAnswers": [
+              "Straks komt ze nog even langs.",
+              "Straks komt ze nog even langs."
+            ],
+            "preferred": "Straks komt ze nog even langs.",
+            "explanation": "'Straks' (in a bit) first → 'komt ze'. The separable 'langskomen' keeps 'langs' at the end: 'Straks komt ze ... langs.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het regende de hele dag zonder ophouden.",
+            "task": "Begin de zin met 'De hele dag'.",
+            "acceptedAnswers": [
+              "De hele dag regende het zonder ophouden.",
+              "De hele dag regende het zonder ophouden."
+            ],
+            "preferred": "De hele dag regende het zonder ophouden.",
+            "explanation": "The time phrase 'De hele dag' opens, so the verb 'regende' comes next and the subject 'het' follows: 'De hele dag regende het ...'. Even the dummy subject 'het' moves after the verb."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik dronk vroeger veel te veel koffie.",
+            "task": "Begin de zin met 'Vroeger'.",
+            "acceptedAnswers": [
+              "Vroeger dronk ik veel te veel koffie.",
+              "Vroeger dronk ik veel te veel koffie."
+            ],
+            "preferred": "Vroeger dronk ik veel te veel koffie.",
+            "explanation": "'Vroeger' first → 'dronk ik' (verb before subject). 'Vroeger dronk ik ...' = I used to drink ... This is exactly the pattern that's easy to get wrong: not 'Vroeger ik dronk'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We gaan volgende week eindelijk verhuizen.",
+            "task": "Begin de zin met 'Volgende week'.",
+            "acceptedAnswers": [
+              "Volgende week gaan we eindelijk verhuizen.",
+              "Volgende week gaan we eindelijk verhuizen."
+            ],
+            "preferred": "Volgende week gaan we eindelijk verhuizen.",
+            "explanation": "'Volgende week' first → 'gaan we'. The infinitive 'verhuizen' stays at the end: 'Volgende week gaan we ... verhuizen.' Verb second, subject third, as always."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Tomorrow I'm going to the dentist.",
+            "modelAnswer": "Morgen ga ik naar de tandarts.",
+            "alternatives": [
+              "Morgen ga ik naar de tandarts.",
+              "Ik ga morgen naar de tandarts."
+            ],
+            "note": "Front 'Morgen' and the verb comes before the subject: 'Morgen ga ik ...'. The un-fronted 'Ik ga morgen ...' is equally correct — but the moment a time word leads, inversion is obligatory."
+          },
+          {
+            "type": "translation",
+            "prompt": "Yesterday we watched a film.",
+            "modelAnswer": "Gisteren hebben we een film gekeken.",
+            "alternatives": [
+              "Gisteren hebben we een film gekeken.",
+              "Gisteren keken we een film."
+            ],
+            "note": "'Gisteren' first → 'hebben we' / 'keken we' (verb before subject). The perfect ('hebben ... gekeken') and the imperfectum ('keken') both invert. Not 'Gisteren we hebben'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Now I understand what you mean.",
+            "modelAnswer": "Nu begrijp ik wat je bedoelt.",
+            "alternatives": [
+              "Nu begrijp ik wat je bedoelt.",
+              "Nu snap ik wat je bedoelt."
+            ],
+            "note": "'Nu' first → 'begrijp ik'. The indirect question 'wat je bedoelt' is a sub-clause, so its verb 'bedoelt' goes to the end. 'Snappen' is the everyday spoken synonym of 'begrijpen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Last year we went to Spain.",
+            "modelAnswer": "Vorig jaar zijn we naar Spanje geweest.",
+            "alternatives": [
+              "Vorig jaar zijn we naar Spanje geweest.",
+              "Vorig jaar gingen we naar Spanje."
+            ],
+            "note": "'Vorig jaar' first → 'zijn we' / 'gingen we'. Note 'naar Spanje geweest' uses 'zijn' (to have been somewhere). Verb second, subject third."
+          },
+          {
+            "type": "translation",
+            "prompt": "After that, we went home.",
+            "modelAnswer": "Daarna gingen we naar huis.",
+            "alternatives": [
+              "Daarna gingen we naar huis.",
+              "Daarna zijn we naar huis gegaan."
+            ],
+            "note": "'Daarna' is a sequencing time word, so it forces inversion: 'Daarna gingen we ...'. These linking words ('daarna', 'toen', 'vervolgens') are where storytelling most often goes wrong — remember the verb comes second."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "First we ate, and afterwards we watched a film together.",
+            "modelAnswer": "Eerst aten we, en daarna keken we samen een film.",
+            "alternatives": [
+              "Eerst aten we, en daarna keken we samen een film.",
+              "Eerst hebben we gegeten, en daarna hebben we samen een film gekeken."
+            ],
+            "note": "Two fronted time words, two inversions: 'Eerst aten we' and 'daarna keken we'. Both 'eerst' and 'daarna' push the verb ahead of the subject. 'En' coordinates, but the inversion is triggered by 'daarna', not by 'en'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Tomorrow I have to work, but the day after I'm free.",
+            "modelAnswer": "Morgen moet ik werken, maar overmorgen ben ik vrij.",
+            "alternatives": [
+              "Morgen moet ik werken, maar overmorgen ben ik vrij.",
+              "Morgen moet ik werken, maar overmorgen heb ik vrij."
+            ],
+            "note": "Both halves front a time word and invert: 'Morgen moet ik' and 'overmorgen ben ik'. 'Overmorgen' = the day after tomorrow. The modal 'moet' sends 'werken' to the end. 'Vrij zijn' / 'vrij hebben' = to be off work."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was young, I often played outside; nowadays children sit inside.",
+            "modelAnswer": "Toen ik jong was, speelde ik vaak buiten; tegenwoordig zitten kinderen binnen.",
+            "alternatives": [
+              "Toen ik jong was, speelde ik vaak buiten; tegenwoordig zitten kinderen binnen.",
+              "Toen ik jong was, speelde ik vaak buiten; tegenwoordig zitten de kinderen binnen."
+            ],
+            "note": "A 'toen'-bijzin counts as the fronted element, so the main clause inverts: 'speelde ik'. Then 'tegenwoordig' (nowadays) fronts and inverts too: 'zitten kinderen'. The sub-clause itself is verb-final ('Toen ik jong was')."
+          },
+          {
+            "type": "translation",
+            "prompt": "At eight the meeting starts, so by then everything has to be ready.",
+            "modelAnswer": "Om acht uur begint de vergadering, dus dan moet alles klaar zijn.",
+            "alternatives": [
+              "Om acht uur begint de vergadering, dus dan moet alles klaar zijn.",
+              "Om acht uur begint de vergadering, dus tegen die tijd moet alles klaar zijn."
+            ],
+            "note": "Two frontings: 'Om acht uur begint de vergadering' and 'dan moet alles' (after 'dus'). Both the clock time and the resumptive 'dan' force inversion. 'Tegen die tijd' = by then. The modal sends 'klaar zijn' to the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "Next week we're moving, and after that we'll finally have more space.",
+            "modelAnswer": "Volgende week gaan we verhuizen, en daarna hebben we eindelijk meer ruimte.",
+            "alternatives": [
+              "Volgende week gaan we verhuizen, en daarna hebben we eindelijk meer ruimte.",
+              "Volgende week verhuizen we, en daarna hebben we eindelijk meer ruimte."
+            ],
+            "note": "Two fronted time expressions: 'Volgende week gaan we' and 'daarna hebben we'. Each inverts independently. 'Eindelijk' = finally. The first half can also drop 'gaan': 'Volgende week verhuizen we.'"
+          }
+        ]
+      }
+    }
+  ]
+}
