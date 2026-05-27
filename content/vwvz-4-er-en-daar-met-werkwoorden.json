@@ -1,0 +1,241 @@
+{
+  "zone": "vwvz",
+  "zoneName": "Werkwoord + voorzetsel",
+  "tiles": [
+    {
+      "id": "vwvz-4-er-en-daar-met-werkwoorden",
+      "theme": "Er en daar met vaste voorzetsels",
+      "themeEnglish": "Fixed-preposition verbs run through the er/daar machine — wachten op becomes 'ik wacht erop', but for a person you keep 'op hem'",
+      "recognitionQuestion": "Is the 'er' or 'daar' form correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Wacht je nog op de uitslag? Ja, ik wacht er al dagen op.",
+            "correctUse": true,
+            "explanation": "Correct. 'Wachten op' + a thing (the result) contracts to 'er ... op'. 'Ik wacht er al dagen op' = I've been waiting for it for days. The neutral, unstressed form, split around 'al dagen'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hou je van klassieke muziek? Ja, ik hou ervan.",
+            "correctUse": true,
+            "explanation": "Correct. 'Houden van' + a thing → 'ervan'. 'Ik hou ervan' = I love it. Short answer, so it stays joined as 'ervan'; with an adverb it would split ('ik hou er echt van')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Denk je nog weleens aan vroeger? Ja, ik denk er vaak aan.",
+            "correctUse": true,
+            "explanation": "Correct. 'Denken aan' + a thing (the past) → 'er ... aan'. 'Ik denk er vaak aan' = I often think of it. The frequency word 'vaak' sits between 'er' and the stranded 'aan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ben je trots op je dochter? Ja, ik ben heel trots op haar.",
+            "correctUse": true,
+            "explanation": "Correct — and the key contrast. Your daughter is a PERSON, so you keep the preposition + a pronoun: 'op haar', never 'erop'. 'Ik ben trots op haar' = I'm proud of her. The 'er'-form is only for things."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn broer gebeld en ik heb lang ermee gesproken.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Mijn broer' is a person, so no 'ermee': keep 'met' + a pronoun → 'met hem'. Correct: '...en ik heb lang met hem gesproken.' This person-as-'er' slip is the single most common mistake with these verbs."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Waar reken je eigenlijk op? Daar reken ik juist niet op.",
+            "correctUse": true,
+            "explanation": "Correct. 'Rekenen op' + a thing/situation, stressed and fronted → 'daar ... op'. 'Daar reken ik niet op' = that's exactly what I'm not counting on. The stressed 'daar' (rather than 'er') puts weight on the 'that'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je zin in een kopje koffie? Ja, daar heb ik wel zin in.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zin hebben in' + a thing, fronted for a touch of emphasis → 'daar ... in'. 'Daar heb ik wel zin in' = yes, I do fancy that. The 'wel' answers the offer warmly. Unstressed, you'd say 'ik heb er wel zin in'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik wacht al een uur op de trein.",
+            "task": "Vervang 'op de trein' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik wacht er al een uur op.",
+              "Ik wacht er al een uur op."
+            ],
+            "preferred": "Ik wacht er al een uur op.",
+            "explanation": "'Op de trein' (a thing) → 'er ... op', split around 'al een uur': 'Ik wacht er al een uur op.' The stranded 'op' goes to the end. This is 'wachten op' meeting the 'er'-rule."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik hou heel veel van pure chocola.",
+            "task": "Vervang 'van pure chocola' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik hou er heel veel van.",
+              "Ik hou er heel veel van."
+            ],
+            "preferred": "Ik hou er heel veel van.",
+            "explanation": "'Van pure chocola' (a thing) → 'er ... van'. 'Ik hou er heel veel van' = I love it a lot. The quantity word 'heel veel' sits between 'er' and the stranded 'van'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik reken op mijn beste collega.",
+            "task": "Vervang het object door de juiste vorm (let op: persoon!).",
+            "acceptedAnswers": [
+              "Ik reken op hem.",
+              "Ik reken op haar."
+            ],
+            "preferred": "Ik reken op hem.",
+            "explanation": "A colleague is a PERSON, so no 'erop': keep 'op' + a pronoun → 'Ik reken op hem/haar.' 'Erop' would only fit a thing or situation ('ik reken erop dat het lukt'). The person-vs-thing split is the whole point of this tile."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kijk enorm uit naar het lange weekend.",
+            "task": "Vervang 'naar het lange weekend' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik kijk er enorm naar uit.",
+              "Ik kijk er enorm naar uit."
+            ],
+            "preferred": "Ik kijk er enorm naar uit.",
+            "explanation": "'Uitkijken naar' + a thing → 'er ... naar ... uit'. The separable 'uitkijken' and the fixed 'naar' both go to the end around 'enorm': 'Ik kijk er enorm naar uit.' Three pieces, all stranded at the close."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben echt bang voor grote spinnen.",
+            "task": "Vervang 'voor grote spinnen' door een 'daar'-vorm (nadruk).",
+            "acceptedAnswers": [
+              "Daar ben ik echt bang voor.",
+              "Daar ben ik echt bang voor."
+            ],
+            "preferred": "Daar ben ik echt bang voor.",
+            "explanation": "'Bang voor' + a thing, fronted for emphasis → 'daar ... voor'. 'Daar ben ik echt bang voor' = that's what I'm really afraid of. Fronting 'daar' triggers inversion ('ben ik'). Unstressed: 'ik ben er echt bang voor'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik twijfel sterk aan dat plan.",
+            "task": "Vervang 'aan dat plan' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik twijfel er sterk aan.",
+              "Ik twijfel er sterk aan."
+            ],
+            "preferred": "Ik twijfel er sterk aan.",
+            "explanation": "'Twijfelen aan' + a thing → 'er ... aan'. 'Ik twijfel er sterk aan' = I seriously doubt it. The adverb 'sterk' sits between 'er' and the stranded 'aan'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb lang met de buurman over de heg gesproken.",
+            "task": "Vervang 'met de buurman' \u00e9n 'over de heg' door de juiste vormen.",
+            "acceptedAnswers": [
+              "Ik heb lang met hem erover gesproken.",
+              "Ik heb er lang met hem over gesproken."
+            ],
+            "preferred": "Ik heb er lang met hem over gesproken.",
+            "explanation": "Two objects, two rules: the neighbour is a person → 'met hem' (pronoun kept); the hedge is a thing → 'er ... over' (contracted). 'Ik heb er lang met hem over gesproken.' Person stays, thing contracts — in one sentence."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'm waiting for it.",
+            "modelAnswer": "Ik wacht erop.",
+            "alternatives": [
+              "Ik wacht erop.",
+              "Daar wacht ik op."
+            ],
+            "note": "'Wachten op' + a thing → 'erop' (neutral) or stressed 'daar ... op'. For a person it would be 'ik wacht op hem/haar'. Short sentence, so 'erop' stays joined."
+          },
+          {
+            "type": "translation",
+            "prompt": "She's very fond of it.",
+            "modelAnswer": "Ze houdt er veel van.",
+            "alternatives": [
+              "Ze houdt er veel van.",
+              "Daar houdt ze veel van."
+            ],
+            "note": "'Houden van' + a thing → 'er ... van', split around 'veel'. 'Ze houdt er veel van' = she's very fond of it. Stressed version fronts 'daar'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm counting on him.",
+            "modelAnswer": "Ik reken op hem.",
+            "alternatives": [
+              "Ik reken op hem.",
+              "Op hem reken ik."
+            ],
+            "note": "'Rekenen op' + a PERSON → keep 'op' + pronoun: 'op hem'. No 'erop' here — that's only for things and situations. Front 'op hem' for emphasis (with inversion: 'reken ik')."
+          },
+          {
+            "type": "translation",
+            "prompt": "Are you looking forward to it?",
+            "modelAnswer": "Kijk je ernaar uit?",
+            "alternatives": [
+              "Kijk je ernaar uit?",
+              "Verheug je je erop?"
+            ],
+            "note": "'Uitkijken naar' + a thing → 'ernaar ... uit'. 'Kijk je ernaar uit?' = are you looking forward to it? The alternative 'zich verheugen op' → 'zich erop verheugen' is the warmer, more formal version."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't believe in it.",
+            "modelAnswer": "Ik geloof er niet in.",
+            "alternatives": [
+              "Ik geloof er niet in.",
+              "Daar geloof ik niet in."
+            ],
+            "note": "'Geloven in' + a thing → 'er ... in'. 'Ik geloof er niet in' = I don't believe in it. The stressed, fronted 'Daar geloof ik niet in' puts the weight on the 'that'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I asked him about it, but he didn't want to talk about it.",
+            "modelAnswer": "Ik heb hem ernaar gevraagd, maar hij wilde er niet over praten.",
+            "alternatives": [
+              "Ik heb hem ernaar gevraagd, maar hij wilde er niet over praten.",
+              "Ik heb het hem gevraagd, maar hij wilde er niet over praten."
+            ],
+            "note": "Person stays as a pronoun ('hem'), thing contracts: 'vragen naar' → 'ernaar', 'praten over' → 'er ... over'. The modal 'wilde' sends the cluster to the end: 'er niet over praten'. One person, two things, three different treatments."
+          },
+          {
+            "type": "translation",
+            "prompt": "She's proud of it, and she has every right to be proud of it.",
+            "modelAnswer": "Ze is er trots op, en ze mag er ook trots op zijn.",
+            "alternatives": [
+              "Ze is er trots op, en ze mag er ook trots op zijn.",
+              "Ze is er terecht trots op, en dat mag ook."
+            ],
+            "note": "'Trots op' + a thing → 'er ... op', twice. In the second half the modal 'mag' wraps the cluster: 'er ook trots op zijn'. 'Terecht' = rightly/justifiably, a neat one-word way to say she has every right."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm looking forward to the holiday — I've been looking forward to it for months.",
+            "modelAnswer": "Ik kijk uit naar de vakantie \u2014 ik kijk er al maanden naar uit.",
+            "alternatives": [
+              "Ik kijk uit naar de vakantie \u2014 ik kijk er al maanden naar uit.",
+              "Ik verheug me op de vakantie \u2014 ik kijk er al maanden naar uit."
+            ],
+            "note": "The full verb first ('uitkijken naar de vakantie'), then the contracted 'er ... naar ... uit' once the noun is known. 'Ik kijk er al maanden naar uit' = I've been looking forward to it for months. The separable 'uit' and the fixed 'naar' both strand at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "He's afraid of dogs, but he's not afraid of them when they're on a lead.",
+            "modelAnswer": "Hij is bang voor honden, maar hij is er niet bang voor als ze aan de lijn zitten.",
+            "alternatives": [
+              "Hij is bang voor honden, maar hij is er niet bang voor als ze aan de lijn zitten.",
+              "Hij is bang voor honden, maar daar is hij niet bang voor als ze aan de lijn zitten."
+            ],
+            "note": "'Bang voor' with the full noun ('voor honden'), then contracted to 'er ... voor' (dogs are things, so the 'er'-form is right). The 'als'-bijzin sends 'zitten' to the end. 'Aan de lijn' = on a lead."
+          },
+          {
+            "type": "translation",
+            "prompt": "I doubt it, and I keep thinking about it.",
+            "modelAnswer": "Ik twijfel eraan, en ik moet er steeds aan denken.",
+            "alternatives": [
+              "Ik twijfel eraan, en ik moet er steeds aan denken.",
+              "Daar twijfel ik aan, en ik moet er steeds aan denken."
+            ],
+            "note": "Two 'aan'-verbs, both with a thing, both contracting to the 'er'-form: 'twijfelen aan' → 'eraan' and 'denken aan' → 'er ... aan'. 'Ik moet er steeds aan denken' = I keep thinking about it. 'Steeds' = continually."
+          }
+        ]
+      }
+    }
+  ]
+}
