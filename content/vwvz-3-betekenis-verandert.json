@@ -1,0 +1,242 @@
+{
+  "zone": "vwvz",
+  "zoneName": "Werkwoord + voorzetsel",
+  "tiles": [
+    {
+      "id": "vwvz-3-betekenis-verandert",
+      "theme": "Voorzetsel verandert de betekenis",
+      "themeEnglish": "Verbs where swapping the preposition changes the meaning (denken aan vs over, vragen om vs naar) — the wrong one is grammatical but says the wrong thing",
+      "recognitionQuestion": "Does the preposition give the intended meaning?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik moet nog goed nadenken over dat aanbod voordat ik beslis.",
+            "correctUse": true,
+            "explanation": "Correct. 'Nadenken over' = to consider / mull over (an issue). Exactly right for weighing up an offer: 'nadenken over dat aanbod'. Hold this against 'denken aan', which means to have something in mind or recall it — a different verb-sense entirely."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Na het diner vroeg de klant naar de rekening.",
+            "correctUse": false,
+            "explanation": "Niet correct for the intended meaning. To ask FOR the bill (request it) is 'vragen om': 'vroeg om de rekening'. 'Vragen naar' means to ask ABOUT / after something — so 'vroeg naar de rekening' sounds like the customer enquired about the bill rather than asking to pay. After dinner, you want 'om'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb gisteren lang met mijn baas gesproken.",
+            "correctUse": true,
+            "explanation": "Correct. 'Spreken met' = to speak WITH / to (a person). 'Met mijn baas spreken' = to talk to my boss. Use 'met' for the person you're talking to, and 'over' for the topic you're discussing — they often appear together."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Waar gaat die nieuwe Nederlandse film eigenlijk over?",
+            "correctUse": true,
+            "explanation": "Correct. 'Gaan over' = to be about (a subject). 'Waar gaat de film over?' = what's the film about? This is the fixed 'over' for the subject matter of a book, film or talk — nothing to do with 'going' anywhere."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik denk de hele dag al over jou; ik mis je enorm.",
+            "correctUse": false,
+            "explanation": "Niet correct for the intended meaning. To have someone in your thoughts / miss them is 'denken aan': 'ik denk de hele dag aan jou'. 'Denken over jou' suggests forming an opinion or judgement about you — which clashes with 'I miss you'. For affection and longing, it's 'aan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De baby lag in de wieg en lachte de hele tijd om mij.",
+            "correctUse": false,
+            "explanation": "Niet correct for the intended meaning. To smile AT someone is 'lachen naar' (or 'tegen'): 'lachte de hele tijd naar mij'. 'Lachen om' means to laugh AT / about something funny — so 'om mij' makes it sound like the baby found you ridiculous. For a baby beaming at you, it's 'naar'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je moet je aan de afspraken houden, anders verlies je hun vertrouwen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich houden aan' = to keep to / abide by (rules, agreements). 'Je aan de afspraken houden' = to stick to the agreements. Quite separate from 'houden van' (to love) — same verb 'houden', completely different meaning depending on the preposition."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik wil je iets ___ je reis vragen. (= ik wil informatie)",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik wil je iets naar je reis vragen.",
+              "Ik wil je iets over je reis vragen.",
+              "naar"
+            ],
+            "preferred": "Ik wil je iets over je reis vragen.",
+            "explanation": "To enquire / ask about something is 'vragen naar' (or, for a topic, 'vragen over'): you want information about the trip. Reserve 'vragen om' for requesting a thing. Here you're seeking information, so 'naar'/'over', not 'om'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De bedelaar vroeg ___ wat kleingeld. (= een verzoek)",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "De bedelaar vroeg om wat kleingeld.",
+              "om"
+            ],
+            "preferred": "De bedelaar vroeg om wat kleingeld.",
+            "explanation": "To ask FOR something (a request) is 'vragen om': 'vroeg om wat kleingeld' (asked for some change). Contrast the previous item, where you wanted information ('naar'). Same verb, opposite job."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik moet er nog eens goed ___ nadenken. (= overwegen)",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik moet er nog eens goed over nadenken.",
+              "over"
+            ],
+            "preferred": "Ik moet er nog eens goed over nadenken.",
+            "explanation": "To mull over / consider is 'nadenken over' → here with a thing, 'er ... over'. 'Ik moet er nog over nadenken' = I need to think it over. This is the deliberating sense, not the 'have in mind' sense of 'denken aan'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik denk vaak ___ jou als ik dit liedje hoor. (= jij komt in mijn gedachten)",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik denk vaak aan jou als ik dit liedje hoor.",
+              "aan"
+            ],
+            "preferred": "Ik denk vaak aan jou als ik dit liedje hoor.",
+            "explanation": "To have someone come to mind is 'denken aan': 'ik denk aan jou'. (With a person it's 'aan jou', never 'eraan'.) This is the recall/affection sense — distinct from 'nadenken over', which is deliberation."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Gisteren heb ik ___ de directeur gesproken. (= een persoon)",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Gisteren heb ik met de directeur gesproken.",
+              "met"
+            ],
+            "preferred": "Gisteren heb ik met de directeur gesproken.",
+            "explanation": "To speak WITH a person is 'spreken met': 'met de directeur spreken'. Use 'over' only for the topic ('spreken over de plannen'). The person gets 'met', the subject gets 'over'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het boek ___ de Tweede Wereldoorlog. (= dat is het onderwerp)",
+            "task": "Maak een zin met 'gaan over'.",
+            "acceptedAnswers": [
+              "Het boek gaat over de Tweede Wereldoorlog.",
+              "Het boek gaat over de Tweede Wereldoorlog."
+            ],
+            "preferred": "Het boek gaat over de Tweede Wereldoorlog.",
+            "explanation": "'Gaan over' = to be about. 'Het boek gaat over de oorlog' = the book is about the war. The fixed 'over' marks subject matter — the book isn't 'going' anywhere."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je hebt het beloofd, dus ___ je belofte! (= nakomen)",
+            "task": "Maak een gebod met 'zich houden aan'.",
+            "acceptedAnswers": [
+              "Je hebt het beloofd, dus hou je aan je belofte!",
+              "Je hebt het beloofd, dus houd je aan je belofte!"
+            ],
+            "preferred": "Je hebt het beloofd, dus hou je aan je belofte!",
+            "explanation": "'Zich houden aan' = to keep to / honour. 'Hou je aan je belofte!' = keep your promise! The reflexive 'je' and the 'aan'-phrase are both needed. Don't confuse with 'houden van' (to love)."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I need to think about your offer.",
+            "modelAnswer": "Ik moet over je aanbod nadenken.",
+            "alternatives": [
+              "Ik moet nadenken over je aanbod.",
+              "Ik moet er nog over nadenken."
+            ],
+            "note": "'Consider / think over' = 'nadenken over'. This is the deliberating sense. If you'd said 'denken aan je aanbod' it would mean the offer merely crossed your mind — not that you're weighing it up."
+          },
+          {
+            "type": "translation",
+            "prompt": "I think about you a lot.",
+            "modelAnswer": "Ik denk veel aan je.",
+            "alternatives": [
+              "Ik denk veel aan jou.",
+              "Ik moet vaak aan je denken."
+            ],
+            "note": "'Have in mind / miss' = 'denken aan'. 'Ik denk aan je' = I'm thinking of you. With a person, keep 'aan' + pronoun ('aan je/jou'), never 'eraan'. 'Ik moet aan je denken' is the warm 'you keep coming to mind'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She asked for the bill.",
+            "modelAnswer": "Ze vroeg om de rekening.",
+            "alternatives": [
+              "Ze vroeg om de rekening.",
+              "Ze vroeg of ze mocht afrekenen."
+            ],
+            "note": "'Ask for / request' = 'vragen om'. 'Vragen naar de rekening' would mean she enquired about it. The alternative 'vragen of ze mocht afrekenen' (ask whether she could pay) sidesteps the preposition altogether."
+          },
+          {
+            "type": "translation",
+            "prompt": "He asked about you.",
+            "modelAnswer": "Hij vroeg naar je.",
+            "alternatives": [
+              "Hij vroeg naar jou.",
+              "Hij vroeg hoe het met je ging."
+            ],
+            "note": "'Enquire / ask after' = 'vragen naar'. 'Hij vroeg naar je' = he asked after you. Contrast 'vragen om' (request): 'naar' seeks information, 'om' seeks a thing. The alternative spells out the after-you sense."
+          },
+          {
+            "type": "translation",
+            "prompt": "Stick to the agreement.",
+            "modelAnswer": "Hou je aan de afspraak.",
+            "alternatives": [
+              "Houd je aan de afspraak.",
+              "Je moet je aan de afspraak houden."
+            ],
+            "note": "'Abide by / keep to' = 'zich houden aan'. 'Hou je aan de afspraak' = stick to the agreement. The reflexive 'je' is essential. Completely separate from 'houden van' (to love) — only the preposition tells them apart."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I asked about the price, and then I asked for a discount.",
+            "modelAnswer": "Ik vroeg naar de prijs, en toen vroeg ik om korting.",
+            "alternatives": [
+              "Ik vroeg naar de prijs, en toen vroeg ik om korting.",
+              "Ik informeerde naar de prijs, en toen vroeg ik om korting."
+            ],
+            "note": "The whole 'vragen' contrast in one line: 'vragen naar' (enquire about the price) versus 'vragen om' (request a discount). Note the inversion after 'toen': 'toen vroeg ik'. 'Informeren naar' is the more formal way to enquire."
+          },
+          {
+            "type": "translation",
+            "prompt": "I've thought your plan over, and I keep thinking about how much work it'll be.",
+            "modelAnswer": "Ik heb over je plan nagedacht, en ik moet steeds denken aan hoeveel werk het wordt.",
+            "alternatives": [
+              "Ik heb over je plan nagedacht, en ik moet steeds denken aan hoeveel werk het wordt.",
+              "Ik heb je plan overdacht, en ik moet steeds denken aan hoeveel werk het wordt."
+            ],
+            "note": "Both senses of 'denken' side by side: 'nadenken over' (deliberate on the plan) and 'denken aan' (the thought of all that work keeps surfacing). 'Steeds' = keep (doing); the indirect question 'hoeveel werk het wordt' sends its verb to the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "She spoke to the manager about the complaint.",
+            "modelAnswer": "Ze sprak met de manager over de klacht.",
+            "alternatives": [
+              "Ze sprak met de manager over de klacht.",
+              "Ze heeft met de manager over de klacht gesproken."
+            ],
+            "note": "Both 'spreken' prepositions in one sentence: 'met' for the person (the manager) and 'over' for the topic (the complaint). The person gets 'met', the subject gets 'over' — they co-exist happily."
+          },
+          {
+            "type": "translation",
+            "prompt": "The film is about a man who can't keep to his promises.",
+            "modelAnswer": "De film gaat over een man die zich niet aan zijn beloftes kan houden.",
+            "alternatives": [
+              "De film gaat over een man die zich niet aan zijn beloftes kan houden.",
+              "De film gaat over een man die zijn beloftes niet kan nakomen."
+            ],
+            "note": "'Gaan over' (be about) frames the sentence; inside the relative clause sits 'zich houden aan' (keep to) with a modal, so the cluster goes to the end: 'die zich niet aan zijn beloftes kan houden'. 'Nakomen' (to honour, separable) is the clean synonym."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't laugh at me — I was only smiling at the baby.",
+            "modelAnswer": "Lach niet om mij \u2014 ik lachte alleen maar naar de baby.",
+            "alternatives": [
+              "Lach me niet uit \u2014 ik lachte alleen maar naar de baby.",
+              "Lach niet om mij \u2014 ik lachte alleen naar de baby."
+            ],
+            "note": "'Lachen om' (laugh at / about something) versus 'lachen naar' (smile at someone) — one little preposition is the difference between mockery and warmth. 'Uitlachen' (separable, to mock) → 'lach me niet uit' is the sharper version of the first half."
+          }
+        ]
+      }
+    }
+  ]
+}

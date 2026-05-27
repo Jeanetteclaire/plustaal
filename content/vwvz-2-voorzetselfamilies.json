@@ -1,0 +1,241 @@
+{
+  "zone": "vwvz",
+  "zoneName": "Werkwoord + voorzetsel",
+  "tiles": [
+    {
+      "id": "vwvz-2-voorzetselfamilies",
+      "theme": "Voorzetselfamilies",
+      "themeEnglish": "Fixed-preposition verbs grouped by their preposition (aan, op, over, voor, naar, van) so the patterns start to feel learnable",
+      "recognitionQuestion": "Is the correct preposition used with this verb?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik hoop voor beter weer morgen.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Hopen' takes 'op', not 'voor': 'Ik hoop op beter weer.' This belongs to the large 'op'-family (hopen op, rekenen op, wachten op, reageren op). English 'hope for' misleads you toward 'voor', but Dutch fixes it as 'op'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Veel mensen nemen deel aan de demonstratie.",
+            "correctUse": true,
+            "explanation": "Correct. 'Deelnemen aan' = to take part in. One of the 'aan'-family (deelnemen aan, wennen aan, lijden aan, denken aan). 'Aan' is the fixed preposition; the separable 'deelnemen' splits as 'nemen ... deel'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Bedankt voor je hulp bij de verhuizing!",
+            "correctUse": true,
+            "explanation": "Correct. 'Bedanken voor' = to thank for. Part of the 'voor'-family (bedanken voor, waarschuwen voor, zorgen voor, bang zijn voor). Here 'voor' does match the English 'for' — a rare easy one."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De kinderen verlangen op de zomervakantie.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Verlangen' takes 'naar', not 'op': 'De kinderen verlangen naar de zomervakantie' (long for the summer holidays). This is the 'naar'-family (verlangen naar, kijken naar, luisteren naar, zoeken naar, uitkijken naar)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben echt genoten van het concert.",
+            "correctUse": true,
+            "explanation": "Correct. 'Genieten van' = to enjoy. Part of the 'van'-family (genieten van, houden van, afhangen van, schrikken van). 'Van' is fixed and doesn't translate as 'of' here — 'genieten van' simply means 'to enjoy'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Let goed op je spullen in de drukke trein.",
+            "correctUse": true,
+            "explanation": "Correct. 'Letten op' = to keep an eye on / pay attention to. Another 'op'-family member (letten op, rekenen op, wijzen op). 'Let op je spullen' = watch your belongings. The separable verb splits: 'let ... op'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij klaagt altijd over het weer.",
+            "correctUse": true,
+            "explanation": "Correct. 'Klagen over' = to complain about. The 'over'-family (klagen over, praten over, nadenken over, beslissen over). 'Over' is the fixed preposition for talking or grumbling about a topic."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik moet nog wennen ___ mijn nieuwe baan.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik moet nog wennen aan mijn nieuwe baan.",
+              "aan"
+            ],
+            "preferred": "Ik moet nog wennen aan mijn nieuwe baan.",
+            "explanation": "'Wennen aan' = to get used to. An 'aan'-family verb. 'Ik moet nog wennen aan mijn baan' = I still have to get used to my job."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze reageerde helemaal niet ___ mijn bericht.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ze reageerde helemaal niet op mijn bericht.",
+              "op"
+            ],
+            "preferred": "Ze reageerde helemaal niet op mijn bericht.",
+            "explanation": "'Reageren op' = to respond to. An 'op'-family verb. 'Reageren op een bericht' = to reply to a message. Not 'aan' or 'naar'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De raad moet ___ de nieuwe begroting beslissen.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "De raad moet over de nieuwe begroting beslissen.",
+              "over"
+            ],
+            "preferred": "De raad moet over de nieuwe begroting beslissen.",
+            "explanation": "'Beslissen over' = to decide on. An 'over'-family verb. 'Beslissen over de begroting' = to decide on the budget. (You 'beslist over' an issue, but you 'besluit tot' an action — a finer point for later.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij waarschuwde me ___ de gladde weg.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Hij waarschuwde me voor de gladde weg.",
+              "voor"
+            ],
+            "preferred": "Hij waarschuwde me voor de gladde weg.",
+            "explanation": "'Waarschuwen voor' = to warn about/against. A 'voor'-family verb. 'Waarschuwen voor gevaar' = to warn of danger. The 'voor' here carries the sense of 'against / look out for'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het hele team zoekt ___ een goede oplossing.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Het hele team zoekt naar een goede oplossing.",
+              "naar"
+            ],
+            "preferred": "Het hele team zoekt naar een goede oplossing.",
+            "explanation": "'Zoeken naar' = to search for. A 'naar'-family verb. 'Zoeken naar een oplossing' = to look for a solution. (Plain 'iets zoeken' without 'naar' is also possible for a concrete object — 'ik zoek mijn sleutels'.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Of we gaan, hangt ___ het weer af.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Of we gaan, hangt van het weer af.",
+              "van"
+            ],
+            "preferred": "Of we gaan, hangt van het weer af.",
+            "explanation": "'Afhangen van' = to depend on. A 'van'-family verb, and separable: 'hangt ... af'. 'Het hangt van het weer af' = it depends on the weather. The 'of'-clause ('Of we gaan') is the subject here."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn opa lijdt al jaren ___ een hartkwaal.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Mijn opa lijdt al jaren aan een hartkwaal.",
+              "aan"
+            ],
+            "preferred": "Mijn opa lijdt al jaren aan een hartkwaal.",
+            "explanation": "'Lijden aan' = to suffer from (an illness). An 'aan'-family verb. 'Lijden aan een ziekte' = to suffer from a disease. (Note 'lijden onder' = to suffer because of circumstances — a different shade.)"
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "She's very proud of her work.",
+            "modelAnswer": "Ze is heel trots op haar werk.",
+            "alternatives": [
+              "Ze is heel trots op haar werk.",
+              "Ze is enorm trots op haar werk."
+            ],
+            "note": "'Trots op' = proud of. An 'op'-pairing (here with an adjective rather than a verb, but the fixed preposition works the same way). Not 'van', despite the English 'of'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Thanks for the lovely evening.",
+            "modelAnswer": "Bedankt voor de gezellige avond.",
+            "alternatives": [
+              "Bedankt voor de gezellige avond.",
+              "Dank je wel voor de gezellige avond."
+            ],
+            "note": "'Bedanken voor' = to thank for. A 'voor'-pairing. 'Gezellig' is the untranslatable Dutch word for cosy/convivial — exactly right for a nice evening."
+          },
+          {
+            "type": "translation",
+            "prompt": "We really enjoyed the trip.",
+            "modelAnswer": "We hebben echt genoten van de reis.",
+            "alternatives": [
+              "We hebben echt genoten van de reis.",
+              "We hebben enorm genoten van de reis."
+            ],
+            "note": "'Genieten van' = to enjoy. A 'van'-pairing. 'Genieten' → 'genoten' (sterk werkwoord). 'Van' here is purely the fixed preposition, not 'of'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Everyone is looking for a solution.",
+            "modelAnswer": "Iedereen zoekt naar een oplossing.",
+            "alternatives": [
+              "Iedereen zoekt naar een oplossing.",
+              "Iedereen is op zoek naar een oplossing."
+            ],
+            "note": "'Zoeken naar' = to search for. A 'naar'-pairing. The idiom 'op zoek zijn naar' (to be in search of) uses the same 'naar' and sounds a touch more deliberate."
+          },
+          {
+            "type": "translation",
+            "prompt": "It depends on the weather.",
+            "modelAnswer": "Het hangt van het weer af.",
+            "alternatives": [
+              "Het hangt van het weer af.",
+              "Dat hangt van het weer af."
+            ],
+            "note": "'Afhangen van' = to depend on. A 'van'-pairing, separable: 'hangt ... af'. 'Het hangt van het weer af' = it depends on the weather. The 'af' goes to the end."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'm not used to it yet, but I'm working on it.",
+            "modelAnswer": "Ik ben er nog niet aan gewend, maar ik werk eraan.",
+            "alternatives": [
+              "Ik ben er nog niet aan gewend, maar ik werk eraan.",
+              "Ik moet er nog aan wennen, maar ik werk eraan."
+            ],
+            "note": "Two 'aan'-family verbs, both with a thing as object, so both go to the 'er'-form: 'wennen aan' → 'er ... aan gewend' and 'werken aan' → 'eraan'. A neat illustration of fixed prepositions feeding straight into the 'er + voorzetsel' rule."
+          },
+          {
+            "type": "translation",
+            "prompt": "She complained about the noise and asked for a different room.",
+            "modelAnswer": "Ze klaagde over het lawaai en vroeg om een andere kamer.",
+            "alternatives": [
+              "Ze klaagde over het lawaai en vroeg om een andere kamer.",
+              "Ze klaagde over de herrie en vroeg om een andere kamer."
+            ],
+            "note": "Two different families in one sentence: 'klagen over' (over-family, to complain about) and 'vragen om' (asking for / requesting). 'Lawaai' / 'herrie' = noise/racket. The contrast with 'vragen naar' (ask about) is the focus of the next tile."
+          },
+          {
+            "type": "translation",
+            "prompt": "He warned me about the risk, so I prepared for the worst.",
+            "modelAnswer": "Hij waarschuwde me voor het risico, dus ik bereidde me voor op het ergste.",
+            "alternatives": [
+              "Hij waarschuwde me voor het risico, dus ik bereidde me voor op het ergste.",
+              "Hij waarschuwde me voor het gevaar, dus ik bereidde me voor op het ergste."
+            ],
+            "note": "'Waarschuwen voor' (voor-family) and 'zich voorbereiden op' (op-family) sit side by side — and use different prepositions for closely related ideas. 'Voorbereiden' (separable, reflexive here) → 'bereidde me voor'. 'Het ergste' = the worst."
+          },
+          {
+            "type": "translation",
+            "prompt": "We really enjoyed the holiday, but now we have to get used to working again.",
+            "modelAnswer": "We hebben echt genoten van de vakantie, maar nu moeten we weer aan het werk wennen.",
+            "alternatives": [
+              "We hebben echt genoten van de vakantie, maar nu moeten we weer aan het werk wennen.",
+              "We hebben enorm genoten van de vakantie, maar nu moeten we weer wennen aan het werk."
+            ],
+            "note": "'Genieten van' (van-family) and 'wennen aan' (aan-family) in one breath. 'Aan het werk wennen' = to get used to working again. The modal 'moeten' sends 'wennen' to the end. Note how each verb keeps its own fixed preposition regardless of the others."
+          },
+          {
+            "type": "translation",
+            "prompt": "Whether we can count on him depends entirely on how he reacts to the news.",
+            "modelAnswer": "Of we op hem kunnen rekenen, hangt helemaal af van hoe hij op het nieuws reageert.",
+            "alternatives": [
+              "Of we op hem kunnen rekenen, hangt helemaal af van hoe hij op het nieuws reageert.",
+              "Of we op hem kunnen rekenen, hangt er helemaal van af hoe hij op het nieuws reageert."
+            ],
+            "note": "Three fixed-preposition verbs threaded together: 'rekenen op' (a person → 'op hem'), 'afhangen van', and 'reageren op'. The 'of'-clause is the subject; 'afhangen' splits ('hangt ... af'); the indirect question 'hoe hij ... reageert' sends its verb to the end. Each verb keeps its own preposition."
+          }
+        ]
+      }
+    }
+  ]
+}
