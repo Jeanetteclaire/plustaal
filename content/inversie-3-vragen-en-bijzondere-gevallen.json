@@ -1,0 +1,241 @@
+{
+  "zone": "inversie",
+  "zoneName": "Inversie",
+  "tiles": [
+    {
+      "id": "inversie-3-vragen-en-bijzondere-gevallen",
+      "theme": "Vragen, gebod en bijzondere gevallen",
+      "themeEnglish": "More inversion cases — yes/no questions and imperatives (verb first), the 'dan'-resumptive, and the counterfactual conditional with no 'als' (Had ik dat geweten, ...)",
+      "recognitionQuestion": "Is the word order correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Kom je vanavond ook gezellig langs?",
+            "correctUse": true,
+            "explanation": "Correct. A yes/no question puts the verb FIRST, then the subject: 'Kom je ...?'. No question word in front — the inversion itself signals the question. The separable 'langskomen' keeps 'langs' at the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Waar ga je deze zomer naartoe op vakantie?",
+            "correctUse": true,
+            "explanation": "Correct. A wh-question has the question word ('Waar') first, then the verb, then the subject: 'Waar ga je ...?'. The question word counts as the first element, so the verb-second rule still holds. 'Naartoe' marks destination."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als je vroeg naar huis gaat, je mist het beste deel van het feest.",
+            "correctUse": false,
+            "explanation": "Niet correct. The fronted 'als'-clause is the first element, so the main clause must invert: '..., mis je het beste deel', not '..., je mist'. Optional 'dan' bridges them: '..., dan mis je het beste deel.' Same rule as inversie-2 — a fronted bijzin always forces inversion after it."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als het droog blijft, dan gaan we morgen lekker wandelen.",
+            "correctUse": true,
+            "explanation": "Correct. The 'dan'-resumptive picks up after the fronted condition: 'Als ..., dan gaan we ...'. The inversion lands on 'dan' — verb 'gaan' comes second, subject 'we' third. 'Dan' is optional but very common in spoken Dutch; with or without it, the inversion is identical."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Doe alsjeblieft even de deur achter je dicht.",
+            "correctUse": true,
+            "explanation": "Correct. An imperative puts the verb FIRST: 'Doe de deur dicht.' No subject in standard imperatives; 'alsjeblieft' and 'even' soften the command. The separable 'dichtdoen' keeps 'dicht' at the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Had ik dat eerder geweten, ik was nooit gegaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Had ik dat geweten' is itself a counterfactual conditional (verb first instead of 'Als ik dat had geweten'), and it counts as the fronted element — so the main clause must invert: '..., was ik nooit gegaan'. Optional 'dan': '..., dan was ik nooit gegaan.' The conditional-zonder-als is one of B2's elegant tools, but the inversion has to follow."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Was ik maar tien jaar jonger geweest!",
+            "correctUse": true,
+            "explanation": "Correct. The conditional wish 'Was ik maar ...!' is verb-first ('if only I were ...'). 'Maar' is the wishful particle. This is the same verb-first conditional form as 'Had ik dat geweten' — but standing alone as a wish, with no main clause to follow."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Je komt morgen om acht uur.",
+            "task": "Maak er een ja/nee-vraag van.",
+            "acceptedAnswers": [
+              "Kom je morgen om acht uur?",
+              "Kom je morgen om acht uur?"
+            ],
+            "preferred": "Kom je morgen om acht uur?",
+            "explanation": "Yes/no question: verb first, subject second. 'Je komt' becomes 'Kom je?'. Nothing in first position, so the inversion itself does the work of marking it as a question."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij begint om negen uur met werken.",
+            "task": "Maak er een wh-vraag van met 'Wanneer'.",
+            "acceptedAnswers": [
+              "Wanneer begint hij met werken?",
+              "Wanneer begint hij met werken?"
+            ],
+            "preferred": "Wanneer begint hij met werken?",
+            "explanation": "Question word 'Wanneer' fills first position, verb 'begint' second, subject 'hij' third: 'Wanneer begint hij ...?'. The wh-word counts as the first element."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je doet de deur dicht.",
+            "task": "Maak er een gebod (imperatief) van.",
+            "acceptedAnswers": [
+              "Doe de deur dicht.",
+              "Doe de deur dicht!"
+            ],
+            "preferred": "Doe de deur dicht.",
+            "explanation": "Imperative: drop the subject 'je' and put the verb first: 'Doe de deur dicht.' Stem form, no -t ending. The separable 'dichtdoen' splits as expected: 'Doe ... dicht.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je blijft thuis als het regent.",
+            "task": "Begin met de bijzin 'Als het regent' en voeg 'dan' toe.",
+            "acceptedAnswers": [
+              "Als het regent, dan blijf je thuis.",
+              "Als het regent, dan blijf je thuis."
+            ],
+            "preferred": "Als het regent, dan blijf je thuis.",
+            "explanation": "Front the 'als'-clause and add the resumptive 'dan': 'Als het regent, dan blijf je thuis.' The inversion ('blijf je') lands on 'dan'. 'Dan' is optional but warmly idiomatic in spoken Dutch."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Als ik tijd had, kwam ik wel langs.",
+            "task": "Herschrijf de bijzin als conditioneel zonder 'als' (Had ik ...).",
+            "acceptedAnswers": [
+              "Had ik tijd, dan kwam ik wel langs.",
+              "Had ik tijd, kwam ik wel langs."
+            ],
+            "preferred": "Had ik tijd, dan kwam ik wel langs.",
+            "explanation": "The 'als'-clause becomes verb-first: 'Had ik tijd, ...'. The main clause then inverts (or takes 'dan'): '..., (dan) kwam ik ...'. This conditional-zonder-als is slightly more literary than 'als ik had ...' but increasingly common in spoken Dutch too."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Als ik dat had geweten, was ik niet gekomen.",
+            "task": "Herschrijf de bijzin als conditioneel zonder 'als'.",
+            "acceptedAnswers": [
+              "Had ik dat geweten, was ik niet gekomen.",
+              "Had ik dat geweten, dan was ik niet gekomen."
+            ],
+            "preferred": "Had ik dat geweten, was ik niet gekomen.",
+            "explanation": "The past counterfactual: 'Had ik dat geweten, ...' (= had I known that). The plusquamperfectum auxiliary 'had' leads. The main clause inverts after the comma, with or without 'dan'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je gaat niet weg.",
+            "task": "Maak er een negatief gebod van.",
+            "acceptedAnswers": [
+              "Ga niet weg.",
+              "Ga niet weg!"
+            ],
+            "preferred": "Ga niet weg.",
+            "explanation": "Negative imperative: verb first, then 'niet', then the rest. 'Ga niet weg' = don't leave. Subject 'je' drops out. The separable 'weggaan' keeps 'weg' at the end."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Are you coming tomorrow?",
+            "modelAnswer": "Kom je morgen?",
+            "alternatives": [
+              "Kom je morgen?",
+              "Kom je morgen ook?"
+            ],
+            "note": "Yes/no question: verb first, subject second. No question word; the inversion is the question. Adding 'ook' makes it 'are you coming too?', warmly inclusive."
+          },
+          {
+            "type": "translation",
+            "prompt": "Where are you going on holiday?",
+            "modelAnswer": "Waar ga je op vakantie naartoe?",
+            "alternatives": [
+              "Waar ga je naartoe op vakantie?",
+              "Waar ga je deze zomer naartoe?"
+            ],
+            "note": "Question word 'Waar' first → 'ga je' (verb-subject). 'Naartoe' marks destination; it can sit at the end ('Waar ga je naartoe?') or split off ('Waar ga je ... naartoe?')."
+          },
+          {
+            "type": "translation",
+            "prompt": "Close the window, please.",
+            "modelAnswer": "Doe het raam dicht, alsjeblieft.",
+            "alternatives": [
+              "Doe het raam dicht, alsjeblieft.",
+              "Doe het raam even dicht, alsjeblieft."
+            ],
+            "note": "Imperative: verb first, no subject. The separable 'dichtdoen' splits: 'Doe ... dicht'. 'Even' softens the request to 'just'."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you have time, then come along.",
+            "modelAnswer": "Als je tijd hebt, kom dan mee.",
+            "alternatives": [
+              "Als je tijd hebt, dan kom je mee.",
+              "Als je tijd hebt, kom dan even mee."
+            ],
+            "note": "Two ways: the imperative 'Kom dan mee' (verb first + dan), or the statement 'Dan kom je mee' (inversion after fronted 'dan'). Both natural. The 'als'-clause is verb-final ('hebt'); the main clause carries the inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "If only I had known!",
+            "modelAnswer": "Had ik dat maar geweten!",
+            "alternatives": [
+              "Had ik dat maar geweten!",
+              "Was ik er maar bij geweest!"
+            ],
+            "note": "Counterfactual wish, verb first: 'Had ik dat maar geweten!' The particle 'maar' carries the 'if only' wistfulness. The alternative ('Was ik er maar bij geweest' = if only I'd been there) shows the same verb-first wish pattern with 'was'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "Had I known the road was closed, I'd have taken a different route.",
+            "modelAnswer": "Had ik geweten dat de weg afgesloten was, dan had ik een andere route genomen.",
+            "alternatives": [
+              "Had ik geweten dat de weg afgesloten was, had ik een andere route genomen.",
+              "Als ik had geweten dat de weg afgesloten was, had ik een andere route genomen."
+            ],
+            "note": "Counterfactual zonder als ('Had ik geweten ...') + a 'dat'-bijzin inside it ('dat de weg afgesloten was', verb-final). After the comma, the main clause inverts: '(dan) had ik ... genomen', plusquamperfectum + participle. Three layers of word order working together."
+          },
+          {
+            "type": "translation",
+            "prompt": "Where had you been before you came to live in Amsterdam?",
+            "modelAnswer": "Waar had je gewoond voordat je in Amsterdam kwam wonen?",
+            "alternatives": [
+              "Waar had je gewoond voordat je naar Amsterdam verhuisde?",
+              "Waar woonde je voordat je in Amsterdam kwam wonen?"
+            ],
+            "note": "Wh-question with a plusquamperfectum ('Waar had je gewoond ...?') and a 'voordat'-bijzin (verb-final: 'kwam wonen' / 'verhuisde'). The first cluster is question-inverted; the second is sub-clause-final. Two different orders in one sentence."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you don't want to come, just say so.",
+            "modelAnswer": "Als je niet wilt komen, zeg het dan gewoon.",
+            "alternatives": [
+              "Als je niet wilt komen, zeg het dan gewoon.",
+              "Als je niet mee wilt, zeg het dan gewoon."
+            ],
+            "note": "Fronted 'als'-bijzin (verb-final: 'wilt komen') followed by an imperative with 'dan': 'zeg het dan gewoon.' 'Gewoon' = just/simply, softening it. The imperative still starts with the verb."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't forget to call your mother on her birthday.",
+            "modelAnswer": "Vergeet niet om je moeder op haar verjaardag te bellen.",
+            "alternatives": [
+              "Vergeet niet om je moeder op haar verjaardag te bellen.",
+              "Vergeet niet je moeder te bellen op haar verjaardag."
+            ],
+            "note": "Negative imperative: 'Vergeet niet ...' (verb first, then 'niet'). Followed by 'om ... te bellen' — a non-finite clause sending 'te bellen' to the end. 'Verjaardag' = birthday."
+          },
+          {
+            "type": "translation",
+            "prompt": "Were I in your shoes, I wouldn't do it.",
+            "modelAnswer": "Was ik jou, dan zou ik het niet doen.",
+            "alternatives": [
+              "Was ik jou, dan zou ik het niet doen.",
+              "Als ik jou was, zou ik het niet doen."
+            ],
+            "note": "Counterfactual wish 'Was ik jou' (literally 'were I you' — Dutch uses the pronoun, no 'in your shoes' idiom). Main clause inverts: '(dan) zou ik het niet doen'. The 'als'-version is equally fine and a touch more everyday."
+          }
+        ]
+      }
+    }
+  ]
+}

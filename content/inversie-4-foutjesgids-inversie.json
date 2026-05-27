@@ -1,0 +1,241 @@
+{
+  "zone": "inversie",
+  "zoneName": "Inversie",
+  "tiles": [
+    {
+      "id": "inversie-4-foutjesgids-inversie",
+      "theme": "Foutjesgids inversie",
+      "themeEnglish": "Mixed inversion review — fronted element plus a verb cluster at once, where the rule and the instinct most often collide",
+      "recognitionQuestion": "Is the word order correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Gisteren ik heb een hele mooie film gezien op tv.",
+            "correctUse": false,
+            "explanation": "Niet correct. Fronted 'Gisteren' forces verb-second word order: 'Gisteren heb ik ...', not 'Gisteren ik heb'. The participle 'gezien' stays at the end. This is the single most common slip in Dutch — and the more elements in the sentence, the easier it is to miss."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vorig jaar zijn we drie weken naar Italië geweest.",
+            "correctUse": true,
+            "explanation": "Correct. Fronted 'Vorig jaar' → verb 'zijn' second, subject 'we' third. The participle 'geweest' goes to the end. Note 'zijn ... geweest' (not 'hebben') for 'have been somewhere'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen we eindelijk thuiskwamen, het had al uren geregend.",
+            "correctUse": false,
+            "explanation": "Niet correct. The fronted 'toen'-bijzin counts as the first element, so the main clause must invert: '..., had het al uren geregend', not '..., het had'. Even with the dummy subject 'het', the verb comes first. The plusquamperfectum cluster 'had ... geregend' wraps around 'al uren'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Misschien hij kan ons morgen toch nog wel helpen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The comment adverb 'Misschien' fills first position, so the verb 'kan' must come next: 'Misschien kan hij ons morgen helpen.' The infinitive 'helpen' stays at the end of the cluster. 'Misschien' / 'helaas' / 'gelukkig' all behave like time words for inversion purposes."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je gisteren je broer nog kunnen bereiken?",
+            "correctUse": true,
+            "explanation": "Correct. Yes/no question with a perfect-double-infinitive cluster: 'Heb je ... kunnen bereiken?' Verb first, subject second, cluster 'kunnen bereiken' closing at the end. Question inversion plus double infinitive — two patterns working in tandem."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als je het had gewild, had je het zelf kunnen doen.",
+            "correctUse": true,
+            "explanation": "Correct. Fronted 'als'-bijzin (verb-final 'had gewild') triggers main-clause inversion: '..., had je het kunnen doen.' The cluster 'had ... kunnen doen' (plusquamperfectum double infinitive) sits at the end. Conditional, double infinitive, AND inversion all at once."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Had je het me gevraagd, ik had het wel gedaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Had je het me gevraagd' is a counterfactual zonder als — it itself is the fronted element, so the main clause must invert: '..., had ik het wel gedaan', not '..., ik had'. With 'dan' it would be: '..., dan had ik het wel gedaan.' This case-without-'als' is elegant but ruthlessly demands the inversion."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik heb gisteren niet kunnen slapen vanwege het lawaai.",
+            "task": "Begin met 'Gisteren'.",
+            "acceptedAnswers": [
+              "Gisteren heb ik niet kunnen slapen vanwege het lawaai.",
+              "Gisteren heb ik vanwege het lawaai niet kunnen slapen."
+            ],
+            "preferred": "Gisteren heb ik niet kunnen slapen vanwege het lawaai.",
+            "explanation": "Fronted 'Gisteren' triggers inversion ('heb ik'), and the double infinitive 'kunnen slapen' closes the clause. Two patterns layered: inversion in front, double infinitive at the back. 'Vanwege' = because of."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We waren al naar huis gegaan toen het begon te regenen.",
+            "task": "Begin met de bijzin 'Toen het begon te regenen'.",
+            "acceptedAnswers": [
+              "Toen het begon te regenen, waren we al naar huis gegaan.",
+              "Toen het begon te regenen, waren we al naar huis gegaan."
+            ],
+            "preferred": "Toen het begon te regenen, waren we al naar huis gegaan.",
+            "explanation": "Fronted 'toen'-bijzin (verb-final 'begon te regenen') triggers inversion in the main clause: 'waren we ...'. The participle 'gegaan' closes the clause, with 'al naar huis' before it. 'Naar huis gaan' takes 'zijn'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je kunt de afspraak afzeggen als je echt geen tijd hebt.",
+            "task": "Begin met de bijzin 'Als je echt geen tijd hebt'.",
+            "acceptedAnswers": [
+              "Als je echt geen tijd hebt, kun je de afspraak afzeggen.",
+              "Als je echt geen tijd hebt, kun je de afspraak afzeggen."
+            ],
+            "preferred": "Als je echt geen tijd hebt, kun je de afspraak afzeggen.",
+            "explanation": "Fronted 'als'-bijzin (verb-final 'hebt') → main clause inverts: 'kun je'. The modal sends 'afzeggen' to the end: 'kun je de afspraak afzeggen.' Inversion + modal cluster combined."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik zou je geholpen hebben als ik het had geweten.",
+            "task": "Herschrijf de bijzin als conditioneel zonder 'als' (Had ik ...).",
+            "acceptedAnswers": [
+              "Had ik het geweten, dan zou ik je geholpen hebben.",
+              "Had ik het geweten, zou ik je geholpen hebben."
+            ],
+            "preferred": "Had ik het geweten, dan zou ik je geholpen hebben.",
+            "explanation": "Counterfactual zonder als: 'Had ik het geweten, ...'. Main clause inverts after the comma (with or without 'dan'). The cluster 'zou ... geholpen hebben' closes the clause. Three things at once: verb-first conditional, inversion, conditional perfect cluster."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij heeft de hele week hard aan dat rapport gewerkt.",
+            "task": "Begin met 'De hele week'.",
+            "acceptedAnswers": [
+              "De hele week heeft hij hard aan dat rapport gewerkt.",
+              "De hele week heeft hij hard aan dat rapport gewerkt."
+            ],
+            "preferred": "De hele week heeft hij hard aan dat rapport gewerkt.",
+            "explanation": "Fronted time phrase 'De hele week' → 'heeft hij'. The participle 'gewerkt' closes the clause, with 'hard aan dat rapport' in between. 'Werken aan' (fixed preposition) folds in naturally."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze heeft hem deze week nog niet kunnen spreken.",
+            "task": "Maak er een ja/nee-vraag van.",
+            "acceptedAnswers": [
+              "Heeft ze hem deze week nog niet kunnen spreken?",
+              "Heeft ze hem deze week nog niet kunnen spreken?"
+            ],
+            "preferred": "Heeft ze hem deze week nog niet kunnen spreken?",
+            "explanation": "Yes/no question: 'Heeft ze ...?'. The double infinitive 'kunnen spreken' closes the clause. Question inversion + double infinitive cluster — exactly the combo that trips most non-natives up."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We mochten als kinderen nooit lang opblijven van onze ouders.",
+            "task": "Begin met 'Als kinderen' (= toen we kind waren).",
+            "acceptedAnswers": [
+              "Als kinderen mochten we nooit lang opblijven van onze ouders.",
+              "Als kinderen mochten we nooit lang opblijven van onze ouders."
+            ],
+            "preferred": "Als kinderen mochten we nooit lang opblijven van onze ouders.",
+            "explanation": "Fronted phrase 'Als kinderen' (= as children) → 'mochten we'. The infinitive 'opblijven' closes the clause. Note this 'als' (= as / in the role of) is NOT a sub-clause conjunction — it's just a fronted phrase, but it still triggers inversion."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Last week I couldn't reach him at all.",
+            "modelAnswer": "Vorige week heb ik hem helemaal niet kunnen bereiken.",
+            "alternatives": [
+              "Vorige week heb ik hem helemaal niet kunnen bereiken.",
+              "Vorige week kon ik hem helemaal niet bereiken."
+            ],
+            "note": "Fronted 'Vorige week' → 'heb ik' (inversion), with double infinitive 'kunnen bereiken' at the end. The simpler imperfectum 'kon ik hem ... bereiken' avoids the double infinitive — both are fine."
+          },
+          {
+            "type": "translation",
+            "prompt": "When we got home, it had already started raining.",
+            "modelAnswer": "Toen we thuiskwamen, was het al begonnen te regenen.",
+            "alternatives": [
+              "Toen we thuiskwamen, was het al begonnen te regenen.",
+              "Toen we thuiskwamen, had het al geregend."
+            ],
+            "note": "Fronted 'toen'-bijzin (verb-final 'thuiskwamen') triggers main-clause inversion: 'was het ...'. The cluster 'was ... begonnen te regenen' is the past perfect of 'beginnen te' — 'beginnen' takes 'zijn', not 'hebben'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Had I known, I would never have done it.",
+            "modelAnswer": "Had ik dat geweten, dan had ik het nooit gedaan.",
+            "alternatives": [
+              "Had ik dat geweten, had ik het nooit gedaan.",
+              "Als ik dat had geweten, had ik het nooit gedaan."
+            ],
+            "note": "Counterfactual zonder als: 'Had ik dat geweten, ...'. Main clause inverts (with optional 'dan'). Two plusquamperfectums in a row — 'had geweten' and 'had gedaan' — typical of regret/hindsight sentences."
+          },
+          {
+            "type": "translation",
+            "prompt": "Have you been able to speak to your sister?",
+            "modelAnswer": "Heb je je zus kunnen spreken?",
+            "alternatives": [
+              "Heb je je zus al kunnen spreken?",
+              "Heb je je zus nog kunnen spreken?"
+            ],
+            "note": "Yes/no question with a perfect double infinitive: 'Heb je ... kunnen spreken?' Verb first, subject second, cluster 'kunnen spreken' at the end. Add 'al' (yet) or 'nog' (still) for nuance."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you'd like, we can talk about it tomorrow.",
+            "modelAnswer": "Als je wilt, kunnen we er morgen over praten.",
+            "alternatives": [
+              "Als je wilt, kunnen we het er morgen over hebben.",
+              "Als je wilt, kunnen we er morgen over praten."
+            ],
+            "note": "Fronted 'als'-bijzin (verb-final 'wilt') → main clause inverts: 'kunnen we'. Plus an 'er + voorzetsel' construction ('erover praten' / 'het erover hebben'). Inversion + modal + er-form all in one short sentence — classic B2 territory."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "After we'd been waiting for an hour, the train finally arrived.",
+            "modelAnswer": "Nadat we een uur hadden gewacht, kwam de trein eindelijk aan.",
+            "alternatives": [
+              "Nadat we een uur hadden gewacht, kwam de trein eindelijk aan.",
+              "Nadat we een uur op de trein hadden gewacht, kwam hij eindelijk aan."
+            ],
+            "note": "Fronted 'nadat'-bijzin in the plusquamperfectum (verb-final 'hadden gewacht') → main clause inverts: 'kwam de trein ...'. The separable 'aankomen' splits: 'kwam ... aan'. 'Wachten op' (fixed prep) appears in the alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I'd had more time, I'd have explained it better.",
+            "modelAnswer": "Had ik meer tijd gehad, dan had ik het beter uitgelegd.",
+            "alternatives": [
+              "Had ik meer tijd gehad, had ik het beter uitgelegd.",
+              "Als ik meer tijd had gehad, had ik het beter uitgelegd."
+            ],
+            "note": "Counterfactual zonder als 'Had ik ... gehad', main clause inverts: '(dan) had ik ... uitgelegd'. Two plusquamperfectums of regret. 'Uitleggen' (separable) → 'uitgelegd'. The 'als'-version is fine too."
+          },
+          {
+            "type": "translation",
+            "prompt": "Yesterday, despite all the rain, we still managed to walk for two hours through the woods.",
+            "modelAnswer": "Gisteren hebben we ondanks alle regen toch twee uur door het bos kunnen lopen.",
+            "alternatives": [
+              "Gisteren hebben we ondanks alle regen toch twee uur door het bos kunnen lopen.",
+              "Gisteren konden we ondanks alle regen toch twee uur door het bos lopen."
+            ],
+            "note": "Fronted 'Gisteren' → 'hebben we'. Then a heavy middle ('ondanks alle regen toch twee uur door het bos') and the double infinitive 'kunnen lopen' at the end. 'Ondanks' = despite; 'toch' = still/anyway. Inversion + cluster, with a lot of material in between."
+          },
+          {
+            "type": "translation",
+            "prompt": "Tomorrow, as soon as the meeting is finished, I'll call you straight away.",
+            "modelAnswer": "Morgen, zodra de vergadering afgelopen is, bel ik je meteen.",
+            "alternatives": [
+              "Morgen, zodra de vergadering afgelopen is, bel ik je meteen.",
+              "Morgen bel ik je meteen zodra de vergadering afgelopen is."
+            ],
+            "note": "Two fronted elements: 'Morgen' and the 'zodra'-bijzin (verb-final 'afgelopen is'). Together they form the first element, so the main clause still inverts only once: 'bel ik je meteen'. Alternative pushes the bijzin to the back: 'Morgen bel ik je ... zodra ...'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Now that I'm thinking about it, that's actually a really good idea.",
+            "modelAnswer": "Nu ik er zo over nadenk, is dat eigenlijk een heel goed idee.",
+            "alternatives": [
+              "Nu ik er zo over nadenk, is dat eigenlijk een heel goed idee.",
+              "Nu ik erover nadenk, is dat eigenlijk een heel goed idee."
+            ],
+            "note": "Fronted 'nu'-bijzin (verb-final 'nadenk'; 'nu' here = now that) → main clause inverts: 'is dat ...'. Plus 'nadenken over' → 'er ... over nadenk' — fixed-preposition verb meeting the 'er'-rule. The whole bijzin counts as one element, even with the er + prep tucked inside it."
+          }
+        ]
+      }
+    }
+  ]
+}
