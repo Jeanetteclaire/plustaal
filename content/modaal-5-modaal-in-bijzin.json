@@ -1,0 +1,241 @@
+{
+  "zone": "modaal",
+  "zoneName": "Modale werkwoorden",
+  "tiles": [
+    {
+      "id": "modaal-5-modaal-in-bijzin",
+      "theme": "Modaal in de bijzin",
+      "themeEnglish": "Modal verbs inside subordinate clauses — where the finite modal moves to the end, and the auxiliary sits before the double infinitive",
+      "recognitionQuestion": "Is the modal placed correctly in this subordinate clause?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik weet zeker dat hij ons morgen kan helpen.",
+            "correctUse": true,
+            "explanation": "Correct. In a 'dat'-bijzin the verbs go to the end: subject and objects first, then the cluster 'kan helpen' (finite modal before infinitive). 'Ik weet zeker dat hij ons morgen kan helpen.' This end-of-clause placement is the whole skill of this tile."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het vervelende is dat we nog heel lang moeten wachten.",
+            "correctUse": true,
+            "explanation": "Correct. The cluster 'moeten wachten' closes the bijzin: '...dat we nog heel lang moeten wachten.' Everything else (subject, time phrase) comes before it. Finite modal 'moeten' first, then the infinitive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik denk dat hij kan morgen niet komen.",
+            "correctUse": false,
+            "explanation": "Niet correct. In a bijzin the finite modal can't sit in the middle — it goes to the end with its infinitive: 'dat hij morgen niet kan komen.' Correct: 'Ik denk dat hij morgen niet kan komen.' Keeping 'kan' early is a main-clause habit that doesn't carry over."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Sorry dat ik je gisteren niet heb kunnen bereiken.",
+            "correctUse": true,
+            "explanation": "Correct. With a double infinitive in a bijzin, the auxiliary 'heb' sits BEFORE the pair, all at the end: '...dat ik je gisteren niet heb kunnen bereiken.' The whole cluster 'heb kunnen bereiken' closes the clause. This auxiliary-first order is the trickiest part."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij belde om te zeggen dat hij ons wil later bellen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The finite modal 'wil' must go to the end of the bijzin with its infinitive: 'dat hij ons later wil bellen.' Correct: '...dat hij ons later wil bellen.' 'Wil' can't stay stranded before 'later' inside a subordinate clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze gaf toe dat ze het eigenlijk eerder had moeten zeggen.",
+            "correctUse": true,
+            "explanation": "Correct. The 'had moeten + infinitive' (should have) cluster lands at the end of the bijzin, auxiliary 'had' first: '...dat ze het eigenlijk eerder had moeten zeggen.' A plusquamperfectum double infinitive sitting neatly inside a subordinate clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hopen dat het concert ondanks het weer kan doorgaan.",
+            "correctUse": true,
+            "explanation": "Correct. With a separable verb under a modal in a bijzin, the cluster closes the clause: '...dat het concert kan doorgaan.' Both 'kan doorgaan' and the split 'door kan gaan' are accepted. 'Ondanks het weer' = despite the weather."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hij kan morgen niet komen.",
+            "task": "Begin met 'Ik denk dat ...' (maak er een bijzin van).",
+            "acceptedAnswers": [
+              "Ik denk dat hij morgen niet kan komen.",
+              "Ik denk dat hij morgen niet kan komen."
+            ],
+            "preferred": "Ik denk dat hij morgen niet kan komen.",
+            "explanation": "Turning a main clause into a bijzin sends the cluster to the end: 'kan komen' closes '...dat hij morgen niet kan komen.' The finite modal 'kan' leaves second position and joins its infinitive at the close."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We moeten nog lang wachten.",
+            "task": "Begin met 'Het vervelende is dat ...'.",
+            "acceptedAnswers": [
+              "Het vervelende is dat we nog lang moeten wachten.",
+              "Het vervelende is dat we nog lang moeten wachten."
+            ],
+            "preferred": "Het vervelende is dat we nog lang moeten wachten.",
+            "explanation": "The cluster 'moeten wachten' goes to the end of the bijzin. Subject 'we' and the time phrase 'nog lang' come before it: '...dat we nog lang moeten wachten.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb je niet kunnen bereiken.",
+            "task": "Begin met 'Het spijt me dat ...'.",
+            "acceptedAnswers": [
+              "Het spijt me dat ik je niet heb kunnen bereiken.",
+              "Het spijt me dat ik je niet heb kunnen bereiken."
+            ],
+            "preferred": "Het spijt me dat ik je niet heb kunnen bereiken.",
+            "explanation": "Double infinitive in a bijzin: auxiliary 'heb' before the pair 'kunnen bereiken', all at the end. '...dat ik je niet heb kunnen bereiken.' Never 'kunnen bereiken heb' — the auxiliary leads the cluster."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je mag hier niet roken.",
+            "task": "Begin met 'Op het bord staat dat ...'.",
+            "acceptedAnswers": [
+              "Op het bord staat dat je hier niet mag roken.",
+              "Op het bord staat dat je hier niet mag roken."
+            ],
+            "preferred": "Op het bord staat dat je hier niet mag roken.",
+            "explanation": "The cluster 'mag roken' closes the bijzin: '...dat je hier niet mag roken.' Note the main clause itself opens with 'Op het bord' and so inverts ('staat dat'), but the rule under test is the modal going to the end of the subordinate clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Kun je morgen komen?",
+            "task": "Begin met 'Hij vraagt of ...' (indirecte vraag).",
+            "acceptedAnswers": [
+              "Hij vraagt of je morgen kunt komen.",
+              "Hij vraagt of je morgen kan komen."
+            ],
+            "preferred": "Hij vraagt of je morgen kunt komen.",
+            "explanation": "An indirect question uses 'of' (whether) and behaves like any bijzin: the cluster 'kunt komen' goes to the end. '...of je morgen kunt komen.' The question's inversion ('Kun je ...?') disappears once it's embedded."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze had het eerder moeten zeggen.",
+            "task": "Begin met 'Ze gaf toe dat ...'.",
+            "acceptedAnswers": [
+              "Ze gaf toe dat ze het eerder had moeten zeggen.",
+              "Ze gaf toe dat ze het eerder had moeten zeggen."
+            ],
+            "preferred": "Ze gaf toe dat ze het eerder had moeten zeggen.",
+            "explanation": "The 'had moeten zeggen' cluster closes the bijzin, auxiliary 'had' first: '...dat ze het eerder had moeten zeggen.' The regret structure 'had moeten + infinitive' keeps its order; only its position shifts to the clause end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het concert kan doorgaan.",
+            "task": "Begin met 'We hopen dat ...'.",
+            "acceptedAnswers": [
+              "We hopen dat het concert kan doorgaan.",
+              "We hopen dat het concert door kan gaan."
+            ],
+            "preferred": "We hopen dat het concert kan doorgaan.",
+            "explanation": "With the separable 'doorgaan' under a modal, the bijzin can end with 'kan doorgaan' (whole) or the split 'door kan gaan' — both standard. The cluster, however split, sits at the close: '...dat het concert kan doorgaan.'"
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I think he can help us tomorrow.",
+            "modelAnswer": "Ik denk dat hij ons morgen kan helpen.",
+            "alternatives": [
+              "Ik denk dat hij ons morgen kan helpen.",
+              "Volgens mij kan hij ons morgen helpen."
+            ],
+            "note": "In the 'dat'-bijzin the cluster 'kan helpen' goes to the end: '...dat hij ons morgen kan helpen.' Drop the 'dat' and use 'volgens mij' (in my view) and it becomes a main clause again, with the modal back in second position."
+          },
+          {
+            "type": "translation",
+            "prompt": "She said she couldn't come.",
+            "modelAnswer": "Ze zei dat ze niet kon komen.",
+            "alternatives": [
+              "Ze zei dat ze niet kon komen.",
+              "Ze zei dat ze niet zou kunnen komen."
+            ],
+            "note": "Imperfectum 'kon' + infinitive, cluster at the end of the bijzin: '...dat ze niet kon komen.' The 'zou kunnen komen' version (wouldn't be able to) is a softer, more tentative report."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm sorry that I couldn't reach you yesterday.",
+            "modelAnswer": "Het spijt me dat ik je gisteren niet heb kunnen bereiken.",
+            "alternatives": [
+              "Sorry dat ik je gisteren niet heb kunnen bereiken.",
+              "Het spijt me dat ik je gisteren niet kon bereiken."
+            ],
+            "note": "The double infinitive in a bijzin puts the auxiliary 'heb' before the pair: '...dat ik je gisteren niet heb kunnen bereiken.' The simpler imperfectum 'niet kon bereiken' is also fine and lighter."
+          },
+          {
+            "type": "translation",
+            "prompt": "He asked whether I wanted to come along.",
+            "modelAnswer": "Hij vroeg of ik mee wilde komen.",
+            "alternatives": [
+              "Hij vroeg of ik mee wilde komen.",
+              "Hij vroeg of ik wilde meekomen."
+            ],
+            "note": "Indirect question with 'of' (whether); the cluster goes to the end. With separable 'meekomen' you get either 'mee wilde komen' (split) or 'wilde meekomen' (whole). Both natural."
+          },
+          {
+            "type": "translation",
+            "prompt": "I know that you have to leave early.",
+            "modelAnswer": "Ik weet dat je vroeg weg moet.",
+            "alternatives": [
+              "Ik weet dat je vroeg moet vertrekken.",
+              "Ik weet dat je vroeg weg moet."
+            ],
+            "note": "The modal 'moet' goes to the end of the bijzin. Dutch happily drops the verb of motion: '...dat je vroeg weg moet' (literally 'that you early away must'). Spell it out with 'vertrekken' if you prefer: '...dat je vroeg moet vertrekken.'"
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "He said he hadn't been able to come because he'd had to work.",
+            "modelAnswer": "Hij zei dat hij niet had kunnen komen omdat hij had moeten werken.",
+            "alternatives": [
+              "Hij zei dat hij niet had kunnen komen omdat hij had moeten werken.",
+              "Hij zei dat hij niet was kunnen komen omdat hij had moeten werken."
+            ],
+            "note": "Two plusquamperfectum double infinitives, each closing its own bijzin: 'had kunnen komen' (in the 'dat'-clause) and 'had moeten werken' (in the 'omdat'-clause). Auxiliary 'had' leads each cluster. (Note: standard Dutch uses 'had kunnen komen', though 'was' is heard regionally.)"
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't know whether she'll want to help, now that she's so busy.",
+            "modelAnswer": "Ik weet niet of ze zal willen helpen, nu ze het zo druk heeft.",
+            "alternatives": [
+              "Ik weet niet of ze zal willen helpen, nu ze het zo druk heeft.",
+              "Ik weet niet of ze wel wil helpen, nu ze het zo druk heeft."
+            ],
+            "note": "An 'of'-bijzin with a future cluster 'zal willen helpen' at the end, plus a 'nu'-bijzin ('now that ...') whose verb 'heeft' also goes to the close. 'Het druk hebben' = to be busy. 'Of ze wel wil helpen' is the simpler present-tense version."
+          },
+          {
+            "type": "translation",
+            "prompt": "It's a shame we couldn't stay longer, but we had to catch the train.",
+            "modelAnswer": "Het is jammer dat we niet langer konden blijven, maar we moesten de trein halen.",
+            "alternatives": [
+              "Jammer dat we niet langer konden blijven, maar we moesten de trein halen.",
+              "Het is jammer dat we niet langer hebben kunnen blijven, maar we moesten de trein halen."
+            ],
+            "note": "The 'dat'-bijzin ends with the cluster 'konden blijven'; the main clause after 'maar' keeps the modal in second position ('we moesten ...'), since 'maar' coordinates rather than subordinates. 'De trein halen' = to catch the train."
+          },
+          {
+            "type": "translation",
+            "prompt": "She admitted that she should have told me sooner.",
+            "modelAnswer": "Ze gaf toe dat ze het me eerder had moeten vertellen.",
+            "alternatives": [
+              "Ze gaf toe dat ze het me eerder had moeten zeggen.",
+              "Ze gaf toe dat ze het me eerder had moeten vertellen."
+            ],
+            "note": "The regret structure 'had moeten + infinitive' inside a 'dat'-bijzin: cluster 'had moeten vertellen' at the end, auxiliary first. 'Toegeven' (separable, to admit) → imperfectum splits in the main clause: 'gaf toe'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Because the road had been closed, we had to take a detour.",
+            "modelAnswer": "Omdat de weg was afgesloten, moesten we omrijden.",
+            "alternatives": [
+              "Omdat de weg afgesloten was, moesten we omrijden.",
+              "Doordat de weg was afgesloten, moesten we omrijden."
+            ],
+            "note": "A past-perfect passive in the 'omdat'-bijzin ('was afgesloten', verb cluster at the end), then inversion after the comma: 'moesten we omrijden.' 'Omrijden' = to take a detour. 'Doordat' stresses cause-and-effect a touch more than 'omdat'."
+          }
+        ]
+      }
+    }
+  ]
+}

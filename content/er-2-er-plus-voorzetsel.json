@@ -1,0 +1,242 @@
+{
+  "zone": "er",
+  "zoneName": "Er",
+  "tiles": [
+    {
+      "id": "er-2-er-plus-voorzetsel",
+      "theme": "Er + voorzetsel",
+      "themeEnglish": "The pronominal adverb 'er' + preposition (erop, ermee, eraan, erover) — the unstressed way to say 'on it', 'with it', 'about it' for things",
+      "recognitionQuestion": "Is this 'er' + preposition form correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik heb lang op de bus gewacht; ik heb er wel een halfuur op gewacht.",
+            "correctUse": true,
+            "explanation": "Correct. 'Wachten op iets' → 'er ... op'. For a thing, the preposition + 'it' contracts to 'er(op)', and in practice it usually splits: 'er ... op gewacht'. This is the neutral, unstressed counterpart of 'daarop'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ben je tevreden met je nieuwe baan? Ja, ik ben er heel tevreden mee.",
+            "correctUse": true,
+            "explanation": "Correct. 'Tevreden met iets' → 'er ... mee'. Note 'met' always surfaces as 'mee' in these adverbs (never 'er ... met'). The split 'er ... mee' is the everyday order; joined 'ermee' is also right."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb gisteren mijn zus gezien en ik heb lang ermee gepraat.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Er' + preposition is only for THINGS, never people. For your sister you keep the preposition + a pronoun: 'met haar'. Correct: '...en ik heb lang met haar gepraat.' Using 'ermee' for a person is the classic trap."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Denk je nog aan de afspraak? Ja hoor, ik denk eraan.",
+            "correctUse": true,
+            "explanation": "Correct. 'Denken aan iets' → 'er ... aan' / 'eraan'. The appointment is a thing, so 'eraan', not 'aan het'. 'Ja hoor' = yes indeed, a warm little affirmation."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het is gelukt en ik ben heel trots op het.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dutch can't say 'op het' (preposition + het/dat) for a thing — it must contract to 'er(op)': 'ik ben er heel trots op' (or stressed 'daar ben ik trots op'). The preposition and 'it' always fuse into the adverb."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je genoeg geld voor de kaartjes? Ja, ik heb er genoeg voor.",
+            "correctUse": true,
+            "explanation": "Correct. 'Geld hebben voor iets' → 'er ... voor'. 'Ik heb er genoeg voor' = I have enough for it. The quantity word 'genoeg' slots neatly between 'er' and the stranded preposition 'voor'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het was een moeilijk besluit, maar uiteindelijk ben ik ertoe gekomen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Komen tot iets' → 'ertoe' ('tot' becomes 'toe'). 'Ertoe komen' = to bring oneself to / reach the point of. Alongside 'mee' (from 'met'), 'toe' (from 'tot') is the other preposition that changes shape in these adverbs."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik wacht al lang op de trein.",
+            "task": "Vervang 'op de trein' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik wacht er al lang op.",
+              "Ik wacht er al lang op."
+            ],
+            "preferred": "Ik wacht er al lang op.",
+            "explanation": "'Op de trein' (a thing) → 'er ... op'. The split is standard: 'ik wacht er al lang op'. The time phrase 'al lang' sits between 'er' and the stranded 'op'. Joined 'erop' is heavier and less common in speech."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben heel tevreden met het resultaat.",
+            "task": "Vervang 'met het resultaat' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik ben er heel tevreden mee.",
+              "Ik ben er heel tevreden mee."
+            ],
+            "preferred": "Ik ben er heel tevreden mee.",
+            "explanation": "'Met het resultaat' → 'er ... mee' ('met' → 'mee'). 'Ik ben er heel tevreden mee' = I'm very happy with it. The adjective 'tevreden' sits between 'er' and the stranded 'mee'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik reken op mijn broer.",
+            "task": "Leg uit waarom je hier g\u00e9\u00e9n 'er'-vorm kunt gebruiken, en geef de juiste zin.",
+            "acceptedAnswers": [
+              "Ik reken op hem.",
+              "Ik reken op mijn broer; het is een persoon, dus geen 'er'-vorm."
+            ],
+            "preferred": "Ik reken op hem.",
+            "explanation": "'Mijn broer' is a person, so no 'er'-form: you keep 'op' + a pronoun → 'ik reken op hem'. 'Erop' would only work if you were counting on a thing or situation ('ik reken erop dat het lukt')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik denk vaak aan mijn vakantie in Italië.",
+            "task": "Vervang 'aan mijn vakantie in Italië' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik denk er vaak aan.",
+              "Ik denk er vaak aan."
+            ],
+            "preferred": "Ik denk er vaak aan.",
+            "explanation": "'Aan mijn vakantie' (a thing) → 'er ... aan'. 'Ik denk er vaak aan' = I often think about it. Frequency word 'vaak' sits between 'er' and the stranded 'aan'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ben je bang voor de operatie?",
+            "task": "Vervang 'voor de operatie' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ben je er bang voor?",
+              "Ben je er bang voor?"
+            ],
+            "preferred": "Ben je er bang voor?",
+            "explanation": "'Bang voor iets' → 'er ... voor'. In the question: 'Ben je er bang voor?'. The adjective 'bang' sits between 'er' and the stranded 'voor'. (Stressed: 'Daar ben je toch niet bang voor?')"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb over het voorstel nagedacht.",
+            "task": "Verbeter en vervang 'over het voorstel' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik heb erover nagedacht.",
+              "Ik heb er goed over nagedacht.",
+              "Ik heb er lang over nagedacht."
+            ],
+            "preferred": "Ik heb erover nagedacht.",
+            "explanation": "'Nadenken over iets' → 'er ... over' / 'erover'. You can't say 'over het' for a thing; it contracts. 'Ik heb erover nagedacht' = I've thought about it. Add an adverb and it splits: 'er goed over nagedacht'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb geen zin in die lange vergadering.",
+            "task": "Vervang 'in die lange vergadering' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik heb er geen zin in.",
+              "Ik heb er geen zin in."
+            ],
+            "preferred": "Ik heb er geen zin in.",
+            "explanation": "'Zin hebben in iets' → 'er ... in'. 'Ik heb er geen zin in' = I don't feel like it. The fixed phrase 'ergens zin in hebben' is extremely common; the object 'geen zin' sits between 'er' and the stranded 'in'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Are you waiting for it?",
+            "modelAnswer": "Wacht je erop?",
+            "alternatives": [
+              "Wacht je erop?",
+              "Ben je erop aan het wachten?"
+            ],
+            "note": "'Wait for it' = 'wachten op' → 'erop' (joined here because nothing comes between in a short question). For a thing, never 'op het'. If it were a person: 'Wacht je op hem/haar?'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm very happy with it.",
+            "modelAnswer": "Ik ben er heel blij mee.",
+            "alternatives": [
+              "Ik ben er heel blij mee.",
+              "Ik ben er erg blij mee."
+            ],
+            "note": "'Happy with it' = 'blij met' → 'er ... mee' ('met' → 'mee'). The adjective 'blij' sits between 'er' and 'mee'. Stressed version: 'Daar ben ik heel blij mee.'"
+          },
+          {
+            "type": "translation",
+            "prompt": "I've thought about it a lot.",
+            "modelAnswer": "Ik heb er veel over nagedacht.",
+            "alternatives": [
+              "Ik heb er veel over nagedacht.",
+              "Ik heb er goed over nagedacht."
+            ],
+            "note": "'Think about it' = 'nadenken over' → 'er ... over'. With the adverb 'veel' it splits: 'er veel over nagedacht'. 'Nadenken' (separable) → 'nagedacht', cluster at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "Are you afraid of it?",
+            "modelAnswer": "Ben je er bang voor?",
+            "alternatives": [
+              "Ben je er bang voor?",
+              "Ben je er soms bang voor?"
+            ],
+            "note": "'Afraid of it' = 'bang voor' → 'er ... voor'. The adjective 'bang' sits between 'er' and the stranded 'voor'. For a person you'd say 'Ben je bang voor hem?'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't feel like it.",
+            "modelAnswer": "Ik heb er geen zin in.",
+            "alternatives": [
+              "Ik heb er geen zin in.",
+              "Daar heb ik geen zin in."
+            ],
+            "note": "'Feel like it' = 'zin hebben in' → 'er ... in'. 'Ik heb er geen zin in' is the set phrase. The stressed 'Daar heb ik geen zin in' puts extra weight on the 'that'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I've been waiting for it for an hour, but nothing has happened yet.",
+            "modelAnswer": "Ik wacht er al een uur op, maar er is nog niets gebeurd.",
+            "alternatives": [
+              "Ik wacht er al een uur op, maar er is nog niets gebeurd.",
+              "Ik sta er al een uur op te wachten, maar er is nog niets gebeurd."
+            ],
+            "note": "Two different uses of 'er' in one sentence: first 'er ... op' (waiting for it — the prepositional kind), then 'er is niets gebeurd' (the placeholder 'er' of 'there is/are'). Same little word, two jobs. 'Maar' coordinates, so no inversion after it."
+          },
+          {
+            "type": "translation",
+            "prompt": "She asked whether I was happy with the result, and I said I was very happy with it.",
+            "modelAnswer": "Ze vroeg of ik tevreden was met het resultaat, en ik zei dat ik er heel tevreden mee was.",
+            "alternatives": [
+              "Ze vroeg of ik tevreden was met het resultaat, en ik zei dat ik er heel tevreden mee was.",
+              "Ze vroeg of ik blij was met het resultaat, en ik zei dat ik er heel blij mee was."
+            ],
+            "note": "An 'of'-bijzin keeps the full phrase ('met het resultaat'), but in the answering 'dat'-bijzin it contracts to 'er ... mee', with the finite verb 'was' at the very end: '...dat ik er heel tevreden mee was.' The split 'er ... mee' wraps around the adjective."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm not afraid of it, but I have thought about it carefully.",
+            "modelAnswer": "Ik ben er niet bang voor, maar ik heb er wel goed over nagedacht.",
+            "alternatives": [
+              "Ik ben er niet bang voor, maar ik heb er wel goed over nagedacht.",
+              "Ik ben er niet bang voor, maar ik heb er wel degelijk over nagedacht."
+            ],
+            "note": "Two 'er'-constructions in parallel: 'er ... voor' (bang voor) and 'er ... over' (nadenken over). The 'wel' answers the implied contrast (I'm not afraid, but I have thought). 'Wel degelijk' = most certainly, a firmer version."
+          },
+          {
+            "type": "translation",
+            "prompt": "He's counting on it, so we mustn't forget.",
+            "modelAnswer": "Hij rekent erop, dus we mogen het niet vergeten.",
+            "alternatives": [
+              "Hij rekent erop, dus we mogen het niet vergeten.",
+              "Hij rekent erop, dus we moeten het niet vergeten."
+            ],
+            "note": "'Rekenen op' → 'erop' (counting on it / on the situation — a thing, so the 'er'-form is right). 'Dus' (so) triggers inversion: 'dus we mogen ...' — actually 'dus' often behaves coordinatingly, so 'dus we mogen' is fine in speech. 'Mogen niet' = mustn't."
+          },
+          {
+            "type": "translation",
+            "prompt": "It took a long time before she could bring herself to talk about it.",
+            "modelAnswer": "Het duurde lang voordat ze ertoe kon komen om erover te praten.",
+            "alternatives": [
+              "Het duurde lang voordat ze ertoe kon komen erover te praten.",
+              "Het duurde lang voordat ze zover kon komen om erover te praten."
+            ],
+            "note": "Two er-forms stacked: 'ertoe komen' ('komen tot' → bring oneself to, 'tot' → 'toe') and 'erover praten' ('praten over'). The 'voordat'-bijzin sends 'kon komen' to the end; the 'om ... te praten' clause hangs off it. A genuine mouthful — and exactly the kind of sentence that separates B2 from B1."
+          }
+        ]
+      }
+    }
+  ]
+}
