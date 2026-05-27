@@ -1,0 +1,241 @@
+{
+  "zone": "bijzinnen",
+  "zoneName": "Bijzinnen",
+  "tiles": [
+    {
+      "id": "bijzinnen-3-betrekkelijke-bijzinnen",
+      "theme": "Betrekkelijke bijzinnen",
+      "themeEnglish": "Relative clauses — die for de-words, dat for het-words, wat after iets/alles/niets, and prep + wie or waar + prep for objects of a preposition",
+      "recognitionQuestion": "Is the relative pronoun used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "De man die naast me in de trein zat, viel in slaap.",
+            "correctUse": true,
+            "explanation": "Correct. 'De man' is a de-word, so the relative pronoun is 'die'. The relative clause is a bijzin, so the verb 'zat' goes to the end. Trick: the relative pronoun matches the article — de → die."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het boek dat ik gisteren bij de boekhandel heb gekocht, ligt op tafel.",
+            "correctUse": true,
+            "explanation": "Correct. 'Het boek' is a het-word, so the relative pronoun is 'dat'. The cluster 'heb gekocht' goes to the end of the relative clause. Same trick: het → dat. (Beware: 'dat' as a relative is a different word from 'dat' as a conjunction — both spelled identically.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Alles wat hij over zichzelf vertelde, bleek later waar.",
+            "correctUse": true,
+            "explanation": "Correct. After an indefinite antecedent like 'alles' (everything), 'iets' (something), 'niets' (nothing), or a superlative ('het mooiste'), the relative pronoun is 'wat', not 'dat'. 'Alles wat hij vertelde ...' = everything (that) he said."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het boek die ik gisteren bij de boekhandel heb gekocht, ligt op tafel.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Het boek' is a het-word, so the relative pronoun must be 'dat', not 'die': 'Het boek dat ik ... heb gekocht'. The mismatch is one of the most frequent slips with relatives — the trick that works every time is matching the relative to the article (de → die, het → dat)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De vrouw met wie ik vanmorgen heb gepraat, werkt bij Schiphol.",
+            "correctUse": true,
+            "explanation": "Correct. For a PERSON after a preposition, Dutch uses 'wie': 'met wie', 'aan wie', 'over wie'. Without a preposition, you'd use 'die': 'de vrouw die ik ken'. Compare 'waar + prep' for things — same idea, person vs thing."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De stoel waarop ik zat, was niet erg comfortabel.",
+            "correctUse": true,
+            "explanation": "Correct. For a THING after a preposition, Dutch uses 'waar + preposition' — 'waarop' (on which), 'waarover' (about which), 'waarmee' (with which). The split form 'de stoel waar ik op zat' is equally fine and more spoken. Things → 'waar', people → 'wie'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het enige wat ik nu nog kan doen, is wachten op de uitslag.",
+            "correctUse": true,
+            "explanation": "Correct. After 'het enige' (the only thing) — a superlative-like phrase with an indefinite feel — the relative pronoun is 'wat'. Cluster 'kan doen' at the end of the relative clause. The same pattern as 'alles wat', 'iets wat', 'niets wat'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ken die man. Hij staat daar.",
+            "task": "Verbind tot één zin met een betrekkelijke bijzin.",
+            "acceptedAnswers": [
+              "Ik ken de man die daar staat.",
+              "Ik ken de man die daar staat."
+            ],
+            "preferred": "Ik ken de man die daar staat.",
+            "explanation": "'De man' (de-word) → 'die'. The relative clause is verb-final: 'die daar staat'. The whole relative attaches to 'de man'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het boek is interessant. Ik lees het.",
+            "task": "Verbind tot één zin met een betrekkelijke bijzin.",
+            "acceptedAnswers": [
+              "Het boek dat ik lees, is interessant.",
+              "Het boek dat ik lees is interessant."
+            ],
+            "preferred": "Het boek dat ik lees, is interessant.",
+            "explanation": "'Het boek' (het-word) → 'dat'. Verb 'lees' at the end of the relative clause: 'dat ik lees'. The main clause's own verb 'is' follows after the comma."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Alles is een leugen. Hij zegt het.",
+            "task": "Verbind tot één zin met een betrekkelijke bijzin.",
+            "acceptedAnswers": [
+              "Alles wat hij zegt, is een leugen.",
+              "Alles wat hij zegt is een leugen."
+            ],
+            "preferred": "Alles wat hij zegt, is een leugen.",
+            "explanation": "After 'alles' (indefinite antecedent) the relative is 'wat', not 'dat'. Verb 'zegt' at the end of the relative clause: 'wat hij zegt'. 'Leugen' = lie."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het mes ligt op tafel. Ik snijd ermee.",
+            "task": "Verbind met 'waarmee'.",
+            "acceptedAnswers": [
+              "Het mes waarmee ik snijd, ligt op tafel.",
+              "Het mes waar ik mee snijd, ligt op tafel."
+            ],
+            "preferred": "Het mes waarmee ik snijd, ligt op tafel.",
+            "explanation": "Thing + preposition 'met' → 'waarmee' (joined) or 'waar ... mee' (split). Verb 'snijd' at the end of the relative clause. The joined form sounds a touch more formal; the split is everyday speech."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De vrouw werkt hier. Ik help haar.",
+            "task": "Verbind tot één zin met een betrekkelijke bijzin.",
+            "acceptedAnswers": [
+              "De vrouw die ik help, werkt hier.",
+              "De vrouw die ik help werkt hier."
+            ],
+            "preferred": "De vrouw die ik help, werkt hier.",
+            "explanation": "Person, no preposition → 'die' (the default relative for people). Verb 'help' at the end of the relative clause. Reserve 'wie' for when there's a preposition before it ('aan wie', 'met wie')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De collega is op vakantie. Ik werk met hem.",
+            "task": "Verbind met 'met wie'.",
+            "acceptedAnswers": [
+              "De collega met wie ik werk, is op vakantie.",
+              "De collega met wie ik werk is op vakantie."
+            ],
+            "preferred": "De collega met wie ik werk, is op vakantie.",
+            "explanation": "Person + preposition 'met' → 'met wie'. Not 'waarmee' (which is for things). Verb 'werk' at the end of the relative clause. 'Met wie ik werk' = with whom I work."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik zag iets. Het was heel verdacht.",
+            "task": "Verbind met een betrekkelijke bijzin (Ik zag iets ...).",
+            "acceptedAnswers": [
+              "Ik zag iets wat heel verdacht was.",
+              "Ik zag iets dat heel verdacht was."
+            ],
+            "preferred": "Ik zag iets wat heel verdacht was.",
+            "explanation": "After 'iets', the standard relative is 'wat': 'Ik zag iets wat heel verdacht was.' 'Dat' is sometimes heard but 'wat' is the standard choice. Verb 'was' at the end of the relative clause. 'Verdacht' = suspicious."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "The man who lives next door is very friendly.",
+            "modelAnswer": "De man die naast ons woont, is heel vriendelijk.",
+            "alternatives": [
+              "De man die naast ons woont, is heel aardig.",
+              "Onze buurman is heel vriendelijk."
+            ],
+            "note": "'De man' (de-word) → 'die'. Verb 'woont' at the end of the relative clause. The alternative just says 'onze buurman' (our neighbour) — sometimes a relative clause is overkill in Dutch where a single word will do."
+          },
+          {
+            "type": "translation",
+            "prompt": "The book I'm reading is fantastic.",
+            "modelAnswer": "Het boek dat ik lees, is fantastisch.",
+            "alternatives": [
+              "Het boek dat ik lees, is geweldig.",
+              "Het boek dat ik aan het lezen ben, is fantastisch."
+            ],
+            "note": "'Het boek' (het-word) → 'dat'. English drops the relative ('the book I'm reading'), but Dutch keeps it. Verb 'lees' / 'aan het lezen ben' at the end of the relative clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "Everything she said was true.",
+            "modelAnswer": "Alles wat ze zei, was waar.",
+            "alternatives": [
+              "Alles wat ze gezegd heeft, was waar.",
+              "Alles wat ze heeft gezegd, is waar gebleken."
+            ],
+            "note": "After 'alles', the relative is 'wat', not 'dat'. Verb 'zei' / 'gezegd heeft' at the end of the relative clause. 'Blijken' (to turn out) is the natural verb for 'was/has been shown true'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The chair I was sitting on broke.",
+            "modelAnswer": "De stoel waarop ik zat, brak.",
+            "alternatives": [
+              "De stoel waar ik op zat, brak.",
+              "De stoel waarop ik zat, ging kapot."
+            ],
+            "note": "Thing + 'op' → 'waarop' (joined) or 'waar ... op' (split). Verb 'zat' at the end of the relative clause. 'Breken' / 'kapotgaan' both render 'broke'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The colleague I'm working with is on holiday.",
+            "modelAnswer": "De collega met wie ik werk, is op vakantie.",
+            "alternatives": [
+              "De collega met wie ik werk, is op vakantie.",
+              "De collega waarmee ik werk, is op vakantie."
+            ],
+            "note": "Person + 'met' → 'met wie'. The form 'waarmee' for a person is increasingly heard but considered less standard; 'met wie' is the textbook answer. Verb 'werk' at the end of the relative clause."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "The friend I told you about yesterday is coming to visit next week.",
+            "modelAnswer": "De vriend over wie ik je gisteren vertelde, komt volgende week op bezoek.",
+            "alternatives": [
+              "De vriend over wie ik je gisteren heb verteld, komt volgende week op bezoek.",
+              "De vriend waarover ik je gisteren vertelde, komt volgende week op bezoek."
+            ],
+            "note": "Person + 'over' → 'over wie' (standard) or, increasingly heard, 'waarover'. 'Vertellen over' is a fixed-preposition verb feeding into the relative. Verb at the end of the relative clause. 'Op bezoek komen' = to come and visit."
+          },
+          {
+            "type": "translation",
+            "prompt": "Anyone who wants to come is welcome.",
+            "modelAnswer": "Iedereen die mee wil komen, is welkom.",
+            "alternatives": [
+              "Iedereen die wil komen, is welkom.",
+              "Wie mee wil komen, is welkom."
+            ],
+            "note": "'Iedereen' (everyone, a person) → 'die'. Modal cluster 'wil komen' / 'mee wil komen' at the end of the relative clause. The headless 'Wie mee wil komen' (whoever wants to come) is a neat alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "The only thing I forgot to bring is the wine.",
+            "modelAnswer": "Het enige wat ik vergeten ben mee te nemen, is de wijn.",
+            "alternatives": [
+              "Het enige wat ik vergeten heb mee te nemen, is de wijn.",
+              "Het enige dat ik niet heb meegenomen, is de wijn."
+            ],
+            "note": "After 'het enige' the relative is 'wat'. Cluster 'vergeten ben mee te nemen' at the end of the relative clause — 'vergeten' takes 'zijn' here (= to have forgotten an action) and is followed by 'mee te nemen' (to bring along, with 'te'). The simpler alternative dodges 'vergeten'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The project he's been working on for months has finally been approved.",
+            "modelAnswer": "Het project waar hij al maanden aan werkt, is eindelijk goedgekeurd.",
+            "alternatives": [
+              "Het project waaraan hij al maanden werkt, is eindelijk goedgekeurd.",
+              "Het project waar hij al maanden aan werkt, is uiteindelijk goedgekeurd."
+            ],
+            "note": "Thing + 'aan' (from 'werken aan') → 'waar ... aan' (split, spoken) or 'waaraan' (joined). Verb 'werkt' at the end of the relative clause. The main clause is a perfect passive 'is goedgekeurd'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The neighbour whose dog barks at night has finally moved away.",
+            "modelAnswer": "De buurman van wie de hond 's nachts blaft, is eindelijk verhuisd.",
+            "alternatives": [
+              "De buurman wiens hond 's nachts blaft, is eindelijk verhuisd.",
+              "De buurman van wie de hond elke nacht blaft, is eindelijk verhuisd."
+            ],
+            "note": "Possessive relative 'whose': 'van wie' (everyday) or formal 'wiens'. Both work; 'van wie' is the spoken default. ''s Nachts' = at night (genitive of 'nacht'). The main clause uses 'is verhuisd' (zijn-verb)."
+          }
+        ]
+      }
+    }
+  ]
+}

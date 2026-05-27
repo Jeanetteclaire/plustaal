@@ -1,0 +1,241 @@
+{
+  "zone": "bijzinnen",
+  "zoneName": "Bijzinnen",
+  "tiles": [
+    {
+      "id": "bijzinnen-4-als-wanneer-toen",
+      "theme": "Als, wanneer en toen",
+      "themeEnglish": "The three Dutch words for 'when' — toen for one past event, als for repeated/general/future, wanneer for questions",
+      "recognitionQuestion": "Is 'als', 'wanneer' or 'toen' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Wanneer ik klein was, speelde ik veel buiten in de tuin.",
+            "correctUse": false,
+            "explanation": "Niet correct. For ONE specific past period or event, Dutch uses 'toen', not 'wanneer': 'Toen ik klein was, ...'. 'Wanneer' is for questions only. Mixing them up is the single most common error here — English 'when' covers all three, but Dutch carves them up."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen ik gisteren wakker werd, regende het al hard.",
+            "correctUse": true,
+            "explanation": "Correct. 'Toen' for a specific moment in the past: 'Toen ik wakker werd, ...'. Verb 'werd' at the end of the bijzin; the main clause then inverts ('regende het'). 'Toen'-bijzinnen are by definition past — never use 'toen' for present or future."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik moe ben, ga ik meestal vroeg naar bed.",
+            "correctUse": true,
+            "explanation": "Correct. 'Als' for a general/repeated condition: 'Als ik moe ben, ...' (whenever I'm tired). Verb 'ben' at the end of the bijzin; the main clause inverts ('ga ik'). Use 'als' for present, future, and repeated past — anything that isn't a single past event."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen het hard regent, blijf ik gewoon thuis op de bank.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Toen' only works for ONE specific past event. For a general or repeated present situation, use 'als': 'Als het hard regent, blijf ik thuis.' If 'toen' shows up with a present-tense verb, something has gone wrong — 'toen' lives entirely in the past."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Weet jij toevallig wanneer de volgende bus vertrekt?",
+            "correctUse": true,
+            "explanation": "Correct. 'Wanneer' is the question word for 'when', whether direct ('Wanneer komt hij?') or indirect ('Weet je wanneer hij komt?'). Verb 'vertrekt' at the end of the indirect-question bijzin. This is 'wanneer' doing its proper job."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger kreeg ik altijd pannenkoeken als ik bij mijn oma logeerde.",
+            "correctUse": true,
+            "explanation": "Correct, and the subtle case worth knowing: 'als' for REPEATED past events (whenever / every time). 'Toen' would mean one specific stay; 'als ik logeerde' means each time it happened. 'Vroeger' (in the old days) signals the habitual flavour. So past + multiple = 'als', past + single = 'toen'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen ik vanavond thuiskom, moet ik nog avondeten koken.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Vanavond' (this evening) is future, so 'toen' is impossible — use 'als' (or 'zodra' for 'as soon as'): 'Als ik vanavond thuiskom, ...'. 'Toen' is past-only; for present and future the choice is 'als' / 'wanneer (question)' / 'zodra'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik was klein. Ik speelde veel in de tuin.",
+            "task": "Verbind met de juiste 'wanneer'-vorm voor één specifieke verleden periode.",
+            "acceptedAnswers": [
+              "Toen ik klein was, speelde ik veel in de tuin.",
+              "Toen ik klein was, speelde ik veel in de tuin."
+            ],
+            "preferred": "Toen ik klein was, speelde ik veel in de tuin.",
+            "explanation": "One past period (childhood) → 'toen'. Verb 'was' at the end of the bijzin; main clause inverts: 'speelde ik'. 'Toen ik klein was' is the model for any 'when I was X' phrase about your own past."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kom vroeg thuis. Ik kook iets lekkers.",
+            "task": "Verbind met de juiste 'wanneer'-vorm voor een algemene situatie.",
+            "acceptedAnswers": [
+              "Als ik vroeg thuiskom, kook ik iets lekkers.",
+              "Als ik vroeg thuiskom, kook ik iets lekkers."
+            ],
+            "preferred": "Als ik vroeg thuiskom, kook ik iets lekkers.",
+            "explanation": "Present general → 'als'. Verb 'thuiskom' (separable, fused in bijzin!) at the end. Main clause inverts: 'kook ik'. 'Als' here is closer to English 'whenever' than to 'if'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Wanneer komt hij?",
+            "task": "Begin met 'Ik weet niet ...' (indirecte vraag).",
+            "acceptedAnswers": [
+              "Ik weet niet wanneer hij komt.",
+              "Ik weet niet wanneer hij komt."
+            ],
+            "preferred": "Ik weet niet wanneer hij komt.",
+            "explanation": "Indirect question with 'wanneer': verb 'komt' to the end. 'Wanneer' as question word survives in indirect questions — it's the one place 'wanneer' is at home outside direct questions."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Wanneer ik gisteren wakker werd, regende het al hard.",
+            "task": "Verbeter het 'wanneer'-woord.",
+            "acceptedAnswers": [
+              "Toen ik gisteren wakker werd, regende het al hard.",
+              "Toen ik gisteren wakker werd, regende het al hard."
+            ],
+            "preferred": "Toen ik gisteren wakker werd, regende het al hard.",
+            "explanation": "'Gisteren' fixes this as one specific past moment, so the conjunction must be 'toen', not 'wanneer'. Replace it and the rest of the sentence stays the same: 'Toen ik gisteren wakker werd, ...'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik logeerde vaak bij mijn oma. Ik kreeg dan altijd pannenkoeken. (vroeger)",
+            "task": "Verbind voor herhaaldelijke gebeurtenissen in het verleden.",
+            "acceptedAnswers": [
+              "Als ik vroeger bij mijn oma logeerde, kreeg ik altijd pannenkoeken.",
+              "Vroeger kreeg ik altijd pannenkoeken als ik bij mijn oma logeerde."
+            ],
+            "preferred": "Vroeger kreeg ik altijd pannenkoeken als ik bij mijn oma logeerde.",
+            "explanation": "Multiple past visits → 'als' (the past-habitual case). 'Vroeger' + 'als' + imperfectum signals 'every time, back then'. Compare 'toen ik bij mijn oma logeerde' = one specific stay. The presence of 'altijd' (always) gives the repeated meaning away."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben morgen klaar. Ik bel je.",
+            "task": "Verbind voor een toekomstige situatie.",
+            "acceptedAnswers": [
+              "Als ik morgen klaar ben, bel ik je.",
+              "Zodra ik morgen klaar ben, bel ik je."
+            ],
+            "preferred": "Als ik morgen klaar ben, bel ik je.",
+            "explanation": "Future → 'als' (or 'zodra' for 'as soon as'). Verb 'ben' at the end of the bijzin; main clause inverts: 'bel ik'. Never 'wanneer' here — that's reserved for questions."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kwam gisteravond thuis. Ik had veel honger.",
+            "task": "Verbind voor één specifieke gebeurtenis in het verleden.",
+            "acceptedAnswers": [
+              "Toen ik gisteravond thuiskwam, had ik veel honger.",
+              "Toen ik gisteravond thuiskwam, had ik veel honger."
+            ],
+            "preferred": "Toen ik gisteravond thuiskwam, had ik veel honger.",
+            "explanation": "One past event → 'toen'. Separable 'thuiskomen' fuses at the end of the bijzin: 'thuiskwam'. Main clause inverts: 'had ik'. The whole rule in one move: punctual past = 'toen'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "When I was young, I lived in London.",
+            "modelAnswer": "Toen ik jong was, woonde ik in Londen.",
+            "alternatives": [
+              "Toen ik jong was, woonde ik in Londen.",
+              "Toen ik klein was, woonde ik in Londen."
+            ],
+            "note": "Single past period → 'toen'. Verb 'was' at the end of the bijzin; main clause inverts: 'woonde ik'. Never 'wanneer' here — that's the question word. (You'd say so to a Dutch person and feel the fluency lift.)"
+          },
+          {
+            "type": "translation",
+            "prompt": "When it rains, I take the tram.",
+            "modelAnswer": "Als het regent, neem ik de tram.",
+            "alternatives": [
+              "Als het regent, neem ik de tram.",
+              "Als het regent, ga ik met de tram."
+            ],
+            "note": "Present/general → 'als'. Verb 'regent' at the end of the bijzin; main clause inverts: 'neem ik'. 'Als' here = 'whenever / if'. The English present 'rains' is general, so 'als'."
+          },
+          {
+            "type": "translation",
+            "prompt": "When does the meeting start?",
+            "modelAnswer": "Wanneer begint de vergadering?",
+            "alternatives": [
+              "Wanneer begint de vergadering?",
+              "Hoe laat begint de vergadering?"
+            ],
+            "note": "Direct question → 'wanneer' (or 'hoe laat' for clock time). Verb second, subject third: 'Wanneer begint de vergadering?'. This is the only place 'wanneer' is at home outside indirect questions."
+          },
+          {
+            "type": "translation",
+            "prompt": "Do you know when she's arriving?",
+            "modelAnswer": "Weet je wanneer ze aankomt?",
+            "alternatives": [
+              "Weet je wanneer ze aankomt?",
+              "Weet je hoe laat ze aankomt?"
+            ],
+            "note": "Indirect question → still 'wanneer'. Verb 'aankomt' (separable, fused in bijzin) at the end. The main clause is itself a yes/no question 'Weet je ...?'. Two question patterns nested."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I'm tired, I get grumpy.",
+            "modelAnswer": "Als ik moe ben, word ik chagrijnig.",
+            "alternatives": [
+              "Als ik moe ben, word ik chagrijnig.",
+              "Als ik moe ben, ben ik chagrijnig."
+            ],
+            "note": "Present general → 'als'. Verb 'ben' at the end of the bijzin; main clause inverts: 'word ik' (note 'worden' for becoming grumpy — a state change). 'Chagrijnig' = grumpy, beautifully Dutch."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "When I arrived at work yesterday, my colleague had already left.",
+            "modelAnswer": "Toen ik gisteren op mijn werk aankwam, was mijn collega al weg.",
+            "alternatives": [
+              "Toen ik gisteren op mijn werk aankwam, was mijn collega al vertrokken.",
+              "Toen ik gisteren aankwam op kantoor, was mijn collega al weg."
+            ],
+            "note": "Single past event → 'toen'. Separable 'aankomen' fuses at the end: 'aankwam'. Main clause inverts: 'was mijn collega'. 'Al weg' (already gone) is the everyday short form of 'al vertrokken' — the resulting state matters more than the act of leaving."
+          },
+          {
+            "type": "translation",
+            "prompt": "Whenever she comes home late, the cat is already waiting at the door.",
+            "modelAnswer": "Als ze laat thuiskomt, staat de kat al bij de deur te wachten.",
+            "alternatives": [
+              "Als ze laat thuiskomt, zit de kat al bij de deur te wachten.",
+              "Telkens als ze laat thuiskomt, wacht de kat al bij de deur."
+            ],
+            "note": "Repeated present → 'als' (English 'whenever' is the giveaway). 'Telkens als' = every time, makes the repetition explicit. 'Staan / zitten te wachten' (positional progressive) is very Dutch for 'is waiting'. Verb-final bijzin, inverted main clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't know when the package will arrive, but I'll let you know as soon as it does.",
+            "modelAnswer": "Ik weet niet wanneer het pakket aankomt, maar ik laat het je weten zodra het er is.",
+            "alternatives": [
+              "Ik weet niet wanneer het pakket komt, maar ik laat het je weten zodra het er is.",
+              "Ik weet niet wanneer het pakket aankomt, maar ik laat het je meteen weten zodra het er is."
+            ],
+            "note": "Three 'when'-flavours in one sentence: indirect question 'wanneer' ('wanneer het pakket aankomt'), then 'zodra' for 'as soon as' ('zodra het er is'). 'Laten weten' = to let know (causative 'laten' + infinitive). Each bijzin is verb-final."
+          },
+          {
+            "type": "translation",
+            "prompt": "When she was a child, her family used to spend every summer in France.",
+            "modelAnswer": "Toen ze klein was, bracht haar familie elke zomer in Frankrijk door.",
+            "alternatives": [
+              "Toen ze klein was, brachten ze elke zomer in Frankrijk door.",
+              "Als ze klein was, bracht haar familie elke zomer in Frankrijk door."
+            ],
+            "note": "Single past period (childhood) → 'toen'. 'Doorbrengen' (separable) splits in the imperfectum main clause: 'bracht ... door'. The 'als'-version is also possible if you frame it as 'every time she was a child' — but 'toen' is the clean default for a defined past stretch."
+          },
+          {
+            "type": "translation",
+            "prompt": "When you've finished, just put the report on my desk.",
+            "modelAnswer": "Als je klaar bent, leg je het rapport gewoon op mijn bureau.",
+            "alternatives": [
+              "Zodra je klaar bent, leg je het rapport gewoon op mijn bureau.",
+              "Als je klaar bent, leg het rapport dan gewoon op mijn bureau."
+            ],
+            "note": "Future condition → 'als' (or 'zodra' for 'as soon as'). Bijzin verb-final ('bent'); main clause then inverts ('leg je'). Or use an imperative: 'leg het rapport dan ... op mijn bureau' (verb-first, with resumptive 'dan'). 'Gewoon' here softens to 'just'."
+          }
+        ]
+      }
+    }
+  ]
+}
