@@ -1,0 +1,241 @@
+{
+  "zone": "vwvz",
+  "zoneName": "Werkwoord + voorzetsel",
+  "tiles": [
+    {
+      "id": "vwvz-1-vaste-voorzetsels",
+      "theme": "Vaste voorzetsels",
+      "themeEnglish": "Verbs that take a fixed preposition (wachten op, denken aan, houden van) — where the preposition is set by the verb, not by logic",
+      "recognitionQuestion": "Is the correct preposition used with this verb?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik wacht al een uur op de bus.",
+            "correctUse": true,
+            "explanation": "Correct. 'Wachten' takes 'op': 'wachten op de bus' (to wait for the bus). English 'wait FOR' would tempt 'voor', but the fixed Dutch preposition is 'op'. These pairings have to be learned as units."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze houdt heel veel van klassieke muziek.",
+            "correctUse": true,
+            "explanation": "Correct. 'Houden van' = to love / be fond of: 'houden van muziek'. The 'van' is fixed and doesn't translate the English 'of' — 'houden van' simply means 'to love'. One of the most common fixed pairs."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik denk de laatste tijd vaak over mijn oma in Engeland.",
+            "correctUse": false,
+            "explanation": "Niet correct, in this meaning. To think OF / about a person (have them in mind) is 'denken aan': 'ik denk vaak aan mijn oma'. 'Denken over' exists but means to ponder or form a view on an issue ('Wat denk je over dit plan?'). For missing your grandma, it's 'aan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Luister je weleens naar het nieuws op de radio?",
+            "correctUse": true,
+            "explanation": "Correct. 'Luisteren' takes 'naar': 'luisteren naar het nieuws' (to listen to the news). English 'listen TO' maps onto Dutch 'naar', not 'tot'. 'Weleens' = ever / sometimes."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij vroeg naar een glas water omdat hij dorst had.",
+            "correctUse": false,
+            "explanation": "Niet correct, in this meaning. To ask FOR something (request it) is 'vragen om': 'hij vroeg om een glas water'. 'Vragen naar' means to ask ABOUT / after something ('hij vroeg naar de weg' = he asked the way). Since he wanted the water, it's 'om'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We kijken vanavond samen naar een film.",
+            "correctUse": true,
+            "explanation": "Correct. 'Kijken' takes 'naar' for watching: 'kijken naar een film' (to watch a film). 'Naar' is the fixed preposition; English 'watch' has no preposition, so this is an easy one to forget."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je kunt altijd op mij rekenen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Rekenen op' = to count on / rely on: 'op mij rekenen'. The fixed preposition is 'op'. Note that with a person you keep 'op' + pronoun ('op mij'), never an 'er'-form."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik wacht ___ de trein.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik wacht op de trein.",
+              "op"
+            ],
+            "preferred": "Ik wacht op de trein.",
+            "explanation": "'Wachten op' — fixed pairing. 'Ik wacht op de trein.' Not 'voor' (despite English 'wait for'); the Dutch verb simply governs 'op'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze houdt ___ haar twee katten.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ze houdt van haar twee katten.",
+              "van"
+            ],
+            "preferred": "Ze houdt van haar twee katten.",
+            "explanation": "'Houden van' = to love. 'Ze houdt van haar katten.' The 'van' is part of the verb's meaning, not a literal 'of'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik denk vaak ___ vroeger.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik denk vaak aan vroeger.",
+              "aan"
+            ],
+            "preferred": "Ik denk vaak aan vroeger.",
+            "explanation": "'Denken aan' = to think of / have in mind. 'Ik denk vaak aan vroeger' (I often think back to the old days). 'Denken over' would mean to ponder an issue — a different verb-sense."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het kind vraagt ___ een glaasje melk.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Het kind vraagt om een glaasje melk.",
+              "om"
+            ],
+            "preferred": "Het kind vraagt om een glaasje melk.",
+            "explanation": "'Vragen om' = to ask for (request). 'Het kind vraagt om melk.' Keep 'vragen naar' for asking ABOUT something ('naar de weg vragen')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Bijna iedereen kijkt ___ de finale.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Bijna iedereen kijkt naar de finale.",
+              "naar"
+            ],
+            "preferred": "Bijna iedereen kijkt naar de finale.",
+            "explanation": "'Kijken naar' = to watch. 'Iedereen kijkt naar de finale.' English 'watch' has no preposition, so the Dutch 'naar' is easy to drop — but it's required."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik twijfel ___ zijn goede bedoelingen.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik twijfel aan zijn goede bedoelingen.",
+              "aan"
+            ],
+            "preferred": "Ik twijfel aan zijn goede bedoelingen.",
+            "explanation": "'Twijfelen aan' = to doubt / have doubts about. 'Ik twijfel aan zijn bedoelingen' (I doubt his intentions). The fixed preposition is 'aan', not 'over' or 'van'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Zij zorgt heel goed ___ haar planten.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Zij zorgt heel goed voor haar planten.",
+              "voor"
+            ],
+            "preferred": "Zij zorgt heel goed voor haar planten.",
+            "explanation": "'Zorgen voor' = to take care of / look after. 'Zij zorgt voor haar planten.' The fixed preposition is 'voor'. (Compare 'zorgen dat ...' = to make sure that ...)"
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'm waiting for the bus.",
+            "modelAnswer": "Ik wacht op de bus.",
+            "alternatives": [
+              "Ik wacht op de bus.",
+              "Ik sta op de bus te wachten."
+            ],
+            "note": "'Wachten op' — not 'voor', despite English 'wait for'. 'Ik sta ... te wachten' (the 'staan te' progressive) is the natural way to stress that you're waiting right now."
+          },
+          {
+            "type": "translation",
+            "prompt": "She's very fond of animals.",
+            "modelAnswer": "Ze houdt veel van dieren.",
+            "alternatives": [
+              "Ze houdt veel van dieren.",
+              "Ze is dol op dieren."
+            ],
+            "note": "'Houden van' = to love / be fond of. 'Ze houdt veel van dieren.' The idiom 'dol zijn op' (to be crazy about) is a lively alternative — and note it uses 'op', a different fixed preposition."
+          },
+          {
+            "type": "translation",
+            "prompt": "I often think about my childhood.",
+            "modelAnswer": "Ik denk vaak aan mijn jeugd.",
+            "alternatives": [
+              "Ik denk vaak aan mijn jeugd.",
+              "Ik denk vaak terug aan mijn jeugd."
+            ],
+            "note": "'Denken aan' = to think of / about (have in mind). 'Terugdenken aan' (to think back to) adds the backward-looking nuance. Not 'denken over', which is for pondering a question or issue."
+          },
+          {
+            "type": "translation",
+            "prompt": "He asked for help.",
+            "modelAnswer": "Hij vroeg om hulp.",
+            "alternatives": [
+              "Hij vroeg om hulp.",
+              "Hij vroeg om assistentie."
+            ],
+            "note": "'Vragen om' = to ask for (request). 'Hij vroeg om hulp.' Don't use 'vragen naar' here — that would mean he asked ABOUT help, not for it."
+          },
+          {
+            "type": "translation",
+            "prompt": "You can always count on me.",
+            "modelAnswer": "Je kunt altijd op mij rekenen.",
+            "alternatives": [
+              "Je kunt altijd op mij rekenen.",
+              "Op mij kun je altijd rekenen."
+            ],
+            "note": "'Rekenen op' = to count on. With a person, keep 'op' + pronoun: 'op mij rekenen'. Front it for emphasis: 'Op mij kun je altijd rekenen' (with inversion: 'kun je')."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I've been waiting for it for an hour.",
+            "modelAnswer": "Ik wacht er al een uur op.",
+            "alternatives": [
+              "Ik wacht er al een uur op.",
+              "Ik sta er al een uur op te wachten."
+            ],
+            "note": "'Wachten op' meets the 'er'-rule: the object is a thing ('it'), so it contracts to 'er ... op'. 'Ik wacht er al een uur op.' This is exactly where fixed prepositions feed into the 'er + voorzetsel' you've just practised."
+          },
+          {
+            "type": "translation",
+            "prompt": "She asked me about my trip, and I told her about it.",
+            "modelAnswer": "Ze vroeg me naar mijn reis, en ik vertelde haar erover.",
+            "alternatives": [
+              "Ze vroeg me naar mijn reis, en ik vertelde haar erover.",
+              "Ze vroeg naar mijn reis, en ik heb haar er alles over verteld."
+            ],
+            "note": "Two fixed-preposition verbs: 'vragen naar' (to ask about) and 'vertellen over' (to tell about). The thing ('my trip') becomes 'erover' in the second half, while the person ('her') stays as the pronoun 'haar'. A clean thing-vs-person split in one line."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm thinking about him a lot, because he's ill.",
+            "modelAnswer": "Ik denk veel aan hem, want hij is ziek.",
+            "alternatives": [
+              "Ik denk veel aan hem, want hij is ziek.",
+              "Ik moet veel aan hem denken, want hij is ziek."
+            ],
+            "note": "'Denken aan' with a PERSON keeps 'aan' + pronoun: 'aan hem', never 'eraan'. (The 'er'-form is only for things.) 'Ik moet veel aan hem denken' is the very Dutch 'I can't stop thinking about him'. 'Want' coordinates, so no inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "We're looking forward to the holiday, but we're a bit worried about the weather.",
+            "modelAnswer": "We kijken uit naar de vakantie, maar we maken ons een beetje zorgen over het weer.",
+            "alternatives": [
+              "We kijken uit naar de vakantie, maar we maken ons een beetje zorgen over het weer.",
+              "We verheugen ons op de vakantie, maar we maken ons een beetje zorgen om het weer."
+            ],
+            "note": "Two more fixed pairs: 'uitkijken naar' (to look forward to) and 'zich zorgen maken over' (to worry about). 'Zich verheugen op' is the alternative for the first. 'Maken ons ... zorgen' — the reflexive 'ons' and the object 'zorgen' wrap around 'een beetje'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He doesn't believe in ghosts, but he's afraid of the dark.",
+            "modelAnswer": "Hij gelooft niet in spoken, maar hij is bang voor het donker.",
+            "alternatives": [
+              "Hij gelooft niet in spoken, maar hij is bang voor het donker.",
+              "Hij gelooft niet in geesten, maar hij is wel bang in het donker."
+            ],
+            "note": "'Geloven in' (to believe in) and 'bang zijn voor' (to be afraid of) — two fixed pairings where the Dutch preposition matches the English neatly for once. 'Spoken' / 'geesten' = ghosts. 'Wel' in the alternative answers the implied contrast."
+          }
+        ]
+      }
+    }
+  ]
+}

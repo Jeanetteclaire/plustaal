@@ -1,0 +1,241 @@
+{
+  "zone": "er",
+  "zoneName": "Er",
+  "tiles": [
+    {
+      "id": "er-5-er-gemengd-en-foutjes",
+      "theme": "Er gemengd en foutjes",
+      "themeEnglish": "Mixed review of all four uses of 'er' — locative, + preposition, + number, and placeholder — and the slips where they get confused",
+      "recognitionQuestion": "Is 'er' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ben je weleens in Rome geweest? Ja, ik ben er twee keer geweest.",
+            "correctUse": true,
+            "explanation": "Correct. This is the locative 'er' = there (a place): 'ik ben er twee keer geweest' (I've been there twice). Don't be fooled by 'twee keer' — that's just the number of visits; the 'er' itself stands for the place 'Rome', the plaatsbijwoord use."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Heb je aan de boodschappen gedacht? Ja, ik heb eraan gedacht.",
+            "correctUse": true,
+            "explanation": "Correct. The 'er + preposition' use: 'denken aan iets' → 'eraan'. 'Ik heb eraan gedacht' = I've thought of it. The shopping is a thing, so the preposition + 'it' contracts to 'eraan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hoeveel kaartjes wil je hebben? Ik wil drie.",
+            "correctUse": false,
+            "explanation": "Niet correct. The noun is dropped, so the number needs the quantitative 'er': 'Ik wil er drie.' Correct: 'Ik wil er drie.' This dropped 'er' is the most frequent slip of all — English says 'I want three', Dutch can't leave the gap empty."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er zit een vlieg in mijn soep.",
+            "correctUse": true,
+            "explanation": "Correct. The placeholder 'er' introducing an indefinite subject: 'Er zit een vlieg in mijn soep' = there's a fly in my soup. The real subject ('een vlieg') follows the verb; 'er' holds the front slot."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn oma gebeld en ik heb wel een uur ermee gepraat.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Er + preposition' is only for things, never people. For your grandma you keep the preposition + a pronoun: 'met haar'. Correct: '...en ik heb wel een uur met haar gepraat.' Using 'ermee' for a person is a classic mix-up."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er werd gisteren hard gewerkt op kantoor.",
+            "correctUse": true,
+            "explanation": "Correct. The impersonal passive: 'Er werd hard gewerkt' = there was hard work going on / people worked hard. No real subject, so the dummy 'er' fills the slot. 'Werken' → 'gewerkt', participle at the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hoeveel appels liggen er nog? Er liggen er nog vier.",
+            "correctUse": true,
+            "explanation": "Correct, and the double 'er' in full view. 'Er liggen er nog vier' = there are four left: the first 'er' is the placeholder ('there'), the second is the quantitative 'er' ('of them'). Two separate jobs, two little words."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ben twee keer in Parijs geweest.",
+            "task": "Vervang 'in Parijs' door 'er' (plaatsbijwoord).",
+            "acceptedAnswers": [
+              "Ik ben er twee keer geweest.",
+              "Ik ben er twee keer geweest."
+            ],
+            "preferred": "Ik ben er twee keer geweest.",
+            "explanation": "The locative 'er' replaces the place: 'in Parijs' → 'er'. 'Ik ben er twee keer geweest.' This is 'er' as plaatsbijwoord — standing in for a location, like English 'there'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kijk erg uit naar de zomervakantie.",
+            "task": "Vervang 'naar de zomervakantie' door een 'er'-vorm.",
+            "acceptedAnswers": [
+              "Ik kijk er erg naar uit.",
+              "Ik kijk er erg naar uit."
+            ],
+            "preferred": "Ik kijk er erg naar uit.",
+            "explanation": "'Uitkijken naar iets' → 'er ... naar ... uit'. The separable 'uitkijken' and the fixed preposition 'naar' both land at the end around the adverb: 'Ik kijk er erg naar uit.' A thing, so the 'er'-form, not 'naar het'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Heb je kinderen? (antwoord: 3)",
+            "task": "Geef het antwoord met de kwantitatieve 'er'.",
+            "acceptedAnswers": [
+              "Ja, ik heb er drie.",
+              "Ja, ik heb er drie."
+            ],
+            "preferred": "Ja, ik heb er drie.",
+            "explanation": "Noun dropped, number kept → quantitative 'er': 'Ja, ik heb er drie.' The 'er' stands in for 'kinderen'. Obligatory the moment the noun disappears."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Een kat zit op het dak.",
+            "task": "Herschrijf met de plaatshouder 'er'.",
+            "acceptedAnswers": [
+              "Er zit een kat op het dak.",
+              "Er zit een kat op het dak."
+            ],
+            "preferred": "Er zit een kat op het dak.",
+            "explanation": "Indefinite subject ('een kat') → introduce it with placeholder 'er': 'Er zit een kat op het dak.' The subject moves behind the verb; 'er' takes the front slot. The presentative use."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik reken op mijn beste vriend.",
+            "task": "Vervang het object door 'er' \u00f3f leg uit waarom dat niet kan.",
+            "acceptedAnswers": [
+              "Ik reken op hem.",
+              "Dat kan niet met 'er': het is een persoon, dus 'op hem'."
+            ],
+            "preferred": "Ik reken op hem.",
+            "explanation": "'Mijn beste vriend' is a person, so no 'erop': you keep 'op' + a pronoun → 'Ik reken op hem.' 'Erop' would only work for a thing or situation ('ik reken erop dat het lukt')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Men rookt hier niet.",
+            "task": "Maak een onpersoonlijke passief met 'er'.",
+            "acceptedAnswers": [
+              "Er wordt hier niet gerookt.",
+              "Er wordt hier niet gerookt."
+            ],
+            "preferred": "Er wordt hier niet gerookt.",
+            "explanation": "Impersonal passive: drop 'men', use 'er' as dummy subject → 'Er wordt hier niet gerookt' (no smoking here / there's no smoking here). 'Roken' → 'gerookt', participle at the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hoeveel mensen waren er aanwezig? (antwoord: ongeveer 50)",
+            "task": "Geef het antwoord met een dubbele 'er'.",
+            "acceptedAnswers": [
+              "Er waren er ongeveer vijftig.",
+              "Er waren er ongeveer vijftig."
+            ],
+            "preferred": "Er waren er ongeveer vijftig.",
+            "explanation": "Placeholder 'er' (there were) + quantitative 'er' (of them) → 'Er waren er ongeveer vijftig.' Both surface as separate words because they don't sit directly next to each other."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Have you been there before?",
+            "modelAnswer": "Ben je er weleens geweest?",
+            "alternatives": [
+              "Ben je er weleens geweest?",
+              "Ben je er ooit geweest?"
+            ],
+            "note": "Locative 'er' = there. 'Ben je er weleens geweest?' = have you ever been there? 'Weleens' / 'ooit' = ever. The 'er' stands in for the place under discussion."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm looking forward to it.",
+            "modelAnswer": "Ik kijk ernaar uit.",
+            "alternatives": [
+              "Ik kijk ernaar uit.",
+              "Ik verheug me erop."
+            ],
+            "note": "'Uitkijken naar' → 'ernaar ... uit'. 'Ik kijk ernaar uit' is the standard 'I'm looking forward to it'. 'Zich verheugen op' → 'zich erop verheugen' is the slightly warmer, more formal alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "There's a problem.",
+            "modelAnswer": "Er is een probleem.",
+            "alternatives": [
+              "Er is een probleem.",
+              "Er is een probleempje."
+            ],
+            "note": "Placeholder 'er' + indefinite subject 'een probleem'. Without 'er' the sentence has an empty subject slot. The diminutive 'probleempje' softens it to 'a small issue'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I have two of them.",
+            "modelAnswer": "Ik heb er twee.",
+            "alternatives": [
+              "Ik heb er twee.",
+              "Ik heb er maar twee."
+            ],
+            "note": "Quantitative 'er' for the dropped noun: 'Ik heb er twee.' The 'er' is exactly the English 'of them'. Add 'maar' for 'only two'."
+          },
+          {
+            "type": "translation",
+            "prompt": "A lot was eaten and drunk.",
+            "modelAnswer": "Er werd veel gegeten en gedronken.",
+            "alternatives": [
+              "Er werd veel gegeten en gedronken.",
+              "Er is veel gegeten en gedronken."
+            ],
+            "note": "Impersonal passive: 'Er werd veel gegeten en gedronken' — one 'er werd' carrying two participles. 'Eten' → 'gegeten', 'drinken' → 'gedronken'. The perfect 'Er is ... gegeten' works too."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "There were a lot of people at the party, but I only knew a few of them.",
+            "modelAnswer": "Er waren veel mensen op het feest, maar ik kende er maar een paar.",
+            "alternatives": [
+              "Er waren veel mensen op het feest, maar ik kende er maar een paar.",
+              "Er waren veel mensen op het feest, maar ik kende er slechts een paar."
+            ],
+            "note": "Two different 'er's in one sentence: the placeholder 'Er waren veel mensen' (there were), then the quantitative 'ik kende er maar een paar' (I only knew a few of them). 'Kennen' imperfectum 'kende'. 'Maar / slechts' = only."
+          },
+          {
+            "type": "translation",
+            "prompt": "I've been there twice already, but I'd go back in a heartbeat.",
+            "modelAnswer": "Ik ben er al twee keer geweest, maar ik zou er zo weer naartoe gaan.",
+            "alternatives": [
+              "Ik ben er al twee keer geweest, maar ik zou er zo weer naartoe gaan.",
+              "Ik ben er al twee keer geweest, maar ik zou er zo weer heen gaan."
+            ],
+            "note": "Two locative 'er's: 'ik ben er ... geweest' (been there) and 'er ... naartoe gaan' (go there). 'Zo' here = in a heartbeat / right away; 'weer' = again. 'Naartoe' / 'heen' = to (there), the destination word."
+          },
+          {
+            "type": "translation",
+            "prompt": "Are there any biscuits left? Yes, but there are only two left.",
+            "modelAnswer": "Zijn er nog koekjes? Ja, maar er zijn er nog maar twee.",
+            "alternatives": [
+              "Zijn er nog koekjes? Ja, maar er zijn er nog maar twee.",
+              "Zijn er nog koekjes? Ja, maar er zijn er nog maar twee over."
+            ],
+            "note": "The question uses the placeholder 'er' ('Zijn er nog koekjes?'); the answer stacks both — placeholder + quantitative — 'er zijn er nog maar twee.' 'Nog maar' = only ... left."
+          },
+          {
+            "type": "translation",
+            "prompt": "There was a lot of talk about it, but nothing was decided.",
+            "modelAnswer": "Er werd veel over gepraat, maar er werd niets besloten.",
+            "alternatives": [
+              "Er werd veel over gepraat, maar er werd niets besloten.",
+              "Er werd er veel over gepraat, maar er werd niets besloten."
+            ],
+            "note": "A subtle one: 'Er werd veel over gepraat' is an impersonal passive ('praten over') where 'er' simultaneously holds the dummy-subject slot and carries the prepositional 'over' (about it). Then a second impersonal passive: 'er werd niets besloten' (nothing was decided)."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd thought about it, but when I got there, it turned out there were no tickets left.",
+            "modelAnswer": "Ik had erover nagedacht, maar toen ik er aankwam, bleken er geen kaartjes meer te zijn.",
+            "alternatives": [
+              "Ik had erover nagedacht, maar toen ik er aankwam, bleken er geen kaartjes meer te zijn.",
+              "Ik had er goed over nagedacht, maar toen ik er aankwam, bleken er geen kaartjes meer te zijn."
+            ],
+            "note": "Three different 'er's in one sentence — the full B2 test. 'Erover' (er + preposition: thought about it), 'er aankwam' (locative: arrived there), and 'bleken er geen kaartjes meer te zijn' (placeholder: there turned out to be none). 'Blijken' + 'te zijn'; the 'toen'-bijzin sends 'aankwam' to the end."
+          }
+        ]
+      }
+    }
+  ]
+}
