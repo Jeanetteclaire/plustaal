@@ -1,0 +1,241 @@
+{
+  "zone": "modaal",
+  "zoneName": "Modale werkwoorden",
+  "tiles": [
+    {
+      "id": "modaal-4-dubbele-infinitief",
+      "theme": "De dubbele infinitief",
+      "themeEnglish": "The double infinitive (IPP) — why laten/zien/horen/helpen and the modals take 'heb laten zien', never 'heb getoond', in the perfect",
+      "recognitionQuestion": "Is this double infinitive correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn auto laten repareren.",
+            "correctUse": true,
+            "explanation": "Correct. 'Laten' (to have/let something done) takes a double infinitive in the perfect: 'heb ... laten repareren', not 'gelaten'. 'Ik heb mijn auto laten repareren' = I had my car repaired. This is the core rule: certain verbs swap their own participle for an infinitive when a second verb follows."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben de buren de hele nacht horen ruziën.",
+            "correctUse": true,
+            "explanation": "Correct. 'Horen' (to hear) is a perception verb that behaves like a modal here: double infinitive 'hebben ... horen ruziën', not 'gehoord'. 'We hebben hen horen ruziën' = we heard them arguing. The same family: zien, voelen, horen."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn haar laten geknipt.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second verb must be an infinitive: 'laten knippen', not the participle 'geknipt'. Correct: 'Ik heb mijn haar laten knippen' = I had my hair cut. In a double infinitive BOTH verbs are infinitives — the participle never appears in the cluster."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb haar gisteren zien lopen in het park.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zien' (to see) + a second verb = double infinitive 'heb ... zien lopen', not 'gezien'. 'Ik heb haar zien lopen' = I saw her walking. Word order: auxiliary 'heb', then the cluster 'zien lopen' toward the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij heeft me helpen de kast gedragen naar boven.",
+            "correctUse": false,
+            "explanation": "Niet correct. Two faults: the second verb should be infinitive 'dragen', not 'gedragen', and the cluster belongs together at the end. Correct: 'Hij heeft me de kast helpen dragen naar boven' (or '...helpen de kast naar boven te dragen'). 'Helpen' joins the double-infinitive family."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mijn zoon heeft me helpen verhuizen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Helpen' + infinitive = double infinitive 'heeft ... helpen verhuizen', not 'geholpen'. 'Hij heeft me helpen verhuizen' = he helped me move house. (You may also hear 'heeft me geholpen met verhuizen' — but with a bare infinitive, the double-infinitive form is standard.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "We zijn na de vergadering nog even blijven praten.",
+            "correctUse": true,
+            "explanation": "Correct — and note the auxiliary. 'Blijven' + infinitive forms a double infinitive but takes 'zijn', not 'hebben': 'We zijn ... blijven praten' = we stayed on chatting. 'Blijven', 'gaan' and 'komen' all use 'zijn' here. The double-infinitive shape is the same; only the helper verb differs."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Een monteur repareert mijn fiets.",
+            "task": "Herschrijf met 'laten' in het perfectum (ik liet het doen).",
+            "acceptedAnswers": [
+              "Ik heb mijn fiets laten repareren.",
+              "Ik heb mijn fiets door een monteur laten repareren."
+            ],
+            "preferred": "Ik heb mijn fiets laten repareren.",
+            "explanation": "'Laten' (to have something done) → double infinitive 'heb ... laten repareren'. The agent, if named, takes 'door': 'door een monteur laten repareren'. Never 'gelaten' with a second verb present."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik hoorde hem zingen onder de douche.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb hem horen zingen onder de douche.",
+              "Ik heb hem onder de douche horen zingen."
+            ],
+            "preferred": "Ik heb hem horen zingen onder de douche.",
+            "explanation": "'Horen' + infinitive → double infinitive 'heb ... horen zingen', not 'gehoord'. The cluster sits at the end; the place phrase can go before or after. A perception verb behaving exactly like a modal."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik zag haar het gebouw binnengaan.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb haar het gebouw binnen zien gaan.",
+              "Ik heb haar het gebouw zien binnengaan."
+            ],
+            "preferred": "Ik heb haar het gebouw zien binnengaan.",
+            "explanation": "'Zien' + infinitive → double infinitive 'heb ... zien binnengaan', not 'gezien'. With the separable 'binnengaan' you may split it around 'zien' ('binnen zien gaan') or keep it whole ('zien binnengaan'); both are fine."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn buurman hielp me de tafel dragen.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Mijn buurman heeft me de tafel helpen dragen.",
+              "Mijn buurman heeft me helpen de tafel te dragen."
+            ],
+            "preferred": "Mijn buurman heeft me de tafel helpen dragen.",
+            "explanation": "'Helpen' + infinitive → double infinitive 'heeft ... helpen dragen', not 'geholpen'. The object 'de tafel' sits inside the clause; the cluster 'helpen dragen' closes it. The 'helpen ... te dragen' variant with 'te' is also accepted."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb mijn jas laten gestomen.",
+            "task": "Verbeter de zin.",
+            "acceptedAnswers": [
+              "Ik heb mijn jas laten stomen.",
+              "Ik heb mijn jas laten stomen."
+            ],
+            "preferred": "Ik heb mijn jas laten stomen.",
+            "explanation": "The second verb must be the infinitive 'stomen', not the participle 'gestoomd/gestomen'. Correct: 'Ik heb mijn jas laten stomen' = I had my coat dry-cleaned. Spotting and fixing the stray participle is the whole skill here."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb hem horen binnenkomen.",
+            "task": "Begin met 'Ik wist dat er iemand thuis was, omdat ...' (maak er een bijzin van).",
+            "acceptedAnswers": [
+              "Ik wist dat er iemand thuis was, omdat ik hem had horen binnenkomen.",
+              "Ik wist dat er iemand thuis was, omdat ik hem hoorde binnenkomen."
+            ],
+            "preferred": "Ik wist dat er iemand thuis was, omdat ik hem had horen binnenkomen.",
+            "explanation": "In the 'omdat'-bijzin the auxiliary 'had' precedes the double infinitive, all at the end: '...omdat ik hem had horen binnenkomen'. Since the main clause is past, the cluster shifts to plusquamperfectum 'had horen binnenkomen'. This auxiliary-before-the-pair order is the classic stumbling block."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Na het eten bleven we nog lang napraten.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Na het eten zijn we nog lang blijven napraten.",
+              "Na het eten zijn we nog lang blijven napraten."
+            ],
+            "preferred": "Na het eten zijn we nog lang blijven napraten.",
+            "explanation": "'Blijven' + infinitive → double infinitive, but with 'zijn' as auxiliary: 'zijn we ... blijven napraten'. Note the inversion after 'na het eten', and that 'blijven' (like 'gaan', 'komen') takes 'zijn', not 'hebben'. 'Napraten' = to chat on afterwards."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I had my hair cut yesterday.",
+            "modelAnswer": "Ik heb gisteren mijn haar laten knippen.",
+            "alternatives": [
+              "Gisteren heb ik mijn haar laten knippen.",
+              "Ik heb mijn haar gisteren laten knippen."
+            ],
+            "note": "'Have something done' = 'laten' + infinitive → double infinitive 'heb ... laten knippen', never 'gelaten' or 'geknipt'. Front 'gisteren' and invert: 'Gisteren heb ik ...'. This 'laten' construction is everywhere in Dutch for services."
+          },
+          {
+            "type": "translation",
+            "prompt": "I heard him come in last night.",
+            "modelAnswer": "Ik heb hem gisteravond horen binnenkomen.",
+            "alternatives": [
+              "Ik heb hem gisteravond binnen horen komen.",
+              "Gisteravond heb ik hem horen binnenkomen."
+            ],
+            "note": "'Horen' + infinitive → double infinitive 'heb ... horen binnenkomen', not 'gehoord'. The separable 'binnenkomen' may split around 'horen' or stay whole. 'Gisteravond' = last night."
+          },
+          {
+            "type": "translation",
+            "prompt": "We saw her leave.",
+            "modelAnswer": "We hebben haar zien vertrekken.",
+            "alternatives": [
+              "We hebben haar zien weggaan.",
+              "We hebben haar weg zien gaan."
+            ],
+            "note": "'Zien' + infinitive → double infinitive 'hebben ... zien vertrekken', not 'gezien'. 'Vertrekken' or 'weggaan' both render 'leave'; with separable 'weggaan' you can split it ('weg zien gaan')."
+          },
+          {
+            "type": "translation",
+            "prompt": "He helped me move house.",
+            "modelAnswer": "Hij heeft me helpen verhuizen.",
+            "alternatives": [
+              "Hij heeft me geholpen met verhuizen.",
+              "Hij heeft me helpen met de verhuizing."
+            ],
+            "note": "'Helpen' + bare infinitive → double infinitive 'heeft ... helpen verhuizen', not 'geholpen'. The alternative 'geholpen met verhuizen' (participle + 'met' + infinitive/noun) is also idiomatic — but with a bare infinitive in the cluster, use the double-infinitive form."
+          },
+          {
+            "type": "translation",
+            "prompt": "We stayed talking for a while after dinner.",
+            "modelAnswer": "We zijn na het eten nog even blijven praten.",
+            "alternatives": [
+              "Na het eten zijn we nog even blijven praten.",
+              "We zijn nog wat blijven napraten na het eten."
+            ],
+            "note": "'Blijven' + infinitive → double infinitive with the auxiliary 'zijn' (not 'hebben'): 'zijn ... blijven praten'. 'Even' / 'wat' = for a bit. 'Napraten' adds the nuance of lingering chat after an event."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I had the car repaired because it had broken down on the motorway.",
+            "modelAnswer": "Ik heb de auto laten repareren omdat hij op de snelweg kapot was gegaan.",
+            "alternatives": [
+              "Ik heb de auto laten maken omdat hij op de snelweg kapot was gegaan.",
+              "Ik heb de auto laten repareren omdat hij op de snelweg was stukgegaan."
+            ],
+            "note": "Double infinitive 'heb ... laten repareren' in the main clause, plus an 'omdat'-bijzin in the plusquamperfectum: 'kapot was gegaan' (had broken down). 'Kapotgaan' / 'stukgaan' (separable) take 'zijn'. The bijzin verb cluster goes to the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "She said she'd heard them arguing all night.",
+            "modelAnswer": "Ze zei dat ze hen de hele nacht had horen ruziën.",
+            "alternatives": [
+              "Ze zei dat ze hen de hele nacht had horen ruziën.",
+              "Ze vertelde dat ze hen de hele nacht had horen ruziemaken."
+            ],
+            "note": "Reported speech with a plusquamperfectum double infinitive inside the 'dat'-bijzin: 'had horen ruziën' — auxiliary 'had' before the two infinitives, all at the end. 'Hen' for the people (object). 'Ruziën' / 'ruziemaken' = to quarrel."
+          },
+          {
+            "type": "translation",
+            "prompt": "I saw him fall, so I helped him get up.",
+            "modelAnswer": "Ik heb hem zien vallen, dus heb ik hem helpen opstaan.",
+            "alternatives": [
+              "Ik heb hem zien vallen, dus heb ik hem overeind helpen komen.",
+              "Ik zag hem vallen, dus heb ik hem helpen opstaan."
+            ],
+            "note": "Two double infinitives in one sentence: 'heb ... zien vallen' and 'heb ... helpen opstaan'. 'Dus' (so) triggers inversion in the second clause: 'dus heb ik ...'. 'Opstaan' / 'overeind komen' = to get up. The first clause can also stay in the imperfectum ('ik zag hem vallen')."
+          },
+          {
+            "type": "translation",
+            "prompt": "He let the documents be sent without checking them first.",
+            "modelAnswer": "Hij heeft de documenten laten versturen zonder ze eerst te controleren.",
+            "alternatives": [
+              "Hij heeft de stukken laten versturen zonder ze eerst te controleren.",
+              "Hij liet de documenten versturen zonder ze eerst te checken."
+            ],
+            "note": "'Laten' + infinitive → double infinitive 'heeft ... laten versturen' (let/had ... sent). The 'zonder ... te'-construction ('zonder ze eerst te controleren' = without checking them first) sends 'te controleren' to the end of its own clause. 'Versturen' / 'controleren' / 'checken' all natural."
+          },
+          {
+            "type": "translation",
+            "prompt": "Because I'd had to wait so long, I'd been able to read the whole newspaper.",
+            "modelAnswer": "Omdat ik zo lang had moeten wachten, had ik de hele krant kunnen lezen.",
+            "alternatives": [
+              "Doordat ik zo lang had moeten wachten, had ik de hele krant kunnen lezen.",
+              "Omdat ik zo lang had moeten wachten, had ik de krant helemaal kunnen lezen."
+            ],
+            "note": "Two plusquamperfectum double infinitives back to back: 'had moeten wachten' (in the 'omdat'-bijzin, cluster at the end) and 'had ... kunnen lezen' (main clause, with inversion after the comma: 'had ik ...'). 'Doordat' stresses cause-and-effect more than 'omdat'. This is the structure fully assembled — your double-infinitive workout in one sentence."
+          }
+        ]
+      }
+    }
+  ]
+}

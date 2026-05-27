@@ -1,0 +1,244 @@
+{
+  "zone": "modaal",
+  "zoneName": "Modale werkwoorden",
+  "tiles": [
+    {
+      "id": "modaal-3-mogen-en-willen",
+      "theme": "Mogen en willen",
+      "themeEnglish": "The modals 'mogen' (may/be allowed/like) and 'willen' (want) — permission, prohibition, the double infinitive, and 'zou willen'",
+      "recognitionQuestion": "Is 'mogen' or 'willen' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Je mag hier niet parkeren.",
+            "correctUse": true,
+            "explanation": "Correct. 'Mogen' = to be allowed to; 'mag niet' is the standard way to express a prohibition: 'Je mag hier niet parkeren' = you may not / mustn't park here. Present singular 'mag', infinitive 'parkeren' at the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb dat altijd al willen doen.",
+            "correctUse": true,
+            "explanation": "Correct, and the pattern at the heart of this topic. In the perfect, 'willen' + a second verb forms a DOUBLE INFINITIVE: 'heb ... willen doen' — both infinitives, never 'gewild'. 'Altijd al' = always (with a wistful edge). Auxiliary 'hebben'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb je al die tijd willen gebeld.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second verb must stay an infinitive: 'willen bellen', not the participle 'gebeld'. Correct: 'Ik heb je al die tijd willen bellen.' Once a modal has a partner verb, BOTH are infinitives in the perfect — the participle never appears."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik mag die nieuwe collega wel.",
+            "correctUse": true,
+            "explanation": "Correct — a second, very Dutch use of 'mogen': to like. 'Ik mag iemand (wel)' = I (quite) like someone. The 'wel' is almost obligatory here and signals mild warmth. Note this 'mogen' takes a direct object, not a second verb."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik zou graag een kopje koffie willen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zou ... willen' = would like, the polite way to state a wish: 'Ik zou graag ... willen.' Here 'willen' stands at the end with no second verb (the wish is for the coffee itself). 'Graag' = gladly/please, the politeness word."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze heeft altijd dokter gewild worden.",
+            "correctUse": false,
+            "explanation": "Niet correct. Double infinitive again: 'willen worden', not the participle 'gewild'. Correct: 'Ze heeft altijd dokter willen worden' = she always wanted to become a doctor. 'Gewild' only when 'willen' stands completely alone ('Ik heb het altijd gewild')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger mocht ik nooit laat opblijven.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum 'mocht' (singular past of 'mogen') = was allowed to. Note the inversion after the opening time word: 'Vroeger mocht ik ...', not 'Vroeger ik mocht'. 'Opblijven' (separable) at the end. Plural past is 'mochten'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Roken is hier verboden.",
+            "task": "Herschrijf met 'mogen' (verbod).",
+            "acceptedAnswers": [
+              "Je mag hier niet roken.",
+              "Hier mag je niet roken.",
+              "Je mag hier niet roken."
+            ],
+            "preferred": "Je mag hier niet roken.",
+            "explanation": "'Mag niet' expresses a prohibition: 'Je mag hier niet roken.' Front 'hier' and invert: 'Hier mag je niet roken.' The infinitive 'roken' closes the clause. 'Mogen niet' is the everyday 'mustn't'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik wil al jaren naar Japan reizen.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb al jaren naar Japan willen reizen.",
+              "Ik heb al jaren naar Japan willen reizen."
+            ],
+            "preferred": "Ik heb al jaren naar Japan willen reizen.",
+            "explanation": "Double infinitive: 'heb ... willen reizen'. Auxiliary 'hebben' + two infinitives, modal first. Never 'gewild reizen' or 'willen gereisd'. 'Al jaren' = for years."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik vind die nieuwe buurman aardig.",
+            "task": "Herschrijf met 'mogen' (= ik vind hem aardig).",
+            "acceptedAnswers": [
+              "Ik mag die nieuwe buurman wel.",
+              "Ik mag die nieuwe buurman best.",
+              "Die nieuwe buurman mag ik wel."
+            ],
+            "preferred": "Ik mag die nieuwe buurman wel.",
+            "explanation": "'Iemand mogen' = to like someone, almost always with 'wel' or 'best'. 'Ik mag hem wel' = I quite like him. This 'mogen' takes a person as direct object, no second verb."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik wil graag een afspraak maken.",
+            "task": "Maak het beleefder met 'zou ... willen'.",
+            "acceptedAnswers": [
+              "Ik zou graag een afspraak willen maken.",
+              "Ik zou graag een afspraak willen maken.",
+              "Ik zou een afspraak willen maken."
+            ],
+            "preferred": "Ik zou graag een afspraak willen maken.",
+            "explanation": "'Zou ... willen' softens a wish to 'would like to'. With a second verb it's a double infinitive at the end: 'zou graag ... willen maken'. The most polite register for requests and bookings."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik mag van mijn ouders naar het feest.",
+            "task": "Zet in de onvoltooid verleden tijd (imperfectum).",
+            "acceptedAnswers": [
+              "Ik mocht van mijn ouders naar het feest.",
+              "Ik mocht van mijn ouders naar het feest."
+            ],
+            "preferred": "Ik mocht van mijn ouders naar het feest.",
+            "explanation": "Imperfectum 'mocht' = was allowed to. 'Mogen van iemand' = to be allowed by someone: 'ik mocht van mijn ouders' (my parents let me). Dutch drops the verb of motion when direction is clear: 'mocht ... naar het feest'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik wilde het zo graag, maar het lukte niet.",
+            "task": "Herschrijf het eerste deel met 'willen' in het perfectum (zonder tweede werkwoord).",
+            "acceptedAnswers": [
+              "Ik heb het zo graag gewild, maar het lukte niet.",
+              "Ik heb het altijd zo graag gewild, maar het lukte niet."
+            ],
+            "preferred": "Ik heb het zo graag gewild, maar het lukte niet.",
+            "explanation": "Here 'willen' stands alone — no second verb — so it takes the participle: 'heb het gewild'. This is the one place 'gewild' is correct. Add a second verb and you'd switch straight back to the double infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze heeft altijd lerares willen worden.",
+            "task": "Begin met 'Iedereen wist dat ...' (maak er een bijzin van).",
+            "acceptedAnswers": [
+              "Iedereen wist dat ze altijd lerares had willen worden.",
+              "Iedereen wist dat ze altijd al lerares had willen worden."
+            ],
+            "preferred": "Iedereen wist dat ze altijd lerares had willen worden.",
+            "explanation": "In a bijzin the auxiliary moves toward the end but sits BEFORE the double infinitive: '...dat ze altijd lerares had willen worden'. Since the knowing is past, the wish shifts to plusquamperfectum 'had willen worden'. The cluster closes the clause."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "You're not allowed to smoke here.",
+            "modelAnswer": "Je mag hier niet roken.",
+            "alternatives": [
+              "Hier mag je niet roken.",
+              "Roken mag hier niet."
+            ],
+            "note": "'Be allowed to' = 'mogen'; the negative 'mag niet' is the standard 'mustn't / may not'. Front 'hier' → invert: 'Hier mag je niet roken.' You can also make 'roken' the subject: 'Roken mag hier niet.'"
+          },
+          {
+            "type": "translation",
+            "prompt": "I've always wanted to learn Italian.",
+            "modelAnswer": "Ik heb altijd Italiaans willen leren.",
+            "alternatives": [
+              "Ik heb altijd al Italiaans willen leren.",
+              "Ik wilde altijd al Italiaans leren."
+            ],
+            "note": "Perfect double infinitive: 'heb ... willen leren' — both infinitives, never 'gewild'. 'Altijd al' adds the lifelong-wish flavour. The imperfectum 'ik wilde altijd al ... leren' is a lighter alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "I quite like her.",
+            "modelAnswer": "Ik mag haar wel.",
+            "alternatives": [
+              "Ik mag haar best.",
+              "Ik vind haar wel aardig."
+            ],
+            "note": "'Iemand mogen' = to like someone, with near-obligatory 'wel' (or 'best'). 'Ik mag haar wel' carries exactly the mild warmth of English 'I quite like her'. 'Ik vind haar aardig' is the more neutral phrasing."
+          },
+          {
+            "type": "translation",
+            "prompt": "Would you like some tea?",
+            "modelAnswer": "Wil je thee?",
+            "alternatives": [
+              "Zou je thee willen?",
+              "Wil je een kopje thee?"
+            ],
+            "note": "Plain 'Wil je ...?' is perfectly polite in spoken Dutch for offers. 'Zou je ... willen?' is a notch more formal. Here 'willen' needs no second verb — the wish is for the tea itself."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was a child, I was allowed to stay up late on Fridays.",
+            "modelAnswer": "Toen ik klein was, mocht ik op vrijdag laat opblijven.",
+            "alternatives": [
+              "Toen ik klein was, mocht ik op vrijdag lang opblijven.",
+              "Als kind mocht ik op vrijdag laat opblijven."
+            ],
+            "note": "Imperfectum 'mocht' = was allowed to. The 'toen'-bijzin ('Toen ik klein was') sends its verb to the end, then the main clause inverts: 'mocht ik ...'. 'Opblijven' (separable, to stay up) sits at the close."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "She said she'd always wanted to become a teacher, but her parents wouldn't allow it.",
+            "modelAnswer": "Ze zei dat ze altijd lerares had willen worden, maar haar ouders stonden het niet toe.",
+            "alternatives": [
+              "Ze zei dat ze altijd al lerares had willen worden, maar dat haar ouders het niet toestonden.",
+              "Ze zei dat ze altijd lerares had willen worden, maar haar ouders wilden het niet toestaan."
+            ],
+            "note": "A 'dat'-bijzin with the plusquamperfectum double infinitive 'had willen worden' (auxiliary before the two infinitives, all at the end). 'Toestaan' (separable, to allow) → imperfectum splits: 'stonden ... toe'. Note two different ways to render 'wouldn't allow'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You may go now, but you mustn't tell anyone.",
+            "modelAnswer": "Je mag nu gaan, maar je mag het niemand vertellen.",
+            "alternatives": [
+              "Je mag nu weg, maar je mag het aan niemand vertellen.",
+              "Je mag nu gaan, maar je mag het tegen niemand zeggen."
+            ],
+            "note": "Both halves use 'mogen' — first as permission ('mag nu gaan'), then as prohibition ('mag het niemand vertellen'). The same modal swings between 'may' and 'mustn't' depending on the negation. 'Maar' coordinates, so no inversion after it."
+          },
+          {
+            "type": "translation",
+            "prompt": "I would have liked to help, but I wasn't allowed inside.",
+            "modelAnswer": "Ik had graag willen helpen, maar ik mocht niet naar binnen.",
+            "alternatives": [
+              "Ik had graag willen helpen, maar ik mocht niet naar binnen.",
+              "Ik zou graag hebben geholpen, maar ik mocht niet naar binnen."
+            ],
+            "note": "'Would have liked to' = plusquamperfectum double infinitive 'had graag willen helpen'. Paired with 'mogen' in the imperfectum: 'ik mocht niet naar binnen' (wasn't allowed in). 'Naar binnen' = inside; the verb of motion drops after 'mogen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you'd like to come along, you're very welcome.",
+            "modelAnswer": "Mocht je mee willen komen, dan ben je van harte welkom.",
+            "alternatives": [
+              "Als je mee wilt komen, ben je van harte welkom.",
+              "Mocht je mee willen gaan, dan ben je van harte welkom."
+            ],
+            "note": "'Mocht je ...' is an elegant conditional ('should you / if you'). It opens a bijzin (verb cluster 'willen komen' at the end), answered by 'dan' + inversion: 'dan ben je ...'. 'Meekomen' (separable) splits as 'mee ... komen'. 'Van harte welkom' = very welcome."
+          },
+          {
+            "type": "translation",
+            "prompt": "He didn't want to be disturbed while he was working.",
+            "modelAnswer": "Hij wilde niet gestoord worden terwijl hij aan het werk was.",
+            "alternatives": [
+              "Hij wilde niet gestoord worden terwijl hij werkte.",
+              "Hij wilde met rust gelaten worden terwijl hij aan het werk was."
+            ],
+            "note": "'Willen' + a passive infinitive: 'wilde niet gestoord worden' (didn't want to be disturbed) — the modal governs the passive cluster 'gestoord worden'. The 'terwijl'-bijzin sends its verb to the end. 'Aan het werk zijn' = to be working; 'met rust gelaten worden' = to be left in peace."
+          }
+        ]
+      }
+    }
+  ]
+}
