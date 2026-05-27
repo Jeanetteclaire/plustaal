@@ -1,0 +1,241 @@
+{
+  "zone": "bijzinnen",
+  "zoneName": "Bijzinnen",
+  "tiles": [
+    {
+      "id": "bijzinnen-2-indirecte-vragen",
+      "theme": "Indirecte vragen",
+      "themeEnglish": "Indirect questions — same verb-final rule as other bijzinnen, just opened by 'of' (whether) or a question word",
+      "recognitionQuestion": "Is the indirect-question word order correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik weet niet of hij vanavond nog langskomt.",
+            "correctUse": true,
+            "explanation": "Correct. Indirect yes/no question uses 'of' (whether) + verb at the end: 'of hij vanavond nog langskomt.' The separable 'langskomen' stays together at the end. 'Of' is Dutch's all-purpose 'whether' for indirect questions."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze vroeg of komt hij vanavond ook nog langs.",
+            "correctUse": false,
+            "explanation": "Niet correct. An indirect question drops the direct-question word order — the verb goes to the end: 'of hij vanavond ook nog langskomt'. The direct version ('Komt hij langs?') is verb-first, but once embedded as a bijzin, 'komt' moves to the close. This is the most common indirect-question slip."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik vroeg me af waar ze de auto had geparkeerd.",
+            "correctUse": true,
+            "explanation": "Correct. An indirect wh-question: 'waar' opens the bijzin, then the verb cluster 'had geparkeerd' (plusquamperfectum) goes to the end. 'Zich afvragen' (to wonder) + indirect question is a very Dutch construction."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Weet jij wanneer de winkel zaterdag weer opengaat?",
+            "correctUse": true,
+            "explanation": "Correct. Indirect question with 'wanneer': verb at the end of the bijzin, with the separable 'opengaan' fused: 'opengaat'. The main clause itself is a yes/no question ('Weet jij ...?'), and inside it the embedded question keeps verb-final order."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij wilde precies weten hoe lang ben ik al in Nederland.",
+            "correctUse": false,
+            "explanation": "Niet correct. The direct question 'Hoe lang ben je al in Nederland?' has verb-second order, but as an indirect question the verb goes to the end: 'hoe lang ik al in Nederland ben'. The inversion belongs to the direct question; embedding it sends 'ben' to the close."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Niemand begreep waarom hij zo boos werd op zijn collega.",
+            "correctUse": true,
+            "explanation": "Correct. Indirect 'waarom'-question: verb 'werd' at the end. 'Boos worden op iemand' (= to get angry with someone) — fixed preposition 'op' with a person, so kept as 'op zijn collega' (not 'erop'). Two B2 patterns layered."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik vroeg hem of hij heeft het rapport al gelezen.",
+            "correctUse": false,
+            "explanation": "Niet correct. In an indirect question, the whole verb cluster goes to the end: 'of hij het rapport al heeft gelezen' (or 'al gelezen heeft'). Auxiliary 'heeft' belongs at the close of the bijzin with the participle, not stranded in the middle. This is the cluster-in-bijzin trap."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Komt hij vanavond?",
+            "task": "Begin met 'Ik weet niet ...'.",
+            "acceptedAnswers": [
+              "Ik weet niet of hij vanavond komt.",
+              "Ik weet niet of hij vanavond komt."
+            ],
+            "preferred": "Ik weet niet of hij vanavond komt.",
+            "explanation": "Direct yes/no question 'Komt hij?' becomes indirect with 'of' + verb at the end: 'of hij vanavond komt'. The original inversion ('komt hij') unwinds into bijzin order."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Waar woont hij eigenlijk?",
+            "task": "Begin met 'Ze vroeg ...'.",
+            "acceptedAnswers": [
+              "Ze vroeg waar hij eigenlijk woont.",
+              "Ze vroeg waar hij eigenlijk woont."
+            ],
+            "preferred": "Ze vroeg waar hij eigenlijk woont.",
+            "explanation": "Direct 'Waar woont hij?' (verb second) becomes indirect 'waar hij eigenlijk woont' (verb last). The question word 'waar' still leads the bijzin, but the inversion dissolves."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Wanneer begint de film?",
+            "task": "Begin met 'Weet je ...?'.",
+            "acceptedAnswers": [
+              "Weet je wanneer de film begint?",
+              "Weet je wanneer de film begint?"
+            ],
+            "preferred": "Weet je wanneer de film begint?",
+            "explanation": "The main clause becomes a yes/no question 'Weet je ...?' and the embedded question goes verb-final: 'wanneer de film begint'. Two question patterns in one sentence, each with its own word order."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hoe heet jouw hond?",
+            "task": "Begin met 'Ik wil graag weten ...'.",
+            "acceptedAnswers": [
+              "Ik wil graag weten hoe jouw hond heet.",
+              "Ik wil graag weten hoe je hond heet."
+            ],
+            "preferred": "Ik wil graag weten hoe jouw hond heet.",
+            "explanation": "Direct 'Hoe heet ...?' becomes indirect 'hoe ... heet': verb to the end. 'Heten' is the standard verb for 'to be called / named'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Heb je het al gezien?",
+            "task": "Begin met 'Ze vroeg ...'.",
+            "acceptedAnswers": [
+              "Ze vroeg of ik het al had gezien.",
+              "Ze vroeg of ik het al gezien had."
+            ],
+            "preferred": "Ze vroeg of ik het al had gezien.",
+            "explanation": "Direct perfect 'Heb je het gezien?' becomes indirect 'of ik het al had gezien': verb shifts to past tense in the reported speech ('heb' → 'had'), and the whole cluster goes to the end. Both 'had gezien' and 'gezien had' are accepted."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Waarom huilt het kind?",
+            "task": "Begin met 'Niemand wist ...'.",
+            "acceptedAnswers": [
+              "Niemand wist waarom het kind huilde.",
+              "Niemand wist waarom het kind huilde."
+            ],
+            "preferred": "Niemand wist waarom het kind huilde.",
+            "explanation": "Indirect 'waarom'-question: verb to the end. Note the tense shift: present 'huilt' becomes imperfectum 'huilde' to match 'wist' (past reporting verb). Standard sequence-of-tenses move."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Wie kan ons morgen helpen?",
+            "task": "Begin met 'Ik vroeg me af ...'.",
+            "acceptedAnswers": [
+              "Ik vroeg me af wie ons morgen kon helpen.",
+              "Ik vroeg me af wie ons morgen kon helpen."
+            ],
+            "preferred": "Ik vroeg me af wie ons morgen kon helpen.",
+            "explanation": "Indirect 'wie'-question: cluster 'kon helpen' at the end (note the tense shift: 'kan' → 'kon'). 'Zich afvragen' (to wonder) is reflexive — 'ik vroeg me af', with 'me' near the verb and 'af' at the end of the main clause."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I don't know whether he's coming.",
+            "modelAnswer": "Ik weet niet of hij komt.",
+            "alternatives": [
+              "Ik weet niet of hij komt.",
+              "Ik weet niet of hij nog komt."
+            ],
+            "note": "Indirect yes/no question with 'of' (whether) + verb at the end. 'Nog' adds the nuance 'still / yet'. Note Dutch uses 'of', not 'als', for indirect 'whether'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She asked where I lived.",
+            "modelAnswer": "Ze vroeg waar ik woonde.",
+            "alternatives": [
+              "Ze vroeg waar ik woonde.",
+              "Ze vroeg me waar ik woonde."
+            ],
+            "note": "Indirect 'waar'-question: verb 'woonde' to the end, imperfectum to match the past reporting verb 'vroeg'. The optional 'me' (whom she asked) sits near the main verb."
+          },
+          {
+            "type": "translation",
+            "prompt": "Do you know when the train leaves?",
+            "modelAnswer": "Weet jij wanneer de trein vertrekt?",
+            "alternatives": [
+              "Weet je wanneer de trein vertrekt?",
+              "Weet je hoe laat de trein vertrekt?"
+            ],
+            "note": "Two question patterns in one sentence: yes/no 'Weet je ...?' (verb first) and indirect 'wanneer de trein vertrekt' (verb last). 'Hoe laat' = at what time, a natural alternative for clock times."
+          },
+          {
+            "type": "translation",
+            "prompt": "He wanted to know how long I'd been waiting.",
+            "modelAnswer": "Hij wilde weten hoe lang ik al had gewacht.",
+            "alternatives": [
+              "Hij wilde weten hoe lang ik al stond te wachten.",
+              "Hij wilde weten hoe lang ik al wachtte."
+            ],
+            "note": "Indirect 'hoe lang'-question with plusquamperfectum 'had gewacht' (the waiting precedes the asking). The progressive 'stond te wachten' is very Dutch and works in the imperfectum: 'hoe lang ik al stond te wachten'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I have no idea why she said that.",
+            "modelAnswer": "Ik heb geen idee waarom ze dat zei.",
+            "alternatives": [
+              "Ik heb geen idee waarom ze dat zei.",
+              "Ik snap niet waarom ze dat zei."
+            ],
+            "note": "Indirect 'waarom'-question: verb 'zei' to the end. 'Geen idee hebben' = to have no idea; 'snappen' (to get / understand) is the everyday spoken verb. Imperfectum 'zei' to match the past frame."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "She wanted to know whether I'd already eaten and where I'd had lunch.",
+            "modelAnswer": "Ze wilde weten of ik al gegeten had en waar ik geluncht had.",
+            "alternatives": [
+              "Ze wilde weten of ik al had gegeten en waar ik had geluncht.",
+              "Ze wilde weten of ik al gegeten had en waar ik had geluncht."
+            ],
+            "note": "Two indirect questions in series: 'of ik al gegeten had' (yes/no with 'of') and 'waar ik geluncht had' (wh- with 'waar'). Both verb-final, both in the plusquamperfectum. Either cluster order ('had gegeten' / 'gegeten had') is accepted, but stay consistent within a sentence."
+          },
+          {
+            "type": "translation",
+            "prompt": "He asked me how I'd managed to fix it so quickly.",
+            "modelAnswer": "Hij vroeg me hoe ik het zo snel had kunnen maken.",
+            "alternatives": [
+              "Hij vroeg me hoe ik het zo snel had weten te repareren.",
+              "Hij vroeg me hoe het me gelukt was het zo snel te maken."
+            ],
+            "note": "Indirect 'hoe'-question with plusquamperfectum double infinitive: 'hoe ik het ... had kunnen maken' (cluster at end). 'Weten te + infinitive' = to manage to. 'Lukken' (to succeed) is the everyday verb for 'managed' — it's impersonal: 'het lukte me' = I managed."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm not sure whether I should answer his email today or tomorrow.",
+            "modelAnswer": "Ik weet niet zeker of ik vandaag of morgen op zijn mail moet reageren.",
+            "alternatives": [
+              "Ik weet niet zeker of ik vandaag of morgen op zijn mail moet reageren.",
+              "Ik weet niet zeker of ik vandaag of morgen op zijn mail zal reageren."
+            ],
+            "note": "Indirect yes/no question with 'of', plus 'reageren op' (fixed preposition with a thing — 'op zijn mail'). The modal 'moet' wraps the cluster: 'moet reageren'. Note the second 'of' here is the coordinating 'or', not the subordinating 'whether' — same little word, two jobs."
+          },
+          {
+            "type": "translation",
+            "prompt": "Nobody could explain to me why the meeting had been cancelled.",
+            "modelAnswer": "Niemand kon mij uitleggen waarom de vergadering was afgelast.",
+            "alternatives": [
+              "Niemand kon me uitleggen waarom de vergadering was afgezegd.",
+              "Niemand kon me uitleggen waarom de vergadering geannuleerd was."
+            ],
+            "note": "Indirect 'waarom'-question with past-perfect passive: 'waarom de vergadering was afgelast' (cluster at end). 'Afgelasten' / 'afzeggen' / 'annuleren' = to cancel; 'afgelast' is the standard for events, 'afgezegd' for appointments, 'geannuleerd' more formal."
+          },
+          {
+            "type": "translation",
+            "prompt": "She wondered whether her colleagues knew where the keys were kept.",
+            "modelAnswer": "Ze vroeg zich af of haar collega's wisten waar de sleutels werden bewaard.",
+            "alternatives": [
+              "Ze vroeg zich af of haar collega's wisten waar de sleutels lagen.",
+              "Ze vroeg zich af of haar collega's wisten waar de sleutels werden bewaard."
+            ],
+            "note": "Indirect questions nested two deep: 'of haar collega's wisten' (yes/no), and inside it 'waar de sleutels werden bewaard' (wh-, with a passive). Both verb-final. The simpler 'lagen' (lay, were) sidesteps the passive. 'Zich afvragen' (to wonder) leads the whole structure."
+          }
+        ]
+      }
+    }
+  ]
+}

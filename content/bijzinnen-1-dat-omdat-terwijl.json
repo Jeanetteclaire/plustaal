@@ -1,0 +1,241 @@
+{
+  "zone": "bijzinnen",
+  "zoneName": "Bijzinnen",
+  "tiles": [
+    {
+      "id": "bijzinnen-1-dat-omdat-terwijl",
+      "theme": "Dat, omdat, terwijl en andere voegwoorden",
+      "themeEnglish": "Subordinate clauses with dat, omdat, terwijl, nadat, voordat — the finite verb goes to the end",
+      "recognitionQuestion": "Is the word order in this subordinate clause correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik weet zeker dat hij morgen om acht uur langskomt.",
+            "correctUse": true,
+            "explanation": "Correct. A 'dat'-bijzin sends the finite verb to the end of the clause: '...dat hij morgen om acht uur langskomt.' Note the separable 'langskomen' stays together at the end (it does NOT split in a bijzin) — that's the standard pattern."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik blijf vandaag thuis omdat ik ben ziek.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Omdat' is a subordinating conjunction, so the verb goes to the end: 'omdat ik ziek ben'. Compare 'want', the coordinating conjunction, which keeps normal word order: 'Ik blijf thuis, want ik ben ziek.' Same meaning, different word order — the omdat/want pair is the classic B2 minefield."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Terwijl ik aan het koken was, belde mijn moeder onverwacht.",
+            "correctUse": true,
+            "explanation": "Correct. The 'terwijl'-bijzin (while) sends 'was' to the end of its clause: 'Terwijl ik aan het koken was, ...'. The progressive 'aan het koken' sits before it. Then the main clause inverts after the comma — fronted bijzin, verb-subject."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We gingen pas naar huis nadat de film helemaal was afgelopen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Nadat' opens a bijzin in the plusquamperfectum: 'nadat de film helemaal was afgelopen'. The cluster 'was afgelopen' lands at the end of the clause. Note the standard order: auxiliary 'was' before participle 'afgelopen' (both 'was afgelopen' and 'afgelopen was' are accepted)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik bel je meteen zodra ik kom thuis vanavond.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zodra' opens a bijzin, so the separable 'thuiskomen' must STAY TOGETHER at the end: 'zodra ik vanavond thuiskom.' In a main clause it splits ('ik kom vanavond thuis'); in a bijzin the parts reunite. This re-joining of separable verbs is a quiet B2 trap."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij belde precies op het moment dat ik wegging.",
+            "correctUse": true,
+            "explanation": "Correct. 'Op het moment dat' opens a bijzin (essentially a relative clause meaning 'at the moment when'): the verb 'wegging' goes to the end. 'Weggaan' stays together as one word — separable verbs reunite in bijzinnen."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze zei dat ze me gisteren echt niet had kunnen bereiken.",
+            "correctUse": true,
+            "explanation": "Correct. A 'dat'-bijzin in the plusquamperfectum with a double infinitive: 'dat ze ... had kunnen bereiken.' The whole cluster — auxiliary 'had' before the two infinitives — closes the clause. Verb-final + double infinitive in one neat package."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hij komt morgen om acht uur.",
+            "task": "Begin met 'Ik weet zeker dat ...'.",
+            "acceptedAnswers": [
+              "Ik weet zeker dat hij morgen om acht uur komt.",
+              "Ik weet zeker dat hij morgen om acht uur komt."
+            ],
+            "preferred": "Ik weet zeker dat hij morgen om acht uur komt.",
+            "explanation": "The 'dat'-bijzin sends the verb to the end: 'dat hij morgen om acht uur komt.' Subject, time phrase, then verb. The main clause keeps normal order: 'Ik weet zeker'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik blijf thuis, want ik ben ziek.",
+            "task": "Herschrijf met 'omdat'.",
+            "acceptedAnswers": [
+              "Ik blijf thuis omdat ik ziek ben.",
+              "Ik blijf thuis omdat ik ziek ben."
+            ],
+            "preferred": "Ik blijf thuis omdat ik ziek ben.",
+            "explanation": "'Want' (coordinating) keeps normal order; 'omdat' (subordinating) sends the verb to the end → 'omdat ik ziek ben'. Same meaning, different word order. Mixing these up is the single most common B2 slip with conjunctions."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Mijn moeder belde onverwacht. Ik was aan het koken.",
+            "task": "Verbind met 'terwijl' (begin met de bijzin).",
+            "acceptedAnswers": [
+              "Terwijl ik aan het koken was, belde mijn moeder onverwacht.",
+              "Mijn moeder belde onverwacht terwijl ik aan het koken was."
+            ],
+            "preferred": "Terwijl ik aan het koken was, belde mijn moeder onverwacht.",
+            "explanation": "Fronted 'terwijl'-bijzin: verb 'was' to the end of the clause; the main clause then inverts ('belde mijn moeder'). Or put the bijzin second — then the main clause has no inversion: 'Mijn moeder belde ... terwijl ik ... was.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "We gingen naar huis. De film was helemaal afgelopen.",
+            "task": "Verbind met 'nadat' (bijzin eerst).",
+            "acceptedAnswers": [
+              "Nadat de film helemaal was afgelopen, gingen we naar huis.",
+              "Nadat de film helemaal afgelopen was, gingen we naar huis."
+            ],
+            "preferred": "Nadat de film helemaal was afgelopen, gingen we naar huis.",
+            "explanation": "'Nadat'-bijzin in the plusquamperfectum: cluster 'was afgelopen' / 'afgelopen was' at the end of the clause (both orders fine). The fronted bijzin then triggers main-clause inversion: 'gingen we'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik bel je. Ik kom thuis. (= meteen)",
+            "task": "Verbind met 'zodra' (hoofdzin eerst).",
+            "acceptedAnswers": [
+              "Ik bel je meteen zodra ik thuiskom.",
+              "Ik bel je zodra ik thuiskom."
+            ],
+            "preferred": "Ik bel je meteen zodra ik thuiskom.",
+            "explanation": "'Zodra'-bijzin: separable 'thuiskomen' stays together at the end. Note the main clause 'Ik kom thuis' (split) becomes the bijzin 'zodra ik thuiskom' (re-joined). Separable verbs split in main clauses, fuse in bijzinnen."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ga op vakantie. Eerst maak ik mijn huis schoon.",
+            "task": "Verbind met 'voordat' (de schoonmaak eerst, vakantie daarna).",
+            "acceptedAnswers": [
+              "Voordat ik op vakantie ga, maak ik mijn huis schoon.",
+              "Ik maak mijn huis schoon voordat ik op vakantie ga."
+            ],
+            "preferred": "Voordat ik op vakantie ga, maak ik mijn huis schoon.",
+            "explanation": "'Voordat'-bijzin sends the verb to the end: 'voordat ik op vakantie ga'. The separable 'schoonmaken' splits in the main clause ('maak ... schoon') but would fuse if the bijzin were the main clause instead."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze heeft me gisteren niet kunnen bereiken.",
+            "task": "Begin met 'Ze zei dat ...'.",
+            "acceptedAnswers": [
+              "Ze zei dat ze me gisteren niet had kunnen bereiken.",
+              "Ze zei dat ze me gisteren niet had kunnen bereiken."
+            ],
+            "preferred": "Ze zei dat ze me gisteren niet had kunnen bereiken.",
+            "explanation": "Reported speech with a 'dat'-bijzin in the plusquamperfectum: double infinitive cluster 'had kunnen bereiken' at the end. Auxiliary 'had' first, then the two infinitives. The whole cluster closes the bijzin."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I know that he's coming tomorrow.",
+            "modelAnswer": "Ik weet dat hij morgen komt.",
+            "alternatives": [
+              "Ik weet dat hij morgen komt.",
+              "Ik weet zeker dat hij morgen komt."
+            ],
+            "note": "'Dat'-bijzin sends 'komt' to the end. The main clause keeps normal order: 'Ik weet'. Add 'zeker' for 'I'm sure'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm staying home because I'm tired.",
+            "modelAnswer": "Ik blijf thuis omdat ik moe ben.",
+            "alternatives": [
+              "Ik blijf thuis omdat ik moe ben.",
+              "Ik blijf thuis, want ik ben moe."
+            ],
+            "note": "'Omdat' (subordinating) → 'ik moe ben' (verb at end). 'Want' (coordinating) → 'ik ben moe' (normal order). Both translate as 'because' but trigger different word order — one of the cleanest illustrations of the bijzin rule."
+          },
+          {
+            "type": "translation",
+            "prompt": "While I was cooking, my mother called.",
+            "modelAnswer": "Terwijl ik aan het koken was, belde mijn moeder.",
+            "alternatives": [
+              "Terwijl ik kookte, belde mijn moeder.",
+              "Mijn moeder belde terwijl ik aan het koken was."
+            ],
+            "note": "'Terwijl'-bijzin sends its verb to the end. 'Aan het koken zijn' is the progressive; the simpler imperfectum 'kookte' works too. Fronting the bijzin inverts the main clause ('belde mijn moeder')."
+          },
+          {
+            "type": "translation",
+            "prompt": "After we'd seen the film, we went for a drink.",
+            "modelAnswer": "Nadat we de film hadden gezien, gingen we iets drinken.",
+            "alternatives": [
+              "Nadat we de film hadden gezien, gingen we iets drinken.",
+              "Nadat we de film gezien hadden, gingen we wat drinken."
+            ],
+            "note": "'Nadat'-bijzin in the plusquamperfectum: cluster 'hadden gezien' / 'gezien hadden' at the end. The main clause inverts after the fronted bijzin: 'gingen we'. 'Iets / wat drinken' = to have a drink."
+          },
+          {
+            "type": "translation",
+            "prompt": "As soon as I get home, I'll call you.",
+            "modelAnswer": "Zodra ik thuiskom, bel ik je.",
+            "alternatives": [
+              "Zodra ik thuiskom, bel ik je.",
+              "Ik bel je zodra ik thuiskom."
+            ],
+            "note": "'Zodra'-bijzin → 'thuiskom' (separable, fused at the end of the clause). Fronting the bijzin inverts the main clause: 'bel ik je'. Put it second and there's no inversion: 'Ik bel je zodra ...'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "He told me that he hadn't been able to come because his car had broken down.",
+            "modelAnswer": "Hij vertelde me dat hij niet had kunnen komen omdat zijn auto kapot was gegaan.",
+            "alternatives": [
+              "Hij vertelde me dat hij niet had kunnen komen omdat zijn auto kapot was gegaan.",
+              "Hij vertelde me dat hij niet had kunnen komen omdat zijn auto het had begeven."
+            ],
+            "note": "Two bijzinnen back to back. First a 'dat'-clause with plusquamperfectum double infinitive: 'dat hij niet had kunnen komen' (cluster at end). Then an 'omdat'-clause with past perfect: 'omdat zijn auto kapot was gegaan'. Both verb-final. 'Het begeven' is the idiomatic 'to give up the ghost'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We waited until everyone had left.",
+            "modelAnswer": "We wachtten totdat iedereen weg was.",
+            "alternatives": [
+              "We wachtten tot iedereen weg was.",
+              "We wachtten totdat iedereen was vertrokken."
+            ],
+            "note": "'Totdat' / 'tot'-bijzin: verb-cluster at the end ('weg was' / 'was vertrokken'). 'Weg zijn' = to be gone; 'vertrekken' (to depart) takes 'zijn'. 'Tot' (without -dat) is the everyday spoken version."
+          },
+          {
+            "type": "translation",
+            "prompt": "Before we leave for holiday, I want to tidy the whole house.",
+            "modelAnswer": "Voordat we op vakantie gaan, wil ik het hele huis opruimen.",
+            "alternatives": [
+              "Voordat we op vakantie gaan, wil ik het hele huis opruimen.",
+              "Voor we op vakantie gaan, wil ik het hele huis opruimen."
+            ],
+            "note": "Fronted 'voordat'-bijzin (verb-final 'gaan') triggers main-clause inversion: 'wil ik'. The modal sends 'opruimen' to the end. 'Voor' is the everyday shortening of 'voordat'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She admitted that she should have known better.",
+            "modelAnswer": "Ze gaf toe dat ze het beter had moeten weten.",
+            "alternatives": [
+              "Ze gaf toe dat ze het beter had moeten weten.",
+              "Ze gaf toe dat ze beter had moeten weten."
+            ],
+            "note": "'Dat'-bijzin with the regret structure 'had moeten + infinitive': cluster 'had moeten weten' at the end. 'Toegeven' (separable) splits in the main clause: 'gaf toe'. Verb-final bijzin + double infinitive — exactly the combination that demands attention."
+          },
+          {
+            "type": "translation",
+            "prompt": "While he was reading, the dog quietly slipped out of the door.",
+            "modelAnswer": "Terwijl hij zat te lezen, glipte de hond stilletjes de deur uit.",
+            "alternatives": [
+              "Terwijl hij aan het lezen was, glipte de hond stilletjes de deur uit.",
+              "Terwijl hij las, glipte de hond stilletjes de deur uit."
+            ],
+            "note": "'Terwijl'-bijzin in three flavours: 'zat te lezen' (was sitting reading — a very Dutch positional progressive), 'aan het lezen was' (progressive), or plain 'las' (imperfectum). All verb-final. Fronted bijzin triggers main-clause inversion: 'glipte de hond'. 'Stilletjes' = quietly."
+          }
+        ]
+      }
+    }
+  ]
+}
