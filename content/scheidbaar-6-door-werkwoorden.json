@@ -1,0 +1,246 @@
+{
+  "zone": "scheidbaar",
+  "zoneName": "Scheidbare werkwoorden",
+  "tiles": [
+    {
+      "id": "scheidbaar-6-door-werkwoorden",
+      "theme": "Werkwoorden met 'door'",
+      "themeEnglish": "Verbs with 'door' — separable (do\u0301orgaan, to keep going) vs inseparable (doorlo\u0301pen, to complete), and how stress changes the meaning",
+      "recognitionQuestion": "Is this 'door'-verb used correctly?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Het concert gaat door, ook al regent het.",
+            "correctUse": true,
+            "explanation": "Correct. 'Doorgaan' (separable) = to go ahead / continue. In a main clause the 'door' splits off to the end: 'het concert gaat door'. One of the most useful door-verbs — 'het gaat door' (it's going ahead) versus 'het gaat niet door' (it's called off)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Geef je het zout even door?",
+            "correctUse": true,
+            "explanation": "Correct. 'Doorgeven' (separable) = to pass (along). The 'door' splits to the end: 'geef ... door'. 'Even' (just) softens the request. You 'geeft iets door' at the table, or pass on a message: 'ik geef het door'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We werkten door tot diep in de nacht.",
+            "correctUse": true,
+            "explanation": "Correct. 'Doorwerken' (separable) = to work on / keep working. Imperfectum splits: 'werkten ... door'. 'Door' here adds the sense of carrying on without stopping. 'Tot diep in de nacht' = until deep into the night."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb het hele rapport doorgelezt voordat ik reageerde.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Doorlezen' (separable, = to read through) builds on the strong verb 'lezen' (lees-las-gelezen), so the participle is 'doorgelezen', not 'doorgelezt'. The 'ge' slots in after 'door': door-ge-lezen. Correct: 'Ik heb het hele rapport doorgelezen.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zij heeft drie jaar in het buitenland doorgebracht.",
+            "correctUse": true,
+            "explanation": "Correct. 'Doorbrengen' (separable) = to spend (time). Participle 'doorgebracht' ('brengen' → 'gebracht', with 'door' in front: door-ge-bracht). You 'brengt tijd door' somewhere — the standard verb for spending time, holidays, years."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Na veel moeite heeft hij de hele opleiding doorlopen.",
+            "correctUse": true,
+            "explanation": "Correct, and a key contrast: 'doorlo\u0301pen' (inseparable, stress on 'lopen') = to go through / complete (a course, a process). Because it's inseparable, there's NO 'ge' in the participle: 'doorlopen'. Compare separable 'do\u0301orlopen' (to walk on): 'loop door!'. Same letters, different stress, different verb."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij heeft de zware operatie goed doorgestaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Doorsta\u0301an' (to come through / endure) is inseparable, so it takes no 'ge': the participle is 'doorstaan', not 'doorgestaan'. Correct: 'Hij heeft de zware operatie goed doorstaan.' Inseparable door-verbs (stress on the stem) never insert 'ge'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "We stoppen niet; we blijven verdergaan.",
+            "task": "Herschrijf met 'doorgaan'.",
+            "acceptedAnswers": [
+              "We stoppen niet; we gaan door.",
+              "We stoppen niet, we gaan gewoon door.",
+              "We gaan door."
+            ],
+            "preferred": "We stoppen niet; we gaan door.",
+            "explanation": "'Doorgaan' (separable) = to carry on. Main clause splits: 'we gaan door'. The 'door' lands at the end. Note the contrast with English 'continue', which stays in one piece."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij bleef de hele middag werken.",
+            "task": "Herschrijf met 'doorwerken' (imperfectum).",
+            "acceptedAnswers": [
+              "Hij werkte de hele middag door.",
+              "De hele middag werkte hij door.",
+              "Hij werkte de hele middag stug door."
+            ],
+            "preferred": "Hij werkte de hele middag door.",
+            "explanation": "'Doorwerken' (separable) splits in the imperfectum: 'werkte ... door'. The 'door' carries the 'kept on / without stopping' sense. 'Stug door' = doggedly on."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Kun je deze informatie aan je collega geven?",
+            "task": "Herschrijf met 'doorgeven'.",
+            "acceptedAnswers": [
+              "Kun je deze informatie aan je collega doorgeven?",
+              "Kun je deze informatie even aan je collega doorgeven?",
+              "Geef je deze informatie aan je collega door?"
+            ],
+            "preferred": "Kun je deze informatie aan je collega doorgeven?",
+            "explanation": "'Doorgeven' (separable) = to pass on. After the modal 'kun je', the verb stays whole at the end as an infinitive: 'doorgeven'. In a finite main clause it would split: 'geef je ... door?'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Vul in (perfectum): 'Wij ___ de zomer bij oma ___.' (doorbrengen)",
+            "task": "Schrijf de hele zin.",
+            "acceptedAnswers": [
+              "Wij hebben de zomer bij oma doorgebracht.",
+              "Wij hebben de hele zomer bij oma doorgebracht."
+            ],
+            "preferred": "Wij hebben de zomer bij oma doorgebracht.",
+            "explanation": "'Doorbrengen' (separable), perfectum 'hebben ... doorgebracht'. 'Brengen' is irregular (gebracht); with 'door' the 'ge' slots in: door-ge-bracht. The participle goes to the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Vul in (perfectum): 'Zij ___ de hele opleiding ___.' (doorlopen = afronden, onscheidbaar)",
+            "task": "Schrijf de hele zin.",
+            "acceptedAnswers": [
+              "Zij heeft de hele opleiding doorlopen.",
+              "Zij heeft de hele opleiding succesvol doorlopen."
+            ],
+            "preferred": "Zij heeft de hele opleiding doorlopen.",
+            "explanation": "Here 'doorlo\u0301pen' is inseparable (to complete a course), so NO 'ge' in the participle: 'doorlopen'. The perfectum is 'heeft ... doorlopen'. Contrast the separable 'do\u0301orlopen' (walk on), whose participle would be 'doorgelopen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Vertel het alsjeblieft niet aan anderen.",
+            "task": "Herschrijf met 'doorvertellen'.",
+            "acceptedAnswers": [
+              "Vertel het alsjeblieft niet door.",
+              "Vertel het alsjeblieft aan niemand door.",
+              "Vertel het niet door, alsjeblieft."
+            ],
+            "preferred": "Vertel het alsjeblieft niet door.",
+            "explanation": "'Doorvertellen' (separable) = to pass on / repeat (a message, a secret). The imperative splits: 'vertel ... door'. Participle would be 'doorverteld' (door-ge... no: 'vertellen' has the inseparable 've-' base, so 'doorverteld')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze gaf niet op en bleef volhouden tot het af was.",
+            "task": "Herschrijf met 'doorzetten' (imperfectum).",
+            "acceptedAnswers": [
+              "Ze zette door tot het af was.",
+              "Ze zette gewoon door tot het af was.",
+              "Ze gaf niet op en zette door tot het af was."
+            ],
+            "preferred": "Ze zette door tot het af was.",
+            "explanation": "'Doorzetten' (separable) = to persevere / push on. Imperfectum splits: 'zette ... door'. Participle 'doorgezet'. A close cousin of 'volhouden' and 'doorgaan'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Shall we carry on, or take a break?",
+            "modelAnswer": "Zullen we doorgaan, of even pauzeren?",
+            "alternatives": [
+              "Zullen we doorgaan, of nemen we even pauze?",
+              "Gaan we door, of even pauzeren?"
+            ],
+            "note": "'Doorgaan' (separable) = to carry on. After 'zullen we' it stays whole as an infinitive at the end: 'doorgaan'. 'Even' = for a moment / just. 'Pauzeren' or 'even pauze nemen' both work for taking a break."
+          },
+          {
+            "type": "translation",
+            "prompt": "Can you pass the message on to her?",
+            "modelAnswer": "Kun je de boodschap aan haar doorgeven?",
+            "alternatives": [
+              "Kun je de boodschap even aan haar doorgeven?",
+              "Kun je het bericht aan haar doorvertellen?"
+            ],
+            "note": "'Doorgeven' = to pass on (information, an object). 'Doorvertellen' = to pass on specifically by telling. Both separable; after 'kun je' they sit whole at the end as infinitives. 'Boodschap' / 'bericht' = message."
+          },
+          {
+            "type": "translation",
+            "prompt": "He worked on until midnight.",
+            "modelAnswer": "Hij werkte door tot middernacht.",
+            "alternatives": [
+              "Hij werkte tot middernacht door.",
+              "Hij is tot middernacht doorgegaan met werken."
+            ],
+            "note": "'Doorwerken' (separable), imperfectum 'werkte ... door'. The 'door' gives the 'kept going' sense. The alternative uses 'doorgaan met' (to continue with) + a noun: 'doorgaan met werken'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She completed the whole training programme.",
+            "modelAnswer": "Ze heeft de hele opleiding doorlopen.",
+            "alternatives": [
+              "Ze heeft de hele opleiding afgerond.",
+              "Ze heeft het hele traject doorlopen."
+            ],
+            "note": "Here 'doorlo\u0301pen' is inseparable (to go through / complete), so the participle keeps no 'ge': 'doorlopen'. 'Afronden' (to finish) → 'afgerond' is a clean everyday alternative. 'Traject' = track/route, common for a course of study or process."
+          },
+          {
+            "type": "translation",
+            "prompt": "We spent the weekend in Friesland.",
+            "modelAnswer": "We hebben het weekend in Friesland doorgebracht.",
+            "alternatives": [
+              "We brachten het weekend in Friesland door.",
+              "We hebben het hele weekend in Friesland doorgebracht."
+            ],
+            "note": "'Doorbrengen' (separable) = to spend (time). Perfectum 'hebben ... doorgebracht'; imperfectum splits: 'brachten ... door'. This is the standard verb for spending time, weekends, holidays or years somewhere."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If it doesn't rain, the festival will go ahead as planned.",
+            "modelAnswer": "Als het niet regent, gaat het festival gewoon door zoals gepland.",
+            "alternatives": [
+              "Als het niet regent, gaat het festival door zoals gepland.",
+              "Mocht het niet regenen, dan gaat het festival gewoon door."
+            ],
+            "note": "'Doorgaan' in the main clause splits: 'gaat ... door'. The 'als'-bijzin sends its verb to the end ('regent'); after it, the main clause inverts ('gaat het festival'). 'Gewoon' here = simply / just (it'll go ahead after all). 'Zoals gepland' = as planned."
+          },
+          {
+            "type": "translation",
+            "prompt": "He told me he had spent his whole childhood abroad.",
+            "modelAnswer": "Hij vertelde me dat hij zijn hele jeugd in het buitenland had doorgebracht.",
+            "alternatives": [
+              "Hij vertelde me dat hij zijn hele jeugd in het buitenland doorgebracht had.",
+              "Hij zei dat hij heel zijn jeugd in het buitenland had doorgebracht."
+            ],
+            "note": "Reported speech ('vertelde ... dat') with a plusquamperfectum: 'had doorgebracht' (the spending precedes the telling). In the bijzin the verb cluster goes to the end, in either order ('had doorgebracht' / 'doorgebracht had'). 'Jeugd' = childhood/youth."
+          },
+          {
+            "type": "translation",
+            "prompt": "Please pass the report on to the committee before Friday.",
+            "modelAnswer": "Geef het rapport alsjeblieft voor vrijdag door aan de commissie.",
+            "alternatives": [
+              "Geef het rapport alsjeblieft door aan de commissie voor vrijdag.",
+              "Stuur het rapport alsjeblieft voor vrijdag door naar de commissie."
+            ],
+            "note": "'Doorgeven' (separable) in the imperative splits: 'geef ... door'. The 'door' can sit before or after the place phrase. 'Doorsturen' (to forward) → 'stuur ... door' is the natural verb when it's by email. 'Voor vrijdag' = before Friday."
+          },
+          {
+            "type": "translation",
+            "prompt": "Although she was exhausted, she pushed on until the work was finished.",
+            "modelAnswer": "Hoewel ze uitgeput was, zette ze door totdat het werk af was.",
+            "alternatives": [
+              "Hoewel ze uitgeput was, ging ze door tot het werk af was.",
+              "Ook al was ze uitgeput, ze zette door tot het werk klaar was."
+            ],
+            "note": "'Doorzetten' / 'doorgaan' (both separable) for pushing on. 'Hoewel'-bijzin with the verb at the end ('was'); after it the main clause inverts: 'zette ze door'. 'Totdat' (until) opens a bijzin: 'totdat het werk af was'. 'Uitgeput' = exhausted."
+          },
+          {
+            "type": "translation",
+            "prompt": "Once you've read through the contract, it has to be signed.",
+            "modelAnswer": "Zodra je het contract hebt doorgelezen, moet het worden ondertekend.",
+            "alternatives": [
+              "Zodra je het contract hebt doorgelezen, moet het ondertekend worden.",
+              "Nadat je het contract hebt doorgelezen, dient het te worden ondertekend."
+            ],
+            "note": "Two strands at once. 'Doorlezen' (separable, read through) in a 'zodra'-bijzin: perfectum 'hebt doorgelezen', verb cluster at the end. Main clause is a modal passive: 'moet worden ondertekend' ('moeten' + 'worden' + participle). The formal alternative uses 'dient te worden'."
+          }
+        ]
+      }
+    }
+  ]
+}

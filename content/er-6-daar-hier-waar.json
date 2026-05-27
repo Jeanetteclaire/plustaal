@@ -1,0 +1,246 @@
+{
+  "zone": "er",
+  "zoneName": "Er",
+  "tiles": [
+    {
+      "id": "er-6-daar-hier-waar",
+      "theme": "Daar, hier en waar + voorzetsel",
+      "themeEnglish": "Pronominal adverbs: daar/hier/waar + preposition (daarmee, daarvoor, waarover) — the demonstrative and question cousins of 'er'",
+      "recognitionQuestion": "Is this 'daar'/'hier'/'waar' form correct?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Wat vind je van het voorstel? Daar ben ik het helemaal mee eens.",
+            "correctUse": true,
+            "explanation": "Correct. 'Het eens zijn met iets' becomes 'daar ... mee eens' — the 'met' turns into the pronominal adverb 'daar(mee)'. It can split ('daar ben ik het mee eens') or stay joined ('ik ben het daarmee eens'). 'Daar' = that (a thing), the demonstrative partner of 'er'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mooie fiets! Hoeveel heb je daarvoor betaald?",
+            "correctUse": true,
+            "explanation": "Correct. 'Betalen voor iets' → 'daarvoor betalen' (to pay for that). 'Daarvoor' = for that. Note it can also mean 'before that' in time — context tells you which; here, money, so 'for it'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Dat is mijn buurman. Daar heb ik gisteren nog mee gepraat.",
+            "correctUse": false,
+            "explanation": "Niet correct. Pronominal adverbs (daar/hier/waar + prep) are only for THINGS, never people. For a person you keep the preposition + a pronoun or 'wie': 'met hem heb ik gisteren nog gepraat' or 'met wie ik ... heb gepraat'. 'Daarmee' for a person is the classic trap."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het boek waarover we het hadden, ligt op tafel.",
+            "correctUse": true,
+            "explanation": "Correct. In a relative clause about a thing, 'over' + which becomes 'waarover': 'het boek waarover we het hadden' (the book we were talking about). It can also split: 'het boek waar we het over hadden'. 'Waar' is the question/relative cousin of 'er' and 'daar'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Eerst gingen we eten en daarna naar de bioscoop.",
+            "correctUse": true,
+            "explanation": "Correct. 'Daarna' = after that (in time). This is the temporal side of the daar-family: 'daarna' (afterwards), 'daarvoor' (before that), 'daarop' (thereupon). Handy for sequencing a story."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb veel over dat gelezen in de krant.",
+            "correctUse": false,
+            "explanation": "Niet correct. Dutch can't say 'over dat' (preposition + dat/het) for a thing — it must contract into a pronominal adverb: 'Daar heb ik veel over gelezen' or 'Ik heb er veel over gelezen'. The preposition and the 'that' fuse into 'daarover' / 'erover'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Waar denk je aan?",
+            "correctUse": true,
+            "explanation": "Correct. 'Denken aan iets' → in a question, 'aan' + what becomes 'waar ... aan': 'Waar denk je aan?' (What are you thinking about?). The joined form 'Waaraan denk je?' is also right but sounds more formal. Spoken Dutch nearly always splits."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ben het eens met dat voorstel.",
+            "task": "Vervang 'met dat voorstel' door een 'daar'-vorm.",
+            "acceptedAnswers": [
+              "Daar ben ik het mee eens.",
+              "Ik ben het daarmee eens.",
+              "Daarmee ben ik het eens."
+            ],
+            "preferred": "Daar ben ik het mee eens.",
+            "explanation": "'Met dat voorstel' (a thing) contracts to 'daar(mee)'. The split form 'daar ... mee' is the everyday choice; 'daarmee' joined is fine too. The 'met' always becomes 'mee' in these adverbs (never 'metdaar')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Wat ben je bang voor?",
+            "task": "Verbeter de zin met een 'waar'-vorm.",
+            "acceptedAnswers": [
+              "Waar ben je bang voor?",
+              "Waarvoor ben je bang?"
+            ],
+            "preferred": "Waar ben je bang voor?",
+            "explanation": "'Bang zijn voor iets' → the question word is 'waar ... voor', not 'wat ... voor'. 'Wat ben je bang voor?' is a common slip. Use 'waar(voor)' for things: 'Waar ben je bang voor?'. Reserve 'wat' for plain objects ('Wat zie je?')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb lang op de trein gewacht.",
+            "task": "Vervang 'op de trein' door een 'daar'-vorm.",
+            "acceptedAnswers": [
+              "Daar heb ik lang op gewacht.",
+              "Ik heb daar lang op gewacht.",
+              "Daarop heb ik lang gewacht."
+            ],
+            "preferred": "Daar heb ik lang op gewacht.",
+            "explanation": "'Wachten op iets' → 'daar ... op'. The split version pulls 'daar' to the front and leaves 'op' near the verb: 'daar ... op gewacht'. Joined 'daarop' is also correct but heavier."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben het over de vakantie gehad.",
+            "task": "Vervang 'over de vakantie' door een 'daar'-vorm.",
+            "acceptedAnswers": [
+              "Daar hebben we het over gehad.",
+              "We hebben het daarover gehad.",
+              "Daarover hebben we het gehad."
+            ],
+            "preferred": "Daar hebben we het over gehad.",
+            "explanation": "'Het hebben over iets' (to talk about something) → 'daar ... over'. 'Daar hebben we het over gehad' = we talked about that. The fixed phrase 'het ergens over hebben' is extremely common in speech."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het huis waar ik in woon, is oud.",
+            "task": "Schrijf de aangesloten vorm met 'waarin'.",
+            "acceptedAnswers": [
+              "Het huis waarin ik woon, is oud.",
+              "Het huis waarin ik woon is oud."
+            ],
+            "preferred": "Het huis waarin ik woon, is oud.",
+            "explanation": "The split relative 'waar ... in' joins up to 'waarin' (in which). Both are correct: 'het huis waar ik in woon' (spoken) and 'het huis waarin ik woon' (a touch more formal). 'In' becomes part of the adverb, not stranded after 'dat'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Om acht uur begon de film. Om zeven uur aten we.",
+            "task": "Verbind de tweede zin met 'daarvoor' (= eerder in de tijd).",
+            "acceptedAnswers": [
+              "Om acht uur begon de film. Daarvoor aten we.",
+              "Om acht uur begon de film; daarvoor aten we.",
+              "Om acht uur begon de film, en daarvoor aten we."
+            ],
+            "preferred": "Om acht uur begon de film. Daarvoor aten we.",
+            "explanation": "Here 'daarvoor' is temporal: before that. Starting a clause with it triggers inversion: 'Daarvoor aten we' (not 'Daarvoor we aten'). Same word as the 'for that' meaning — time vs purpose is read from context."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ben je tevreden over het resultaat?",
+            "task": "Antwoord bevestigend met een 'daar'-vorm (Ja, ...).",
+            "acceptedAnswers": [
+              "Ja, daar ben ik tevreden over.",
+              "Ja, daarover ben ik tevreden.",
+              "Ja, ik ben er tevreden over."
+            ],
+            "preferred": "Ja, daar ben ik tevreden over.",
+            "explanation": "'Tevreden zijn over iets' → 'daar ... over'. In the answer, 'daar' fronts and 'over' stays by the adjective: 'daar ben ik tevreden over'. The unstressed 'er ... over' (er-2 territory) is the neutral alternative when you're not emphasising."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I completely agree with that.",
+            "modelAnswer": "Daar ben ik het helemaal mee eens.",
+            "alternatives": [
+              "Ik ben het daar helemaal mee eens.",
+              "Daarmee ben ik het helemaal eens."
+            ],
+            "note": "'Agree with that' = 'het eens zijn met' → 'daar ... mee eens'. 'Met' always surfaces as 'mee' in the adverb. 'Helemaal' = completely. The split form is the natural spoken order."
+          },
+          {
+            "type": "translation",
+            "prompt": "What are you waiting for?",
+            "modelAnswer": "Waar wacht je op?",
+            "alternatives": [
+              "Waarop wacht je?",
+              "Waar zit je op te wachten?"
+            ],
+            "note": "'Wachten op' → question 'waar ... op'. 'Waar wacht je op?' is everyday; 'Waarop wacht je?' is the formal joined version. Not 'wat wacht je op' — things take 'waar(op)', not 'wat', once a preposition is involved."
+          },
+          {
+            "type": "translation",
+            "prompt": "That's the house I grew up in.",
+            "modelAnswer": "Dat is het huis waarin ik ben opgegroeid.",
+            "alternatives": [
+              "Dat is het huis waar ik in ben opgegroeid.",
+              "Dat is het huis waar ik ben opgegroeid."
+            ],
+            "note": "'The house I grew up in' → relative 'waarin' (joined) or 'waar ... in' (split). 'Opgroeien' (separable) → 'opgegroeid'. English strands the preposition at the end; Dutch folds it into 'waarin' or splits it as 'waar ... in'."
+          },
+          {
+            "type": "translation",
+            "prompt": "First we ate; after that we went for a walk.",
+            "modelAnswer": "Eerst aten we; daarna gingen we wandelen.",
+            "alternatives": [
+              "Eerst aten we, en daarna gingen we wandelen.",
+              "We aten eerst en daarna gingen we een stukje wandelen."
+            ],
+            "note": "Temporal 'daarna' = after that. Fronting it inverts the clause: 'daarna gingen we' (not 'daarna we gingen'). Same for 'eerst aten we'. Both 'eerst' and 'daarna' are time adverbs that trigger inversion — exactly the spot Dutch word order catches people out."
+          },
+          {
+            "type": "translation",
+            "prompt": "I paid a lot for it.",
+            "modelAnswer": "Ik heb er veel voor betaald.",
+            "alternatives": [
+              "Daar heb ik veel voor betaald.",
+              "Ik heb er een hoop voor betaald."
+            ],
+            "note": "'Pay for it' = 'betalen voor' → 'er ... voor' (neutral) or 'daar ... voor' (more emphatic, = for THAT). The unstressed 'er ... voor' is the default when 'it' isn't being stressed. The preposition 'voor' stays near the participle."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "The project she's working on is the one I told you about.",
+            "modelAnswer": "Het project waaraan ze werkt, is het project waarover ik je verteld heb.",
+            "alternatives": [
+              "Het project waar ze aan werkt, is het project waar ik je over verteld heb.",
+              "Het project waaraan ze werkt, is het project waarover ik je heb verteld."
+            ],
+            "note": "Two relative pronominal adverbs in one sentence. 'Werken aan' → 'waaraan' (or split 'waar ... aan'); 'vertellen over' → 'waarover' (or 'waar ... over'). Both refer to a thing (the project), so 'waar'-forms, not 'over wie'. Spoken Dutch would split both."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't know what he's afraid of, but he never talks about it.",
+            "modelAnswer": "Ik weet niet waar hij bang voor is, maar hij praat er nooit over.",
+            "alternatives": [
+              "Ik weet niet waarvoor hij bang is, maar hij praat er nooit over.",
+              "Ik weet niet waar hij bang voor is, maar hij heeft het er nooit over."
+            ],
+            "note": "An indirect question with 'waar ... voor' ('bang zijn voor'), verb to the end of the bijzin: 'waar hij bang voor is'. Then 'praten over' → 'er ... over' (unstressed 'it'): 'hij praat er nooit over'. 'Maar' coordinates, so no inversion after it."
+          },
+          {
+            "type": "translation",
+            "prompt": "We had dinner first, and after that we watched the film we'd talked about.",
+            "modelAnswer": "We aten eerst, en daarna keken we de film waarover we het hadden gehad.",
+            "alternatives": [
+              "Eerst aten we, en daarna keken we de film waar we het over hadden gehad.",
+              "We hebben eerst gegeten, en daarna keken we de film waarover we het gehad hadden."
+            ],
+            "note": "Temporal 'daarna' fronts and inverts: 'daarna keken we'. The relative 'waarover we het hadden gehad' (the film we'd talked about) uses 'het hebben over' in the plusquamperfectum, verb cluster at the end of the bijzin. Split 'waar ... over' works too."
+          },
+          {
+            "type": "translation",
+            "prompt": "What did you pay for it, if you don't mind me asking?",
+            "modelAnswer": "Wat heb je ervoor betaald, als ik vragen mag?",
+            "alternatives": [
+              "Hoeveel heb je ervoor betaald, als ik vragen mag?",
+              "Wat heb je er eigenlijk voor betaald, als ik zo vrij mag zijn?"
+            ],
+            "note": "Here the question word is plain 'wat'/'hoeveel' (the amount), while 'for it' is the pronominal adverb 'ervoor' (er + voor): 'wat heb je ervoor betaald'. The polite tag 'als ik vragen mag' is a fixed bijzin (verb 'mag' at the end). 'Hoeveel' is the more natural ask for a price."
+          },
+          {
+            "type": "translation",
+            "prompt": "That's something I've never thought about before.",
+            "modelAnswer": "Dat is iets waar ik nog nooit over heb nagedacht.",
+            "alternatives": [
+              "Dat is iets waarover ik nog nooit heb nagedacht.",
+              "Daar heb ik nog nooit over nagedacht."
+            ],
+            "note": "After 'iets' (something), the relative is 'waar ... over' / 'waarover' ('nadenken over' = to think about). 'Nadenken' (separable) → 'nagedacht'; the cluster 'heb nagedacht' closes the bijzin. The short alternative drops 'iets' and fronts 'daar': 'Daar heb ik nog nooit over nagedacht.'"
+          }
+        ]
+      }
+    }
+  ]
+}
