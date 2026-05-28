@@ -1,0 +1,241 @@
+{
+  "zone": "om-te",
+  "zoneName": "Om ... te",
+  "tiles": [
+    {
+      "id": "om-te-2-zonder-door-inplaatsvan",
+      "theme": "Zonder, door en in plaats van + te",
+      "themeEnglish": "The te + infinitive family beyond purpose — zonder ... te (without doing), door ... te (by doing), in plaats van ... te (instead of doing)",
+      "recognitionQuestion": "Is the te + infinitive construction correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Hij liep langs zonder me ook maar even aan te kijken.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zonder ... te' = without doing. The separable 'aankijken' splits around 'te': 'aan + te + kijken'. 'Zonder me aan te kijken' = without looking at me. Same machinery as 'om ... te', just a different opener."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je leert een taal door veel praten te met moedertaalsprekers.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Door ... te' = by doing, and 'te' must sit directly before its infinitive: 'door veel te praten met moedertaalsprekers'. 'Praten te' is back-to-front. Correct: 'Je leert een taal door veel te praten met moedertaalsprekers' = you learn a language by talking a lot."
+          },
+          {
+            "type": "recognition",
+            "prompt": "In plaats van de bus te nemen, besloot ze te gaan lopen.",
+            "correctUse": true,
+            "explanation": "Correct. 'In plaats van ... te' = instead of doing. 'In plaats van de bus te nemen' = instead of taking the bus. The object 'de bus' sits before 'te nemen'. Then the main clause: 'besloot ze te gaan lopen' (another te-construction — 'besluiten te'). Two te-clauses, neatly nested."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Door elke dag een halfuur te oefenen, ging haar Nederlands snel vooruit.",
+            "correctUse": true,
+            "explanation": "Correct. 'Door ... te' = by doing: 'Door elke dag een halfuur te oefenen' = by practising half an hour every day. The fronted 'door ... te'-clause counts as the first element, so the main clause inverts: 'ging haar Nederlands ...'. 'Vooruitgaan' = to improve."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze ging weg zonder iemand gedag te zeggen tegen.",
+            "correctUse": false,
+            "explanation": "Niet correct — the word order is scrambled. It should be 'zonder iemand gedag te zeggen': the infinitive 'zeggen' goes to the end with 'te' before it, and 'gedag' (the complement) precedes it. 'Tegen' doesn't belong here at all. Correct: 'Ze ging weg zonder iemand gedag te zeggen' = she left without saying goodbye to anyone."
+          },
+          {
+            "type": "recognition",
+            "prompt": "In plaats van te klagen zou je beter iets aan het probleem kunnen doen.",
+            "correctUse": true,
+            "explanation": "Correct. 'In plaats van te klagen' = instead of complaining — nothing between 'van' and the infinitive, so 'te' sits straight after: 'in plaats van te klagen'. The main clause then offers the alternative with 'zou ... kunnen'. 'Iets aan een probleem doen' = to do something about a problem."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij verbeterde zijn uitspraak door veel naar Nederlandse podcasts te luisteren.",
+            "correctUse": true,
+            "explanation": "Correct. 'Door ... te' = by doing: 'door veel naar Nederlandse podcasts te luisteren' = by listening to a lot of Dutch podcasts. 'Luisteren naar' (fixed preposition) folds in: the whole 'naar ... podcasts' phrase sits before 'te luisteren'. The infinitive closes the clause."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hij ging weg. Hij zei niets.",
+            "task": "Verbind met 'zonder ... te'.",
+            "acceptedAnswers": [
+              "Hij ging weg zonder iets te zeggen.",
+              "Hij ging weg zonder iets te zeggen."
+            ],
+            "preferred": "Hij ging weg zonder iets te zeggen.",
+            "explanation": "'Zonder ... te' = without doing. 'Zonder iets te zeggen' = without saying anything. Note the negative 'niets' in the source becomes positive 'iets' inside 'zonder' (since 'zonder' already carries the negation)."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je leert een taal. Je praat veel.",
+            "task": "Verbind met 'door ... te' (= dat is de methode).",
+            "acceptedAnswers": [
+              "Je leert een taal door veel te praten.",
+              "Je leert een taal door veel te praten."
+            ],
+            "preferred": "Je leert een taal door veel te praten.",
+            "explanation": "'Door ... te' = by doing (the means). 'Door veel te praten' = by talking a lot. The adverb 'veel' sits before 'te praten'; 'te' immediately precedes the infinitive. This is the answer to 'how do you do X?'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze nam niet de bus. Ze ging lopen.",
+            "task": "Verbind met 'in plaats van ... te'.",
+            "acceptedAnswers": [
+              "In plaats van de bus te nemen, ging ze lopen.",
+              "Ze ging lopen in plaats van de bus te nemen."
+            ],
+            "preferred": "In plaats van de bus te nemen, ging ze lopen.",
+            "explanation": "'In plaats van ... te' = instead of doing. Front it and the main clause inverts: 'ging ze lopen'. Put it second and there's no inversion: 'Ze ging lopen in plaats van de bus te nemen.' The object 'de bus' sits before 'te nemen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij liep langs. Hij keek me niet aan.",
+            "task": "Verbind met 'zonder ... te' (scheidbaar werkwoord!).",
+            "acceptedAnswers": [
+              "Hij liep langs zonder me aan te kijken.",
+              "Hij liep langs zonder me aan te kijken."
+            ],
+            "preferred": "Hij liep langs zonder me aan te kijken.",
+            "explanation": "Separable 'aankijken' splits around 'te': 'aan + te + kijken'. 'Zonder me aan te kijken' = without looking at me. The object 'me' precedes the split verb. This splitting is the move that trips people — the verb's prefix lands just before 'te'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze haalde haar diploma. Ze studeerde elke avond hard.",
+            "task": "Verbind met 'door ... te' (begin met de bijzin).",
+            "acceptedAnswers": [
+              "Door elke avond hard te studeren, haalde ze haar diploma.",
+              "Ze haalde haar diploma door elke avond hard te studeren."
+            ],
+            "preferred": "Door elke avond hard te studeren, haalde ze haar diploma.",
+            "explanation": "'Door ... te' = by doing. Fronted, it triggers main-clause inversion: 'haalde ze ...'. The time phrase 'elke avond' and the adverb 'hard' both sit before 'te studeren'. 'Een diploma halen' = to get a qualification."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je verspilt je tijd. Je kijkt de hele dag tv. (= beter iets anders doen)",
+            "task": "Verbind met 'in plaats van ... te'.",
+            "acceptedAnswers": [
+              "In plaats van de hele dag tv te kijken, zou je je tijd beter kunnen besteden.",
+              "Je verspilt je tijd door de hele dag tv te kijken."
+            ],
+            "preferred": "In plaats van de hele dag tv te kijken, zou je je tijd beter kunnen besteden.",
+            "explanation": "'In plaats van de hele dag tv te kijken' = instead of watching TV all day. The object 'tv' and time phrase 'de hele dag' sit before 'te kijken'. The accepted 'door ... te' alternative reframes it as cause: 'by watching TV all day, you waste your time'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze loste het op. Ze vroeg niemand om hulp.",
+            "task": "Verbind met 'zonder ... te'.",
+            "acceptedAnswers": [
+              "Ze loste het op zonder iemand om hulp te vragen.",
+              "Ze loste het op zonder iemand om hulp te vragen."
+            ],
+            "preferred": "Ze loste het op zonder iemand om hulp te vragen.",
+            "explanation": "'Zonder ... te' = without doing. 'Vragen om' (fixed preposition) folds in: 'zonder iemand om hulp te vragen' = without asking anyone for help. The infinitive 'vragen' closes the clause, 'te' before it; the object 'iemand' and the 'om hulp' phrase precede it. Negative 'niemand' → positive 'iemand' under 'zonder'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "He left without saying goodbye.",
+            "modelAnswer": "Hij ging weg zonder gedag te zeggen.",
+            "alternatives": [
+              "Hij vertrok zonder gedag te zeggen.",
+              "Hij ging weg zonder afscheid te nemen."
+            ],
+            "note": "'Zonder ... te' = without doing. 'Zonder gedag te zeggen' = without saying goodbye. 'Afscheid nemen' (to take one's leave) is the slightly more formal version: 'zonder afscheid te nemen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You learn by making mistakes.",
+            "modelAnswer": "Je leert door fouten te maken.",
+            "alternatives": [
+              "Je leert door fouten te maken.",
+              "Je leert door fouten te durven maken."
+            ],
+            "note": "'Door ... te' = by doing. 'Door fouten te maken' = by making mistakes. The object 'fouten' sits before 'te maken'. The variant 'te durven maken' (by daring to make) adds a modal-like verb — note 'te' still leads the cluster."
+          },
+          {
+            "type": "translation",
+            "prompt": "Instead of complaining, she did something about it.",
+            "modelAnswer": "In plaats van te klagen, deed ze er iets aan.",
+            "alternatives": [
+              "In plaats van te klagen, deed ze er iets aan.",
+              "Ze deed er iets aan in plaats van te klagen."
+            ],
+            "note": "'In plaats van te klagen' — nothing before the infinitive, so 'te' sits right after 'van'. Fronted, it inverts the main clause: 'deed ze'. 'Er iets aan doen' (to do something about it) uses the er + voorzetsel construction."
+          },
+          {
+            "type": "translation",
+            "prompt": "He improved his Dutch by reading the newspaper every day.",
+            "modelAnswer": "Hij verbeterde zijn Nederlands door elke dag de krant te lezen.",
+            "alternatives": [
+              "Hij verbeterde zijn Nederlands door elke dag de krant te lezen.",
+              "Hij ging vooruit in het Nederlands door elke dag de krant te lezen."
+            ],
+            "note": "'Door ... te' = by doing. 'Door elke dag de krant te lezen' = by reading the paper every day. Time phrase and object sit before 'te lezen'. 'Vooruitgaan in' = to make progress in."
+          },
+          {
+            "type": "translation",
+            "prompt": "She solved it without asking for help.",
+            "modelAnswer": "Ze loste het op zonder om hulp te vragen.",
+            "alternatives": [
+              "Ze loste het op zonder om hulp te vragen.",
+              "Ze loste het zelf op zonder hulp te vragen."
+            ],
+            "note": "'Zonder ... te' = without doing. 'Vragen om' folds in: 'zonder om hulp te vragen'. You can also drop the 'om' colloquially: 'zonder hulp te vragen'. The infinitive 'vragen' closes the clause."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "By getting up earlier, I managed to finish everything on time without rushing.",
+            "modelAnswer": "Door eerder op te staan, lukte het me om alles op tijd af te krijgen zonder me te haasten.",
+            "alternatives": [
+              "Door eerder op te staan, lukte het me alles op tijd af te krijgen zonder me te haasten.",
+              "Door vroeger op te staan, kon ik alles op tijd afkrijgen zonder me te haasten."
+            ],
+            "note": "Three te-constructions threaded together. 'Door eerder op te staan' (separable 'opstaan' split around 'te'), then 'om alles ... af te krijgen' (separable 'afkrijgen' split), then 'zonder me te haasten' (reflexive 'zich haasten'). Fronted 'door'-clause inverts the main clause: 'lukte het me'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Instead of taking the lift, he took the stairs to get a bit more exercise.",
+            "modelAnswer": "In plaats van de lift te nemen, nam hij de trap om wat meer te bewegen.",
+            "alternatives": [
+              "In plaats van de lift te nemen, nam hij de trap om wat meer te bewegen.",
+              "In plaats van met de lift te gaan, nam hij de trap om wat meer beweging te krijgen."
+            ],
+            "note": "An 'in plaats van ... te' clause (instead of) fronting the sentence and inverting the main clause ('nam hij'), followed by an 'om ... te' clause (purpose: to get more exercise). Two different te-headers in one sentence. 'Bewegen' = to move/exercise; 'beweging krijgen' = to get exercise."
+          },
+          {
+            "type": "translation",
+            "prompt": "She passed the exam by working hard, without ever asking anyone for help.",
+            "modelAnswer": "Ze slaagde voor het examen door hard te werken, zonder ooit iemand om hulp te vragen.",
+            "alternatives": [
+              "Ze haalde het examen door hard te werken, zonder ooit iemand om hulp te vragen.",
+              "Ze slaagde voor het examen door hard te werken, zonder ooit hulp te vragen."
+            ],
+            "note": "'Door hard te werken' (by working hard — the means) and 'zonder ooit iemand om hulp te vragen' (without ever asking anyone for help) side by side. 'Slagen voor' / 'halen' = to pass (an exam). 'Vragen om' folds into the 'zonder'-clause. Negative-under-'zonder': 'ooit ... iemand' rather than 'nooit ... niemand'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You won't improve by avoiding the difficult parts; you improve by tackling them.",
+            "modelAnswer": "Je gaat niet vooruit door de moeilijke stukken te vermijden; je gaat vooruit door ze aan te pakken.",
+            "alternatives": [
+              "Je gaat niet vooruit door de moeilijke delen te vermijden; je gaat vooruit door ze aan te pakken.",
+              "Je verbetert niet door de moeilijke stukken te ontwijken; je verbetert door ze aan te pakken."
+            ],
+            "note": "Two 'door ... te' clauses in contrast. 'Door ... te vermijden' (inseparable verb, no split) versus 'door ze aan te pakken' (separable 'aanpakken' split around 'te'). 'Aanpakken' = to tackle. The structure mirrors itself: not by avoiding, but by tackling."
+          },
+          {
+            "type": "translation",
+            "prompt": "He answered all the questions correctly without having studied at all.",
+            "modelAnswer": "Hij beantwoordde alle vragen goed zonder ook maar iets te hebben geleerd.",
+            "alternatives": [
+              "Hij beantwoordde alle vragen goed zonder ook maar iets geleerd te hebben.",
+              "Hij beantwoordde alle vragen goed zonder ook maar iets te hebben gestudeerd."
+            ],
+            "note": "'Zonder ... te' with a perfect infinitive: 'zonder ook maar iets te hebben geleerd' (without having learnt anything at all). The cluster 'te hebben geleerd' / 'geleerd te hebben' — both orders fine. 'Ook maar iets' = anything at all, an emphatic negative under 'zonder'. A genuinely advanced shape."
+          }
+        ]
+      }
+    }
+  ]
+}

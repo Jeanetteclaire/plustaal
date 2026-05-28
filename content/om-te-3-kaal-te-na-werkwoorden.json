@@ -1,0 +1,241 @@
+{
+  "zone": "om-te",
+  "zoneName": "Om ... te",
+  "tiles": [
+    {
+      "id": "om-te-3-kaal-te-na-werkwoorden",
+      "theme": "Kale 'te' na bepaalde werkwoorden",
+      "themeEnglish": "Bare 'te + infinitive' (no 'om') after verbs like proberen, beloven, vergeten, beginnen — and why modals take no 'te' at all",
+      "recognitionQuestion": "Is 'te' used correctly with this verb?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik probeer elke dag een uur Nederlands te studeren.",
+            "correctUse": true,
+            "explanation": "Correct. 'Proberen' selects a bare 'te + infinitive' — no 'om'. 'Ik probeer ... te studeren' = I try to study. These verbs (proberen, beloven, vergeten, hopen ...) take plain 'te', not the full 'om ... te'. The infinitive 'studeren' closes the clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij beloofde me morgen vroeg terug te bellen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Beloven' takes bare 'te'. The separable 'terugbellen' splits around it: 'terug + te + bellen'. 'Hij beloofde ... terug te bellen' = he promised to call back. Same te-splitting as in om...te, just without the 'om'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze vergat de deur op slot te doen voordat ze wegging.",
+            "correctUse": true,
+            "explanation": "Correct. 'Vergeten' takes bare 'te'. 'De deur op slot doen' (to lock the door) → 'de deur op slot te doen'. 'Te' sits before the infinitive 'doen', with the complement 'op slot' just before it. The 'voordat'-bijzin is verb-final ('wegging')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je moet echt wat vaker te ontspannen in het weekend.",
+            "correctUse": false,
+            "explanation": "Niet correct. Modals (moeten, kunnen, mogen, willen, zullen) take NO 'te' — just a bare infinitive: 'Je moet ... ontspannen', not 'te ontspannen'. The 'te' belongs with verbs like proberen/beloven, never with a modal. Correct: 'Je moet echt wat vaker ontspannen in het weekend.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het begon midden in de nacht hard te regenen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Beginnen' takes bare 'te': 'het begon ... te regenen' = it started to rain. 'Te' before the infinitive 'regenen'. (Note 'beginnen' uses 'zijn' in the perfect: 'het is beginnen te regenen' or 'het is gaan regenen'.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "De getuige weigerde nog langer antwoord te geven op de vragen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Weigeren' takes bare 'te'. 'Antwoord geven op' (to answer) → 'antwoord te geven op de vragen'. 'Te' before the infinitive 'geven'; the object 'antwoord' precedes it. 'Weigeren te ...' = to refuse to ..."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik hoop je volgende week weer te zien op de cursus.",
+            "correctUse": true,
+            "explanation": "Correct. 'Hopen' takes bare 'te': 'Ik hoop ... te zien' = I hope to see. 'Te' before the infinitive 'zien', with the object 'je' and time phrase before it. (Note: 'hopen op' + noun takes 'op', but 'hopen' + verb takes bare 'te' — different complements, different patterns.)"
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik studeer elke dag Nederlands. (proberen)",
+            "task": "Herschrijf met 'proberen ... te'.",
+            "acceptedAnswers": [
+              "Ik probeer elke dag Nederlands te studeren.",
+              "Ik probeer elke dag Nederlands te studeren."
+            ],
+            "preferred": "Ik probeer elke dag Nederlands te studeren.",
+            "explanation": "'Proberen' takes bare 'te + infinitive' — no 'om'. 'Ik probeer ... te studeren.' The infinitive goes to the end with 'te' before it; the object and time phrase sit in between."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik bel je morgen terug. (beloven)",
+            "task": "Herschrijf met 'beloven ... te' (scheidbaar werkwoord!).",
+            "acceptedAnswers": [
+              "Ik beloof je morgen terug te bellen.",
+              "Ik beloof je morgen terug te bellen."
+            ],
+            "preferred": "Ik beloof je morgen terug te bellen.",
+            "explanation": "'Beloven' takes bare 'te'. Separable 'terugbellen' splits around it: 'terug + te + bellen'. 'Ik beloof ... terug te bellen' = I promise to call back."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik doe de deur op slot. (vergeten — verleden tijd)",
+            "task": "Herschrijf met 'vergeten ... te' (imperfectum).",
+            "acceptedAnswers": [
+              "Ik vergat de deur op slot te doen.",
+              "Ik was vergeten de deur op slot te doen."
+            ],
+            "preferred": "Ik vergat de deur op slot te doen.",
+            "explanation": "'Vergeten' takes bare 'te'. 'De deur op slot te doen' = to lock the door. 'Te' before 'doen', complement 'op slot' before that. Imperfectum 'vergat'; the perfect 'was vergeten' (with 'zijn') also works."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ontspan dit weekend wat vaker. (moeten — let op: GEEN 'te'!)",
+            "task": "Herschrijf met 'moeten'.",
+            "acceptedAnswers": [
+              "Ik moet dit weekend wat vaker ontspannen.",
+              "Ik moet dit weekend wat vaker ontspannen."
+            ],
+            "preferred": "Ik moet dit weekend wat vaker ontspannen.",
+            "explanation": "Modals take NO 'te' — just the bare infinitive: 'Ik moet ... ontspannen.' This is the contrast at the heart of the tile: proberen/beloven/vergeten take 'te', but moeten/kunnen/mogen/willen/zullen never do."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het regent hard. (beginnen — verleden tijd)",
+            "task": "Herschrijf met 'beginnen ... te' (imperfectum).",
+            "acceptedAnswers": [
+              "Het begon hard te regenen.",
+              "Het begon hard te regenen."
+            ],
+            "preferred": "Het begon hard te regenen.",
+            "explanation": "'Beginnen' takes bare 'te': 'Het begon ... te regenen.' 'Te' before the infinitive 'regenen', the adverb 'hard' before that. The dummy subject 'het' for weather."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij geeft geen antwoord. (weigeren)",
+            "task": "Herschrijf met 'weigeren ... te'.",
+            "acceptedAnswers": [
+              "Hij weigert antwoord te geven.",
+              "Hij weigert antwoord te geven."
+            ],
+            "preferred": "Hij weigert antwoord te geven.",
+            "explanation": "'Weigeren' takes bare 'te': 'Hij weigert ... te geven.' The object 'antwoord' before 'te geven'. 'Weigeren te ...' = to refuse to ... A clean bare-te verb."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik los het zelf op. (besluiten — verleden tijd)",
+            "task": "Herschrijf met 'besluiten ... te' (imperfectum).",
+            "acceptedAnswers": [
+              "Ik besloot het zelf op te lossen.",
+              "Ik besloot het zelf op te lossen."
+            ],
+            "preferred": "Ik besloot het zelf op te lossen.",
+            "explanation": "'Besluiten' takes bare 'te'. Separable 'oplossen' splits around it: 'op + te + lossen'. 'Ik besloot het zelf op te lossen' = I decided to solve it myself. 'Besluiten te ...' = to decide to ..."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'm trying to learn Dutch.",
+            "modelAnswer": "Ik probeer Nederlands te leren.",
+            "alternatives": [
+              "Ik probeer Nederlands te leren.",
+              "Ik probeer Nederlands te leren spreken."
+            ],
+            "note": "'Proberen' takes bare 'te' — no 'om'. 'Ik probeer ... te leren.' The variant 'te leren spreken' (to learn to speak) stacks two infinitives, with 'te' before the first."
+          },
+          {
+            "type": "translation",
+            "prompt": "She promised to help me.",
+            "modelAnswer": "Ze beloofde me te helpen.",
+            "alternatives": [
+              "Ze beloofde me te helpen.",
+              "Ze heeft beloofd me te helpen."
+            ],
+            "note": "'Beloven' takes bare 'te': 'Ze beloofde ... te helpen.' The object 'me' before 'te helpen'. Perfect: 'heeft beloofd ... te helpen' — the participle 'beloofd', then the te-clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't forget to call your mother.",
+            "modelAnswer": "Vergeet niet je moeder te bellen.",
+            "alternatives": [
+              "Vergeet niet je moeder te bellen.",
+              "Vergeet niet om je moeder te bellen."
+            ],
+            "note": "'Vergeten' takes bare 'te'. The imperative 'Vergeet niet ... te bellen.' Note: with 'vergeten' both bare 'te' and 'om ... te' are accepted — 'vergeet niet om ... te bellen' is equally fine. A verb that tolerates either."
+          },
+          {
+            "type": "translation",
+            "prompt": "It started to snow.",
+            "modelAnswer": "Het begon te sneeuwen.",
+            "alternatives": [
+              "Het begon te sneeuwen.",
+              "Het is beginnen te sneeuwen."
+            ],
+            "note": "'Beginnen' takes bare 'te': 'Het begon te sneeuwen.' In the perfect, 'beginnen' takes 'zijn' and itself becomes an infinitive: 'het is beginnen te sneeuwen' (or the everyday 'het is gaan sneeuwen')."
+          },
+          {
+            "type": "translation",
+            "prompt": "You have to relax more.",
+            "modelAnswer": "Je moet meer ontspannen.",
+            "alternatives": [
+              "Je moet meer ontspannen.",
+              "Je moet meer rust nemen."
+            ],
+            "note": "'Moeten' is a modal → NO 'te', just the bare infinitive: 'Je moet ... ontspannen.' This is the key contrast with the bare-te verbs above. 'Rust nemen' = to take a rest."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "He promised to call back, but he forgot to write down my number.",
+            "modelAnswer": "Hij beloofde terug te bellen, maar hij vergat mijn nummer op te schrijven.",
+            "alternatives": [
+              "Hij beloofde terug te bellen, maar hij vergat mijn nummer op te schrijven.",
+              "Hij heeft beloofd terug te bellen, maar hij is vergeten mijn nummer op te schrijven."
+            ],
+            "note": "Two bare-te verbs, two separable infinitives split around 'te': 'beloven' + 'terug te bellen' and 'vergeten' + 'op te schrijven'. 'Maar' coordinates, so no inversion. Both 'terugbellen' and 'opschrijven' break cleanly: prefix + te + verb."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm trying to learn to cook, but I keep forgetting to buy the ingredients.",
+            "modelAnswer": "Ik probeer te leren koken, maar ik vergeet steeds de ingrediënten te kopen.",
+            "alternatives": [
+              "Ik probeer te leren koken, maar ik vergeet steeds de ingrediënten te kopen.",
+              "Ik probeer te leren koken, maar ik vergeet telkens de ingrediënten te kopen."
+            ],
+            "note": "'Proberen te leren koken' stacks 'te' before 'leren', then a bare infinitive 'koken' after it ('leren' takes a bare infinitive, not another 'te'). Then 'vergeten ... te kopen' (bare te). 'Steeds / telkens' = keep (doing). Note where 'te' appears and where it doesn't."
+          },
+          {
+            "type": "translation",
+            "prompt": "She decided to take the train instead of driving, to avoid the traffic.",
+            "modelAnswer": "Ze besloot de trein te nemen in plaats van te rijden, om de file te vermijden.",
+            "alternatives": [
+              "Ze besloot de trein te nemen in plaats van met de auto te gaan, om de file te vermijden.",
+              "Ze besloot de trein te nemen in plaats van te rijden, om het verkeer te vermijden."
+            ],
+            "note": "Three te-clauses, three headers: 'besluiten' + bare 'te nemen', then 'in plaats van ... te rijden' (instead of), then 'om ... te vermijden' (purpose). 'File' = traffic jam, a daily Dutch word. Each 'te' sits directly before its infinitive."
+          },
+          {
+            "type": "translation",
+            "prompt": "He refused to apologise, even though he'd promised to make things right.",
+            "modelAnswer": "Hij weigerde zijn excuses aan te bieden, hoewel hij had beloofd het goed te maken.",
+            "alternatives": [
+              "Hij weigerde sorry te zeggen, hoewel hij had beloofd het goed te maken.",
+              "Hij weigerde zijn excuses aan te bieden, terwijl hij had beloofd het goed te maken."
+            ],
+            "note": "'Weigeren' + 'aan te bieden' (separable 'aanbieden' split around 'te'), then a 'hoewel'-bijzin with 'beloven' + 'goed te maken'. 'Het goedmaken' = to make things right. The bijzin's plusquamperfectum 'had beloofd' precedes the te-clause hanging off it."
+          },
+          {
+            "type": "translation",
+            "prompt": "I hope to be able to come, but I can't promise anything yet.",
+            "modelAnswer": "Ik hoop te kunnen komen, maar ik kan nog niets beloven.",
+            "alternatives": [
+              "Ik hoop te kunnen komen, maar ik kan nog niets beloven.",
+              "Ik hoop erbij te kunnen zijn, maar ik kan nog niets beloven."
+            ],
+            "note": "The contrast in one sentence: 'hopen' takes bare 'te' even before a modal ('te kunnen komen' — 'te' leads the cluster), but the modal 'kan' in the second half takes NO 'te' ('ik kan ... beloven'). 'Erbij kunnen zijn' = to be able to be there."
+          }
+        ]
+      }
+    }
+  ]
+}
