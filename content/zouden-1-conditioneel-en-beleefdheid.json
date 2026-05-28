@@ -1,0 +1,241 @@
+{
+  "zone": "zouden",
+  "zoneName": "Zouden + conditional",
+  "tiles": [
+    {
+      "id": "zouden-1-conditioneel-en-beleefdheid",
+      "theme": "Conditioneel en beleefdheid",
+      "themeEnglish": "Zou/zouden for politeness (Ik zou graag ...) and the conditional (Als ik rijk was, zou ik ...)",
+      "recognitionQuestion": "Is 'zou'/'zouden' used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik zou graag een kopje koffie willen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zou ... willen' = would like, the standard polite way to state a wish. 'Ik zou graag ... willen' = I'd like .... 'Graag' (gladly) is the politeness word; the infinitive 'willen' closes the clause. Far softer than the blunt 'ik wil'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik rijk was, ik zou een huis in Frankrijk kopen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The fronted 'als'-clause is the first element, so the main clause must invert: '..., zou ik een huis kopen', not '..., ik zou'. Correct: 'Als ik rijk was, zou ik een huis in Frankrijk kopen.' The 'als'-bijzin always triggers inversion in the clause that follows."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zou je het raam misschien open kunnen doen?",
+            "correctUse": true,
+            "explanation": "Correct. 'Zou je ... kunnen' = could you, the polite request form. 'Misschien' (perhaps) softens it further. The cluster 'open kunnen doen' sits at the end ('opendoen' splits around 'kunnen'). A very common polite-request shape."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Wat zou jij in mijn plaats doen?",
+            "correctUse": true,
+            "explanation": "Correct. 'Zou' in a question about a hypothetical: 'Wat zou jij ... doen?' = what would you do? Question word 'Wat' first, then 'zou jij' (inversion), infinitive 'doen' at the end. 'In mijn plaats' = in my place / if you were me."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik meer tijd had, zou ik je graag wilde helpen.",
+            "correctUse": false,
+            "explanation": "Niet correct. After 'zou' you need the INFINITIVE 'willen', not the past 'wilde': '..., zou ik je graag willen helpen.' 'Zou' is always followed by an infinitive (or infinitive cluster), never a finite past form. Correct: 'Als ik meer tijd had, zou ik je graag willen helpen.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "We zouden volgend jaar graag naar Japan willen reizen.",
+            "correctUse": true,
+            "explanation": "Correct. Plural 'zouden' + the polite-wish cluster 'willen reizen' at the end. 'We zouden graag ... willen reizen' = we'd love to travel .... 'Graag' marks the wish; 'zouden' agrees with 'we'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als het morgen mooi weer is, zouden we kunnen gaan fietsen.",
+            "correctUse": true,
+            "explanation": "Correct. A conditional with a real (open) condition: 'Als het mooi weer is, zouden we kunnen gaan fietsen' = if the weather's nice, we could go cycling. The 'als'-bijzin is verb-final ('is'); the main clause inverts with the cluster 'kunnen gaan fietsen' at the end."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik wil graag een afspraak maken.",
+            "task": "Maak het beleefder met 'zou ... willen'.",
+            "acceptedAnswers": [
+              "Ik zou graag een afspraak willen maken.",
+              "Ik zou graag een afspraak willen maken."
+            ],
+            "preferred": "Ik zou graag een afspraak willen maken.",
+            "explanation": "'Zou ... willen' softens 'ik wil' to 'I would like'. The cluster 'willen maken' at the end. 'Ik zou graag een afspraak willen maken' is the standard polite phrasing for booking something."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Kun je me even helpen?",
+            "task": "Maak het beleefder met 'zou ... kunnen'.",
+            "acceptedAnswers": [
+              "Zou je me even kunnen helpen?",
+              "Zou je me even kunnen helpen?"
+            ],
+            "preferred": "Zou je me even kunnen helpen?",
+            "explanation": "'Zou je ... kunnen' = could you, more polite than 'kun je'. The cluster 'kunnen helpen' at the end. 'Even' (just) softens it further."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben rijk. Ik koop een groot huis. (onwerkelijk)",
+            "task": "Maak een conditionele zin met 'als' en 'zou'.",
+            "acceptedAnswers": [
+              "Als ik rijk was, zou ik een groot huis kopen.",
+              "Als ik rijk was, zou ik een groot huis kopen."
+            ],
+            "preferred": "Als ik rijk was, zou ik een groot huis kopen.",
+            "explanation": "Unreal condition: 'als' + imperfectum ('was'), main clause with 'zou' + infinitive. The fronted 'als'-clause inverts the main clause: 'zou ik ... kopen'. This is the 'if I were ... I would ...' pattern."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Wat doe jij in mijn situatie?",
+            "task": "Maak er een hypothetische vraag van met 'zou'.",
+            "acceptedAnswers": [
+              "Wat zou jij in mijn situatie doen?",
+              "Wat zou jij in mijn situatie doen?"
+            ],
+            "preferred": "Wat zou jij in mijn situatie doen?",
+            "explanation": "'Zou' makes the question hypothetical: 'Wat zou jij ... doen?' = what would you do? Question word first, 'zou jij' inverted, infinitive 'doen' at the end. The everyday way to ask for advice."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Als ik tijd heb, ik kom langs.",
+            "task": "Verbeter de woordvolgorde en maak het conditioneel met 'zou'.",
+            "acceptedAnswers": [
+              "Als ik tijd had, zou ik langskomen.",
+              "Als ik tijd zou hebben, zou ik langskomen."
+            ],
+            "preferred": "Als ik tijd had, zou ik langskomen.",
+            "explanation": "Two fixes: the main clause must invert after the fronted 'als'-clause ('zou ik', not 'ik zou'), and for the conditional you shift to 'als' + imperfectum ('had') with 'zou' + infinitive in the main clause. 'Langskomen' stays whole as the infinitive after 'zou'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We reizen volgend jaar graag naar Canada.",
+            "task": "Maak het een beleefde wens met 'zouden ... willen'.",
+            "acceptedAnswers": [
+              "We zouden volgend jaar graag naar Canada willen reizen.",
+              "We zouden volgend jaar graag naar Canada willen reizen."
+            ],
+            "preferred": "We zouden volgend jaar graag naar Canada willen reizen.",
+            "explanation": "Plural 'zouden' + 'graag ... willen reizen' for a polite wish. The cluster 'willen reizen' at the end. 'We zouden graag ... willen reizen' = we'd love to travel ..."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het is mooi weer. We gaan fietsen. (mogelijkheid)",
+            "task": "Maak een conditionele zin met 'als' en 'zouden ... kunnen'.",
+            "acceptedAnswers": [
+              "Als het mooi weer is, zouden we kunnen gaan fietsen.",
+              "Als het mooi weer is, zouden we kunnen gaan fietsen."
+            ],
+            "preferred": "Als het mooi weer is, zouden we kunnen gaan fietsen.",
+            "explanation": "Open condition: 'als' + present ('is'), main clause 'zouden ... kunnen' for possibility. Fronted 'als'-clause inverts the main clause: 'zouden we'. The cluster 'kunnen gaan fietsen' closes it."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'd like a cup of tea.",
+            "modelAnswer": "Ik zou graag een kopje thee willen.",
+            "alternatives": [
+              "Ik zou graag een kopje thee willen.",
+              "Ik wil graag een kopje thee."
+            ],
+            "note": "'Zou ... willen' = would like, the polite register. 'Graag' is the key word. The blunter 'ik wil graag' is fine in casual settings, but 'ik zou graag ... willen' is the courteous default."
+          },
+          {
+            "type": "translation",
+            "prompt": "Could you help me, please?",
+            "modelAnswer": "Zou je me kunnen helpen, alsjeblieft?",
+            "alternatives": [
+              "Zou je me kunnen helpen, alsjeblieft?",
+              "Zou u me kunnen helpen, alstublieft?"
+            ],
+            "note": "'Zou je ... kunnen' = could you. The formal version uses 'u' + 'alstublieft': 'Zou u me kunnen helpen, alstublieft?'. The cluster 'kunnen helpen' at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I were you, I wouldn't do it.",
+            "modelAnswer": "Als ik jou was, zou ik het niet doen.",
+            "alternatives": [
+              "Als ik jou was, zou ik het niet doen.",
+              "Was ik jou, dan zou ik het niet doen."
+            ],
+            "note": "Unreal condition: 'als ik jou was' (if I were you) + 'zou ik ... doen'. The fronted 'als'-clause inverts the main clause. The 'zonder als' version 'Was ik jou, dan ...' (from the inversie topic) is the more literary twin."
+          },
+          {
+            "type": "translation",
+            "prompt": "What would you do in my place?",
+            "modelAnswer": "Wat zou jij in mijn plaats doen?",
+            "alternatives": [
+              "Wat zou jij in mijn plaats doen?",
+              "Wat zou jij in mijn situatie doen?"
+            ],
+            "note": "Hypothetical question with 'zou': 'Wat zou jij ... doen?'. Question word first, 'zou jij' inverted, infinitive 'doen' at the end. 'In mijn plaats / situatie' = in my place / situation."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I had more money, I'd travel the world.",
+            "modelAnswer": "Als ik meer geld had, zou ik de wereld rondreizen.",
+            "alternatives": [
+              "Als ik meer geld had, zou ik de hele wereld over reizen.",
+              "Als ik meer geld had, zou ik de wereld rondreizen."
+            ],
+            "note": "Unreal condition: 'als' + imperfectum ('had'), 'zou' + infinitive. Fronted 'als'-clause inverts the main clause: 'zou ik'. 'Rondreizen' (to travel around) or 'de wereld over reizen' both render 'travel the world'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If I had known you were coming, I would have baked a cake.",
+            "modelAnswer": "Als ik had geweten dat je zou komen, zou ik een taart hebben gebakken.",
+            "alternatives": [
+              "Had ik geweten dat je zou komen, dan had ik een taart gebakken.",
+              "Als ik had geweten dat je kwam, had ik een taart gebakken."
+            ],
+            "note": "Past unreal condition. The 'als'-clause uses the plusquamperfectum ('had geweten') with a 'dat'-clause inside ('dat je zou komen'). The main clause is the conditional perfect: 'zou ik ... hebben gebakken' or the tighter 'had ik ... gebakken'. The 'zonder als' version ('Had ik geweten ...') is the elegant alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd really like to thank you for everything you've done for us.",
+            "modelAnswer": "Ik zou je heel graag willen bedanken voor alles wat je voor ons hebt gedaan.",
+            "alternatives": [
+              "Ik zou je heel graag willen bedanken voor alles wat je voor ons gedaan hebt.",
+              "Ik wil je heel graag bedanken voor alles wat je voor ons hebt gedaan."
+            ],
+            "note": "Polite 'zou ... willen bedanken' (would like to thank), with 'bedanken voor' (fixed preposition) and a relative clause 'alles wat je ... hebt gedaan' (note 'wat' after 'alles', verb-cluster at the end). The whole thing is warm and formal — exactly the register 'zou ... willen' is built for."
+          },
+          {
+            "type": "translation",
+            "prompt": "Would it be possible to move the meeting to Thursday?",
+            "modelAnswer": "Zou het mogelijk zijn om de vergadering naar donderdag te verzetten?",
+            "alternatives": [
+              "Zou het mogelijk zijn om de vergadering naar donderdag te verplaatsen?",
+              "Zou de vergadering naar donderdag verzet kunnen worden?"
+            ],
+            "note": "Polite enquiry 'Zou het mogelijk zijn om ... te ...?' — 'zou' + the 'om ... te' construction (a callback to the previous topic). 'Verzetten' / 'verplaatsen' = to move/reschedule. The alternative uses 'zou ... kunnen worden' (could be moved — modal passive)."
+          },
+          {
+            "type": "translation",
+            "prompt": "If the weather were better, we could go for a walk, but it looks like rain.",
+            "modelAnswer": "Als het weer beter was, zouden we kunnen gaan wandelen, maar het ziet ernaar uit dat het gaat regenen.",
+            "alternatives": [
+              "Als het weer beter was, zouden we een wandeling kunnen maken, maar het ziet ernaar uit dat het gaat regenen.",
+              "Als het weer beter zou zijn, zouden we kunnen gaan wandelen, maar het lijkt te gaan regenen."
+            ],
+            "note": "Unreal condition 'als ... was' + 'zouden ... kunnen gaan wandelen'. Then 'het ziet ernaar uit dat ...' (it looks like — 'eruit zien' + 'ernaar' er-form) with a 'dat'-clause. 'Het lijkt te gaan regenen' (it seems about to rain) is the neater alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "You'd think he would have called by now, wouldn't you?",
+            "modelAnswer": "Je zou denken dat hij inmiddels wel gebeld zou hebben, of niet?",
+            "alternatives": [
+              "Je zou toch denken dat hij inmiddels wel gebeld zou hebben?",
+              "Je zou verwachten dat hij inmiddels wel gebeld zou hebben, toch?"
+            ],
+            "note": "Two layers of 'zou': 'Je zou denken' (you'd think) framing a 'dat'-clause with a conditional perfect 'zou hebben gebeld' (would have called). 'Inmiddels' = by now; 'wel' adds the expectation. The tag 'of niet?' / 'toch?' = wouldn't you / right?. A genuinely idiomatic, layered B2 sentence."
+          }
+        ]
+      }
+    }
+  ]
+}

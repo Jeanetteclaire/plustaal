@@ -1,0 +1,241 @@
+{
+  "zone": "om-te",
+  "zoneName": "Om ... te",
+  "tiles": [
+    {
+      "id": "om-te-4-foutjesgids-om-te",
+      "theme": "Foutjesgids om ... te",
+      "themeEnglish": "Mixed review of the whole te + infinitive topic — om vs bare te vs no te, the splitting rule, and the modal trap",
+      "recognitionQuestion": "Is the te-construction correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Hij ging naar de keuken voor een glas water te halen.",
+            "correctUse": false,
+            "explanation": "Niet correct. Purpose uses 'om ... te', not 'voor ... te': 'om een glas water te halen' = to fetch a glass of water. 'Voor' + te is a common interference error (from English 'for' or other languages). Correct: 'Hij ging naar de keuken om een glas water te halen.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze beloofde me te helpen met de verhuizing.",
+            "correctUse": true,
+            "explanation": "Correct. 'Beloven' takes a bare 'te' — no 'om'. 'Ze beloofde ... te helpen' = she promised to help. The infinitive 'helpen' closes the clause with 'te' before it. (Helpen-met + noun: 'met de verhuizing'.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik probeer om elke dag wat Nederlands te oefenen.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Proberen' takes a BARE 'te' — no 'om': 'Ik probeer elke dag wat Nederlands te oefenen.' Adding 'om' after proberen/beloven/hopen/vergeten is a frequent over-correction. Save 'om ... te' for purpose ('in order to')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je moet wat vaker te ontspannen in het weekend.",
+            "correctUse": false,
+            "explanation": "Niet correct. Modals (moeten, kunnen, mogen, willen, zullen) take NO 'te': 'Je moet wat vaker ontspannen.' The 'te' belongs with verbs like proberen and beloven, never with a modal. This modal-plus-te slip is one of the most common errors of all."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze stopte even om uit te rusten op een bankje.",
+            "correctUse": true,
+            "explanation": "Correct. Purpose 'om ... te', and the separable 'uitrusten' split cleanly around 'te': 'uit + te + rusten'. 'Om uit te rusten' = (in order) to rest. Both the 'om ... te' choice and the splitting are right."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij kwam langs om afspreken te iets voor het weekend.",
+            "correctUse": false,
+            "explanation": "Niet correct. The separable 'afspreken' must split around 'te', and 'te' must sit before its infinitive: 'om iets voor het weekend af te spreken'. 'Afspreken te' is back-to-front and unsplit. Correct: 'Hij kwam langs om iets voor het weekend af te spreken.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Door elke dag te oefenen, ging haar uitspraak snel vooruit.",
+            "correctUse": true,
+            "explanation": "Correct. 'Door ... te' = by doing. 'Door elke dag te oefenen' = by practising every day. The fronted 'door'-clause triggers main-clause inversion: 'ging haar uitspraak ...'. 'Vooruitgaan' = to improve. Everything in place."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hij ging naar de winkel voor brood te kopen.",
+            "task": "Verbeter de constructie.",
+            "acceptedAnswers": [
+              "Hij ging naar de winkel om brood te kopen.",
+              "Hij ging naar de winkel om brood te kopen."
+            ],
+            "preferred": "Hij ging naar de winkel om brood te kopen.",
+            "explanation": "Purpose needs 'om ... te', not 'voor ... te': 'om brood te kopen'. The 'voor'-version is interference from other languages. Dutch marks purpose with 'om'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik probeer om gezonder te eten.",
+            "task": "Verbeter de constructie.",
+            "acceptedAnswers": [
+              "Ik probeer gezonder te eten.",
+              "Ik probeer gezonder te eten."
+            ],
+            "preferred": "Ik probeer gezonder te eten.",
+            "explanation": "'Proberen' takes a bare 'te' — drop the 'om': 'Ik probeer gezonder te eten.' Only purpose-clauses ('in order to') take 'om'; verbs like proberen/beloven/hopen take plain 'te'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kan morgen te komen.",
+            "task": "Verbeter de constructie (modaal werkwoord!).",
+            "acceptedAnswers": [
+              "Ik kan morgen komen.",
+              "Ik kan morgen komen."
+            ],
+            "preferred": "Ik kan morgen komen.",
+            "explanation": "Modals take NO 'te': 'Ik kan morgen komen.' 'Kunnen, moeten, mogen, willen, zullen' are always followed by a bare infinitive. The 'te' here is simply wrong."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze ging weg. Ze zei niets tegen niemand.",
+            "task": "Verbind met 'zonder ... te'.",
+            "acceptedAnswers": [
+              "Ze ging weg zonder iets tegen iemand te zeggen.",
+              "Ze ging weg zonder iemand iets te zeggen."
+            ],
+            "preferred": "Ze ging weg zonder iets tegen iemand te zeggen.",
+            "explanation": "'Zonder ... te' = without doing. The double negative 'niets tegen niemand' becomes positive 'iets tegen iemand' under 'zonder' (which already negates). 'Te zeggen' at the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik bel je morgen terug. (beloven)",
+            "task": "Herschrijf met 'beloven ... te' (scheidbaar werkwoord!).",
+            "acceptedAnswers": [
+              "Ik beloof je morgen terug te bellen.",
+              "Ik beloof je morgen terug te bellen."
+            ],
+            "preferred": "Ik beloof je morgen terug te bellen.",
+            "explanation": "'Beloven' takes bare 'te'; the separable 'terugbellen' splits around it: 'terug + te + bellen'. No 'om' with 'beloven'. 'Ik beloof ... terug te bellen.'"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij ging vroeg naar bed. Hij wilde de volgende dag uitslapen kunnen.",
+            "task": "Verbind het doel met 'om ... te' (modaal in de cluster!).",
+            "acceptedAnswers": [
+              "Hij ging vroeg naar bed om de volgende dag te kunnen uitslapen.",
+              "Hij ging vroeg naar bed om de volgende dag uit te kunnen slapen."
+            ],
+            "preferred": "Hij ging vroeg naar bed om de volgende dag te kunnen uitslapen.",
+            "explanation": "Purpose 'om ... te' with a modal: 'te' goes before 'kunnen' → 'om ... te kunnen uitslapen'. Or split the separable verb: 'uit te kunnen slapen'. Both fine; what you can't do is strand 'te' between the modal and the main verb."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je verbetert je Nederlands. Je leest veel. (= dat is de methode)",
+            "task": "Verbind met 'door ... te'.",
+            "acceptedAnswers": [
+              "Je verbetert je Nederlands door veel te lezen.",
+              "Je verbetert je Nederlands door veel te lezen."
+            ],
+            "preferred": "Je verbetert je Nederlands door veel te lezen.",
+            "explanation": "'Door ... te' = by doing (the means). 'Door veel te lezen' = by reading a lot. The adverb 'veel' before 'te lezen'; 'te' immediately precedes the infinitive."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'm going to the shop to buy bread.",
+            "modelAnswer": "Ik ga naar de winkel om brood te kopen.",
+            "alternatives": [
+              "Ik ga naar de winkel om brood te halen.",
+              "Ik ga even naar de winkel om brood te kopen."
+            ],
+            "note": "Purpose → 'om ... te', not 'voor ... te'. 'Halen' (to fetch) is the idiomatic verb for popping out. The infinitive closes the clause with 'te' before it."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm trying to eat more healthily.",
+            "modelAnswer": "Ik probeer gezonder te eten.",
+            "alternatives": [
+              "Ik probeer gezonder te eten.",
+              "Ik probeer me gezonder te voeden."
+            ],
+            "note": "'Proberen' → bare 'te', no 'om'. 'Ik probeer ... te eten.' 'Zich voeden' (to feed oneself / eat) is the more formal variant, reflexive: 'me ... te voeden'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You have to rest more.",
+            "modelAnswer": "Je moet meer rusten.",
+            "alternatives": [
+              "Je moet meer rusten.",
+              "Je moet meer uitrusten."
+            ],
+            "note": "Modal 'moeten' → NO 'te', bare infinitive: 'Je moet ... rusten.' The contrast with bare-te verbs: a modal never takes 'te'. 'Uitrusten' (separable) stays whole after a modal in a main clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "He left without saying anything.",
+            "modelAnswer": "Hij ging weg zonder iets te zeggen.",
+            "alternatives": [
+              "Hij vertrok zonder iets te zeggen.",
+              "Hij ging weg zonder een woord te zeggen."
+            ],
+            "note": "'Zonder ... te' = without doing. English 'without saying anything' → Dutch 'zonder iets te zeggen' (positive 'iets', since 'zonder' carries the negation). 'Zonder een woord te zeggen' = without a word."
+          },
+          {
+            "type": "translation",
+            "prompt": "You learn by practising.",
+            "modelAnswer": "Je leert door te oefenen.",
+            "alternatives": [
+              "Je leert door te oefenen.",
+              "Je leert door veel te oefenen."
+            ],
+            "note": "'Door ... te' = by doing. 'Door te oefenen' = by practising — nothing between 'door' and the infinitive, so 'te' sits straight after. Add 'veel' (a lot) and it slots before 'te oefenen'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "She promised to call back, but she has to finish her work first.",
+            "modelAnswer": "Ze beloofde terug te bellen, maar ze moet eerst haar werk afmaken.",
+            "alternatives": [
+              "Ze beloofde terug te bellen, maar ze moet eerst haar werk afmaken.",
+              "Ze heeft beloofd terug te bellen, maar ze moet eerst haar werk afmaken."
+            ],
+            "note": "The whole contrast in one sentence: 'beloven' takes bare 'te' (with separable 'terugbellen' split: 'terug te bellen'), but the modal 'moet' takes NO 'te' ('moet ... afmaken'). 'Maar' coordinates, so no inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "Instead of complaining, you should try to do something about it.",
+            "modelAnswer": "In plaats van te klagen zou je iets aan het probleem moeten proberen te doen.",
+            "alternatives": [
+              "In plaats van te klagen zou je moeten proberen er iets aan te doen.",
+              "In plaats van te klagen zou je iets aan het probleem moeten doen."
+            ],
+            "note": "Three te-headers possible here: 'in plaats van te klagen' (instead of), 'proberen te doen' (bare te after proberen), and the modal 'zou ... moeten' (no te). 'Er iets aan doen' = to do something about it (er + voorzetsel). The cleanest version keeps it simple."
+          },
+          {
+            "type": "translation",
+            "prompt": "He went to bed early in order to be able to get up at five.",
+            "modelAnswer": "Hij ging vroeg naar bed om om vijf uur op te kunnen staan.",
+            "alternatives": [
+              "Hij ging vroeg naar bed om om vijf uur te kunnen opstaan.",
+              "Hij ging vroeg naar bed om om vijf uur op te kunnen staan."
+            ],
+            "note": "Purpose 'om ... te' with a modal cluster and a separable verb: 'op te kunnen staan' (split) or 'te kunnen opstaan' (whole) — both fine. And yes, the double 'om om' is correct here: the first 'om' is the purpose marker, the second is the preposition in 'om vijf uur' (at five o'clock)."
+          },
+          {
+            "type": "translation",
+            "prompt": "I hope to be able to come, but I can't promise to stay long.",
+            "modelAnswer": "Ik hoop te kunnen komen, maar ik kan niet beloven lang te blijven.",
+            "alternatives": [
+              "Ik hoop te kunnen komen, maar ik kan niet beloven lang te blijven.",
+              "Ik hoop erbij te kunnen zijn, maar ik kan niet beloven lang te blijven."
+            ],
+            "note": "A cascade of the rules: 'hopen' → bare 'te' before the modal ('te kunnen komen'); the modal 'kan' → NO te ('ik kan niet beloven'); then 'beloven' → bare 'te' again ('lang te blijven'). Three verbs, three different te-treatments, all in one sentence."
+          },
+          {
+            "type": "translation",
+            "prompt": "By getting up earlier instead of snoozing, she managed to be on time without rushing.",
+            "modelAnswer": "Door eerder op te staan in plaats van te blijven liggen, lukte het haar om op tijd te zijn zonder zich te haasten.",
+            "alternatives": [
+              "Door eerder op te staan in plaats van uit te slapen, lukte het haar op tijd te zijn zonder zich te haasten.",
+              "Door eerder op te staan in plaats van te blijven liggen, kon ze op tijd zijn zonder zich te haasten."
+            ],
+            "note": "Four te-clauses, four headers: 'door ... op te staan' (by, separable split), 'in plaats van te blijven liggen' (instead of), 'om op tijd te zijn' (purpose), 'zonder zich te haasten' (without, reflexive). The fronted 'door'-clause inverts the main clause: 'lukte het haar'. The whole topic, fully assembled."
+          }
+        ]
+      }
+    }
+  ]
+}
