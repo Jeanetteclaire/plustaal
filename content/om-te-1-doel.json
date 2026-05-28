@@ -1,0 +1,241 @@
+{
+  "zone": "om-te",
+  "zoneName": "Om ... te",
+  "tiles": [
+    {
+      "id": "om-te-1-doel",
+      "theme": "Om ... te voor doel",
+      "themeEnglish": "The 'om ... te + infinitive' construction for purpose — Ik ga naar de winkel om brood te kopen",
+      "recognitionQuestion": "Is the om ... te construction correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik ga vanmiddag naar de bakker om verse broodjes te kopen.",
+            "correctUse": true,
+            "explanation": "Correct. The standard purpose structure: 'om ... te + infinitive'. 'Om verse broodjes te kopen' = (in order) to buy fresh rolls. The infinitive 'kopen' sits at the very end of its clause, with 'te' directly before it. 'Verse broodjes' is the object, between 'om' and 'te'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze belde me gisteravond op om te vragen of ik morgen kon komen.",
+            "correctUse": true,
+            "explanation": "Correct. Here the infinitive 'vragen' has no object before it, so 'te' sits right after 'om': 'om te vragen ...'. Then an indirect question 'of ik morgen kon komen' (verb-final) hangs off it. 'Om te vragen' is the very common shape when the infinitive has no preceding object."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij kwam langs om afspreken te een nieuwe afspraak.",
+            "correctUse": false,
+            "explanation": "Niet correct, on two counts. First, the word order is scrambled. Second — the rule under test — 'te' must split a separable verb: 'om een nieuwe afspraak af te spreken'. The separable 'afspreken' breaks around 'te': 'af + te + spreken'. Correct: 'Hij kwam langs om een nieuwe afspraak af te spreken.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben helemaal geen tijd om vanavond uit eten te gaan.",
+            "correctUse": true,
+            "explanation": "Correct, and the same separable-splitting rule done right: 'uit eten gaan' (a fixed expression for eating out) → 'om vanavond uit eten te gaan'. 'Te' sits before the infinitive 'gaan'; 'uit eten' (the complement) precedes it. 'Geen tijd hebben om ... te' is the standard 'no time to ...' construction."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben de hele middag gewerkt om alles op tijd af te krijgen.",
+            "correctUse": true,
+            "explanation": "Correct. Separable 'afkrijgen' (to get finished) splits cleanly around 'te': 'af + te + krijgen'. 'Om alles op tijd af te krijgen' = (in order) to get everything finished on time. 'Af', 'aan', 'uit', 'op' etc. always end up just before 'te' when their verb appears in an om...te clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij ging vroeg naar bed om kunnen te uitslapen vanmorgen.",
+            "correctUse": false,
+            "explanation": "Niet correct. With a modal in om...te, 'te' goes BEFORE the modal, not after: 'om te kunnen uitslapen' (or with separable splitting: 'om uit te kunnen slapen'). Either order is fine; what you can't do is strand 'te' between 'kunnen' and the main infinitive. Correct: 'Hij ging vroeg naar bed om te kunnen uitslapen.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze stopte even bij een bankje om uit te rusten.",
+            "correctUse": true,
+            "explanation": "Correct. Separable 'uitrusten' (to rest) splits around 'te': 'uit + te + rusten'. 'Om uit te rusten' = (in order) to rest. This is the textbook example of the splitting rule — and the move that goes wrong most often, because the instinct is to keep the verb whole."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ga naar de winkel. Ik koop brood.",
+            "task": "Verbind tot één zin met een 'om ... te'-constructie.",
+            "acceptedAnswers": [
+              "Ik ga naar de winkel om brood te kopen.",
+              "Ik ga naar de winkel om brood te kopen."
+            ],
+            "preferred": "Ik ga naar de winkel om brood te kopen.",
+            "explanation": "Standard om ... te for purpose. The object 'brood' sits between 'om' and 'te'; 'kopen' goes to the end. 'Ik ga naar de winkel om brood te kopen' = I'm going to the shop to buy bread."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij belde om vragen te of ik vanavond tijd had.",
+            "task": "Verbeter de woordvolgorde.",
+            "acceptedAnswers": [
+              "Hij belde om te vragen of ik vanavond tijd had.",
+              "Hij belde om te vragen of ik vanavond tijd had."
+            ],
+            "preferred": "Hij belde om te vragen of ik vanavond tijd had.",
+            "explanation": "When there's nothing between 'om' and the infinitive, 'te' sits straight after 'om': 'om te vragen'. The 'of'-bijzin ('of ik vanavond tijd had') hangs off the infinitive. The instinct to put 'te' last is wrong — it always immediately precedes its infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik moet vroeg weg. Ik wil de eerste trein halen.",
+            "task": "Verbind tot één zin met 'om ... te'.",
+            "acceptedAnswers": [
+              "Ik moet vroeg weg om de eerste trein te halen.",
+              "Ik moet vroeg weg om de eerste trein te kunnen halen."
+            ],
+            "preferred": "Ik moet vroeg weg om de eerste trein te halen.",
+            "explanation": "Object 'de eerste trein' between 'om' and 'te'; infinitive 'halen' at the end. The 'kunnen'-version ('om de eerste trein te kunnen halen' = to be able to catch) adds the modal — and note 'te' still sits right before the modal."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik schrijf een brief om mijn moeder uitnodigen te voor het feest.",
+            "task": "Verbeter de woordvolgorde (scheidbaar werkwoord!).",
+            "acceptedAnswers": [
+              "Ik schrijf een brief om mijn moeder uit te nodigen voor het feest.",
+              "Ik schrijf een brief om mijn moeder voor het feest uit te nodigen."
+            ],
+            "preferred": "Ik schrijf een brief om mijn moeder uit te nodigen voor het feest.",
+            "explanation": "Separable 'uitnodigen' (to invite) splits around 'te': 'uit + te + nodigen'. 'Om mijn moeder uit te nodigen voor het feest' = to invite my mother to the party. 'Te' wedges itself between the two halves of the separable verb — the splitting move."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze gaat naar een cursus. Ze kan dan beter Frans leren.",
+            "task": "Verbind met 'om ... te' (modaal werkwoord!).",
+            "acceptedAnswers": [
+              "Ze gaat naar een cursus om beter Frans te kunnen leren.",
+              "Ze gaat naar een cursus om beter Frans te kunnen leren."
+            ],
+            "preferred": "Ze gaat naar een cursus om beter Frans te kunnen leren.",
+            "explanation": "With a modal in om...te, 'te' sits BEFORE the modal: 'om beter Frans te kunnen leren'. Cluster order: te + kunnen + leren. Not 'om kunnen te leren'. The same rule whenever 'kunnen / willen / moeten' appears inside an om...te clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We hebben de hele dag in de tuin gewerkt. We wilden alles op tijd afkrijgen.",
+            "task": "Verbind met 'om ... te' (let op het scheidbaar werkwoord).",
+            "acceptedAnswers": [
+              "We hebben de hele dag in de tuin gewerkt om alles op tijd af te krijgen.",
+              "We hebben de hele dag in de tuin gewerkt om alles op tijd af te krijgen."
+            ],
+            "preferred": "We hebben de hele dag in de tuin gewerkt om alles op tijd af te krijgen.",
+            "explanation": "Separable 'afkrijgen' splits around 'te': 'af + te + krijgen'. 'Om alles op tijd af te krijgen' = (in order) to get everything finished on time. The object 'alles' and the time phrase 'op tijd' both sit before 'af te krijgen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij belt zijn moeder. Hij wenst haar een gelukkige verjaardag.",
+            "task": "Verbind met 'om ... te'.",
+            "acceptedAnswers": [
+              "Hij belt zijn moeder om haar een gelukkige verjaardag te wensen.",
+              "Hij belt zijn moeder om haar een fijne verjaardag te wensen."
+            ],
+            "preferred": "Hij belt zijn moeder om haar een gelukkige verjaardag te wensen.",
+            "explanation": "Two objects between 'om' and 'te': indirect object 'haar', direct object 'een gelukkige verjaardag'. The infinitive 'wensen' closes the clause, with 'te' just before it. Order inside om...te is just normal Dutch object order, with 'te + infinitive' at the very end."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'm going to the shop to buy some milk.",
+            "modelAnswer": "Ik ga naar de winkel om melk te halen.",
+            "alternatives": [
+              "Ik ga naar de winkel om melk te kopen.",
+              "Ik ga even melk halen bij de winkel."
+            ],
+            "note": "Standard om ... te. 'Halen' (to fetch) is the more idiomatic verb for popping out for something; 'kopen' (to buy) is fine too. Note Dutch often drops 'om' after motion verbs in everyday speech ('Ik ga melk halen'), but the full 'om ... te' is always correct."
+          },
+          {
+            "type": "translation",
+            "prompt": "She phoned to ask if I had time.",
+            "modelAnswer": "Ze belde om te vragen of ik tijd had.",
+            "alternatives": [
+              "Ze belde om te vragen of ik tijd had.",
+              "Ze belde om te vragen of ik vanavond kon."
+            ],
+            "note": "'Om te vragen' — nothing between 'om' and 'te' here, because the indirect question itself is the object. The 'of'-bijzin ('of ik tijd had') sits after the infinitive, verb-final."
+          },
+          {
+            "type": "translation",
+            "prompt": "We took the train to be on time.",
+            "modelAnswer": "We hebben de trein genomen om op tijd te zijn.",
+            "alternatives": [
+              "We hebben de trein gepakt om op tijd te zijn.",
+              "We namen de trein om op tijd aan te komen."
+            ],
+            "note": "'Om op tijd te zijn' = to be on time. 'Pakken' is the everyday spoken alternative to 'nemen' for taking transport. The variant 'aankomen' (separable) splits around 'te': 'aan te komen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He works hard to support his family.",
+            "modelAnswer": "Hij werkt hard om zijn gezin te onderhouden.",
+            "alternatives": [
+              "Hij werkt hard om zijn gezin te onderhouden.",
+              "Hij werkt hard om voor zijn gezin te kunnen zorgen."
+            ],
+            "note": "'Onderhouden' (inseparable — no 'ge-' in participle, and no splitting around 'te') = to support/maintain. The 'kunnen zorgen' alternative shows the modal pattern: 'te' before 'kunnen', then 'zorgen' at the end. 'Zorgen voor' (fixed prep) needs 'voor'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm staying home to rest.",
+            "modelAnswer": "Ik blijf thuis om uit te rusten.",
+            "alternatives": [
+              "Ik blijf thuis om even uit te rusten.",
+              "Ik blijf thuis om bij te komen."
+            ],
+            "note": "Separable 'uitrusten' splits around 'te': 'uit + te + rusten'. The textbook example. 'Bijkomen' (separable, to recover) → 'bij te komen' shows the same pattern with a different separable verb."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'm taking lessons to be able to speak Dutch better.",
+            "modelAnswer": "Ik neem les om beter Nederlands te kunnen spreken.",
+            "alternatives": [
+              "Ik volg een cursus om beter Nederlands te kunnen spreken.",
+              "Ik neem les om mijn Nederlands te verbeteren."
+            ],
+            "note": "Modal in om...te: 'te' before 'kunnen'. Cluster: te + kunnen + spreken. 'Les nemen' / 'een cursus volgen' = to take lessons / a course. The simpler 'om mijn Nederlands te verbeteren' (to improve my Dutch) dodges the modal altogether."
+          },
+          {
+            "type": "translation",
+            "prompt": "She got up early to be able to catch the first train.",
+            "modelAnswer": "Ze stond vroeg op om de eerste trein te kunnen halen.",
+            "alternatives": [
+              "Ze stond vroeg op om de eerste trein te kunnen pakken.",
+              "Ze stond vroeg op om de eerste trein niet te missen."
+            ],
+            "note": "Modal pattern again: 'te kunnen halen / pakken'. The separable 'opstaan' splits in the main clause ('stond ... op'). The neat variant 'om de eerste trein niet te missen' (so as not to miss) uses plain 'om ... te' with negation."
+          },
+          {
+            "type": "translation",
+            "prompt": "I need to find someone to look after my cat while I'm away.",
+            "modelAnswer": "Ik moet iemand vinden om voor mijn kat te zorgen terwijl ik weg ben.",
+            "alternatives": [
+              "Ik moet iemand vinden om op mijn kat te passen terwijl ik weg ben.",
+              "Ik moet iemand zoeken die voor mijn kat zorgt terwijl ik weg ben."
+            ],
+            "note": "'Om voor mijn kat te zorgen' — the fixed preposition 'voor' from 'zorgen voor' folds neatly into the om...te clause, just before 'te zorgen'. 'Oppassen op' (separable, to look after / watch) → 'op mijn kat te passen' — note the splitting around 'te'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We need more time to finish the report properly.",
+            "modelAnswer": "We hebben meer tijd nodig om het rapport goed af te ronden.",
+            "alternatives": [
+              "We hebben meer tijd nodig om het rapport goed af te krijgen.",
+              "We hebben meer tijd nodig om het rapport fatsoenlijk af te ronden."
+            ],
+            "note": "Separable 'afronden' (to finish) splits around 'te': 'af + te + ronden'. 'Tijd hebben om ... te' = to have time to ... 'Goed / fatsoenlijk' = properly. The whole om...te clause hangs off 'tijd nodig hebben'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He came round to apologise for what he'd said the previous evening.",
+            "modelAnswer": "Hij kwam langs om zijn excuses aan te bieden voor wat hij de vorige avond had gezegd.",
+            "alternatives": [
+              "Hij kwam langs om zijn excuses aan te bieden voor wat hij de avond ervoor had gezegd.",
+              "Hij kwam langs om sorry te zeggen voor wat hij de vorige avond had gezegd."
+            ],
+            "note": "Two separable verbs: 'langskomen' splits in the main clause ('kwam ... langs'), 'aanbieden' splits around 'te' in the om...te clause ('aan + te + bieden'). 'Zijn excuses aanbieden' = to apologise (formal); 'sorry zeggen' the casual version. The 'voor wat ...' clause uses 'wat' (indefinite antecedent) and is verb-final."
+          }
+        ]
+      }
+    }
+  ]
+}

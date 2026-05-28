@@ -1,0 +1,241 @@
+{
+  "zone": "bijzinnen",
+  "zoneName": "Bijzinnen",
+  "tiles": [
+    {
+      "id": "bijzinnen-5-foutjesgids-bijzinnen",
+      "theme": "Foutjesgids bijzinnen",
+      "themeEnglish": "Mixed review of the whole subordinate-clause topic — the verb-final rule, the relative-pronoun match, the toen/als/wanneer split, and indirect questions",
+      "recognitionQuestion": "Is the word order correct in this subordinate clause?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Hij zei dat hij morgen om acht uur op tijd zou komen.",
+            "correctUse": true,
+            "explanation": "Correct. A 'dat'-bijzin with a future cluster 'zou komen' at the end. Subject, time phrase, then the verb cluster — the standard verb-final order. Reported speech often uses 'zou + infinitive' for future-in-the-past."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik blijf vandaag in bed omdat ik ben heel moe.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Omdat' is subordinating, so the verb must go to the end: 'omdat ik heel moe ben'. The English-style order 'omdat ik ben moe' is a classic slip. (Compare 'want', the coordinating one: 'want ik ben heel moe' keeps normal order.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Wanneer ik gisteren thuiskwam, was er niemand thuis.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Gisteren' anchors this as one specific past event, so the conjunction must be 'toen', not 'wanneer': 'Toen ik gisteren thuiskwam, ...'. 'Wanneer' is for questions only. The rest of the sentence is fine — the word that's wrong is the conjunction itself."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De film die we gisteravond hebben gezien, was echt geweldig.",
+            "correctUse": true,
+            "explanation": "Correct. 'De film' is a de-word, so the relative pronoun is 'die'. The cluster 'hebben gezien' goes to the end of the relative clause. The match is the trick: de → die, het → dat."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze vroeg me of heeft hij het bericht al gelezen.",
+            "correctUse": false,
+            "explanation": "Niet correct. Indirect question with 'of' sends the whole verb cluster to the end: 'of hij het bericht al heeft gelezen' (or 'al gelezen heeft'). The direct question 'Heeft hij het gelezen?' is verb-first, but once embedded, that inversion unwinds. Cluster stranded mid-bijzin is one of the deepest slips."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Alles wat ze me die avond vertelde, klonk volkomen geloofwaardig.",
+            "correctUse": true,
+            "explanation": "Correct. After 'alles' (indefinite antecedent), the relative pronoun is 'wat', not 'dat'. Verb 'vertelde' at the end of the relative clause. The main verb 'klonk' (sounded) takes the predicate 'volkomen geloofwaardig' (completely credible)."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik bel je vanavond meteen zodra ik kom thuis.",
+            "correctUse": false,
+            "explanation": "Niet correct. The separable 'thuiskomen' must STAY TOGETHER at the end of the bijzin: 'zodra ik thuiskom'. In a main clause it splits ('ik kom thuis'); in a bijzin the parts reunite. Re-fusing the separable verb is the move that gets forgotten most often."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik kan niet komen omdat ik heb het heel druk.",
+            "task": "Verbeter de woordvolgorde.",
+            "acceptedAnswers": [
+              "Ik kan niet komen omdat ik het heel druk heb.",
+              "Ik kan niet komen omdat ik het erg druk heb."
+            ],
+            "preferred": "Ik kan niet komen omdat ik het heel druk heb.",
+            "explanation": "The 'omdat'-bijzin sends the verb to the end: 'omdat ik het heel druk heb'. 'Het druk hebben' = to be busy. The little 'het' stays inside the bijzin, with the finite verb 'heb' closing the clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik blijf thuis. Het regent heel hard.",
+            "task": "Verbind met 'omdat'.",
+            "acceptedAnswers": [
+              "Ik blijf thuis omdat het heel hard regent.",
+              "Ik blijf thuis omdat het hard regent."
+            ],
+            "preferred": "Ik blijf thuis omdat het heel hard regent.",
+            "explanation": "'Omdat' sends the verb 'regent' to the end: 'omdat het heel hard regent'. The 'want'-version ('Ik blijf thuis, want het regent heel hard') keeps normal order. Same meaning, different word order — the choice tells the listener which conjunction you're reaching for."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Waar woont hij eigenlijk?",
+            "task": "Begin met 'Ik vroeg me af ...' (indirecte vraag).",
+            "acceptedAnswers": [
+              "Ik vroeg me af waar hij eigenlijk woont.",
+              "Ik vroeg me af waar hij eigenlijk woonde."
+            ],
+            "preferred": "Ik vroeg me af waar hij eigenlijk woont.",
+            "explanation": "Direct 'Waar woont hij?' becomes indirect 'waar hij eigenlijk woont' — verb to the end. The original inversion ('woont hij') dissolves into bijzin order. Tense can stay present or shift to imperfectum ('woonde') to match the past 'vroeg me af'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het huis die we volgende maand gaan kopen, is best groot.",
+            "task": "Verbeter het betrekkelijk voornaamwoord.",
+            "acceptedAnswers": [
+              "Het huis dat we volgende maand gaan kopen, is best groot.",
+              "Het huis dat we volgende maand gaan kopen, is best groot."
+            ],
+            "preferred": "Het huis dat we volgende maand gaan kopen, is best groot.",
+            "explanation": "'Het huis' is a het-word, so the relative is 'dat', not 'die'. The cluster 'gaan kopen' stays at the end of the relative clause. Match the relative to the article — every time."
+          },
+          {
+            "type": "transformation",
+            "prompt": "___ ik op vakantie ben, krijg ik soms een beetje heimwee.",
+            "task": "Vul 'toen', 'als' of 'wanneer' in.",
+            "acceptedAnswers": [
+              "Als ik op vakantie ben, krijg ik soms een beetje heimwee.",
+              "als"
+            ],
+            "preferred": "Als ik op vakantie ben, krijg ik soms een beetje heimwee.",
+            "explanation": "Present-tense general situation → 'als'. 'Toen' is past-only, 'wanneer' is for questions. 'Als ik op vakantie ben, krijg ik ...' = whenever I'm on holiday, I get .... 'Heimwee' = homesickness."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze wilde weten wanneer komt de bus.",
+            "task": "Verbeter de woordvolgorde.",
+            "acceptedAnswers": [
+              "Ze wilde weten wanneer de bus komt.",
+              "Ze wilde weten wanneer de bus zou komen."
+            ],
+            "preferred": "Ze wilde weten wanneer de bus komt.",
+            "explanation": "Indirect question: the verb goes to the end of the bijzin. 'Wanneer komt de bus?' (direct, verb second) becomes 'wanneer de bus komt' (indirect, verb last). The 'zou komen' version shifts to past-future to match 'wilde weten' more tightly."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De vrouw werkt hier. Ik gaf haar gisteren het pakket.",
+            "task": "Verbind tot één zin met 'aan wie'.",
+            "acceptedAnswers": [
+              "De vrouw aan wie ik gisteren het pakket gaf, werkt hier.",
+              "De vrouw aan wie ik gisteren het pakket heb gegeven, werkt hier."
+            ],
+            "preferred": "De vrouw aan wie ik gisteren het pakket gaf, werkt hier.",
+            "explanation": "Person + preposition 'aan' → 'aan wie' (not 'waaraan', which is for things). Verb 'gaf' at the end of the relative clause; the main clause's own verb 'werkt' follows after the comma. Person-vs-thing test, fluently passed."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I know that he's tired.",
+            "modelAnswer": "Ik weet dat hij moe is.",
+            "alternatives": [
+              "Ik weet dat hij moe is.",
+              "Ik weet dat hij heel moe is."
+            ],
+            "note": "'Dat'-bijzin: verb 'is' to the end. Subject, adjective, verb — the standard bijzin order. 'Ik weet' keeps normal main-clause order."
+          },
+          {
+            "type": "translation",
+            "prompt": "When she was young, she lived in Berlin.",
+            "modelAnswer": "Toen ze jong was, woonde ze in Berlijn.",
+            "alternatives": [
+              "Toen ze klein was, woonde ze in Berlijn.",
+              "Toen ze jong was, heeft ze in Berlijn gewoond."
+            ],
+            "note": "Single past period → 'toen'. Verb 'was' at the end of the bijzin; main clause inverts after the comma ('woonde ze'). Never 'wanneer' for a past statement."
+          },
+          {
+            "type": "translation",
+            "prompt": "Do you know whether the shop is open?",
+            "modelAnswer": "Weet je of de winkel open is?",
+            "alternatives": [
+              "Weet je of de winkel nog open is?",
+              "Weet je of de winkel geopend is?"
+            ],
+            "note": "Indirect yes/no question with 'of': verb 'is' to the end. The main clause itself is a yes/no question 'Weet je ...?' (verb first). Two question patterns nested, each with its own word order."
+          },
+          {
+            "type": "translation",
+            "prompt": "The man I was talking to is my uncle.",
+            "modelAnswer": "De man met wie ik sprak, is mijn oom.",
+            "alternatives": [
+              "De man met wie ik aan het praten was, is mijn oom.",
+              "De man waar ik mee sprak, is mijn oom."
+            ],
+            "note": "Person + 'met' → 'met wie'. The form 'waarmee' for a person is heard but considered less standard; 'met wie' is the textbook answer. Verb at the end of the relative clause. 'Oom' = uncle."
+          },
+          {
+            "type": "translation",
+            "prompt": "Everything she said turned out to be true.",
+            "modelAnswer": "Alles wat ze zei, bleek waar te zijn.",
+            "alternatives": [
+              "Alles wat ze gezegd heeft, bleek waar te zijn.",
+              "Alles wat ze zei, is waar gebleken."
+            ],
+            "note": "After 'alles', the relative is 'wat'. Verb 'zei' at the end of the relative clause. 'Blijken te zijn' = to turn out to be — the 'te zijn' is the infinitive after 'blijken'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "She said she'd call me as soon as she got home.",
+            "modelAnswer": "Ze zei dat ze me zou bellen zodra ze thuiskwam.",
+            "alternatives": [
+              "Ze zei dat ze me zou bellen zodra ze thuis zou zijn.",
+              "Ze zei dat ze me meteen zou bellen zodra ze thuiskwam."
+            ],
+            "note": "Reported speech, two nested bijzinnen. The 'dat'-clause has the future-in-the-past 'zou bellen' at the end; inside it the 'zodra'-clause has the separable 'thuiskwam' (re-fused) at its end. Two verb-final clauses, neatly stacked."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't know whether the meeting I have to attend tomorrow will last long.",
+            "modelAnswer": "Ik weet niet of de vergadering die ik morgen moet bijwonen, lang zal duren.",
+            "alternatives": [
+              "Ik weet niet of de vergadering die ik morgen moet bijwonen, lang gaat duren.",
+              "Ik weet niet of de vergadering waar ik morgen heen moet, lang zal duren."
+            ],
+            "note": "Indirect yes/no question with 'of', containing a relative clause inside it. 'De vergadering' (de-word) → 'die'; modal cluster 'moet bijwonen' (separable, re-fused) at the end of the relative. The outer bijzin's verb cluster 'zal duren' lands at the very end."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I was twelve, I went to a school where everyone spoke English.",
+            "modelAnswer": "Toen ik twaalf was, ging ik naar een school waar iedereen Engels sprak.",
+            "alternatives": [
+              "Toen ik twaalf was, zat ik op een school waar iedereen Engels sprak.",
+              "Toen ik twaalf was, ging ik naar een school waarop iedereen Engels sprak."
+            ],
+            "note": "Single past period → 'toen'. The relative 'waar' here is the locative 'where' (a place): 'een school waar iedereen Engels sprak' — verb 'sprak' at the end. 'Op school zitten' = to attend a school, more natural than 'gaan naar' for ongoing attendance."
+          },
+          {
+            "type": "translation",
+            "prompt": "He asked me why I hadn't replied to his email, even though he'd sent it a week ago.",
+            "modelAnswer": "Hij vroeg me waarom ik niet op zijn mail had gereageerd, terwijl hij hem al een week geleden had gestuurd.",
+            "alternatives": [
+              "Hij vroeg me waarom ik niet op zijn mail had geantwoord, terwijl hij hem een week eerder had gestuurd.",
+              "Hij vroeg me waarom ik niet had gereageerd op zijn mail, terwijl hij hem al een week geleden had verstuurd."
+            ],
+            "note": "Indirect 'waarom'-question with plusquamperfectum 'had gereageerd' (cluster at end), then a 'terwijl'-bijzin with another plusquamperfectum 'had gestuurd'. 'Reageren op' (fixed prep) with a thing → 'op zijn mail' kept (the noun is there). Two verb-final clauses, both with past-perfect clusters."
+          },
+          {
+            "type": "translation",
+            "prompt": "The only thing I forgot was the bottle of wine I'd been planning to bring.",
+            "modelAnswer": "Het enige wat ik vergat, was de fles wijn die ik mee had willen nemen.",
+            "alternatives": [
+              "Het enige wat ik vergat, was de fles wijn die ik had willen meenemen.",
+              "Het enige wat ik vergeten was, was de fles wijn die ik mee had willen nemen."
+            ],
+            "note": "After 'het enige' → 'wat' (the relative for indefinite antecedents). Then a second relative for 'de fles wijn' → 'die' (de-word). Inside it sits the plusquamperfectum double infinitive 'had willen meenemen' / 'mee had willen nemen' — separable 'meenemen' may stay whole or split around the cluster. Two relatives, double infinitive, past — the whole topic distilled."
+          }
+        ]
+      }
+    }
+  ]
+}
