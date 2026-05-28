@@ -1,0 +1,241 @@
+{
+  "zone": "foutjes",
+  "zoneName": "Foutjesgids",
+  "tiles": [
+    {
+      "id": "foutjes-5-kofschip",
+      "theme": "'t Kofschip: -t of -d",
+      "themeEnglish": "Your error to crack: 't kofschip decides -t or -d. If the stem ends in t, k, f, s, ch or p (the sounds in 't kofschip), the ending is voiceless (-t/-te); otherwise voiced (-d/-de)",
+      "recognitionQuestion": "Is the kofschip consonant (t/d) correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik heb de hele middag in de tuin gewerkt.",
+            "correctUse": true,
+            "explanation": "Correct. 'Werken' → stem 'werk', ending in 'k' — a kofschip consonant (voiceless), so the participle takes -t: 'gewerkt'. The rule: stem ends in t/k/f/s/ch/p → voiceless ending. 'Werk' ends in k → 'gewerkt'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben gisteren urenlang gepraad over de plannen.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Praten' → stem 'praat', ending in 't' — a kofschip consonant, so the participle is 'gepraat', not 'gepraad'. (The stem already ends in t, so you don't add another: ge + praat → gepraat.) Voiceless stem → -t."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij heeft het hele weekend hard gestudeert.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Studeren' → stem 'studeer', ending in 'r' — NOT a kofschip consonant, so the ending is voiced -d: 'gestudeerd', not 'gestudeert'. The 'r' isn't in t/k/f/s/ch/p, so it takes -d."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zij heeft haar oude fiets vorige week verkocht.",
+            "correctUse": true,
+            "explanation": "Correct. 'Verkopen' → stem 'verkoop', ending in 'p' — a kofschip consonant, so -t: 'verkocht'. (This verb is slightly irregular in its vowel, but the final consonant still follows kofschip: p → voiceless -t.) Note 'ver-' verbs take no 'ge-'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het kind heeft de hele nacht gehuild en niet geslapen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Huilen' → stem 'huil', ending in 'l' — NOT a kofschip consonant, so voiced -d: 'gehuild'. The 'l' isn't in t/k/f/s/ch/p, so the ending is -d. ('Slapen' is a strong verb → 'geslapen', a separate pattern.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze heeft de muur zelf geverft in een mooie kleur.",
+            "correctUse": false,
+            "explanation": "Niet correct — and this is the sneaky one. 'Verven' looks like it ends in 'f', but the stem is 'verf' and the underlying verb sound is voiced 'v', which is NOT in 't kofschip — so the participle is 'geverfd', not 'geverft'. The tip: if the infinitive has 'v' or 'z' before -en (ver-v-en, rei-z-en), the ending is voiced -d. So 'geverfd', 'gereisd'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vroeger woonde ik in een klein dorp in het noorden.",
+            "correctUse": true,
+            "explanation": "Correct. Imperfectum follows the same rule. 'Wonen' → stem 'woon', ending in 'n' — NOT a kofschip consonant, so voiced -de: 'woonde'. The 'n' isn't in t/k/f/s/ch/p. (Plural: 'woonden'.) Same kofschip logic for the past tense as for participles."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "werken (ik, voltooid deelwoord)",
+            "task": "Geef het voltooid deelwoord.",
+            "acceptedAnswers": [
+              "gewerkt",
+              "gewerkt"
+            ],
+            "preferred": "gewerkt",
+            "explanation": "Stem 'werk' ends in 'k' (kofschip → voiceless) → -t: 'gewerkt'. The 'k' is one of t/k/f/s/ch/p, so the ending is -t."
+          },
+          {
+            "type": "transformation",
+            "prompt": "studeren (hij, voltooid deelwoord)",
+            "task": "Geef het voltooid deelwoord.",
+            "acceptedAnswers": [
+              "gestudeerd",
+              "gestudeerd"
+            ],
+            "preferred": "gestudeerd",
+            "explanation": "Stem 'studeer' ends in 'r' (not kofschip → voiced) → -d: 'gestudeerd'. 'R' isn't in t/k/f/s/ch/p, so the ending is -d, not -t."
+          },
+          {
+            "type": "transformation",
+            "prompt": "verven (zij, voltooid deelwoord)",
+            "task": "Geef het voltooid deelwoord (let op de v!).",
+            "acceptedAnswers": [
+              "geverfd",
+              "geverfd"
+            ],
+            "preferred": "geverfd",
+            "explanation": "The v-trap. 'Verven' has a voiced 'v' in the infinitive (ver-v-en), which is NOT a kofschip consonant, so the ending is -d: 'geverfd', even though the stem is spelled 'verf'. Tip: 'v' or 'z' before -en → voiced -d."
+          },
+          {
+            "type": "transformation",
+            "prompt": "praten (wij, voltooid deelwoord)",
+            "task": "Geef het voltooid deelwoord.",
+            "acceptedAnswers": [
+              "gepraat",
+              "gepraat"
+            ],
+            "preferred": "gepraat",
+            "explanation": "Stem 'praat' ends in 't' (kofschip → voiceless). Since the stem already ends in t, you don't add another: ge + praat → 'gepraat'. Not 'gepraatt' and not 'gepraad'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "reizen (ik, onvoltooid verleden tijd / imperfectum)",
+            "task": "Geef de verledentijdsvorm (enkelvoud).",
+            "acceptedAnswers": [
+              "reisde",
+              "reisde"
+            ],
+            "preferred": "reisde",
+            "explanation": "The z-trap, in the imperfectum. 'Reizen' has a voiced 'z' (rei-z-en), not a kofschip consonant, so voiced -de: 'reisde' (the z becomes s in spelling, but the ending is still -de). Plural: 'reisden'. 'Z' before -en → voiced ending."
+          },
+          {
+            "type": "transformation",
+            "prompt": "fietsen (hij, onvoltooid verleden tijd / imperfectum)",
+            "task": "Geef de verledentijdsvorm (enkelvoud).",
+            "acceptedAnswers": [
+              "fietste",
+              "fietste"
+            ],
+            "preferred": "fietste",
+            "explanation": "Stem 'fiets' ends in 's' (kofschip → voiceless) → -te: 'fietste'. The 's' is one of t/k/f/s/ch/p, so the imperfectum ending is -te. Plural: 'fietsten'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "wonen (zij, onvoltooid verleden tijd / imperfectum, meervoud)",
+            "task": "Geef de verledentijdsvorm (meervoud).",
+            "acceptedAnswers": [
+              "woonden",
+              "woonden"
+            ],
+            "preferred": "woonden",
+            "explanation": "Stem 'woon' ends in 'n' (not kofschip → voiced) → -den in the plural: 'woonden'. Singular would be 'woonde'. 'N' isn't in t/k/f/s/ch/p, so the ending is voiced."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I worked all afternoon.",
+            "modelAnswer": "Ik heb de hele middag gewerkt.",
+            "alternatives": [
+              "Ik heb de hele middag gewerkt.",
+              "Ik werkte de hele middag."
+            ],
+            "note": "'Werken' → stem ends in 'k' (kofschip) → 'gewerkt' (participle) / 'werkte' (imperfectum). Voiceless stem → -t / -te. Both the perfect and the imperfectum follow the same kofschip logic."
+          },
+          {
+            "type": "translation",
+            "prompt": "She painted the wall herself.",
+            "modelAnswer": "Ze heeft de muur zelf geverfd.",
+            "alternatives": [
+              "Ze heeft de muur zelf geverfd.",
+              "Ze verfde de muur zelf."
+            ],
+            "note": "The v-trap. 'Verven' has a voiced 'v' → voiced ending: 'geverfd' (participle) / 'verfde' (imperfectum). Not 'geverft'. Whenever the infinitive shows 'v' before -en, the ending is -d / -de."
+          },
+          {
+            "type": "translation",
+            "prompt": "We travelled through France last summer.",
+            "modelAnswer": "We hebben vorige zomer door Frankrijk gereisd.",
+            "alternatives": [
+              "We hebben vorige zomer door Frankrijk gereisd.",
+              "We reisden vorige zomer door Frankrijk."
+            ],
+            "note": "The z-trap. 'Reizen' has a voiced 'z' → voiced ending: 'gereisd' (participle) / 'reisden' (imperfectum plural). The z surfaces as s in spelling, but the ending stays -d / -de."
+          },
+          {
+            "type": "translation",
+            "prompt": "He cycled to work every day.",
+            "modelAnswer": "Hij fietste elke dag naar zijn werk.",
+            "alternatives": [
+              "Hij fietste elke dag naar zijn werk.",
+              "Elke dag fietste hij naar zijn werk."
+            ],
+            "note": "'Fietsen' → stem ends in 's' (kofschip) → voiceless -te: 'fietste'. Front 'Elke dag' and invert: 'fietste hij'. Voiceless stem → -te / (participle 'gefietst')."
+          },
+          {
+            "type": "translation",
+            "prompt": "I lived in Amsterdam for ten years.",
+            "modelAnswer": "Ik heb tien jaar in Amsterdam gewoond.",
+            "alternatives": [
+              "Ik heb tien jaar in Amsterdam gewoond.",
+              "Ik woonde tien jaar in Amsterdam."
+            ],
+            "note": "'Wonen' → stem ends in 'n' (not kofschip) → voiced: 'gewoond' (participle) / 'woonde' (imperfectum). Voiced stem → -d / -de. The 'n' isn't in t/k/f/s/ch/p."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "She studied hard, worked part-time, and still managed to travel a lot.",
+            "modelAnswer": "Ze studeerde hard, werkte parttime en reisde toch nog veel.",
+            "alternatives": [
+              "Ze studeerde hard, werkte parttime en reisde toch nog veel.",
+              "Ze heeft hard gestudeerd, parttime gewerkt en toch nog veel gereisd."
+            ],
+            "note": "Three verbs, three kofschip outcomes in the imperfectum: 'studeren' (r → voiced 'studeerde'), 'werken' (k → voiceless 'werkte'), 'reizen' (z → voiced 'reisde'). The perfect version mirrors them: 'gestudeerd', 'gewerkt', 'gereisd'. Each ending decided by the stem's final sound."
+          },
+          {
+            "type": "translation",
+            "prompt": "After we'd painted the kitchen and cleaned the whole house, we were exhausted.",
+            "modelAnswer": "Nadat we de keuken hadden geverfd en het hele huis hadden schoongemaakt, waren we uitgeput.",
+            "alternatives": [
+              "Nadat we de keuken hadden geverfd en het hele huis hadden schoongemaakt, waren we uitgeput.",
+              "Nadat we de keuken geverfd hadden en het hele huis schoongemaakt hadden, waren we uitgeput."
+            ],
+            "note": "'Verven' (v → voiced 'geverfd') and 'schoonmaken' (stem 'maak', k → voiceless 'schoongemaakt', separable). The fronted 'nadat'-bijzin (plusquamperfectum, verb-final) inverts the main clause: 'waren we'. Two kofschip decisions inside one subordinate clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "He answered all the questions, but I doubt he understood them.",
+            "modelAnswer": "Hij beantwoordde alle vragen, maar ik betwijfel of hij ze begreep.",
+            "alternatives": [
+              "Hij beantwoordde alle vragen, maar ik betwijfel of hij ze begrepen heeft.",
+              "Hij heeft alle vragen beantwoord, maar ik betwijfel of hij ze begreep."
+            ],
+            "note": "'Beantwoorden' → stem 'beantwoord' ends in 'd' (not kofschip) → voiced -de, but the stem already ends in d, so the imperfectum doubles to 'beantwoordde' (beantwoord + de). Participle: 'beantwoord' (be- → no ge-). 'Begrijpen' is strong → 'begreep' / 'begrepen'. A nice mix of regular kofschip and strong forms."
+          },
+          {
+            "type": "translation",
+            "prompt": "The children played outside while their parents talked and the dinner was being prepared.",
+            "modelAnswer": "De kinderen speelden buiten terwijl hun ouders praatten en het eten werd klaargemaakt.",
+            "alternatives": [
+              "De kinderen speelden buiten terwijl hun ouders praatten en het eten werd klaargemaakt.",
+              "De kinderen speelden buiten terwijl hun ouders praatten en het avondeten werd klaargemaakt."
+            ],
+            "note": "'Spelen' (l → voiced 'speelden') and 'praten' (stem 'praat' ends in t → the plural imperfectum is 'praatten', praat + ten, with a double t). Plus an imperfectum passive 'werd klaargemaakt'. The 'praatten'/'praten' spelling — stem-final t plus the -ten ending — is a classic kofschip pitfall worth seeing."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd already booked the tickets, packed the bags, and emailed everyone before I realised the trip was cancelled.",
+            "modelAnswer": "Ik had de kaartjes al geboekt, de tassen ingepakt en iedereen gemaild voordat ik me realiseerde dat de reis was afgelast.",
+            "alternatives": [
+              "Ik had de kaartjes al geboekt, de tassen gepakt en iedereen gemaild voordat ik doorhad dat de reis was afgelast.",
+              "Ik had de kaartjes al geboekt, de tassen ingepakt en iedereen een mail gestuurd voordat ik me realiseerde dat de reis was afgelast."
+            ],
+            "note": "Three kofschip participles: 'boeken' (k → 'geboekt'), 'inpakken' (k → 'ingepakt', separable), 'mailen' (l → voiced 'gemaild'). Then 'realiseren' (r → 'realiseerde') in the imperfectum. The 'voordat'-bijzin and 'dat'-clause are verb-final; 'afgelast' closes the past-perfect passive. The whole grammar set, with kofschip threaded through — a fitting last sentence."
+          }
+        ]
+      }
+    }
+  ]
+}
