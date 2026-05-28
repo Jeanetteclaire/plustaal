@@ -1,0 +1,241 @@
+{
+  "zone": "foutjes",
+  "zoneName": "Foutjesgids",
+  "tiles": [
+    {
+      "id": "foutjes-4-voltooid-vs-infinitief-dubbel",
+      "theme": "Voltooid deelwoord vs infinitief in de dubbele infinitief",
+      "themeEnglish": "Your error to crack: in the perfect, a modal + second verb makes TWO infinitives (heb willen bellen), never a participle (not heb gewild / heb gebeld)",
+      "recognitionQuestion": "Is the double infinitive correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik heb je gisteren niet kunnen bereiken.",
+            "correctUse": true,
+            "explanation": "Correct. In the perfect, a modal with a second verb forms a DOUBLE INFINITIVE: 'heb ... kunnen bereiken' — both verbs as infinitives, never 'gekund'. The auxiliary is 'hebben'. This is the structure to lock in."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb het probleem zelf kunnen opgelost.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second verb must also be an infinitive: 'kunnen oplossen', not the participle 'opgelost'. Correct: 'Ik heb het probleem zelf kunnen oplossen.' In the double infinitive BOTH verbs stay infinitive — the participle never appears. This is the exact slip to root out."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb dat altijd al willen gedaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. Double infinitive: 'willen doen', not the participle 'gedaan'. Correct: 'Ik heb dat altijd al willen doen.' Once a modal has a partner verb, both are infinitives in the perfect — 'willen doen', never 'willen gedaan'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb mijn best gedaan, maar ik heb het niet gekund.",
+            "correctUse": true,
+            "explanation": "Correct — and the exception worth knowing. When the modal stands ALONE with no second verb, it DOES take the participle: 'ik heb het niet gekund' (I wasn't able to). Compare the double-infinitive cases above, where a second verb is present and 'gekund' would be wrong. No second verb → participle; second verb → double infinitive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij heeft de wedstrijd niet gekund spelen door een blessure.",
+            "correctUse": false,
+            "explanation": "Niet correct. With a second verb present, use the double infinitive 'kunnen spelen', not 'gekund': 'Hij heeft de wedstrijd niet kunnen spelen door een blessure.' 'Gekund' only when 'kunnen' stands completely alone."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je had me dat eerder moeten vertellen.",
+            "correctUse": true,
+            "explanation": "Correct. The 'had moeten + infinitive' pattern = should have. 'Je had me dat moeten vertellen' = you should have told me. The double infinitive 'moeten vertellen' follows the auxiliary 'had'. Never 'had moeten verteld'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb hem nog willen gewaarschuwd, maar het was te laat.",
+            "correctUse": false,
+            "explanation": "Niet correct. Double infinitive: 'willen waarschuwen', not the participle 'gewaarschuwd'. Correct: 'Ik heb hem nog willen waarschuwen, maar het was te laat.' The second verb stays infinitive whenever the modal has a partner verb in the perfect."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik kan je niet bereiken.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb je niet kunnen bereiken.",
+              "Ik heb je niet kunnen bereiken."
+            ],
+            "preferred": "Ik heb je niet kunnen bereiken.",
+            "explanation": "Double infinitive: 'heb ... kunnen bereiken'. Auxiliary 'hebben' + two infinitives, modal first. Never 'heb ... gekund bereiken' or 'heb ... kunnen bereikt'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb het probleem zelf kunnen opgelost.",
+            "task": "Verbeter de zin.",
+            "acceptedAnswers": [
+              "Ik heb het probleem zelf kunnen oplossen.",
+              "Ik heb het probleem zelf kunnen oplossen."
+            ],
+            "preferred": "Ik heb het probleem zelf kunnen oplossen.",
+            "explanation": "The second verb must be the infinitive 'oplossen', not the participle 'opgelost'. In a double infinitive both verbs are infinitives — spotting and fixing the stray participle is the whole skill here."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik wil al jaren naar Japan reizen.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb al jaren naar Japan willen reizen.",
+              "Ik heb al jaren naar Japan willen reizen."
+            ],
+            "preferred": "Ik heb al jaren naar Japan willen reizen.",
+            "explanation": "Double infinitive: 'heb ... willen reizen'. Auxiliary 'hebben' + two infinitives. Never 'gewild reizen' or 'willen gereisd'. 'Al jaren' = for years."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik probeerde het, maar het lukte niet. (kunnen, perfectum, zonder tweede werkwoord)",
+            "task": "Maak een zin met 'kunnen' alleen (Ik heb het ...).",
+            "acceptedAnswers": [
+              "Ik heb het niet gekund.",
+              "Ik heb het gewoon niet gekund."
+            ],
+            "preferred": "Ik heb het niet gekund.",
+            "explanation": "Here 'kunnen' stands alone — no second verb — so it takes the participle: 'heb het niet gekund'. This is the one place 'gekund' is right. Add a second verb and you'd switch straight back to the double infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze heeft altijd dokter willen geworden.",
+            "task": "Verbeter de zin.",
+            "acceptedAnswers": [
+              "Ze heeft altijd dokter willen worden.",
+              "Ze heeft altijd dokter willen worden."
+            ],
+            "preferred": "Ze heeft altijd dokter willen worden.",
+            "explanation": "Double infinitive: 'willen worden', not the participle 'geworden'. 'Ze heeft altijd dokter willen worden' = she always wanted to become a doctor. Both verbs infinitive once a modal has a partner."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je vertelt me dat niet eerder. (had moeten, verwijt)",
+            "task": "Herschrijf met 'had moeten + infinitief'.",
+            "acceptedAnswers": [
+              "Je had me dat eerder moeten vertellen.",
+              "Je had me dat eerder moeten vertellen."
+            ],
+            "preferred": "Je had me dat eerder moeten vertellen.",
+            "explanation": "'Had moeten + infinitive' = should have. Double infinitive 'moeten vertellen' after the auxiliary 'had'. Never 'had moeten verteld'. THE structure for regret and reproach."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb hem nog willen gewaarschuwd.",
+            "task": "Verbeter de zin.",
+            "acceptedAnswers": [
+              "Ik heb hem nog willen waarschuwen.",
+              "Ik heb hem nog willen waarschuwen."
+            ],
+            "preferred": "Ik heb hem nog willen waarschuwen.",
+            "explanation": "Double infinitive: 'willen waarschuwen', not 'gewaarschuwd'. The second verb stays infinitive. 'Nog' = still / in time. Fix the stray participle."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I haven't been able to reach him all day.",
+            "modelAnswer": "Ik heb hem de hele dag niet kunnen bereiken.",
+            "alternatives": [
+              "Ik heb hem de hele dag niet kunnen bereiken.",
+              "De hele dag heb ik hem niet kunnen bereiken."
+            ],
+            "note": "Double infinitive: 'heb ... kunnen bereiken' — never 'gekund' with a second verb present. 'De hele dag' = all day. Front it and invert: 'De hele dag heb ik ...'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I've always wanted to learn Italian.",
+            "modelAnswer": "Ik heb altijd Italiaans willen leren.",
+            "alternatives": [
+              "Ik heb altijd al Italiaans willen leren.",
+              "Ik heb altijd Italiaans willen leren."
+            ],
+            "note": "Double infinitive: 'heb ... willen leren' — both infinitives, never 'gewild'. 'Altijd al' adds the lifelong-wish flavour."
+          },
+          {
+            "type": "translation",
+            "prompt": "I tried, but I just couldn't.",
+            "modelAnswer": "Ik heb het geprobeerd, maar ik heb het gewoon niet gekund.",
+            "alternatives": [
+              "Ik heb het geprobeerd, maar het lukte gewoon niet.",
+              "Ik heb het geprobeerd, maar ik kon het gewoon niet."
+            ],
+            "note": "'Couldn't' standing alone → the participle 'gekund' (no second verb), or the imperfectum 'kon het niet'. 'Het lukte niet' (I didn't manage) is the natural idiom. The moment a second verb appears, you'd switch to the double infinitive."
+          },
+          {
+            "type": "translation",
+            "prompt": "You should have called me.",
+            "modelAnswer": "Je had me moeten bellen.",
+            "alternatives": [
+              "Je had me moeten bellen.",
+              "Je had me echt moeten bellen."
+            ],
+            "note": "'Should have' = 'had moeten + infinitive': 'had ... moeten bellen'. Double infinitive after the plusquamperfectum 'had'. Never 'had moeten gebeld'. The standard structure for hindsight and reproach."
+          },
+          {
+            "type": "translation",
+            "prompt": "She has never wanted to talk about it.",
+            "modelAnswer": "Ze heeft er nooit over willen praten.",
+            "alternatives": [
+              "Ze heeft er nooit over willen praten.",
+              "Ze heeft er nooit over willen spreken."
+            ],
+            "note": "Double infinitive: 'heeft ... willen praten' — never 'gewild'. 'Praten over' (fixed preposition) with a thing → 'er ... over'. The whole cluster 'over willen praten' closes the clause."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'm sorry I couldn't come to your party; I had to work.",
+            "modelAnswer": "Het spijt me dat ik niet naar je feest heb kunnen komen; ik moest werken.",
+            "alternatives": [
+              "Sorry dat ik niet naar je feest heb kunnen komen; ik moest werken.",
+              "Het spijt me dat ik niet naar je feestje heb kunnen komen, want ik moest werken."
+            ],
+            "note": "A 'dat'-bijzin with the double infinitive 'heb kunnen komen' (auxiliary 'heb' before the two infinitives, all at the end), plus 'moeten' in the imperfectum: 'ik moest werken'. Never 'heb gekund komen' or 'heb kunnen gekomen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He said he hadn't been able to finish the report because the computer had crashed.",
+            "modelAnswer": "Hij zei dat hij het rapport niet had kunnen afmaken omdat de computer was vastgelopen.",
+            "alternatives": [
+              "Hij zei dat hij het rapport niet af had kunnen maken omdat de computer was vastgelopen.",
+              "Hij zei dat hij het rapport niet had kunnen afronden omdat de computer was gecrasht."
+            ],
+            "note": "Reported speech with a PLUSQUAMPERFECTUM double infinitive: 'had kunnen afmaken' (auxiliary 'had' + two infinitives). Never 'had gekund afmaken' or 'had kunnen afgemaakt'. The 'omdat'-clause adds a past perfect: 'was vastgelopen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "We could have taken the earlier train, but we didn't know it was running.",
+            "modelAnswer": "We hadden de eerdere trein kunnen nemen, maar we wisten niet dat hij reed.",
+            "alternatives": [
+              "We hadden de eerdere trein kunnen pakken, maar we wisten niet dat hij reed.",
+              "We hadden de vroegere trein kunnen nemen, maar we wisten niet dat hij reed."
+            ],
+            "note": "'Could have done' = plusquamperfectum double infinitive: 'hadden ... kunnen nemen'. Both verbs infinitive — never 'hadden gekund nemen' or 'hadden kunnen genomen'. The 'missed possibility' structure."
+          },
+          {
+            "type": "translation",
+            "prompt": "She would have liked to help, but she hadn't been allowed to come in.",
+            "modelAnswer": "Ze had graag willen helpen, maar ze had niet naar binnen mogen komen.",
+            "alternatives": [
+              "Ze had graag willen helpen, maar ze had niet naar binnen mogen komen.",
+              "Ze had graag willen helpen, maar ze mocht niet naar binnen."
+            ],
+            "note": "Two plusquamperfectum double infinitives: 'had willen helpen' (would have liked to help) and 'had ... mogen komen' (hadn't been allowed to come). Both keep two infinitives — never 'had gewild geholpen' or 'had gemogen komen'. 'Naar binnen' = inside."
+          },
+          {
+            "type": "translation",
+            "prompt": "I should have been able to fix it myself, but in the end I had to call someone.",
+            "modelAnswer": "Ik had het zelf moeten kunnen maken, maar uiteindelijk heb ik iemand moeten bellen.",
+            "alternatives": [
+              "Ik had het zelf moeten kunnen maken, maar uiteindelijk heb ik iemand moeten bellen.",
+              "Ik had het zelf moeten kunnen repareren, maar uiteindelijk moest ik iemand bellen."
+            ],
+            "note": "A TRIPLE infinitive in the first half: 'had ... moeten kunnen maken' (should have been able to fix) — auxiliary 'had' + three infinitives, never a participle among them. Then another double infinitive 'heb ... moeten bellen'. The extreme case of the rule: however long the cluster, no participle creeps in."
+          }
+        ]
+      }
+    }
+  ]
+}
