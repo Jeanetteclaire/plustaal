@@ -1,0 +1,241 @@
+{
+  "zone": "foutjes",
+  "zoneName": "Foutjesgids",
+  "tiles": [
+    {
+      "id": "foutjes-2-enige-spelling",
+      "theme": "De spelling van 'enige'",
+      "themeEnglish": "Your error to crack: 'enige' is spelled with one e at the start, not 'eenige' — plus the look-alike spelling traps around it",
+      "recognitionQuestion": "Is the spelling correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Hij was de enige die op tijd was gekomen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Enige' (the only / sole) is spelled with a SINGLE e at the start: e-n-i-g-e. 'De enige die ...' = the only one who .... The long 'e' sound here comes from the open syllable (e-ni-ge), so no double 'ee' is needed."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er was maar eenige interesse voor het plan.",
+            "correctUse": false,
+            "explanation": "Niet correct. It's 'enige', not 'eenige' — one e, not two. 'Er was maar enige interesse' = there was only some interest. This double-e spelling is the exact slip to root out: the word is always e-n-i-g-e, whether it means 'only' or 'some'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Na enige tijd kwam er eindelijk een reactie.",
+            "correctUse": true,
+            "explanation": "Correct. Here 'enige' means 'some / a certain amount of': 'na enige tijd' = after some time. Same spelling as the 'only' sense — one e. (Context tells you which meaning: 'de enige' = the only, 'enige' without article = some.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zij is de enige van ons die vloeiend Frans spreekt.",
+            "correctUse": true,
+            "explanation": "Correct. 'De enige van ons' = the only one of us. Single e throughout. Note: avoid 'de enigste' — although you'll hear it spoken, 'enige' is already superlative in sense, so 'enigste' is non-standard in writing."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb maar eeven tijd, dus laten we snel beginnen.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Even' (briefly / just a moment) is spelled with a single e: e-v-e-n, not 'eeven'. 'Ik heb maar even tijd' = I've only got a moment. Like 'enige', the long vowel comes from the open syllable (e-ven), so no doubling."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Er zijn enkele kleine foutjes blijven staan.",
+            "correctUse": true,
+            "explanation": "Correct. 'Enkele' (a few / some) is spelled with a single e at the start, and is a close cousin of 'enige'. 'Enkele kleine foutjes' = a few small mistakes. Both 'enige' and 'enkele' can mean 'some', with 'enkele' leaning more toward 'a few (countable)'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Dat is de enige reden waarom ik nog twijfel.",
+            "correctUse": true,
+            "explanation": "Correct. 'De enige reden' = the only reason. Single e. The relative 'waarom ik nog twijfel' is verb-final. A clean, common use of 'enige' in the 'sole' sense."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hij was de ___ die het wist. (= de only)",
+            "task": "Vul het juiste woord correct gespeld in.",
+            "acceptedAnswers": [
+              "Hij was de enige die het wist.",
+              "enige"
+            ],
+            "preferred": "Hij was de enige die het wist.",
+            "explanation": "'Enige' (the only one) — single e, e-n-i-g-e. 'De enige die het wist' = the only one who knew. Never 'eenige'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Er was maar eenige belangstelling.",
+            "task": "Verbeter de spelling.",
+            "acceptedAnswers": [
+              "Er was maar enige belangstelling.",
+              "Er was maar enige belangstelling."
+            ],
+            "preferred": "Er was maar enige belangstelling.",
+            "explanation": "'Enige' has one e, not two: 'enige belangstelling' = some interest. Strike the extra e. The long vowel is carried by the open syllable, so 'ee' is wrong here."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Heb je ___ tijd om me te helpen? (= a moment, kort)",
+            "task": "Vul het juiste woord correct gespeld in.",
+            "acceptedAnswers": [
+              "Heb je even tijd om me te helpen?",
+              "even"
+            ],
+            "preferred": "Heb je even tijd om me te helpen?",
+            "explanation": "'Even' (just / a moment) — single e, e-v-e-n. 'Heb je even tijd?' = have you got a moment? Same open-syllable long vowel as 'enige', so no doubling."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Na ___ tijd begon het te regenen. (= some, na een poosje)",
+            "task": "Vul het juiste woord correct gespeld in.",
+            "acceptedAnswers": [
+              "Na enige tijd begon het te regenen.",
+              "enige"
+            ],
+            "preferred": "Na enige tijd begon het te regenen.",
+            "explanation": "'Enige tijd' = some time / a while. Single e. Note the inversion after the fronted 'Na enige tijd': 'begon het'. Two things to get right at once."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Er staan nog ___ foutjes in de tekst. (= a few)",
+            "task": "Vul het juiste woord correct gespeld in (enkele of enige).",
+            "acceptedAnswers": [
+              "Er staan nog enkele foutjes in de tekst.",
+              "Er staan nog enige foutjes in de tekst."
+            ],
+            "preferred": "Er staan nog enkele foutjes in de tekst.",
+            "explanation": "'Enkele' (a few, countable) fits best for discrete mistakes; 'enige' (some) also works. Both single-e. 'Er staan nog enkele foutjes' = there are still a few mistakes."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Zij is de ___ persoon die ik volledig vertrouw. (= only)",
+            "task": "Vul het juiste woord correct gespeld in.",
+            "acceptedAnswers": [
+              "Zij is de enige persoon die ik volledig vertrouw.",
+              "enige"
+            ],
+            "preferred": "Zij is de enige persoon die ik volledig vertrouw.",
+            "explanation": "'De enige persoon' = the only person. Single e. The relative clause 'die ik volledig vertrouw' is verb-final. Avoid 'enigste' in writing — 'enige' already carries the 'sole' meaning."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Kun je ___ wachten? Ik ben zo klaar. (= briefly)",
+            "task": "Vul het juiste woord correct gespeld in.",
+            "acceptedAnswers": [
+              "Kun je even wachten? Ik ben zo klaar.",
+              "even"
+            ],
+            "preferred": "Kun je even wachten? Ik ben zo klaar.",
+            "explanation": "'Even' (a moment / briefly) — single e. 'Kun je even wachten?' = can you wait a sec? 'Ik ben zo klaar' = I'll be done in a moment ('zo' = shortly here)."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "He was the only one who knew.",
+            "modelAnswer": "Hij was de enige die het wist.",
+            "alternatives": [
+              "Hij was de enige die het wist.",
+              "Hij was de enige die ervan wist."
+            ],
+            "note": "'De enige' (the only one) — single e. The relative 'die het wist' / 'die ervan wist' is verb-final. 'Ervan wist' uses the er + voorzetsel form (weten van → ervan)."
+          },
+          {
+            "type": "translation",
+            "prompt": "After some time, she replied.",
+            "modelAnswer": "Na enige tijd reageerde ze.",
+            "alternatives": [
+              "Na enige tijd reageerde ze.",
+              "Na enige tijd gaf ze antwoord."
+            ],
+            "note": "'Enige tijd' = some time. Single e. The fronted 'Na enige tijd' inverts the main clause: 'reageerde ze' / 'gaf ze'. 'Reageren' = to respond; 'antwoord geven' = to answer."
+          },
+          {
+            "type": "translation",
+            "prompt": "Have you got a moment?",
+            "modelAnswer": "Heb je even tijd?",
+            "alternatives": [
+              "Heb je even tijd?",
+              "Heb je even?"
+            ],
+            "note": "'Even' (a moment) — single e. 'Heb je even tijd?' or just 'Heb je even?' = have you got a sec? A small, very high-frequency word that's easy to over-spell as 'eeven'."
+          },
+          {
+            "type": "translation",
+            "prompt": "There were only a few people there.",
+            "modelAnswer": "Er waren maar enkele mensen.",
+            "alternatives": [
+              "Er waren maar enkele mensen.",
+              "Er waren maar een paar mensen."
+            ],
+            "note": "'Enkele' (a few) — single e. 'Er waren maar enkele mensen' = there were only a few people. 'Een paar' is the everyday spoken equivalent. Placeholder 'er' for the indefinite subject."
+          },
+          {
+            "type": "translation",
+            "prompt": "That's the only reason I'm still doubting.",
+            "modelAnswer": "Dat is de enige reden waarom ik nog twijfel.",
+            "alternatives": [
+              "Dat is de enige reden waarom ik nog twijfel.",
+              "Dat is de enige reden dat ik nog twijfel."
+            ],
+            "note": "'De enige reden' = the only reason. Single e. 'Waarom ik nog twijfel' / 'dat ik nog twijfel' — the relative clause is verb-final ('twijfel'). Both 'waarom' and 'dat' work after 'reden'."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "She was the only one of the candidates who had some real experience.",
+            "modelAnswer": "Zij was de enige van de kandidaten die enige echte ervaring had.",
+            "alternatives": [
+              "Zij was de enige van de kandidaten die enige echte ervaring had.",
+              "Zij was de enige kandidaat die enige echte ervaring had."
+            ],
+            "note": "Both senses of 'enige' in one sentence: 'de enige' (the only one) and 'enige ervaring' (some experience). Both single-e. The relative clause 'die ... had' is verb-final. A neat demonstration that the same spelling covers both meanings."
+          },
+          {
+            "type": "translation",
+            "prompt": "Give me just a moment; there are still a few small things I need to check.",
+            "modelAnswer": "Geef me even de tijd; er zijn nog enkele kleine dingen die ik moet controleren.",
+            "alternatives": [
+              "Geef me even de tijd; er zijn nog enkele kleine dingen die ik moet nakijken.",
+              "Geef me even; er zijn nog een paar kleine dingen die ik moet controleren."
+            ],
+            "note": "'Even' (a moment) and 'enkele' (a few) — both single-e, side by side. The relative 'die ik moet controleren' is verb-final. 'Controleren' / 'nakijken' = to check. Two of the look-alike spelling traps in one breath."
+          },
+          {
+            "type": "translation",
+            "prompt": "After some hesitation, he admitted he was the only one who hadn't read the report.",
+            "modelAnswer": "Na enige aarzeling gaf hij toe dat hij de enige was die het rapport niet had gelezen.",
+            "alternatives": [
+              "Na enige aarzeling gaf hij toe dat hij de enige was die het rapport niet had gelezen.",
+              "Na enige aarzeling bekende hij dat hij de enige was die het rapport niet gelezen had."
+            ],
+            "note": "Both 'enige' senses again: 'enige aarzeling' (some hesitation) and 'de enige' (the only one). The fronted 'Na enige aarzeling' inverts: 'gaf hij toe' (separable 'toegeven'). The 'dat'- and relative clauses are verb-final. Spelling stays single-e throughout."
+          },
+          {
+            "type": "translation",
+            "prompt": "It's the only thing I'd still like to change, if I had just a little more time.",
+            "modelAnswer": "Het is het enige wat ik nog zou willen veranderen, als ik nog een beetje meer tijd had.",
+            "alternatives": [
+              "Het is het enige wat ik nog zou willen veranderen, als ik nog wat meer tijd had.",
+              "Het enige wat ik nog zou willen veranderen, is dit \u2014 als ik nog wat meer tijd had."
+            ],
+            "note": "'Het enige wat ...' (the only thing that — note 'wat' after the indefinite 'het enige'), single e. The polite 'zou willen veranderen' and a present-unreal 'als'-clause ('als ik ... had') round it out. Several earlier topics converging on one correctly-spelled 'enige'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Just a few weeks ago she was still the only one in the team who spoke fluent Dutch.",
+            "modelAnswer": "Nog maar enkele weken geleden was zij de enige in het team die vloeiend Nederlands sprak.",
+            "alternatives": [
+              "Nog maar enkele weken geleden was zij de enige in het team die vloeiend Nederlands sprak.",
+              "Nog maar een paar weken geleden was zij de enige in het team die vloeiend Nederlands sprak."
+            ],
+            "note": "'Enkele' (a few) and 'de enige' (the only one) together, both single-e. The fronted time phrase 'Nog maar enkele weken geleden' inverts the main clause: 'was zij'. The relative 'die ... sprak' is verb-final. Spelling plus inversion plus relative clause, all at once."
+          }
+        ]
+      }
+    }
+  ]
+}

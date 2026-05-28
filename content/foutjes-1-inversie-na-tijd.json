@@ -1,0 +1,241 @@
+{
+  "zone": "foutjes",
+  "zoneName": "Foutjesgids",
+  "tiles": [
+    {
+      "id": "foutjes-1-inversie-na-tijd",
+      "theme": "Inversie na een tijdsbepaling",
+      "themeEnglish": "Your error to crack: when a time word opens the sentence, the verb comes before the subject (Gisteren ben ik ..., not Gisteren ik ben ...)",
+      "recognitionQuestion": "Is the word order correct after the fronted time word?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Gisteren ik ben naar de markt geweest.",
+            "correctUse": false,
+            "explanation": "Niet correct — and this is the one to burn in. A fronted time word forces verb-second: 'Gisteren ben ik ...', not 'Gisteren ik ben'. The verb 'ben' must come before the subject 'ik'. Correct: 'Gisteren ben ik naar de markt geweest.' This is the single most common slip — keeping the English subject-verb order after 'gisteren'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Morgen ga ik vroeg naar mijn werk.",
+            "correctUse": true,
+            "explanation": "Correct. 'Morgen' first → verb 'ga' second, subject 'ik' third: 'Morgen ga ik ...'. This is the target pattern: time word, then verb, then subject. Read it aloud a few times — it's the rhythm to internalise."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Nu ik begrijp eindelijk hoe het werkt.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Nu' opens, so the verb must come next: 'Nu begrijp ik ...', not 'Nu ik begrijp'. Correct: 'Nu begrijp ik eindelijk hoe het werkt.' The indirect question 'hoe het werkt' is then verb-final. The error is purely the un-inverted main clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Daarna we zijn met z'n allen naar het strand gegaan.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Daarna' (after that) is a time word, so it forces inversion: 'Daarna zijn we ...', not 'Daarna we zijn'. Correct: 'Daarna zijn we met z'n allen naar het strand gegaan.' Sequencing words — daarna, toen, vervolgens — are where this slip bites hardest mid-story."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vorig jaar zijn we drie weken in Italië geweest.",
+            "correctUse": true,
+            "explanation": "Correct. 'Vorig jaar' first → 'zijn we' (verb before subject). The participle 'geweest' goes to the end. 'Vorig jaar zijn we ...' — exactly the shape you're aiming for whenever a time phrase leads."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Elke ochtend drink ik eerst een grote kop koffie.",
+            "correctUse": true,
+            "explanation": "Correct. 'Elke ochtend' first → 'drink ik'. Verb second, subject third. A habitual time phrase triggers the same inversion as a one-off one. 'Elke ochtend drink ik ...'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen ik wakker werd, het was al heel laat.",
+            "correctUse": false,
+            "explanation": "Niet correct. The fronted 'toen'-bijzin counts as the first element, so the main clause must invert: '..., was het al heel laat', not '..., het was'. Correct: 'Toen ik wakker werd, was het al heel laat.' Even the dummy 'het' moves after the verb. A whole bijzin in front works exactly like a single time word."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ben gisteren naar de dokter geweest.",
+            "task": "Begin met 'Gisteren'.",
+            "acceptedAnswers": [
+              "Gisteren ben ik naar de dokter geweest.",
+              "Gisteren ben ik naar de dokter geweest."
+            ],
+            "preferred": "Gisteren ben ik naar de dokter geweest.",
+            "explanation": "Front 'Gisteren' → verb and subject swap: 'ben ik'. 'Gisteren ben ik ...' The participle 'geweest' stays at the end. This is THE pattern to drill: time word, verb, subject."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik begrijp het nu eindelijk.",
+            "task": "Begin met 'Nu'.",
+            "acceptedAnswers": [
+              "Nu begrijp ik het eindelijk.",
+              "Nu begrijp ik het eindelijk."
+            ],
+            "preferred": "Nu begrijp ik het eindelijk.",
+            "explanation": "'Nu' first → 'begrijp ik'. Verb second, subject third. Not 'Nu ik begrijp'. The little 'het' follows the subject."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We gingen daarna naar een café in de stad.",
+            "task": "Begin met 'Daarna'.",
+            "acceptedAnswers": [
+              "Daarna gingen we naar een café in de stad.",
+              "Daarna gingen we naar een café in de stad."
+            ],
+            "preferred": "Daarna gingen we naar een café in de stad.",
+            "explanation": "'Daarna' first → 'gingen we'. Sequencing words force inversion just like any time word. 'Daarna gingen we ...' — watch this one especially when you're telling a story."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik sta elke dag om half zeven op.",
+            "task": "Begin met 'Elke dag'.",
+            "acceptedAnswers": [
+              "Elke dag sta ik om half zeven op.",
+              "Elke dag sta ik om half zeven op."
+            ],
+            "preferred": "Elke dag sta ik om half zeven op.",
+            "explanation": "'Elke dag' first → 'sta ik'. The separable 'opstaan' still splits to the end: 'sta ... op'. Two patterns at once — inversion plus the separable split."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We zijn vorige zomer naar Spanje gereisd.",
+            "task": "Begin met 'Vorige zomer'.",
+            "acceptedAnswers": [
+              "Vorige zomer zijn we naar Spanje gereisd.",
+              "Vorige zomer zijn we naar Spanje gereisd."
+            ],
+            "preferred": "Vorige zomer zijn we naar Spanje gereisd.",
+            "explanation": "'Vorige zomer' first → 'zijn we'. Verb second, subject third; participle 'gereisd' at the end. 'Vorige zomer zijn we ...'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het begon 's middags hard te regenen.",
+            "task": "Begin met \"'s Middags\".",
+            "acceptedAnswers": [
+              "'s Middags begon het hard te regenen.",
+              "'s Middags begon het hard te regenen."
+            ],
+            "preferred": "'s Middags begon het hard te regenen.",
+            "explanation": "The time phrase \"'s Middags\" (in the afternoon) opens → 'begon het'. Even the dummy subject 'het' moves after the verb. 'Beginnen te + infinitive': 'begon ... te regenen'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik was toen nog veel te jong om het te begrijpen.",
+            "task": "Begin met 'Toen'.",
+            "acceptedAnswers": [
+              "Toen was ik nog veel te jong om het te begrijpen.",
+              "Toen was ik nog veel te jong om het te begrijpen."
+            ],
+            "preferred": "Toen was ik nog veel te jong om het te begrijpen.",
+            "explanation": "'Toen' as a single fronted time word (then / at that time) → 'was ik'. Verb second, subject third. The 'om ... te'-clause closes the sentence: 'om het te begrijpen'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Yesterday I went to the market.",
+            "modelAnswer": "Gisteren ben ik naar de markt geweest.",
+            "alternatives": [
+              "Gisteren ben ik naar de markt gegaan.",
+              "Gisteren ging ik naar de markt."
+            ],
+            "note": "'Gisteren' first → 'ben ik' / 'ging ik' (verb before subject). 'Naar de markt geweest' uses 'zijn' (been somewhere); 'gegaan' / 'ging' (went) also work. Never 'Gisteren ik ben'."
+          },
+          {
+            "type": "translation",
+            "prompt": "Tomorrow I'm starting a new job.",
+            "modelAnswer": "Morgen begin ik aan een nieuwe baan.",
+            "alternatives": [
+              "Morgen begin ik aan een nieuwe baan.",
+              "Morgen start ik met een nieuwe baan."
+            ],
+            "note": "'Morgen' first → 'begin ik'. 'Beginnen aan' / 'starten met' = to start (a job). The verb leads, the subject follows. The target rhythm."
+          },
+          {
+            "type": "translation",
+            "prompt": "After that, we walked home.",
+            "modelAnswer": "Daarna zijn we naar huis gelopen.",
+            "alternatives": [
+              "Daarna liepen we naar huis.",
+              "Daarna zijn we naar huis gelopen."
+            ],
+            "note": "'Daarna' first → 'zijn we' / 'liepen we'. A sequencing word triggers inversion. 'Lopen' to a destination can take 'zijn' ('zijn ... gelopen') or stay imperfectum ('liepen')."
+          },
+          {
+            "type": "translation",
+            "prompt": "Every morning I read the newspaper.",
+            "modelAnswer": "Elke ochtend lees ik de krant.",
+            "alternatives": [
+              "Elke ochtend lees ik de krant.",
+              "'s Ochtends lees ik altijd de krant."
+            ],
+            "note": "'Elke ochtend' / ''s Ochtends' first → 'lees ik'. A habitual time phrase inverts exactly like a one-off. Verb second, subject third."
+          },
+          {
+            "type": "translation",
+            "prompt": "Last year we moved to Amsterdam.",
+            "modelAnswer": "Vorig jaar zijn we naar Amsterdam verhuisd.",
+            "alternatives": [
+              "Vorig jaar zijn we naar Amsterdam verhuisd.",
+              "Vorig jaar verhuisden we naar Amsterdam."
+            ],
+            "note": "'Vorig jaar' first → 'zijn we' / 'verhuisden we'. 'Verhuizen' (to move house) takes 'zijn'. The participle 'verhuisd' goes to the end."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "This morning I overslept, so I missed the first train.",
+            "modelAnswer": "Vanochtend heb ik me verslapen, dus ik heb de eerste trein gemist.",
+            "alternatives": [
+              "Vanochtend heb ik me verslapen, dus heb ik de eerste trein gemist.",
+              "Vanochtend versliep ik me, dus miste ik de eerste trein."
+            ],
+            "note": "'Vanochtend' first → 'heb ik' (inversion). 'Zich verslapen' = to oversleep (reflexive). After 'dus' you can invert ('dus heb ik') or keep normal order ('dus ik heb') — both are heard, since 'dus' sits on the line between coordinating and resumptive."
+          },
+          {
+            "type": "translation",
+            "prompt": "When I got home, the children were already asleep.",
+            "modelAnswer": "Toen ik thuiskwam, sliepen de kinderen al.",
+            "alternatives": [
+              "Toen ik thuiskwam, sliepen de kinderen al.",
+              "Toen ik thuiskwam, lagen de kinderen al te slapen."
+            ],
+            "note": "The fronted 'toen'-bijzin (verb-final 'thuiskwam') forces main-clause inversion: 'sliepen de kinderen'. 'Liggen te slapen' (the positional progressive) is the very Dutch way to say they were asleep. A whole bijzin in front behaves like one time word."
+          },
+          {
+            "type": "translation",
+            "prompt": "First we had dinner, then we watched a film, and after that everyone went home.",
+            "modelAnswer": "Eerst hebben we gegeten, toen hebben we een film gekeken, en daarna is iedereen naar huis gegaan.",
+            "alternatives": [
+              "Eerst aten we, toen keken we een film, en daarna ging iedereen naar huis.",
+              "Eerst hebben we gegeten, daarna hebben we een film gekeken, en toen is iedereen naar huis gegaan."
+            ],
+            "note": "Three fronted time words, three inversions: 'Eerst hebben we', 'toen hebben we', 'daarna is iedereen'. This is exactly the storytelling situation where the slip creeps in — each new time word resets the verb-second rule. Drill the rhythm across all three."
+          },
+          {
+            "type": "translation",
+            "prompt": "Next week I have a day off, so then I'll finally have time to tidy the house.",
+            "modelAnswer": "Volgende week heb ik een vrije dag, dus dan heb ik eindelijk tijd om het huis op te ruimen.",
+            "alternatives": [
+              "Volgende week heb ik een vrije dag, dus dan heb ik eindelijk tijd om het huis op te ruimen.",
+              "Volgende week heb ik vrij, dus dan heb ik eindelijk tijd om het huis op te ruimen."
+            ],
+            "note": "Two frontings: 'Volgende week heb ik' and the resumptive 'dan heb ik' (after 'dus'). Both invert. Then 'om ... op te ruimen' (separable split around 'te'). 'Een vrije dag / vrij hebben' = to have a day off."
+          },
+          {
+            "type": "translation",
+            "prompt": "Years ago I lived in London, but now I can't imagine living anywhere but Amsterdam.",
+            "modelAnswer": "Jaren geleden woonde ik in Londen, maar nu kan ik me niet voorstellen dat ik ergens anders dan in Amsterdam zou wonen.",
+            "alternatives": [
+              "Jaren geleden woonde ik in Londen, maar nu kan ik me niet voorstellen ergens anders dan in Amsterdam te wonen.",
+              "Jaren geleden woonde ik in Londen, maar nu kan ik me niet voorstellen dat ik ergens anders zou wonen dan in Amsterdam."
+            ],
+            "note": "Two fronted time words, two inversions: 'Jaren geleden woonde ik' and 'nu kan ik'. 'Zich voorstellen' = to imagine (reflexive). The 'dat'-bijzin with 'zou wonen' is verb-final. A long sentence, but both time-frontings invert cleanly — that's the habit to lock in."
+          }
+        ]
+      }
+    }
+  ]
+}
