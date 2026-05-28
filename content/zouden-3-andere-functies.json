@@ -1,0 +1,241 @@
+{
+  "zone": "zouden",
+  "zoneName": "Zouden + conditional",
+  "tiles": [
+    {
+      "id": "zouden-3-andere-functies",
+      "theme": "Andere functies van 'zou'",
+      "themeEnglish": "The other jobs of 'zou' — hearsay (Hij zou ziek zijn), tentative advice (Je zou eens ...), and softened opinion (Ik zou zeggen ...)",
+      "recognitionQuestion": "Is 'zou'/'zouden' used correctly in this function?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Volgens de krant zou de minister volgende week aftreden.",
+            "correctUse": true,
+            "explanation": "Correct. This is the HEARSAY 'zou' — reporting something claimed but not confirmed: 'zou ... aftreden' = is said to / reportedly will resign. 'Volgens de krant' (according to the paper) flags the unverified source. 'Zou' here means 'allegedly / supposedly', not 'would'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je zou eens wat vaker naar buiten moeten gaan.",
+            "correctUse": true,
+            "explanation": "Correct. The TENTATIVE-ADVICE 'zou': 'Je zou eens ... moeten' = you really ought to / you should .... The 'eens' softens it into friendly advice rather than a command. 'Zou ... moeten' is gentler than a bare 'je moet'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik zou zeggen dat het ongeveer twintig kilometer is.",
+            "correctUse": true,
+            "explanation": "Correct. The HEDGING 'zou' — softening an opinion or estimate: 'Ik zou zeggen dat ...' = I'd say (that) .... It makes a guess sound tentative and polite rather than flatly asserted. Compare the blunter 'Het is ongeveer twintig kilometer.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het zou kunnen dat hij het gewoon vergeten is.",
+            "correctUse": true,
+            "explanation": "Correct. 'Het zou kunnen dat ...' = it could be that ... — 'zou' expressing possibility/speculation. 'Het zou kunnen' on its own means 'that's possible / could be'. A handy way to float a maybe without committing to it."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij zei dat hij morgen zou komen, maar hij zou nu ziek is.",
+            "correctUse": false,
+            "explanation": "Niet correct. The hearsay 'zou' is still followed by an INFINITIVE, not a finite verb: 'hij zou nu ziek zijn' (he's apparently ill now), not 'zou ... is'. Correct: '..., maar hij zou nu ziek zijn.' The first 'zou' ('zou komen') is right; the second needs 'zijn', not 'is'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je zou je moeten schamen voor wat je gezegd hebt.",
+            "correctUse": true,
+            "explanation": "Correct. The REPROACH 'zou': 'Je zou je moeten schamen' = you should be ashamed. 'Zou ... moeten' softens the form but the content still carries the rebuke. The reflexive 'zich schamen' (to be ashamed) + 'voor' for what about. 'Voor wat je gezegd hebt' is a verb-final relative clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Naar verluidt zouden er meer dan duizend mensen aanwezig zijn geweest.",
+            "correctUse": true,
+            "explanation": "Correct. Formal hearsay: 'Naar verluidt' (reportedly) + 'zouden ... aanwezig zijn geweest' (are said to have been present). 'Zou' here reports an unverified claim about the past, using a perfect infinitive 'aanwezig zijn geweest'. Common in news writing."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "De minister treedt volgens de geruchten volgende week af.",
+            "task": "Herschrijf met de 'zou'-van-geruchten (hearsay).",
+            "acceptedAnswers": [
+              "De minister zou volgende week aftreden.",
+              "Volgens de geruchten zou de minister volgende week aftreden."
+            ],
+            "preferred": "De minister zou volgende week aftreden.",
+            "explanation": "Hearsay 'zou' = is said to / reportedly. 'De minister zou ... aftreden' signals the claim is unverified. The separable 'aftreden' stays whole as the infinitive after 'zou'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ga eens wat vaker naar buiten. (vriendelijk advies)",
+            "task": "Maak er vriendelijk advies van met 'zou ... moeten'.",
+            "acceptedAnswers": [
+              "Je zou eens wat vaker naar buiten moeten gaan.",
+              "Je zou wat vaker naar buiten moeten gaan."
+            ],
+            "preferred": "Je zou eens wat vaker naar buiten moeten gaan.",
+            "explanation": "'Zou ... moeten' turns a command into gentle advice. The 'eens' adds the friendly nudge ('you really should, sometime'). The cluster 'moeten gaan' at the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het is ongeveer twintig kilometer. (voorzichtige schatting)",
+            "task": "Maak het voorzichtiger met 'Ik zou zeggen dat ...'.",
+            "acceptedAnswers": [
+              "Ik zou zeggen dat het ongeveer twintig kilometer is.",
+              "Ik zou zeggen dat het zo'n twintig kilometer is."
+            ],
+            "preferred": "Ik zou zeggen dat het ongeveer twintig kilometer is.",
+            "explanation": "'Ik zou zeggen dat ...' hedges an estimate, making it tentative and polite. The 'dat'-bijzin is verb-final ('is'). 'Zo'n' = around/about, a natural softener for numbers."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Misschien is hij het gewoon vergeten.",
+            "task": "Herschrijf met 'Het zou kunnen dat ...'.",
+            "acceptedAnswers": [
+              "Het zou kunnen dat hij het gewoon vergeten is.",
+              "Het zou kunnen dat hij het gewoon is vergeten."
+            ],
+            "preferred": "Het zou kunnen dat hij het gewoon vergeten is.",
+            "explanation": "'Het zou kunnen dat ...' = it could be that ... — floating a possibility. The 'dat'-bijzin is verb-final, with the cluster 'vergeten is' / 'is vergeten' at the end. A softer alternative to 'misschien'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je moet je schamen voor wat je deed.",
+            "task": "Maak het een verwijt met 'zou ... moeten'.",
+            "acceptedAnswers": [
+              "Je zou je moeten schamen voor wat je deed.",
+              "Je zou je moeten schamen voor wat je gedaan hebt."
+            ],
+            "preferred": "Je zou je moeten schamen voor wat je deed.",
+            "explanation": "'Zou ... moeten' wraps a reproach in conditional softening — the form is gentler, the message isn't. Reflexive 'zich schamen' (to be ashamed). 'Voor wat je deed' is a verb-final relative clause with 'wat'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Volgens de berichten waren er meer dan duizend mensen aanwezig.",
+            "task": "Herschrijf met de formele hearsay-'zou' (Naar verluidt ...).",
+            "acceptedAnswers": [
+              "Naar verluidt zouden er meer dan duizend mensen aanwezig zijn geweest.",
+              "Naar verluidt zouden er meer dan duizend mensen aanwezig zijn geweest."
+            ],
+            "preferred": "Naar verluidt zouden er meer dan duizend mensen aanwezig zijn geweest.",
+            "explanation": "Formal hearsay about the past: 'Naar verluidt' (reportedly) + 'zouden ... aanwezig zijn geweest' (perfect infinitive). The placeholder 'er' for the indefinite subject 'meer dan duizend mensen'. Fronted 'Naar verluidt' inverts: 'zouden er'. News-register Dutch."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Praat eens met een dokter. (voorzichtige suggestie)",
+            "task": "Maak een voorzichtige suggestie met 'Je zou ... kunnen'.",
+            "acceptedAnswers": [
+              "Je zou eens met een dokter kunnen praten.",
+              "Je zou met een dokter kunnen praten."
+            ],
+            "preferred": "Je zou eens met een dokter kunnen praten.",
+            "explanation": "'Je zou ... kunnen' = you could (a gentle suggestion). Even softer than 'zou ... moeten'. The cluster 'kunnen praten' at the end. 'Spreken met' / 'praten met' — 'met' for the person."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "He's supposedly very rich.",
+            "modelAnswer": "Hij zou heel rijk zijn.",
+            "alternatives": [
+              "Hij zou heel rijk zijn.",
+              "Hij zou schatrijk zijn."
+            ],
+            "note": "Hearsay 'zou' = supposedly / is said to be. 'Hij zou ... zijn' (infinitive 'zijn', not 'is'). 'Schatrijk' = filthy rich. The whole point of this 'zou' is to report without vouching for it."
+          },
+          {
+            "type": "translation",
+            "prompt": "You should get more sleep.",
+            "modelAnswer": "Je zou eens wat meer moeten slapen.",
+            "alternatives": [
+              "Je zou wat meer moeten slapen.",
+              "Je zou echt wat meer moeten slapen."
+            ],
+            "note": "Tentative advice 'zou ... moeten' = ought to / should. 'Eens' softens it to friendly nudging; 'echt' makes it more insistent. The cluster 'moeten slapen' at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd say it's about an hour's drive.",
+            "modelAnswer": "Ik zou zeggen dat het ongeveer een uur rijden is.",
+            "alternatives": [
+              "Ik zou zeggen dat het zo'n uur rijden is.",
+              "Ik zou denken dat het ongeveer een uur rijden is."
+            ],
+            "note": "Hedging 'Ik zou zeggen / denken dat ...' = I'd say / I'd think. The 'dat'-bijzin is verb-final. 'Een uur rijden' = an hour's drive. Softens an estimate into an opinion."
+          },
+          {
+            "type": "translation",
+            "prompt": "It could be that she missed the train.",
+            "modelAnswer": "Het zou kunnen dat ze de trein heeft gemist.",
+            "alternatives": [
+              "Het zou kunnen dat ze de trein gemist heeft.",
+              "Het kan zijn dat ze de trein heeft gemist."
+            ],
+            "note": "'Het zou kunnen dat ...' = it could be that ... — speculation. The 'dat'-bijzin is verb-final ('heeft gemist' / 'gemist heeft'). 'Het kan zijn dat ...' is a slightly more direct alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "You ought to be ashamed of yourself.",
+            "modelAnswer": "Je zou je moeten schamen.",
+            "alternatives": [
+              "Je zou je moeten schamen.",
+              "Je zou je diep moeten schamen."
+            ],
+            "note": "Reproach via 'zou ... moeten'. Reflexive 'zich schamen' (to be ashamed). 'Je zou je moeten schamen' = you ought to be ashamed. 'Diep' (deeply) sharpens it. The conditional form softens the delivery, not the meaning."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "According to the news, the factory is supposed to close next year, which would cost hundreds of jobs.",
+            "modelAnswer": "Volgens het nieuws zou de fabriek volgend jaar sluiten, wat honderden banen zou kosten.",
+            "alternatives": [
+              "Volgens het nieuws zou de fabriek volgend jaar sluiten, wat honderden banen zou kosten.",
+              "Naar verluidt zou de fabriek volgend jaar sluiten, wat honderden banen zou kosten."
+            ],
+            "note": "Two different 'zou's: the first is hearsay ('zou ... sluiten' = is reportedly closing), the second is conditional ('wat ... zou kosten' = which would cost). 'Wat' here refers back to the whole idea. Fronted 'Volgens het nieuws' inverts: 'zou de fabriek'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd say you should talk to your manager about it before you make a decision.",
+            "modelAnswer": "Ik zou zeggen dat je er met je manager over zou moeten praten voordat je een beslissing neemt.",
+            "alternatives": [
+              "Ik zou zeggen dat je het er met je manager over moet hebben voordat je een beslissing neemt.",
+              "Ik zou zeggen dat je er met je manager over zou moeten praten voordat je een besluit neemt."
+            ],
+            "note": "Hedging 'Ik zou zeggen dat ...' framing a tentative-advice 'zou ... moeten praten' inside the 'dat'-clause. 'Praten over' with a thing → 'er ... over' (er + voorzetsel). The 'voordat'-bijzin is verb-final ('neemt'). 'Zou' working at two levels."
+          },
+          {
+            "type": "translation",
+            "prompt": "It could be that he simply forgot, but you'd think he'd have let us know.",
+            "modelAnswer": "Het zou kunnen dat hij het gewoon vergeten is, maar je zou denken dat hij het ons wel had laten weten.",
+            "alternatives": [
+              "Het zou kunnen dat hij het gewoon vergeten is, maar je zou denken dat hij het ons wel had laten weten.",
+              "Het kan zijn dat hij het gewoon vergeten is, maar je zou toch denken dat hij het ons wel had laten weten."
+            ],
+            "note": "'Het zou kunnen dat ...' (speculation) and 'je zou denken dat ...' (hedged expectation), each opening a verb-final 'dat'-clause. The second contains a plusquamperfectum double infinitive 'had laten weten' (would have let us know). 'Laten weten' = to let know."
+          },
+          {
+            "type": "translation",
+            "prompt": "She's reportedly the best lawyer in the city, but I'd want to see that for myself.",
+            "modelAnswer": "Ze zou de beste advocaat van de stad zijn, maar dat zou ik zelf willen zien.",
+            "alternatives": [
+              "Ze zou de beste advocaat van de stad zijn, maar dat zou ik zelf willen zien.",
+              "Naar verluidt zou ze de beste advocaat van de stad zijn, maar dat zou ik zelf willen zien."
+            ],
+            "note": "Hearsay 'zou ... zijn' (reportedly is) versus the polite-wish 'zou ik ... willen zien' (I'd want to see). Fronting the object 'dat' inverts the second clause: 'dat zou ik ... zien'. Same word, two functions, in deliberate contrast."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I were you, I'd say it would be better to wait until the situation is clearer.",
+            "modelAnswer": "Als ik jou was, zou ik zeggen dat het beter zou zijn om te wachten tot de situatie duidelijker is.",
+            "alternatives": [
+              "Als ik jou was, zou ik zeggen dat het beter is om te wachten tot de situatie duidelijker is.",
+              "Als ik jou was, zou ik zeggen dat het verstandiger zou zijn om te wachten tot de situatie duidelijker is."
+            ],
+            "note": "A stack of 'zou's across registers: conditional ('als ik jou was, zou ik zeggen'), hedged opinion ('dat het beter zou zijn'), then an 'om ... te' clause and a 'tot'-bijzin (verb-final 'is'). Three clauses deep, every 'zou' doing distinct work — the full reach of the word in one sentence."
+          }
+        ]
+      }
+    }
+  ]
+}

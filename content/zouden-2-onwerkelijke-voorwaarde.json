@@ -1,0 +1,241 @@
+{
+  "zone": "zouden",
+  "zoneName": "Zouden + conditional",
+  "tiles": [
+    {
+      "id": "zouden-2-onwerkelijke-voorwaarde",
+      "theme": "Onwerkelijke voorwaarde",
+      "themeEnglish": "The unreal conditional — present (Als ik rijk was, zou ik ...) and past (Als ik het had geweten, had ik ...)",
+      "recognitionQuestion": "Is this conditional correctly formed?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Als ik rijk ben, zou ik stoppen met werken.",
+            "correctUse": false,
+            "explanation": "Niet correct. For a present UNREAL condition (I'm not rich), the 'als'-clause needs the imperfectum, not the present: 'Als ik rijk was, ...'. The present 'ben' would make it a real, open possibility. Correct: 'Als ik rijk was, zou ik stoppen met werken' = if I were rich, I'd stop working."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik meer tijd had, zou ik vaker koken.",
+            "correctUse": true,
+            "explanation": "Correct. Present unreal: 'als' + imperfectum ('had'), main clause 'zou' + infinitive ('zou ... koken'). 'Als ik meer tijd had, zou ik vaker koken' = if I had more time, I'd cook more often. The imperfectum signals it's hypothetical, not a real plan."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik het had geweten, was ik nooit gekomen.",
+            "correctUse": true,
+            "explanation": "Correct. Past unreal: 'als' + plusquamperfectum ('had geweten'), main clause also plusquamperfectum ('was ... gekomen'). 'Als ik het had geweten, was ik nooit gekomen' = if I'd known, I'd never have come. Both halves sit in the past perfect — the classic regret structure."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik jonger was geweest, ik zou de hele wereld rondgereisd hebben.",
+            "correctUse": false,
+            "explanation": "Niet correct — the main clause must invert after the fronted 'als'-clause: '..., zou ik ... rondgereisd hebben', not '..., ik zou'. Correct: 'Als ik jonger was geweest, zou ik de hele wereld rondgereisd hebben.' The conditional perfect 'zou ... hebben gereisd' is fine; only the word order is wrong."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik kon, hielp ik je meteen.",
+            "correctUse": true,
+            "explanation": "Correct — and worth noting: in a present unreal you can drop 'zou' entirely and just use the imperfectum in BOTH clauses. 'Als ik kon, hielp ik je meteen' = if I could, I'd help you right away. This 'zou'-less form is common and natural, especially with modals like 'kunnen'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik het geweten had, ik had het je verteld.",
+            "correctUse": false,
+            "explanation": "Niet correct. The main clause must invert after the fronted 'als'-clause: '..., had ik het je verteld', not '..., ik had'. Correct: 'Als ik het geweten had, had ik het je verteld.' The plusquamperfectum is right in both halves; the error is the un-inverted main clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Wat zou je doen als je een miljoen euro won?",
+            "correctUse": true,
+            "explanation": "Correct. The conditional can come first: 'Wat zou je doen' (main clause, hypothetical question) + 'als je ... won' (present unreal 'als'-clause with imperfectum). When the main clause leads, the 'als'-clause simply follows — no inversion needed in the main clause because 'Wat' already fills first position."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik ben rijk. Ik stop met werken. (onwerkelijk, nu)",
+            "task": "Maak een onwerkelijke voorwaarde (present unreal) met 'als' en 'zou'.",
+            "acceptedAnswers": [
+              "Als ik rijk was, zou ik stoppen met werken.",
+              "Als ik rijk was, zou ik stoppen met werken."
+            ],
+            "preferred": "Als ik rijk was, zou ik stoppen met werken.",
+            "explanation": "Present unreal: 'als' + imperfectum ('was'), main clause 'zou' + infinitive. The imperfectum marks the condition as contrary to fact (I'm not rich). Fronted 'als'-clause inverts the main clause: 'zou ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb meer tijd. Ik kook vaker. (onwerkelijk, nu — zonder 'zou')",
+            "task": "Maak een present unreal in beide delen met imperfectum (geen 'zou').",
+            "acceptedAnswers": [
+              "Als ik meer tijd had, kookte ik vaker.",
+              "Als ik meer tijd had, kookte ik vaker."
+            ],
+            "preferred": "Als ik meer tijd had, kookte ik vaker.",
+            "explanation": "The 'zou'-less present unreal: imperfectum in BOTH clauses ('had' ... 'kookte'). 'Als ik meer tijd had, kookte ik vaker' = if I had more time, I'd cook more often. A natural, slightly lighter alternative to the 'zou'-version."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik weet het. Ik kom niet. (onwerkelijk, verleden)",
+            "task": "Maak een past unreal met 'als' (plusquamperfectum in beide delen).",
+            "acceptedAnswers": [
+              "Als ik het had geweten, was ik niet gekomen.",
+              "Als ik het geweten had, was ik niet gekomen."
+            ],
+            "preferred": "Als ik het had geweten, was ik niet gekomen.",
+            "explanation": "Past unreal: 'als' + plusquamperfectum ('had geweten'), main clause also plusquamperfectum ('was ... gekomen'). Both halves in the past perfect. Fronted 'als'-clause inverts: 'was ik'. The regret structure."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb meer geld. Ik koop een groter huis. (onwerkelijk, nu)",
+            "task": "Maak een present unreal met 'als' en 'zou'.",
+            "acceptedAnswers": [
+              "Als ik meer geld had, zou ik een groter huis kopen.",
+              "Als ik meer geld had, zou ik een groter huis kopen."
+            ],
+            "preferred": "Als ik meer geld had, zou ik een groter huis kopen.",
+            "explanation": "'Als' + imperfectum ('had'), main clause 'zou' + infinitive ('zou ... kopen'). Fronted 'als'-clause inverts the main clause. Contrary to fact: I don't have more money."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je studeert harder. Je slaagt voor het examen. (onwerkelijk, verleden — verwijt)",
+            "task": "Maak een past unreal met 'als' (plusquamperfectum + zou ... hebben).",
+            "acceptedAnswers": [
+              "Als je harder had gestudeerd, zou je voor het examen geslaagd zijn.",
+              "Als je harder had gestudeerd, was je voor het examen geslaagd."
+            ],
+            "preferred": "Als je harder had gestudeerd, zou je voor het examen geslaagd zijn.",
+            "explanation": "Past unreal with a reproach. 'Als' + plusquamperfectum ('had gestudeerd'), main clause either 'zou ... geslaagd zijn' (conditional perfect) or the tighter plusquamperfectum 'was ... geslaagd'. 'Slagen voor' takes 'zijn'. Both main-clause forms are correct and interchangeable."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kan het. Ik doe het meteen. (onwerkelijk, nu — zonder 'zou', met modaal)",
+            "task": "Maak een present unreal in beide delen met imperfectum.",
+            "acceptedAnswers": [
+              "Als ik het kon, deed ik het meteen.",
+              "Als ik het kon, deed ik het meteen."
+            ],
+            "preferred": "Als ik het kon, deed ik het meteen.",
+            "explanation": "Present unreal, 'zou'-less: imperfectum in both clauses ('kon' ... 'deed'). 'Als ik het kon, deed ik het meteen' = if I could, I'd do it right away. With modals like 'kunnen', this imperfectum-only form is especially natural."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je wint de loterij. Wat doe je? (hypothetische vraag)",
+            "task": "Maak een hypothetische vraag (hoofdzin eerst) met 'zou' en een 'als'-bijzin.",
+            "acceptedAnswers": [
+              "Wat zou je doen als je de loterij won?",
+              "Wat zou je doen als je de loterij zou winnen?"
+            ],
+            "preferred": "Wat zou je doen als je de loterij won?",
+            "explanation": "Main clause first: 'Wat zou je doen' (question word + 'zou' + infinitive), then 'als je ... won' (imperfectum for the unreal condition). When the question leads, no extra inversion is needed. 'De loterij winnen' = to win the lottery."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "If I were you, I'd accept the offer.",
+            "modelAnswer": "Als ik jou was, zou ik het aanbod accepteren.",
+            "alternatives": [
+              "Als ik jou was, zou ik het aanbod aannemen.",
+              "Als ik jou was, nam ik het aanbod aan."
+            ],
+            "note": "Present unreal: 'als ik jou was' (if I were you) + 'zou ik ... accepteren'. 'Aannemen' (separable) is the everyday verb for accepting an offer. The 'zou'-less form 'nam ik ... aan' (imperfectum) is also natural."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I had more time, I'd learn to play the piano.",
+            "modelAnswer": "Als ik meer tijd had, zou ik leren pianospelen.",
+            "alternatives": [
+              "Als ik meer tijd had, zou ik leren piano te spelen.",
+              "Als ik meer tijd had, leerde ik pianospelen."
+            ],
+            "note": "Present unreal: 'als' + imperfectum ('had'), 'zou' + infinitive ('zou ... leren'). 'Leren' + bare infinitive 'pianospelen', or with 'te': 'leren piano te spelen'. The imperfectum 'leerde' gives the zou-less version."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I'd known earlier, I'd have come sooner.",
+            "modelAnswer": "Als ik het eerder had geweten, was ik eerder gekomen.",
+            "alternatives": [
+              "Als ik het eerder had geweten, zou ik eerder zijn gekomen.",
+              "Had ik het eerder geweten, dan was ik eerder gekomen."
+            ],
+            "note": "Past unreal: 'als' + plusquamperfectum, main clause plusquamperfectum ('was gekomen') or conditional perfect ('zou ... zijn gekomen'). The 'zonder als' version 'Had ik het eerder geweten, dan ...' is the elegant twin."
+          },
+          {
+            "type": "translation",
+            "prompt": "What would you do if you lost your job?",
+            "modelAnswer": "Wat zou je doen als je je baan verloor?",
+            "alternatives": [
+              "Wat zou je doen als je je baan zou verliezen?",
+              "Wat zou je doen als je je baan kwijtraakte?"
+            ],
+            "note": "Hypothetical question: main clause 'Wat zou je doen' leads, 'als'-clause with imperfectum ('verloor') follows. 'Je baan verliezen / kwijtraken' = to lose your job. No extra inversion since 'Wat' fills first position."
+          },
+          {
+            "type": "translation",
+            "prompt": "If it weren't raining, we could sit in the garden.",
+            "modelAnswer": "Als het niet regende, zouden we in de tuin kunnen zitten.",
+            "alternatives": [
+              "Als het niet regende, konden we in de tuin zitten.",
+              "Als het niet zou regenen, zouden we in de tuin kunnen zitten."
+            ],
+            "note": "Present unreal: 'als het niet regende' (imperfectum) + 'zouden we kunnen zitten'. The 'zou'-less 'konden we ... zitten' (imperfectum modal) is the lighter alternative. Both express the same contrary-to-fact possibility."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If I had studied medicine, I would probably be a doctor now.",
+            "modelAnswer": "Als ik geneeskunde had gestudeerd, zou ik nu waarschijnlijk arts zijn.",
+            "alternatives": [
+              "Als ik geneeskunde had gestudeerd, was ik nu waarschijnlijk arts geweest.",
+              "Had ik geneeskunde gestudeerd, dan zou ik nu waarschijnlijk arts zijn."
+            ],
+            "note": "A mixed conditional: past condition ('had gestudeerd') with a present result ('zou ik nu ... arts zijn'). The 'nu' (now) makes the result present, even though the condition is past. 'Geneeskunde' = medicine (the subject); 'arts' = doctor."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you had told me earlier, I could have helped you, but now it's too late.",
+            "modelAnswer": "Als je het me eerder had verteld, had ik je kunnen helpen, maar nu is het te laat.",
+            "alternatives": [
+              "Als je het me eerder had verteld, had ik je kunnen helpen, maar nu is het te laat.",
+              "Had je het me eerder verteld, dan had ik je kunnen helpen, maar nu is het te laat."
+            ],
+            "note": "Past unreal with a plusquamperfectum double infinitive in the main clause: 'had ik je kunnen helpen' (could have helped). Then 'maar nu is het te laat' — fronted 'nu' inverts ('is het'). Three patterns: unreal condition, double infinitive, inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "I wouldn't have said anything if I'd known it would upset her so much.",
+            "modelAnswer": "Ik zou niets hebben gezegd als ik had geweten dat het haar zo van streek zou maken.",
+            "alternatives": [
+              "Ik had niets gezegd als ik had geweten dat het haar zo van streek zou maken.",
+              "Ik zou niets gezegd hebben als ik had geweten dat het haar zo zou raken."
+            ],
+            "note": "Main clause first (conditional perfect 'zou ... hebben gezegd' or plusquamperfectum 'had ... gezegd'), then 'als'-clause with plusquamperfectum and a 'dat'-clause inside it carrying a future-in-the-past 'zou maken'. 'Van streek maken' = to upset. Layered, but every piece follows the rules."
+          },
+          {
+            "type": "translation",
+            "prompt": "Even if I had the money, I wouldn't buy such an expensive car.",
+            "modelAnswer": "Zelfs als ik het geld had, zou ik niet zo'n dure auto kopen.",
+            "alternatives": [
+              "Zelfs als ik het geld had, zou ik niet zo'n dure auto kopen.",
+              "Zelfs als ik het geld had, kocht ik niet zo'n dure auto."
+            ],
+            "note": "'Zelfs als' (even if) opens a present-unreal 'als'-clause (imperfectum 'had'); the main clause inverts: 'zou ik ... kopen'. 'Zo'n dure auto' = such an expensive car ('zo'n' = zo een). The zou-less 'kocht ik' works too."
+          },
+          {
+            "type": "translation",
+            "prompt": "If she had been a little more careful, the accident would never have happened.",
+            "modelAnswer": "Als ze iets voorzichtiger was geweest, zou het ongeluk nooit zijn gebeurd.",
+            "alternatives": [
+              "Als ze iets voorzichtiger was geweest, was het ongeluk nooit gebeurd.",
+              "Was ze iets voorzichtiger geweest, dan was het ongeluk nooit gebeurd."
+            ],
+            "note": "Past unreal: 'als ze ... was geweest' (plusquamperfectum), main clause 'zou ... zijn gebeurd' (conditional perfect) or the tighter 'was ... gebeurd'. 'Gebeuren' takes 'zijn'. 'Iets voorzichtiger' = a little more careful. The 'zonder als' version inverts: 'Was ze ... geweest, dan ...'."
+          }
+        ]
+      }
+    }
+  ]
+}
