@@ -1,0 +1,241 @@
+{
+  "zone": "scheidbaar",
+  "zoneName": "Scheidbare werkwoorden",
+  "tiles": [
+    {
+      "id": "scheidbaar-3-in-perfectum-en-bijzin",
+      "theme": "Scheidbaar in perfectum en bijzin",
+      "themeEnglish": "Separable verbs in the perfect (ge- in the middle: opgestaan) and in subordinate clauses (the parts reunite at the end)",
+      "recognitionQuestion": "Is the separable verb correctly placed here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik ben vanmorgen om zes uur gestaan op.",
+            "correctUse": false,
+            "explanation": "Niet correct. In the perfect, a separable verb forms ONE participle with 'ge-' in the middle: 'opgestaan', not 'gestaan op'. Correct: 'Ik ben vanmorgen om zes uur opgestaan.' The prefix 'op' fuses onto the front: op + ge + staan."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze heeft haar paraplu weer thuis laten liggen.",
+            "correctUse": true,
+            "explanation": "Correct. Here 'laten liggen' is a double infinitive (no participle), and the separable 'thuislaten' isn't in play — 'thuis' is just the place. 'Ze heeft ... laten liggen' = she left it lying at home. The cluster sits cleanly at the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij zei dat hij morgen vroeg zou opstaan.",
+            "correctUse": true,
+            "explanation": "Correct. In a 'dat'-bijzin the separable verb stays TOGETHER at the end: 'zou opstaan'. It does not split into 'staat ... op' inside a subordinate clause. After 'zou' it's the whole infinitive 'opstaan'. Bijzin = reunited."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vergeet niet om je sleutels mee nemen te.",
+            "correctUse": false,
+            "explanation": "Niet correct. In 'om ... te', a separable verb splits around 'te': 'mee + te + nemen'. Correct: 'Vergeet niet om je sleutels mee te nemen.' The word order 'mee nemen te' is scrambled — 'te' must sit between the prefix and the verb stem."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Toen we aankwamen, was het feest al begonnen.",
+            "correctUse": true,
+            "explanation": "Correct. In the 'toen'-bijzin the separable 'aankomen' stays together at the end: 'aankwamen' (one word, reunited). Then the main clause: 'was het feest al begonnen' (past perfect). Separable verbs fuse in subordinate clauses — they only split in main clauses."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We hebben de hele vergadering opgenomen met haar telefoon.",
+            "correctUse": true,
+            "explanation": "Correct. 'Opnemen' (to record) → participle 'opgenomen', with 'ge-' in the middle: op + ge + nomen. 'Hebben ... opgenomen' = have recorded. The participle goes to the end of the clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik weet niet of de trein al is aangekomen of nog niet aan is gekomen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second half mangles the participle: it's 'aangekomen' (one word, ge- in the middle), never 'aan is gekomen'. Correct: '... of de trein al is aangekomen of nog niet.' In a bijzin the participle stays whole and the auxiliary sits beside it ('is aangekomen' / 'aangekomen is'), but the participle itself never breaks apart."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik sta om zeven uur op.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ik ben om zeven uur opgestaan.",
+              "Ik ben om zeven uur opgestaan."
+            ],
+            "preferred": "Ik ben om zeven uur opgestaan.",
+            "explanation": "Separable 'opstaan' → participle 'opgestaan' (op + ge + staan), with 'zijn' as auxiliary (a verb of change of state). The 'ge-' slots into the middle, between prefix and stem."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze neemt haar laptop mee.",
+            "task": "Zet in de voltooide tijd (perfectum).",
+            "acceptedAnswers": [
+              "Ze heeft haar laptop meegenomen.",
+              "Ze heeft haar laptop meegenomen."
+            ],
+            "preferred": "Ze heeft haar laptop meegenomen.",
+            "explanation": "Separable 'meenemen' → participle 'meegenomen' (mee + ge + nomen). The prefix 'mee' fuses onto the front, 'ge-' in the middle. 'Heeft ... meegenomen' = has brought along."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij staat morgen vroeg op.",
+            "task": "Begin met 'Hij zei dat ...' (maak er een bijzin van).",
+            "acceptedAnswers": [
+              "Hij zei dat hij morgen vroeg opstaat.",
+              "Hij zei dat hij morgen vroeg zou opstaan."
+            ],
+            "preferred": "Hij zei dat hij morgen vroeg opstaat.",
+            "explanation": "In the 'dat'-bijzin the separable verb stays TOGETHER at the end: 'opstaat' (or 'zou opstaan' for future-in-the-past). It does NOT split to 'staat ... op' in a subordinate clause. Bijzin reunites the parts."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Neem je sleutels mee. (= het doel: de deur kunnen openen)",
+            "task": "Maak een 'om ... te'-zin: 'Vergeet niet ...'.",
+            "acceptedAnswers": [
+              "Vergeet niet om je sleutels mee te nemen.",
+              "Vergeet niet je sleutels mee te nemen."
+            ],
+            "preferred": "Vergeet niet om je sleutels mee te nemen.",
+            "explanation": "In 'om ... te', the separable 'meenemen' splits around 'te': 'mee + te + nemen'. 'Om je sleutels mee te nemen.' The 'te' wedges between prefix and stem. ('Vergeten' also allows the bare-te version without 'om'.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het feest is al begonnen. We komen aan.",
+            "task": "Verbind met 'toen' (bijzin eerst, verleden tijd).",
+            "acceptedAnswers": [
+              "Toen we aankwamen, was het feest al begonnen.",
+              "Toen we aankwamen, was het feest al begonnen."
+            ],
+            "preferred": "Toen we aankwamen, was het feest al begonnen.",
+            "explanation": "In the 'toen'-bijzin the separable 'aankomen' stays together at the end: 'aankwamen' (one word). Fronted bijzin → main clause inverts: 'was het feest'. Separable verbs reunite in subordinate clauses."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze nemen de vergadering op. (perfectum, bijzin)",
+            "task": "Begin met 'Ik wist niet dat ...'.",
+            "acceptedAnswers": [
+              "Ik wist niet dat ze de vergadering hadden opgenomen.",
+              "Ik wist niet dat ze de vergadering opgenomen hadden."
+            ],
+            "preferred": "Ik wist niet dat ze de vergadering hadden opgenomen.",
+            "explanation": "In the 'dat'-bijzin, the cluster goes to the end: 'hadden opgenomen' / 'opgenomen hadden' (both orders fine). The participle 'opgenomen' stays whole — ge- in the middle, never broken apart."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De zon gaat onder. (perfectum)",
+            "task": "Zet in de voltooide tijd.",
+            "acceptedAnswers": [
+              "De zon is ondergegaan.",
+              "De zon is ondergegaan."
+            ],
+            "preferred": "De zon is ondergegaan.",
+            "explanation": "Separable 'óndergaan' (to set) → participle 'ondergegaan' (onder + ge + gaan), with 'zijn'. The 'ge-' slots in the middle. (Contrast the inseparable 'ondergáán' = undergo, whose participle is 'ondergaan' with no 'ge-' — same verb-pair from the previous tile.)"
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I got up at six this morning.",
+            "modelAnswer": "Ik ben vanmorgen om zes uur opgestaan.",
+            "alternatives": [
+              "Ik ben vanmorgen om zes uur opgestaan.",
+              "Vanmorgen ben ik om zes uur opgestaan."
+            ],
+            "note": "Separable 'opstaan' → 'opgestaan' (op + ge + staan), with 'zijn'. Front 'vanmorgen' and invert: 'ben ik'. The participle is one word with 'ge-' in the middle."
+          },
+          {
+            "type": "translation",
+            "prompt": "She brought her laptop along.",
+            "modelAnswer": "Ze heeft haar laptop meegenomen.",
+            "alternatives": [
+              "Ze heeft haar laptop meegenomen.",
+              "Ze nam haar laptop mee."
+            ],
+            "note": "Separable 'meenemen' → participle 'meegenomen' (mee + ge + nomen). The imperfectum 'nam ... mee' splits in the main clause; the perfect fuses into one participle."
+          },
+          {
+            "type": "translation",
+            "prompt": "He said he'd get up early tomorrow.",
+            "modelAnswer": "Hij zei dat hij morgen vroeg zou opstaan.",
+            "alternatives": [
+              "Hij zei dat hij morgen vroeg zou opstaan.",
+              "Hij zei dat hij morgen vroeg op zou staan."
+            ],
+            "note": "In the 'dat'-bijzin, 'opstaan' stays together: 'zou opstaan' (or the split-around-the-modal 'op zou staan', also fine). It never splits to 'staat ... op' inside a subordinate clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't forget to bring your passport.",
+            "modelAnswer": "Vergeet niet je paspoort mee te nemen.",
+            "alternatives": [
+              "Vergeet niet om je paspoort mee te nemen.",
+              "Vergeet niet je paspoort mee te nemen."
+            ],
+            "note": "In 'om ... te' (or bare 'te' after 'vergeten'), separable 'meenemen' splits around 'te': 'mee te nemen'. The 'te' sits between prefix and stem."
+          },
+          {
+            "type": "translation",
+            "prompt": "By the time we arrived, the film had already started.",
+            "modelAnswer": "Tegen de tijd dat we aankwamen, was de film al begonnen.",
+            "alternatives": [
+              "Tegen de tijd dat we aankwamen, was de film al begonnen.",
+              "Toen we aankwamen, was de film al begonnen."
+            ],
+            "note": "In the bijzin, separable 'aankomen' stays together: 'aankwamen' (one word). Fronted bijzin → main clause inverts: 'was de film'. 'Tegen de tijd dat' = by the time (that)."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I didn't know that she had already handed in the report when I arrived.",
+            "modelAnswer": "Ik wist niet dat ze het rapport al had ingeleverd toen ik aankwam.",
+            "alternatives": [
+              "Ik wist niet dat ze het rapport al had ingeleverd toen ik aankwam.",
+              "Ik wist niet dat ze het rapport al ingeleverd had toen ik aankwam."
+            ],
+            "note": "Two separable verbs in subordinate clauses, both reunited: 'inleveren' → participle 'ingeleverd' in the 'dat'-bijzin ('had ingeleverd' / 'ingeleverd had'), and 'aankomen' → 'aankwam' in the 'toen'-bijzin. Neither splits inside its clause; the participles keep 'ge-' in the middle (in-ge-leverd)."
+          },
+          {
+            "type": "translation",
+            "prompt": "He got up early in order to catch the first train and take his daughter to school.",
+            "modelAnswer": "Hij stond vroeg op om de eerste trein te halen en zijn dochter naar school te brengen.",
+            "alternatives": [
+              "Hij is vroeg opgestaan om de eerste trein te halen en zijn dochter naar school te brengen.",
+              "Hij stond vroeg op om de eerste trein te halen en zijn dochter weg te brengen."
+            ],
+            "note": "Separable 'opstaan' splits in the main clause ('stond ... op'), or fuses as the participle 'opgestaan' in the perfect. Then two 'om ... te' purpose clauses sharing one 'om'. 'Wegbrengen' (separable) → 'weg te brengen' shows the te-splitting again."
+          },
+          {
+            "type": "translation",
+            "prompt": "She recorded the whole lecture because she was afraid she'd forget the details.",
+            "modelAnswer": "Ze heeft de hele lezing opgenomen omdat ze bang was dat ze de details zou vergeten.",
+            "alternatives": [
+              "Ze heeft de hele lezing opgenomen omdat ze bang was de details te vergeten.",
+              "Ze nam de hele lezing op omdat ze bang was dat ze de details zou vergeten."
+            ],
+            "note": "Separable 'opnemen' → participle 'opgenomen' (perfect) or split 'nam ... op' (imperfectum). The 'omdat'-bijzin is verb-final ('bang was'), with a nested 'dat'-clause ('dat ze ... zou vergeten'). 'Bang zijn om ... te vergeten' is the tighter alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "When the sun had set, it quickly got cold, so we went back inside.",
+            "modelAnswer": "Toen de zon was ondergegaan, werd het snel koud, dus gingen we weer naar binnen.",
+            "alternatives": [
+              "Toen de zon was ondergegaan, werd het snel koud, dus gingen we weer naar binnen.",
+              "Toen de zon onder was gegaan, werd het snel koud, dus gingen we weer naar binnen."
+            ],
+            "note": "Separable 'óndergaan' (set) → participle 'ondergegaan' in the 'toen'-bijzin (cluster 'was ondergegaan' / 'onder was gegaan' at the end). Then two inversions: 'werd het' (after the fronted bijzin) and 'gingen we' (after 'dus'). 'Naar binnen gaan' = to go inside."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm not sure whether he's already left or whether he's planning to come along later.",
+            "modelAnswer": "Ik weet niet zeker of hij al weg is gegaan of dat hij van plan is om later mee te komen.",
+            "alternatives": [
+              "Ik weet niet zeker of hij al is weggegaan of dat hij van plan is later mee te komen.",
+              "Ik weet niet zeker of hij al weg is of dat hij van plan is om later mee te komen."
+            ],
+            "note": "Two 'of'-bijzinnen. First, separable 'weggaan' → participle 'weggegaan' (cluster 'weg is gegaan' / 'is weggegaan' at the end). Then 'meekomen' splits around 'te' in the 'om ... te' clause: 'mee te komen'. 'Van plan zijn om ... te' = to be planning to."
+          }
+        ]
+      }
+    }
+  ]
+}

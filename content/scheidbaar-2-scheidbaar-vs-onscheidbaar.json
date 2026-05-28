@@ -1,0 +1,241 @@
+{
+  "zone": "scheidbaar",
+  "zoneName": "Scheidbare werkwoorden",
+  "tiles": [
+    {
+      "id": "scheidbaar-2-scheidbaar-vs-onscheidbaar",
+      "theme": "Scheidbaar vs onscheidbaar",
+      "themeEnglish": "Separable vs inseparable verbs told apart by stress — vóórkomen (occur, splits) vs voorkómen (prevent, doesn't)",
+      "recognitionQuestion": "Is this separable/inseparable verb handled correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Zulke fouten komen in de beste teksten voor.",
+            "correctUse": true,
+            "explanation": "Correct. 'Vóórkomen' (stress on 'voor', = to occur/happen) is SEPARABLE, so in a main clause 'voor' splits to the end: 'komen ... voor'. 'Fouten komen voor' = mistakes occur. The stress on the prefix is the tell: prefix-stressed → separable."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Met een goede planning kun je veel problemen voor komen.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Voorkómen' (to prevent) is INSEPARABLE, so it must stay whole: 'kun je veel problemen voorkomen' — not split into 'voor komen'. Only the separable 'vóórkomen' (to occur) splits. Here the meaning is 'prevent', so the verb is one solid word: 'voorkomen'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De wond is goed genezen omdat we een infectie hebben voorkomen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Voorkómen' (to prevent) is inseparable, so its participle takes NO 'ge-': 'hebben voorkomen' (not 'voorgekomen'). Compare the separable 'vóórkomen' (to occur), whose participle IS 'voorgekomen'. Same spelling of the infinitive, opposite participles — the stress decides."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij heeft een zware operatie ondergaan zonder te klagen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Ondergáán' (stress on 'gaan', = to undergo) is inseparable → participle 'ondergaan' with no 'ge-' and no splitting. 'Een operatie ondergaan' = to undergo an operation. (The separable 'óndergaan' = to go down/sink, e.g. of the sun, is a different verb.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Kun je in één zin omschrijven wat het probleem precies is?",
+            "correctUse": true,
+            "explanation": "Correct. 'Omschríjven' (stress on 'schrijven', = to describe) is inseparable: it stays whole and takes no 'ge-' in the participle ('omschreven'). Here after the modal 'kun je' it sits whole at the end: 'omschrijven'. (Separable 'ómschrijven' would mean to rewrite/transcribe — rare.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze gaat volgende week een zware operatie onder.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Ondergáán' (to undergo, stress on 'gaan') is INSEPARABLE, so it must not split: 'Ze ondergaat volgende week een zware operatie.' The split form 'gaat ... onder' belongs to the separable 'óndergaan' (to sink/set, e.g. the sun). For undergoing an operation, the verb stays whole: 'ondergaat'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het voorstel is door de hele commissie aanvaard.",
+            "correctUse": true,
+            "explanation": "Correct. 'Aanvaarden' (to accept) is inseparable — note the participle 'aanvaard' takes no 'ge-'. 'Is aanvaard' = has been accepted (perfect passive). Contrast the separable 'áánnemen' (also 'to accept/take on'), whose participle is 'aangenomen' with 'ge-' in the middle."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Zulke problemen ___ vaak ___. (vóórkomen = gebeuren, scheidbaar)",
+            "task": "Vul de zin aan (tegenwoordige tijd, hoofdzin).",
+            "acceptedAnswers": [
+              "Zulke problemen komen vaak voor.",
+              "Zulke problemen komen vaak voor."
+            ],
+            "preferred": "Zulke problemen komen vaak voor.",
+            "explanation": "'Vóórkomen' (to occur) is separable → splits in a main clause: 'komen ... voor'. 'Zulke problemen komen vaak voor' = such problems often occur. Prefix-stressed verbs split."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We willen zulke fouten in de toekomst ___. (voorkómen = vermijden, onscheidbaar)",
+            "task": "Vul het werkwoord in (na een modaal werkwoord).",
+            "acceptedAnswers": [
+              "We willen zulke fouten in de toekomst voorkomen.",
+              "We willen zulke fouten in de toekomst voorkomen."
+            ],
+            "preferred": "We willen zulke fouten in de toekomst voorkomen.",
+            "explanation": "'Voorkómen' (to prevent) is inseparable → stays whole, here at the end after 'willen': 'voorkomen'. It never splits. Same infinitive spelling as the separable 'vóórkomen', but the stress (and the meaning) differ."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Een infectie is gelukkig vermeden. (voorkómen, perfectum-passief)",
+            "task": "Herschrijf met 'voorkomen' (onscheidbaar).",
+            "acceptedAnswers": [
+              "Een infectie is gelukkig voorkomen.",
+              "Gelukkig is een infectie voorkomen."
+            ],
+            "preferred": "Een infectie is gelukkig voorkomen.",
+            "explanation": "'Voorkómen' (prevent) is inseparable → participle 'voorkomen' with NO 'ge-'. 'Is voorkomen' = has been prevented. Don't write 'voorgekomen' — that's the participle of the separable 'vóórkomen' (to occur)."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij heeft de operatie goed doorstaan. Hij ___ volgende week nog een ___. (ondergáán = undergo, onscheidbaar)",
+            "task": "Vul aan (tegenwoordige tijd): 'Hij ___ volgende week nog een behandeling.'",
+            "acceptedAnswers": [
+              "Hij ondergaat volgende week nog een behandeling.",
+              "Hij ondergaat volgende week nog een behandeling."
+            ],
+            "preferred": "Hij ondergaat volgende week nog een behandeling.",
+            "explanation": "'Ondergáán' (to undergo) is inseparable → 'ondergaat' stays whole, doesn't split. 'Hij ondergaat een behandeling' = he undergoes a treatment. (The separable 'óndergaan' = to sink/set would split: 'de zon gaat onder'.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Beschrijf het probleem in één zin. (omschríjven, onscheidbaar)",
+            "task": "Herschrijf als gebod met 'omschrijven'.",
+            "acceptedAnswers": [
+              "Omschrijf het probleem in één zin.",
+              "Omschrijf het probleem in één zin."
+            ],
+            "preferred": "Omschrijf het probleem in één zin.",
+            "explanation": "'Omschríjven' (to describe) is inseparable → the imperative stays whole: 'Omschrijf ...', not 'Schrijf ... om'. Inseparable verbs don't split even in the imperative. Participle would be 'omschreven' (no 'ge-')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De commissie neemt het voorstel aan. (áánnemen, scheidbaar — perfectum)",
+            "task": "Zet in de voltooide tijd.",
+            "acceptedAnswers": [
+              "De commissie heeft het voorstel aangenomen.",
+              "De commissie heeft het voorstel aangenomen."
+            ],
+            "preferred": "De commissie heeft het voorstel aangenomen.",
+            "explanation": "'Áánnemen' (to accept/adopt) is separable → participle 'aangenomen', with 'ge-' slotting in the middle: aan-ge-nomen. Contrast the inseparable 'aanvaarden' (also 'accept'), whose participle 'aanvaard' has no 'ge-'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De zon ___ om negen uur ___. (óndergaan = sink/set, scheidbaar)",
+            "task": "Vul aan (tegenwoordige tijd, hoofdzin).",
+            "acceptedAnswers": [
+              "De zon gaat om negen uur onder.",
+              "De zon gaat om negen uur onder."
+            ],
+            "preferred": "De zon gaat om negen uur onder.",
+            "explanation": "'Óndergaan' (to set/sink, stress on 'onder') is separable → splits in a main clause: 'gaat ... onder'. 'De zon gaat onder' = the sun sets. Compare inseparable 'ondergáán' (undergo), which never splits — the stress is the only signal."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "Such mistakes occur often.",
+            "modelAnswer": "Zulke fouten komen vaak voor.",
+            "alternatives": [
+              "Zulke fouten komen vaak voor.",
+              "Dat soort fouten komt vaak voor."
+            ],
+            "note": "'Vóórkomen' (to occur) is separable → 'komen ... voor' in a main clause. 'Dat soort fouten' takes singular 'komt'. Prefix-stressed, so it splits."
+          },
+          {
+            "type": "translation",
+            "prompt": "We want to prevent such mistakes.",
+            "modelAnswer": "We willen zulke fouten voorkomen.",
+            "alternatives": [
+              "We willen zulke fouten voorkomen.",
+              "We willen zulke fouten in de toekomst voorkomen."
+            ],
+            "note": "'Voorkómen' (to prevent) is inseparable → stays whole at the end after 'willen': 'voorkomen'. Same infinitive spelling as 'occur', but stem-stressed and unsplitting. The meaning and the stress go together."
+          },
+          {
+            "type": "translation",
+            "prompt": "The accident could have been prevented.",
+            "modelAnswer": "Het ongeluk had voorkomen kunnen worden.",
+            "alternatives": [
+              "Het ongeluk had kunnen worden voorkomen.",
+              "Het ongeluk had voorkomen kunnen worden."
+            ],
+            "note": "'Voorkómen' (prevent) inseparable → participle 'voorkomen' (no 'ge-') inside a heavy conditional-perfect passive: 'had voorkomen kunnen worden' (could have been prevented). The cluster order can shift, but 'voorkomen' never gains a 'ge-'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She underwent the operation last week.",
+            "modelAnswer": "Ze heeft vorige week de operatie ondergaan.",
+            "alternatives": [
+              "Ze heeft vorige week de operatie ondergaan.",
+              "Vorige week heeft ze de operatie ondergaan."
+            ],
+            "note": "'Ondergáán' (to undergo) inseparable → participle 'ondergaan' with no 'ge-'. 'Heeft ... ondergaan' = has undergone. Front 'vorige week' and invert: 'heeft ze'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The committee has accepted the proposal.",
+            "modelAnswer": "De commissie heeft het voorstel aangenomen.",
+            "alternatives": [
+              "De commissie heeft het voorstel aangenomen.",
+              "Het voorstel is door de commissie aanvaard."
+            ],
+            "note": "Two 'accept' verbs: separable 'áánnemen' → participle 'aangenomen' (ge- in the middle), and inseparable 'aanvaarden' → 'aanvaard' (no ge-). The second is rendered as a passive here. Both are correct; 'aannemen' is the everyday choice."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If we'd been more careful, the mistake could have been prevented, but these things happen.",
+            "modelAnswer": "Als we voorzichtiger waren geweest, had de fout voorkomen kunnen worden, maar zulke dingen komen voor.",
+            "alternatives": [
+              "Als we voorzichtiger waren geweest, had de fout voorkomen kunnen worden, maar zulke dingen komen nu eenmaal voor.",
+              "Was er beter opgelet, dan had de fout voorkomen kunnen worden, maar zulke dingen gebeuren."
+            ],
+            "note": "Both 'voorkomen' verbs in one sentence: inseparable 'voorkómen' (prevent) as the unsplitting participle in 'had voorkomen kunnen worden', and separable 'vóórkomen' (occur) splitting in 'zulke dingen komen voor'. The stress (and meaning) tell them apart. 'Nu eenmaal' = (these things) just (happen)."
+          },
+          {
+            "type": "translation",
+            "prompt": "He described in detail how he had undergone the whole procedure.",
+            "modelAnswer": "Hij omschreef uitvoerig hoe hij de hele procedure had ondergaan.",
+            "alternatives": [
+              "Hij beschreef uitvoerig hoe hij de hele procedure had ondergaan.",
+              "Hij omschreef in detail hoe hij de hele procedure had ondergaan."
+            ],
+            "note": "Two inseparable verbs: 'omschríjven' (describe) → imperfectum 'omschreef' (no splitting), and 'ondergáán' (undergo) → plusquamperfectum participle 'ondergaan' (no 'ge-'). The indirect question 'hoe hij ... had ondergaan' is verb-final. 'Uitvoerig' = at length; 'beschrijven' is the close synonym of 'omschrijven'."
+          },
+          {
+            "type": "translation",
+            "prompt": "The sun was already setting by the time the meeting was over.",
+            "modelAnswer": "De zon ging al onder tegen de tijd dat de vergadering afgelopen was.",
+            "alternatives": [
+              "De zon ging al onder tegen de tijd dat de vergadering afgelopen was.",
+              "De zon was al aan het ondergaan tegen de tijd dat de vergadering afgelopen was."
+            ],
+            "note": "Separable 'óndergaan' (to set) splits in the main clause: 'ging ... onder'. The 'tegen de tijd dat'-bijzin is verb-final ('afgelopen was'). Contrast inseparable 'ondergáán' (undergo) from the other items — same letters, different stress, opposite behaviour. The progressive 'aan het ondergaan' keeps the verb whole as a noun-like infinitive."
+          },
+          {
+            "type": "translation",
+            "prompt": "The committee accepted the proposal, although a few objections had been raised.",
+            "modelAnswer": "De commissie heeft het voorstel aangenomen, hoewel er een paar bezwaren waren geuit.",
+            "alternatives": [
+              "De commissie heeft het voorstel aangenomen, hoewel er een paar bezwaren waren geuit.",
+              "De commissie heeft het voorstel aanvaard, hoewel er een paar bezwaren waren geuit."
+            ],
+            "note": "Separable 'áánnemen' → 'aangenomen' (ge- in the middle), or inseparable 'aanvaarden' → 'aanvaard' (no ge-) in the alternative. The 'hoewel'-bijzin has a placeholder 'er' + past-perfect passive 'waren geuit' (had been raised). 'Bezwaren uiten' = to raise objections."
+          },
+          {
+            "type": "translation",
+            "prompt": "I can't quite describe the feeling, but I'm sure it will pass.",
+            "modelAnswer": "Ik kan het gevoel niet goed omschrijven, maar ik weet zeker dat het wel overgaat.",
+            "alternatives": [
+              "Ik kan het gevoel niet goed omschrijven, maar ik weet zeker dat het wel overgaat.",
+              "Ik kan het gevoel niet goed beschrijven, maar ik weet zeker dat het wel weer overgaat."
+            ],
+            "note": "Inseparable 'omschríjven' (describe) stays whole at the end after the modal: 'niet goed omschrijven'. Then separable 'óvergaan' (to pass/wear off) in a 'dat'-bijzin, where it stays together at the end: 'dat het wel overgaat'. 'Wel' adds reassurance ('it will pass, don't worry')."
+          }
+        ]
+      }
+    }
+  ]
+}
