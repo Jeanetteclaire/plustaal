@@ -1,0 +1,241 @@
+{
+  "zone": "scheidbaar",
+  "zoneName": "Scheidbare werkwoorden",
+  "tiles": [
+    {
+      "id": "scheidbaar-4-betekenisrijke-prefixen",
+      "theme": "Betekenisrijke voorvoegsels",
+      "themeEnglish": "Separable verbs whose prefix carries the meaning — meevallen/tegenvallen, opvallen, aankomen, voorstellen",
+      "recognitionQuestion": "Is this separable verb used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Het examen viel me reuze mee; het was makkelijker dan ik dacht.",
+            "correctUse": true,
+            "explanation": "Correct. 'Meevallen' = to turn out better than expected — one of the most Dutch verbs there is. 'Het viel me mee' = it was better than I'd feared. The separable 'mee' splits to the end in the main clause: 'viel ... mee'. 'Reuze' (hugely) is a colloquial intensifier."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De reis duurde langer dan verwacht; dat tegenviel echt.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Tegenvallen' (to be disappointing / worse than expected) must split in a main clause: 'dat viel echt tegen', not 'dat tegenviel'. Correct: 'De reis duurde langer dan verwacht; dat viel echt tegen.' The prefix 'tegen' goes to the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Het valt me op dat je de laatste tijd veel stiller bent.",
+            "correctUse": true,
+            "explanation": "Correct. 'Opvallen' = to be noticeable / strike one. 'Het valt me op dat ...' = I've noticed that .... The separable 'op' splits to the end of the main clause, and the 'dat'-bijzin ('dat je ... stiller bent') is verb-final. A very natural way to raise something gently."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mag ik je even voorstellen aan mijn collega Sanne?",
+            "correctUse": true,
+            "explanation": "Correct. 'Voorstellen' = to introduce (a person) — 'iemand voorstellen aan iemand'. After the modal 'mag' the verb stays whole at the end: 'voorstellen'. (Note 'zich voorstellen' = to introduce oneself, or to imagine — same verb, reflexive.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik raad je aan om eerst de handleiding goed te lezen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Aanraden' = to recommend / advise. 'Ik raad je aan om ... te lezen' = I advise you to read .... The separable 'aan' splits to the end of the main clause; the 'om ... te'-clause follows. 'Aanraden' takes an indirect object ('je') plus the advice."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Tijdens de feestdagen ik kom altijd een paar kilo aan.",
+            "correctUse": false,
+            "explanation": "Niet correct — two things. The fronted 'Tijdens de feestdagen' forces inversion: 'kom ik', not 'ik kom'. Correct: 'Tijdens de feestdagen kom ik altijd een paar kilo aan.' ('Aankomen' here = to gain weight; the 'aan' still splits to the end.) The separable split is right; the word order isn't."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij gaf zijn baan op om een eigen bedrijf te beginnen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Opgeven' = to give up / quit. 'Hij gaf zijn baan op' = he gave up his job. The separable 'op' splits to the end of the main clause; the 'om ... te'-clause states the purpose. 'Opgeven' also means to register/sign up — context decides."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Het examen was makkelijker dan ik dacht. (meevallen)",
+            "task": "Herschrijf met 'meevallen' (Het examen ...).",
+            "acceptedAnswers": [
+              "Het examen viel me mee.",
+              "Het examen viel mee."
+            ],
+            "preferred": "Het examen viel me mee.",
+            "explanation": "'Meevallen' = to turn out better than expected. 'Het examen viel me mee' = the exam was better than I'd feared. The 'me' (dative) is optional but very natural. Separable 'mee' to the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De rekening was hoger dan verwacht. (tegenvallen)",
+            "task": "Herschrijf met 'tegenvallen' (De rekening ...).",
+            "acceptedAnswers": [
+              "De rekening viel tegen.",
+              "De rekening viel me tegen."
+            ],
+            "preferred": "De rekening viel tegen.",
+            "explanation": "'Tegenvallen' = to be disappointing / worse than expected. 'De rekening viel tegen' = the bill was higher than hoped. The opposite of 'meevallen'. Separable 'tegen' to the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik merk dat je stiller bent. (opvallen)",
+            "task": "Herschrijf met 'het valt me op dat ...'.",
+            "acceptedAnswers": [
+              "Het valt me op dat je stiller bent.",
+              "Het valt me op dat je stiller bent."
+            ],
+            "preferred": "Het valt me op dat je stiller bent.",
+            "explanation": "'Opvallen' = to strike / be noticeable. 'Het valt me op dat ...' is the standard frame for 'I notice that ...'. Separable 'op' splits to the end of the main clause; the 'dat'-bijzin is verb-final ('bent')."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik stel voor. We gaan eerst lunchen. (voorstellen)",
+            "task": "Verbind met 'voorstellen om ... te'.",
+            "acceptedAnswers": [
+              "Ik stel voor om eerst te gaan lunchen.",
+              "Ik stel voor eerst te gaan lunchen."
+            ],
+            "preferred": "Ik stel voor om eerst te gaan lunchen.",
+            "explanation": "'Voorstellen' = to propose/suggest. 'Ik stel voor om ... te gaan lunchen' = I suggest we go for lunch first. Separable 'voor' splits to the end of the main clause; the 'om ... te'-clause follows. (This 'voorstellen' = propose, distinct from introducing a person.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kom elke winter een paar kilo aan. (begin met 'Elke winter')",
+            "task": "Herschrijf met inversie.",
+            "acceptedAnswers": [
+              "Elke winter kom ik een paar kilo aan.",
+              "Elke winter kom ik een paar kilo aan."
+            ],
+            "preferred": "Elke winter kom ik een paar kilo aan.",
+            "explanation": "Fronting 'Elke winter' forces inversion: 'kom ik'. The separable 'aankomen' (here = to gain weight) still splits to the end: 'kom ... aan'. Two patterns at once — inversion plus separable split."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze stopt met roken. (opgeven)",
+            "task": "Herschrijf met 'opgeven' (Ze geeft ...).",
+            "acceptedAnswers": [
+              "Ze geeft het roken op.",
+              "Ze geeft roken op."
+            ],
+            "preferred": "Ze geeft het roken op.",
+            "explanation": "'Opgeven' = to give up. 'Ze geeft het roken op' = she's giving up smoking. Separable 'op' splits to the end of the main clause. 'Het roken' (the smoking) as a nominalised activity."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik raad het je aan. Je leest eerst de handleiding. (aanraden + om ... te)",
+            "task": "Verbind met 'aanraden om ... te'.",
+            "acceptedAnswers": [
+              "Ik raad je aan om eerst de handleiding te lezen.",
+              "Ik raad je aan eerst de handleiding te lezen."
+            ],
+            "preferred": "Ik raad je aan om eerst de handleiding te lezen.",
+            "explanation": "'Aanraden' = to recommend. 'Ik raad je aan om ... te lezen' = I advise you to read .... Separable 'aan' splits to the end; the 'om ... te'-clause follows. The indirect object 'je' sits between the split parts."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "The weather turned out better than expected.",
+            "modelAnswer": "Het weer viel mee.",
+            "alternatives": [
+              "Het weer viel mee.",
+              "Het weer viel reuze mee."
+            ],
+            "note": "'Meevallen' = to turn out better than feared — there's no neat one-word English equivalent, which is why it's worth owning. 'Reuze mee' = a great deal better. Separable 'mee' to the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "The film was disappointing.",
+            "modelAnswer": "De film viel tegen.",
+            "alternatives": [
+              "De film viel tegen.",
+              "De film viel me tegen."
+            ],
+            "note": "'Tegenvallen' = to disappoint / be worse than expected. 'De film viel tegen' = the film was a letdown. The exact mirror of 'meevallen'. The optional 'me' adds a personal note: 'it disappointed me'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I noticed that the shop was closed.",
+            "modelAnswer": "Het viel me op dat de winkel dicht was.",
+            "alternatives": [
+              "Het viel me op dat de winkel gesloten was.",
+              "Het viel me op dat de winkel dicht was."
+            ],
+            "note": "'Opvallen' = to notice / strike. 'Het viel me op dat ...' = I noticed that .... Separable 'op' splits to the end; the 'dat'-bijzin is verb-final ('was'). 'Dicht' / 'gesloten' = closed."
+          },
+          {
+            "type": "translation",
+            "prompt": "May I introduce you to my colleague?",
+            "modelAnswer": "Mag ik je voorstellen aan mijn collega?",
+            "alternatives": [
+              "Mag ik je aan mijn collega voorstellen?",
+              "Mag ik je even voorstellen aan mijn collega?"
+            ],
+            "note": "'Voorstellen aan' = to introduce (someone) to. After the modal 'mag' the verb stays whole at the end. 'Iemand voorstellen aan iemand'. 'Even' softens it."
+          },
+          {
+            "type": "translation",
+            "prompt": "He gave up his job to travel.",
+            "modelAnswer": "Hij gaf zijn baan op om te reizen.",
+            "alternatives": [
+              "Hij gaf zijn baan op om te gaan reizen.",
+              "Hij heeft zijn baan opgegeven om te reizen."
+            ],
+            "note": "'Opgeven' = to give up. 'Hij gaf zijn baan op' (separable, splits in the main clause) + 'om te reizen' (purpose). Perfect: 'heeft ... opgegeven' (ge- in the middle: op-ge-geven)."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I was dreading the meeting, but it turned out much better than I'd expected.",
+            "modelAnswer": "Ik zag erg op tegen de vergadering, maar die viel veel beter mee dan ik had verwacht.",
+            "alternatives": [
+              "Ik zag op tegen de vergadering, maar die viel veel beter mee dan ik had verwacht.",
+              "Ik zag erg op tegen de vergadering, maar het viel veel beter mee dan verwacht."
+            ],
+            "note": "Two separable verbs: 'opzien tegen' (to dread — 'zag ... op tegen') and 'meevallen' ('viel ... mee'). 'Veel beter ... dan ik had verwacht' = much better than I'd expected. 'Opzien tegen' is a lovely idiomatic one to have alongside 'meevallen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "It struck me that she'd lost a lot of weight since she gave up sugar.",
+            "modelAnswer": "Het viel me op dat ze veel was afgevallen sinds ze suiker had opgegeven.",
+            "alternatives": [
+              "Het viel me op dat ze veel was afgevallen sinds ze met suiker was gestopt.",
+              "Het viel me op dat ze flink was afgevallen sinds ze suiker had opgegeven."
+            ],
+            "note": "Three separable verbs: 'opvallen' ('viel ... op'), 'afvallen' (to lose weight — 'was afgevallen', ge- in the middle) and 'opgeven' (to give up — 'had opgegeven'). The 'dat'- and 'sinds'-bijzinnen are verb-final, so the separable verbs stay whole as participles at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd recommend that you sign up early, because the course often fills up quickly.",
+            "modelAnswer": "Ik raad je aan om je vroeg op te geven, omdat de cursus vaak snel vol zit.",
+            "alternatives": [
+              "Ik raad je aan om je vroeg in te schrijven, omdat de cursus vaak snel vol zit.",
+              "Ik raad je aan je vroeg op te geven, omdat de cursus vaak snel volzit."
+            ],
+            "note": "'Aanraden' ('raad ... aan'), then 'zich opgeven' = to sign up (reflexive here), split around 'te' in the om...te clause: 'op te geven'. 'Inschrijven' (to register) is the close synonym. The 'omdat'-bijzin is verb-final ('vol zit')."
+          },
+          {
+            "type": "translation",
+            "prompt": "The trip was more expensive than expected, but the hotel was a pleasant surprise.",
+            "modelAnswer": "De reis viel qua prijs tegen, maar het hotel viel juist mee.",
+            "alternatives": [
+              "De reis was duurder dan verwacht, maar het hotel viel juist mee.",
+              "De reis viel qua prijs tegen, maar het hotel viel erg mee."
+            ],
+            "note": "The 'meevallen'/'tegenvallen' pair in deliberate contrast within one sentence: the trip 'viel tegen' (disappointed), the hotel 'viel mee' (pleasant surprise). 'Juist' here = on the contrary / by contrast. 'Qua prijs' = in terms of price."
+          },
+          {
+            "type": "translation",
+            "prompt": "Let me suggest that we put it off until everyone has arrived.",
+            "modelAnswer": "Laat me voorstellen om het uit te stellen totdat iedereen is aangekomen.",
+            "alternatives": [
+              "Ik stel voor om het uit te stellen totdat iedereen er is.",
+              "Laat me voorstellen het uit te stellen totdat iedereen is aangekomen."
+            ],
+            "note": "Three separable verbs: 'voorstellen' (suggest), 'uitstellen' (to postpone — split around 'te': 'uit te stellen'), and 'aankomen' (arrive — 'is aangekomen', ge- in the middle). The 'totdat'-bijzin is verb-final. A dense but natural sentence."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "zone": "scheidbaar",
+  "zoneName": "Scheidbare werkwoorden",
+  "tiles": [
+    {
+      "id": "scheidbaar-5-foutjesgids-scheidbaar",
+      "theme": "Foutjesgids scheidbare werkwoorden",
+      "themeEnglish": "Mixed review of separable verbs — the split, the ge- placement, the cluster in a bijzin, and te-splitting in om ... te",
+      "recognitionQuestion": "Is the separable verb handled correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik opbel je morgen zodra ik meer weet.",
+            "correctUse": false,
+            "explanation": "Niet correct. In a main clause a separable verb splits: 'Ik bel je morgen op ...', not 'Ik opbel je'. The prefix 'op' goes to the end. Correct: 'Ik bel je morgen op zodra ik meer weet.' The 'zodra'-bijzin is verb-final ('weet')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij staat elke ochtend om half zeven op.",
+            "correctUse": true,
+            "explanation": "Correct. Main-clause split: 'staat ... op'. The finite verb 'staat' is in second position and the prefix 'op' lands at the end. Textbook separable-verb word order."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Morgen ik bel je terug als ik tijd heb.",
+            "correctUse": false,
+            "explanation": "Niet correct. The fronted 'Morgen' forces inversion: 'bel ik', not 'ik bel'. Correct: 'Morgen bel ik je terug als ik tijd heb.' (The separable 'terugbellen' splits to the end — 'bel ... terug' — which is right; only the inversion is wrong.)"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze is vanochtend veel te laat opgestaan gestaan.",
+            "correctUse": false,
+            "explanation": "Niet correct — the participle is doubled. 'Opstaan' has just one participle: 'opgestaan' (ge- in the middle: op-ge-staan). Correct: 'Ze is vanochtend veel te laat opgestaan.' Not 'opgestaan gestaan'. One separable verb, one participle."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij zei dat hij de vergadering zou voorbereiden.",
+            "correctUse": true,
+            "explanation": "Correct. In a bijzin the separable verb stays whole at the end, and under the modal 'zou' it's a plain infinitive: 'zou voorbereiden'. The cluster closes the 'dat'-clause. No splitting inside the subordinate clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vergeet niet om de kaarten van tevoren te bestellen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Bestellen' is INSEPARABLE (the 'be-' prefix never splits), so 'te' simply sits before the whole verb: 'te bestellen'. Compare a separable verb, which would split around 'te' ('mee te nemen'). Knowing which prefixes split is the skill here — be-, ge-, ver-, ont-, her-, er- never do."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik weet niet of de trein al aangekomen is of nog niet aan is gekomen.",
+            "correctUse": false,
+            "explanation": "Niet correct. The second half mangles the participle: 'aangekomen' stays whole in a bijzin — 'of hij nog niet is aangekomen', not 'nog niet aan is gekomen'. You can't split a participle the way you'd split a finite verb. Correct: '...of de trein al is aangekomen of nog niet.'"
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik opbel je morgen.",
+            "task": "Verbeter de woordvolgorde.",
+            "acceptedAnswers": [
+              "Ik bel je morgen op.",
+              "Ik bel je morgen op."
+            ],
+            "preferred": "Ik bel je morgen op.",
+            "explanation": "Main clause → separable verb splits: 'bel ... op'. The finite part 'bel' goes to second position, the prefix 'op' to the end. Never 'ik opbel' in a main clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik bel je morgen terug. (begin met 'Morgen')",
+            "task": "Herschrijf met inversie.",
+            "acceptedAnswers": [
+              "Morgen bel ik je terug.",
+              "Morgen bel ik je terug."
+            ],
+            "preferred": "Morgen bel ik je terug.",
+            "explanation": "Fronting 'Morgen' forces inversion ('bel ik'), and the separable 'terugbellen' still splits to the end ('bel ... terug'). Two rules together — the inversion and the split."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze staat op. (voltooide tijd)",
+            "task": "Zet in het perfectum.",
+            "acceptedAnswers": [
+              "Ze is opgestaan.",
+              "Ze is opgestaan."
+            ],
+            "preferred": "Ze is opgestaan.",
+            "explanation": "Separable participle: the 'ge-' slots between prefix and stem — 'op + ge + staan' → 'opgestaan'. 'Opstaan' takes 'zijn'. One participle only — never 'opgestaan gestaan'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij bereidt de vergadering voor. (begin met 'Hij zei dat ...')",
+            "task": "Maak er een bijzin van.",
+            "acceptedAnswers": [
+              "Hij zei dat hij de vergadering voorbereidt.",
+              "Hij zei dat hij de vergadering voorbereidde."
+            ],
+            "preferred": "Hij zei dat hij de vergadering voorbereidde.",
+            "explanation": "In a bijzin the separable verb stays whole at the end: 'voorbereidt' / 'voorbereidde'. It does NOT split inside a subordinate clause. (Tense can shift to imperfectum 'voorbereidde' to match 'zei'.)"
+          },
+          {
+            "type": "transformation",
+            "prompt": "Vergeet het niet. Je neemt je paspoort mee. (om ... te)",
+            "task": "Verbind met 'vergeten ... om ... te' (scheidbaar werkwoord!).",
+            "acceptedAnswers": [
+              "Vergeet niet om je paspoort mee te nemen.",
+              "Vergeet niet je paspoort mee te nemen."
+            ],
+            "preferred": "Vergeet niet om je paspoort mee te nemen.",
+            "explanation": "Separable 'meenemen' splits around 'te': 'mee + te + nemen'. 'Vergeet niet om ... mee te nemen' = don't forget to bring .... The prefix 'mee' lands just before 'te'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik schrijf me in voor de cursus. (voltooide tijd)",
+            "task": "Zet in het perfectum.",
+            "acceptedAnswers": [
+              "Ik heb me ingeschreven voor de cursus.",
+              "Ik heb me voor de cursus ingeschreven."
+            ],
+            "preferred": "Ik heb me ingeschreven voor de cursus.",
+            "explanation": "Separable 'inschrijven' (reflexive here): participle 'ingeschreven' (in + ge + schreven). 'Ik heb me ingeschreven' = I've signed up. The reflexive 'me' sits before the participle, which closes the clause."
+          },
+          {
+            "type": "transformation",
+            "prompt": "De trein komt aan. (begin met 'Ik weet niet of ...')",
+            "task": "Maak er een indirecte vraag van (perfectum).",
+            "acceptedAnswers": [
+              "Ik weet niet of de trein is aangekomen.",
+              "Ik weet niet of de trein al is aangekomen."
+            ],
+            "preferred": "Ik weet niet of de trein is aangekomen.",
+            "explanation": "Indirect question with 'of' → verb cluster to the end of the bijzin: 'of de trein is aangekomen'. The participle 'aangekomen' stays whole — never split inside a clause. 'Aankomen' takes 'zijn'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'll call you back tomorrow.",
+            "modelAnswer": "Ik bel je morgen terug.",
+            "alternatives": [
+              "Ik bel je morgen terug.",
+              "Ik zal je morgen terugbellen."
+            ],
+            "note": "Main clause → 'terugbellen' splits: 'bel ... terug'. After the modal 'zal' it stays whole at the end: 'terugbellen'. Two correct placements depending on the structure."
+          },
+          {
+            "type": "translation",
+            "prompt": "She got up late this morning.",
+            "modelAnswer": "Ze is vanochtend laat opgestaan.",
+            "alternatives": [
+              "Ze is vanochtend laat opgestaan.",
+              "Vanochtend is ze laat opgestaan."
+            ],
+            "note": "Participle 'opgestaan' (op-ge-staan), with 'zijn'. Front 'vanochtend' and invert: 'is ze'. The participle closes the clause and is never split."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't forget to bring your passport.",
+            "modelAnswer": "Vergeet niet om je paspoort mee te nemen.",
+            "alternatives": [
+              "Vergeet niet je paspoort mee te nemen.",
+              "Vergeet niet om je paspoort mee te nemen."
+            ],
+            "note": "Separable 'meenemen' splits around 'te': 'mee te nemen'. 'Vergeet niet (om) ... te ...' — the 'om' is optional with 'vergeten'. The prefix 'mee' sits just before 'te'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He said he would prepare the presentation.",
+            "modelAnswer": "Hij zei dat hij de presentatie zou voorbereiden.",
+            "alternatives": [
+              "Hij zei dat hij de presentatie zou voorbereiden.",
+              "Hij zei dat hij de presentatie ging voorbereiden."
+            ],
+            "note": "In the 'dat'-bijzin the separable verb stays whole at the end, as an infinitive under 'zou' / 'ging': 'zou voorbereiden'. No splitting inside a subordinate clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "I signed up for the course last week.",
+            "modelAnswer": "Ik heb me vorige week ingeschreven voor de cursus.",
+            "alternatives": [
+              "Ik heb me vorige week voor de cursus ingeschreven.",
+              "Ik heb me vorige week ingeschreven voor de cursus."
+            ],
+            "note": "Participle 'ingeschreven' (in-ge-schreven), reflexive 'me'. 'Inschrijven voor' = to register for. The participle closes the clause; the 'voor'-phrase can sit before or after it."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "When I got home, I noticed that someone had switched off all the lights.",
+            "modelAnswer": "Toen ik thuiskwam, viel het me op dat iemand alle lichten had uitgedaan.",
+            "alternatives": [
+              "Toen ik thuiskwam, viel het me op dat iemand alle lichten had uitgezet.",
+              "Toen ik thuiskwam, merkte ik dat iemand alle lichten had uitgedaan."
+            ],
+            "note": "Three separable verbs: 'thuiskomen' (re-fused in the 'toen'-bijzin: 'thuiskwam'), 'opvallen' (split in the main clause after inversion: 'viel het me op'), and 'uitdoen'/'uitzetten' (participle at the end of the 'dat'-bijzin: 'had uitgedaan'). Each in its correct placement."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd advise you to fill in the form carefully before you send it off.",
+            "modelAnswer": "Ik raad je aan om het formulier zorgvuldig in te vullen voordat je het opstuurt.",
+            "alternatives": [
+              "Ik raad je aan het formulier zorgvuldig in te vullen voordat je het opstuurt.",
+              "Ik raad je aan om het formulier zorgvuldig in te vullen voordat je het verstuurt."
+            ],
+            "note": "Three separable verbs in three placements: 'aanraden' (split in main clause: 'raad ... aan'), 'invullen' (split around 'te' in the om...te clause: 'in te vullen'), and 'opsturen' (whole at the end of the 'voordat'-bijzin: 'opstuurt'). A compact tour of all the rules."
+          },
+          {
+            "type": "translation",
+            "prompt": "The exam turned out better than expected, but I'd still recommend preparing thoroughly.",
+            "modelAnswer": "Het examen viel mee, maar ik zou je toch aanraden om je goed voor te bereiden.",
+            "alternatives": [
+              "Het examen viel mee, maar ik zou je toch aanraden je goed voor te bereiden.",
+              "Het examen viel mee, maar ik raad je toch aan om je goed voor te bereiden."
+            ],
+            "note": "'Meevallen' (split: 'viel mee'), 'aanraden' (whole after 'zou': 'zou ... aanraden'), and 'zich voorbereiden' (reflexive, split around 'te': 'voor te bereiden'). 'Toch' = still/nonetheless. The reflexive 'je' sits inside the om...te clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "Before the meeting started, he handed out the documents he'd printed that morning.",
+            "modelAnswer": "Voordat de vergadering begon, deelde hij de documenten uit die hij die ochtend had uitgeprint.",
+            "alternatives": [
+              "Voordat de vergadering begon, deelde hij de documenten uit die hij die ochtend had geprint.",
+              "Voordat de vergadering begon, deelde hij de stukken uit die hij die ochtend had uitgeprint."
+            ],
+            "note": "'Beginnen' (whole at the end of the 'voordat'-bijzin: 'begon'), 'uitdelen' (split in the main clause after the fronted bijzin: 'deelde ... uit'), and 'uitprinten'/'printen' (participle in the relative clause: 'had uitgeprint'). The fronted bijzin inverts the main clause: 'deelde hij'."
+          },
+          {
+            "type": "translation",
+            "prompt": "It struck me how much the city had changed since I moved away ten years ago.",
+            "modelAnswer": "Het viel me op hoezeer de stad was veranderd sinds ik tien jaar geleden was weggegaan.",
+            "alternatives": [
+              "Het viel me op hoeveel de stad was veranderd sinds ik tien jaar geleden was vertrokken.",
+              "Het viel me op hoezeer de stad was veranderd sinds ik tien jaar geleden was weggegaan."
+            ],
+            "note": "'Opvallen' (split in the main clause: 'viel me op'), then an indirect exclamation 'hoezeer ... was veranderd' (verb-final), and a 'sinds'-bijzin with 'weggaan' (participle 'weggegaan', with 'zijn'). 'Hoezeer' = how much / to what extent. Multiple clauses, every verb correctly placed."
+          }
+        ]
+      }
+    }
+  ]
+}
