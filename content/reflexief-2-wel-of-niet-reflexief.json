@@ -1,0 +1,242 @@
+{
+  "zone": "reflexief",
+  "zoneName": "Reflexieve werkwoorden",
+  "tiles": [
+    {
+      "id": "reflexief-2-wel-of-niet-reflexief",
+      "theme": "Wel of niet reflexief",
+      "themeEnglish": "Verbs where the reflexive pronoun changes the meaning — zich voelen (feel) vs voelen (touch), zich herinneren (recall) vs herinneren aan (remind)",
+      "recognitionQuestion": "Is the verb correctly reflexive (or non-reflexive) here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik voel me vandaag een stuk beter dan gisteren.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich voelen' (with the reflexive 'me') = to feel (a state or emotion): 'ik voel me beter' = I feel better. Without the reflexive, 'voelen' means to touch/feel something physically ('ik voel de stof' = I feel the fabric). The pronoun is what flips the meaning."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Voel eens deze stof; me is hij niet heel zacht?",
+            "correctUse": false,
+            "explanation": "Niet correct. Touching something physically is plain 'voelen', no reflexive: 'Voel eens deze stof; is hij niet heel zacht?' The stray 'me' is wrong here — you only add the reflexive for 'voelen' in the emotional/state sense ('ik voel me ...'). Here you're feeling the fabric, so no 'me'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik herinner me onze eerste ontmoeting nog precies.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich herinneren' (with 'me') = to recall / remember something yourself: 'ik herinner me ...' = I remember .... Contrast 'herinneren aan' (no reflexive) = to remind someone of something ('dat herinnert me aan vroeger' = that reminds me of the old days). Same root, the reflexive marks 'recall' vs 'remind'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Was je handen goed voordat je gaat eten.",
+            "correctUse": true,
+            "explanation": "Correct. Washing a specific thing (your hands) is plain 'wassen', no reflexive: 'Was je handen' = wash your hands. The reflexive 'zich wassen' means to wash oneself generally ('ik was me' = I'm having a wash). Wash a thing → no reflexive; wash yourself → reflexive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze bedacht een heel slim plan om me te helpen.",
+            "correctUse": true,
+            "explanation": "Correct. Plain 'bedenken' (no reflexive) = to think up / devise: 'ze bedacht een plan' = she thought up a plan. The reflexive 'zich bedenken' means to change one's mind ('ik heb me bedacht' = I've changed my mind). Here she's devising, so no reflexive."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Op het laatste moment ik bedacht me en bleef toch thuis.",
+            "correctUse": false,
+            "explanation": "Niet correct — the word order. 'Op het laatste moment' is fronted, so the main clause must invert: 'bedacht ik me', not 'ik bedacht me'. (The reflexive 'zich bedenken' = to change one's mind is the right verb here.) Correct: 'Op het laatste moment bedacht ik me en bleef toch thuis.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik heb me verslapen en daardoor de bus gemist.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich verslapen' (always reflexive) = to oversleep: 'ik heb me verslapen' = I overslept. This is an obligatorily reflexive verb — there's no non-reflexive 'verslapen'. 'Daardoor' = as a result."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Hoe gaat het met je? (= jouw gezondheid/stemming)",
+            "task": "Antwoord met 'zich voelen' (Ik voel ...).",
+            "acceptedAnswers": [
+              "Ik voel me goed.",
+              "Ik voel me prima.",
+              "Ik voel me niet zo lekker."
+            ],
+            "preferred": "Ik voel me goed.",
+            "explanation": "'Zich voelen' (with 'me') for a state: 'ik voel me goed/prima'. The reflexive is obligatory in this sense. 'Me niet zo lekker' = not so great — a very common Dutch way to say you're under the weather."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Voel deze stof. (= aanraken)",
+            "task": "Schrijf de zin (let op: GEEN reflexief).",
+            "acceptedAnswers": [
+              "Voel deze stof.",
+              "Voel eens deze stof."
+            ],
+            "preferred": "Voel deze stof.",
+            "explanation": "Touching something → plain 'voelen', no reflexive. 'Voel deze stof' = feel this fabric. Adding 'me' would be wrong here; that's only for 'voelen' in the emotional/state sense."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Weet je onze eerste ontmoeting nog? (= herinneren)",
+            "task": "Herschrijf met 'zich herinneren' (Ik herinner ...).",
+            "acceptedAnswers": [
+              "Ik herinner me onze eerste ontmoeting nog.",
+              "Ik herinner me onze eerste ontmoeting nog goed."
+            ],
+            "preferred": "Ik herinner me onze eerste ontmoeting nog.",
+            "explanation": "'Zich herinneren' (with 'me') = to recall: 'ik herinner me ...'. The reflexive is needed when YOU remember something. Compare 'herinneren aan' = to remind, which takes no reflexive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Dat liedje doet me aan mijn jeugd denken. (= het roept een herinnering op)",
+            "task": "Herschrijf met 'herinneren aan' (Dat liedje ...).",
+            "acceptedAnswers": [
+              "Dat liedje herinnert me aan mijn jeugd.",
+              "Dat liedje herinnert me aan mijn jeugd."
+            ],
+            "preferred": "Dat liedje herinnert me aan mijn jeugd.",
+            "explanation": "'Herinneren aan' = to remind (someone) of — NO reflexive. 'Dat liedje herinnert me aan mijn jeugd' = that song reminds me of my childhood. Here 'me' is the OBJECT (the one being reminded), not a reflexive pronoun. The 'aan' is the fixed preposition."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik veranderde van gedachten en bleef thuis. (= van mening veranderen)",
+            "task": "Herschrijf met 'zich bedenken'.",
+            "acceptedAnswers": [
+              "Ik bedacht me en bleef thuis.",
+              "Ik heb me bedacht en ben thuisgebleven."
+            ],
+            "preferred": "Ik bedacht me en bleef thuis.",
+            "explanation": "'Zich bedenken' (with 'me') = to change one's mind. 'Ik bedacht me' = I changed my mind. Contrast plain 'bedenken' (no reflexive) = to think up/devise. The reflexive flips 'devise' into 'reconsider'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze verzon een excuus om niet te hoeven komen. (= een excuus bedenken)",
+            "task": "Herschrijf met 'bedenken' (GEEN reflexief).",
+            "acceptedAnswers": [
+              "Ze bedacht een excuus om niet te hoeven komen.",
+              "Ze bedacht een excuus om niet te hoeven komen."
+            ],
+            "preferred": "Ze bedacht een excuus om niet te hoeven komen.",
+            "explanation": "Plain 'bedenken' = to think up/invent: 'ze bedacht een excuus' = she thought up an excuse. No reflexive in this sense. 'Hoeven ... te' (with negation) = to not have to; the 'om ... te' clause gives the purpose."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik sliep te lang en miste de afspraak. (= per ongeluk te lang slapen)",
+            "task": "Herschrijf met 'zich verslapen' (perfectum).",
+            "acceptedAnswers": [
+              "Ik heb me verslapen en de afspraak gemist.",
+              "Ik heb me verslapen en daardoor de afspraak gemist."
+            ],
+            "preferred": "Ik heb me verslapen en de afspraak gemist.",
+            "explanation": "'Zich verslapen' (always reflexive) = to oversleep. 'Ik heb me verslapen' = I overslept. There's no non-reflexive version of this verb — the 'me' is obligatory."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I feel much better today.",
+            "modelAnswer": "Ik voel me vandaag veel beter.",
+            "alternatives": [
+              "Ik voel me vandaag veel beter.",
+              "Vandaag voel ik me veel beter."
+            ],
+            "note": "'Zich voelen' (with 'me') for a state: 'ik voel me beter'. Front 'vandaag' and invert: 'voel ik me'. The reflexive is obligatory in the emotional/health sense."
+          },
+          {
+            "type": "translation",
+            "prompt": "Feel how soft this is.",
+            "modelAnswer": "Voel eens hoe zacht dit is.",
+            "alternatives": [
+              "Voel eens hoe zacht dit is.",
+              "Voel maar hoe zacht dit is."
+            ],
+            "note": "Physical touching → plain 'voelen', no reflexive. 'Voel eens hoe zacht dit is' = feel how soft this is. 'Eens / maar' soften the imperative. The indirect question 'hoe zacht dit is' is verb-final."
+          },
+          {
+            "type": "translation",
+            "prompt": "I don't remember his name.",
+            "modelAnswer": "Ik herinner me zijn naam niet.",
+            "alternatives": [
+              "Ik herinner me zijn naam niet.",
+              "Ik kan me zijn naam niet herinneren."
+            ],
+            "note": "'Zich herinneren' (with 'me') = to recall: 'ik herinner me ... niet'. The modal version 'ik kan me ... niet herinneren' (I can't remember) is extremely common and equally natural. Reflexive in both."
+          },
+          {
+            "type": "translation",
+            "prompt": "That smell reminds me of my grandmother's house.",
+            "modelAnswer": "Die geur herinnert me aan het huis van mijn oma.",
+            "alternatives": [
+              "Die geur herinnert me aan het huis van mijn oma.",
+              "Die geur doet me aan het huis van mijn oma denken."
+            ],
+            "note": "'Herinneren aan' = to remind of — no reflexive; 'me' is the object (the one reminded). The idiom 'doen denken aan' (to make think of) is the everyday alternative: 'die geur doet me aan ... denken'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I changed my mind at the last minute.",
+            "modelAnswer": "Ik heb me op het laatste moment bedacht.",
+            "alternatives": [
+              "Ik heb me op het laatste moment bedacht.",
+              "Op het laatste moment heb ik me bedacht."
+            ],
+            "note": "'Zich bedenken' (with 'me') = to change one's mind. 'Ik heb me bedacht' = I changed my mind. Front 'op het laatste moment' and invert: 'heb ik me bedacht'. Not to be confused with plain 'bedenken' (devise)."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I don't feel well, so I think I'll wash quickly and go to bed.",
+            "modelAnswer": "Ik voel me niet lekker, dus ik denk dat ik me snel ga wassen en naar bed ga.",
+            "alternatives": [
+              "Ik voel me niet lekker, dus ik denk dat ik me snel ga wassen en naar bed ga.",
+              "Ik voel me niet goed, dus ik denk dat ik me even snel was en naar bed ga."
+            ],
+            "note": "Two reflexives: 'zich voelen' ('ik voel me niet lekker') and 'zich wassen' in the general sense ('ik ga me wassen' = I'll have a wash). Both take 'me'. The 'dat'-bijzin is verb-final ('ga ... wassen ... ga'). Note 'wassen' here is reflexive (washing oneself), unlike 'je handen wassen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "She thought up a clever excuse, but at the last minute she changed her mind and told the truth.",
+            "modelAnswer": "Ze bedacht een slim excuus, maar op het laatste moment bedacht ze zich en vertelde de waarheid.",
+            "alternatives": [
+              "Ze bedacht een slim excuus, maar op het laatste moment bedacht ze zich en vertelde ze de waarheid.",
+              "Ze verzon een slim excuus, maar op het laatste moment bedacht ze zich en zei ze de waarheid."
+            ],
+            "note": "Both senses of 'bedenken' in one sentence: plain 'bedacht een excuus' (devised) versus reflexive 'bedacht ze zich' (changed her mind). Fronted 'op het laatste moment' inverts: 'bedacht ze zich'. The reflexive 'zich' is the only difference between inventing and reconsidering."
+          },
+          {
+            "type": "translation",
+            "prompt": "Do you remember the man who reminded us of your uncle?",
+            "modelAnswer": "Herinner je je de man die ons aan je oom deed denken?",
+            "alternatives": [
+              "Herinner je je de man die ons aan je oom herinnerde?",
+              "Weet je nog die man die ons aan je oom deed denken?"
+            ],
+            "note": "Both 'remember'-verbs in one sentence: 'zich herinneren' ('herinner je je ...' — note the doubled 'je je': subject + reflexive) and 'herinneren aan' / 'doen denken aan' for 'reminded us of'. The relative clause 'die ons aan je oom ... ' is verb-final. 'Weet je nog' = do you recall, the everyday alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "I overslept this morning because I hadn't felt well during the night.",
+            "modelAnswer": "Ik heb me vanmorgen verslapen omdat ik me 's nachts niet lekker had gevoeld.",
+            "alternatives": [
+              "Ik heb me vanmorgen verslapen omdat ik me 's nachts niet lekker had gevoeld.",
+              "Ik heb me vanochtend verslapen omdat ik me 's nachts niet goed had gevoeld."
+            ],
+            "note": "Two obligatorily-reflexive uses: 'zich verslapen' (oversleep) and 'zich voelen' in the plusquamperfectum ('had me ... gevoeld'). The 'omdat'-bijzin is verb-final with the cluster 'had gevoeld' at the end. Both 'me's are essential."
+          },
+          {
+            "type": "translation",
+            "prompt": "Wash your hands before dinner, and don't forget to wash properly before bed too.",
+            "modelAnswer": "Was je handen voor het eten, en vergeet niet je ook goed te wassen voordat je naar bed gaat.",
+            "alternatives": [
+              "Was je handen voor het eten, en vergeet niet je ook goed te wassen voor het slapengaan.",
+              "Was voor het eten je handen, en vergeet niet je ook goed te wassen voordat je gaat slapen."
+            ],
+            "note": "Both uses of 'wassen' side by side: non-reflexive 'je handen wassen' (wash a thing) and reflexive 'je wassen' (wash yourself). 'Vergeten ... te' (bare te) with the reflexive 'je' before 'te wassen'. The 'voordat'-bijzin is verb-final. The presence or absence of the reflexive marks washing a thing vs washing oneself."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "zone": "reflexief",
+  "zoneName": "Reflexieve werkwoorden",
+  "tiles": [
+    {
+      "id": "reflexief-3-met-vast-voorzetsel",
+      "theme": "Reflexief met vast voorzetsel",
+      "themeEnglish": "Reflexive verbs with a fixed preposition — zich verheugen op, zich ergeren aan, zich interesseren voor",
+      "recognitionQuestion": "Is the reflexive verb's preposition correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik verheug me al weken naar de vakantie.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zich verheugen' takes 'op', not 'naar': 'Ik verheug me op de vakantie' = I'm looking forward to the holiday. ('Uitkijken naar' takes 'naar', but 'zich verheugen' takes 'op' — easy to cross-wire.) The reflexive 'me' is right; the preposition is the error."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik erger me enorm aan mensen die te laat komen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich ergeren aan' = to be annoyed/irritated by. 'Ik erger me aan ...' = I'm annoyed by .... The reflexive 'me' plus the fixed preposition 'aan'. 'Mensen die te laat komen' is a verb-final relative clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Mijn dochter interesseert zich vooral voor oude talen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich interesseren voor' = to be interested in. 'Ze interesseert zich voor ...' = she's interested in .... The reflexive 'zich' plus the fixed preposition 'voor'. 'Vooral' = especially."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij bemoeit zich altijd over andermans zaken.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zich bemoeien' takes 'met', not 'over': 'Hij bemoeit zich met andermans zaken' = he's always interfering in other people's business. The reflexive 'zich' is right; the preposition should be 'met'. 'Andermans' = other people's."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je moet je beter op je werk concentreren.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich concentreren op' = to concentrate on. 'Je moet je ... concentreren' = you must concentrate. The reflexive 'je' plus the fixed preposition 'op'. The modal sends 'concentreren' to the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze maakt zich grote zorgen over haar zoon in het buitenland.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich zorgen maken over' = to worry about. 'Ze maakt zich zorgen over ...' = she's worried about .... The reflexive 'zich', the object 'zorgen', and the fixed preposition 'over'. A three-part fixed expression worth memorising whole."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je hoeft je niet te schamen over een foutje.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zich schamen' takes 'voor', not 'over': 'Je hoeft je niet te schamen voor een foutje' = you needn't be ashamed of a little mistake. The reflexive 'je' and the 'hoeven ... te' are right; only the preposition is wrong — it should be 'voor'."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik kijk uit naar het concert. (= zich verheugen)",
+            "task": "Herschrijf met 'zich verheugen' (let op het voorzetsel).",
+            "acceptedAnswers": [
+              "Ik verheug me op het concert.",
+              "Ik verheug me op het concert."
+            ],
+            "preferred": "Ik verheug me op het concert.",
+            "explanation": "'Zich verheugen op' = to look forward to. Note the preposition switch: 'uitkijken naar' but 'zich verheugen op'. Same meaning, different fixed preposition. The reflexive 'me' is obligatory."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Lawaai irriteert me enorm. (= zich ergeren)",
+            "task": "Herschrijf met 'zich ergeren aan' (Ik erger ...).",
+            "acceptedAnswers": [
+              "Ik erger me enorm aan lawaai.",
+              "Ik erger me enorm aan lawaai."
+            ],
+            "preferred": "Ik erger me enorm aan lawaai.",
+            "explanation": "'Zich ergeren aan' = to be annoyed by. 'Ik erger me aan lawaai' = noise annoys me. The reflexive 'me' plus the fixed 'aan'. Dutch frames the annoyance from the annoyed person's side, hence reflexive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij heeft veel belangstelling voor geschiedenis. (= zich interesseren)",
+            "task": "Herschrijf met 'zich interesseren voor'.",
+            "acceptedAnswers": [
+              "Hij interesseert zich voor geschiedenis.",
+              "Hij interesseert zich voor geschiedenis."
+            ],
+            "preferred": "Hij interesseert zich voor geschiedenis.",
+            "explanation": "'Zich interesseren voor' = to be interested in. 'Hij interesseert zich voor ...' = he's interested in .... The reflexive 'zich' plus the fixed 'voor'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij moet zich niet met mijn zaken ___. (= zich bemoeien)",
+            "task": "Vul het werkwoord en het juiste voorzetsel aan (de zin staat al klaar).",
+            "acceptedAnswers": [
+              "Hij moet zich niet met mijn zaken bemoeien.",
+              "Hij moet zich niet met mijn zaken bemoeien."
+            ],
+            "preferred": "Hij moet zich niet met mijn zaken bemoeien.",
+            "explanation": "'Zich bemoeien met' = to interfere with/in. 'Zich met mijn zaken bemoeien' = to meddle in my affairs. The reflexive 'zich' plus the fixed 'met'. The modal sends 'bemoeien' to the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik kan me niet goed concentreren. (waarop? = mijn werk)",
+            "task": "Vul aan met 'op' + object.",
+            "acceptedAnswers": [
+              "Ik kan me niet goed op mijn werk concentreren.",
+              "Ik kan me niet goed op mijn werk concentreren."
+            ],
+            "preferred": "Ik kan me niet goed op mijn werk concentreren.",
+            "explanation": "'Zich concentreren op' = to concentrate on. 'Me op mijn werk concentreren'. The reflexive 'me' plus the fixed 'op'. The modal 'kan' sends 'concentreren' to the end."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik ben bang voor haar gezondheid. (= zich zorgen maken)",
+            "task": "Herschrijf met 'zich zorgen maken over'.",
+            "acceptedAnswers": [
+              "Ik maak me zorgen over haar gezondheid.",
+              "Ik maak me zorgen over haar gezondheid."
+            ],
+            "preferred": "Ik maak me zorgen over haar gezondheid.",
+            "explanation": "'Zich zorgen maken over' = to worry about. 'Ik maak me zorgen over ...'. The full fixed expression: reflexive 'me' + object 'zorgen' + preposition 'over'. Worth learning as one chunk."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je hoeft je niet te schamen. (waarvoor? = je accent)",
+            "task": "Vul aan met het juiste voorzetsel + object.",
+            "acceptedAnswers": [
+              "Je hoeft je niet te schamen voor je accent.",
+              "Je hoeft je niet te schamen voor je accent."
+            ],
+            "preferred": "Je hoeft je niet te schamen voor je accent.",
+            "explanation": "'Zich schamen voor' = to be ashamed of. 'Je schamen voor je accent'. The reflexive 'je', 'hoeven ... te' for 'needn't', and the fixed preposition 'voor'. (A kind sentence to have in your pocket.)"
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I'm looking forward to the weekend.",
+            "modelAnswer": "Ik verheug me op het weekend.",
+            "alternatives": [
+              "Ik verheug me op het weekend.",
+              "Ik kijk uit naar het weekend."
+            ],
+            "note": "'Zich verheugen op' = to look forward to. Note the preposition: 'zich verheugen OP', but 'uitkijken NAAR' — both mean the same, with different fixed prepositions. 'Uitkijken naar' is non-reflexive and a touch more casual."
+          },
+          {
+            "type": "translation",
+            "prompt": "I get annoyed by people who are always late.",
+            "modelAnswer": "Ik erger me aan mensen die altijd te laat zijn.",
+            "alternatives": [
+              "Ik erger me aan mensen die altijd te laat zijn.",
+              "Ik erger me aan mensen die altijd te laat komen."
+            ],
+            "note": "'Zich ergeren aan' = to be annoyed by. The reflexive 'me' + fixed 'aan'. 'Mensen die altijd te laat zijn/komen' is a verb-final relative clause. Dutch puts the irritation on the irritated party's side, hence reflexive."
+          },
+          {
+            "type": "translation",
+            "prompt": "She's very interested in art.",
+            "modelAnswer": "Ze interesseert zich erg voor kunst.",
+            "alternatives": [
+              "Ze interesseert zich erg voor kunst.",
+              "Ze heeft veel belangstelling voor kunst."
+            ],
+            "note": "'Zich interesseren voor' = to be interested in. The reflexive 'zich' + fixed 'voor'. The non-reflexive idiom 'belangstelling hebben voor' (to have interest in) is a common alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't interfere in other people's business.",
+            "modelAnswer": "Bemoei je niet met andermans zaken.",
+            "alternatives": [
+              "Bemoei je niet met andermans zaken.",
+              "Bemoei je niet met de zaken van anderen."
+            ],
+            "note": "'Zich bemoeien met' = to interfere with/in. The imperative 'Bemoei je niet ...' keeps the reflexive 'je'. The fixed preposition is 'met'. 'Andermans' / 'van anderen' = other people's."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'm worried about my exam.",
+            "modelAnswer": "Ik maak me zorgen over mijn examen.",
+            "alternatives": [
+              "Ik maak me zorgen over mijn examen.",
+              "Ik zit over mijn examen in."
+            ],
+            "note": "'Zich zorgen maken over' = to worry about. The fixed expression: 'me' + 'zorgen' + 'over'. The idiom 'ergens over inzitten' ('ik zit over ... in') is a more colloquial way to say you're fretting."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I'm looking forward to the trip, but I'm a bit worried about the weather.",
+            "modelAnswer": "Ik verheug me op de reis, maar ik maak me een beetje zorgen over het weer.",
+            "alternatives": [
+              "Ik verheug me op de reis, maar ik maak me een beetje zorgen over het weer.",
+              "Ik kijk uit naar de reis, maar ik maak me een beetje zorgen over het weer."
+            ],
+            "note": "Two reflexive-plus-preposition verbs: 'zich verheugen op' (look forward to) and 'zich zorgen maken over' (worry about). Each keeps its own reflexive ('me') and fixed preposition. 'Maar' coordinates, so no inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "He's so interested in it that he can't concentrate on anything else.",
+            "modelAnswer": "Hij interesseert zich er zo voor dat hij zich op niets anders kan concentreren.",
+            "alternatives": [
+              "Hij interesseert zich er zo voor dat hij zich op niets anders kan concentreren.",
+              "Hij is er zo in geïnteresseerd dat hij zich op niets anders kan concentreren."
+            ],
+            "note": "'Zich interesseren voor' with a thing → 'er ... voor' (the er-contraction): 'hij interesseert zich er ... voor'. Then 'zich concentreren op' inside a 'dat'-bijzin, verb-final with the modal: 'kan concentreren'. Two reflexives, two prepositions, plus the er-form — the topic meeting the er + voorzetsel work."
+          },
+          {
+            "type": "translation",
+            "prompt": "She got annoyed by his comment, but she didn't let it show.",
+            "modelAnswer": "Ze ergerde zich aan zijn opmerking, maar ze liet het niet merken.",
+            "alternatives": [
+              "Ze ergerde zich aan zijn opmerking, maar ze liet het niet merken.",
+              "Ze ergerde zich aan zijn opmerking, maar liet het niet merken."
+            ],
+            "note": "'Zich ergeren aan' = to be annoyed by, here in the imperfectum ('ergerde zich aan'). 'Iets laten merken' = to let something show (causative 'laten' + 'merken'). 'Maar' coordinates. The reflexive 'zich' + fixed 'aan' stay together."
+          },
+          {
+            "type": "translation",
+            "prompt": "You shouldn't worry so much about what other people think.",
+            "modelAnswer": "Je moet je niet zo veel zorgen maken over wat anderen denken.",
+            "alternatives": [
+              "Je moet je niet zo veel zorgen maken over wat anderen denken.",
+              "Je moet je niet zo druk maken over wat anderen denken."
+            ],
+            "note": "'Zich zorgen maken over' with the modal 'moeten' sending the cluster to the end: 'zorgen maken'. 'Over wat anderen denken' — the relative 'wat' (indefinite) opening a verb-final clause. 'Zich druk maken over' = to fret about, a close cousin."
+          },
+          {
+            "type": "translation",
+            "prompt": "I can't concentrate on my work because I keep worrying about the interview tomorrow.",
+            "modelAnswer": "Ik kan me niet op mijn werk concentreren omdat ik me steeds zorgen maak over het sollicitatiegesprek van morgen.",
+            "alternatives": [
+              "Ik kan me niet op mijn werk concentreren omdat ik me steeds zorgen maak over het gesprek van morgen.",
+              "Ik kan me niet concentreren op mijn werk omdat ik me steeds zorgen maak over het sollicitatiegesprek morgen."
+            ],
+            "note": "Two reflexive-plus-preposition verbs across a main clause and an 'omdat'-bijzin: 'zich concentreren op' (with modal 'kan ... concentreren') and 'zich zorgen maken over' (verb-final in the bijzin: 'maak'). 'Steeds' = keep (doing). 'Sollicitatiegesprek' = job interview. Each reflexive keeps its own 'me' and preposition."
+          }
+        ]
+      }
+    }
+  ]
+}
