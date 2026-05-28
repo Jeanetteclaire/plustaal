@@ -1,0 +1,241 @@
+{
+  "zone": "reflexief",
+  "zoneName": "Reflexieve werkwoorden",
+  "tiles": [
+    {
+      "id": "reflexief-4-foutjesgids-reflexief",
+      "theme": "Foutjesgids reflexieve werkwoorden",
+      "themeEnglish": "Mixed review of reflexive verbs — the me/je/zich pronouns, the fixed prepositions, and the reflexive-vs-non-reflexive meaning shifts",
+      "recognitionQuestion": "Is the reflexive verb used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik verbaas zich erover dat hij niets gezegd heeft.",
+            "correctUse": false,
+            "explanation": "Niet correct. The reflexive pronoun must agree with the subject: with 'ik' it's 'me', not 'zich'. Correct: 'Ik verbaas me erover dat ...'. 'Zich' is only for the third person (hij/zij/ze/u). Getting the pronoun to match the subject is the most basic reflexive error."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij ergert zich enorm aan collega's die altijd te laat zijn.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich ergeren aan' = to be annoyed by. Third-person 'zich' matches 'hij', and the fixed preposition is 'aan'. The relative clause 'die altijd te laat zijn' is verb-final. Everything in place."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Voel je vandaag niet goed?",
+            "correctUse": false,
+            "explanation": "Niet correct for the intended meaning. 'Zich voelen' (to feel a certain way) needs the reflexive pronoun: 'Voel je je vandaag niet goed?' The first 'je' is the subject, the second is the reflexive. Without it, 'voel je' reads as 'do you touch/feel (something)' — a different verb. Dutch really does double the 'je' here."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik verheug me al weken naar de zomervakantie.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zich verheugen' takes 'op', not 'naar': 'Ik verheug me al weken op de zomervakantie' = I've been looking forward to the summer holidays for weeks. The pronoun 'me' is right (matches 'ik'); the preposition is the error. Compare 'uitkijken naar', which does take 'naar' — easy to cross the wires."
+          },
+          {
+            "type": "recognition",
+            "prompt": "We moeten ons haasten, anders missen we de trein.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich haasten' (to hurry) with the first-person plural reflexive 'ons' (matching 'we'). 'We moeten ons haasten' = we have to hurry. The modal 'moeten' sends 'haasten' to the end. Pronoun and structure both right."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Zij maakt zich grote zorgen over haar zoon in het buitenland.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich zorgen maken over' = to worry about. Third-person 'zich' matches 'zij'; the fixed preposition is 'over'. 'Grote zorgen' sits between the reflexive and the verb. A textbook reflexive-plus-preposition construction."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Op het laatste moment ik bedacht me en bleef toch thuis.",
+            "correctUse": false,
+            "explanation": "Niet correct — two things. The word order is wrong: after the fronted 'Op het laatste moment', the verb must come before the subject ('bedacht ik me'). Correct: 'Op het laatste moment bedacht ik me en bleef ik toch thuis.' (And note 'zich bedenken' = to change one's mind, distinct from plain 'bedenken' = to think up.)"
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik verbaas ___ erover dat niemand iets zei.",
+            "task": "Vul het juiste reflexief voornaamwoord in.",
+            "acceptedAnswers": [
+              "Ik verbaas me erover dat niemand iets zei.",
+              "me"
+            ],
+            "preferred": "Ik verbaas me erover dat niemand iets zei.",
+            "explanation": "With 'ik', the reflexive pronoun is 'me'. 'Zich verbazen over' = to be surprised at. 'Ik verbaas me erover dat ...' — 'erover' for the thing, 'dat'-clause verb-final."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Voel je niet lekker? (= jij, gevoel)",
+            "task": "Verbeter de zin (reflexief werkwoord 'zich voelen').",
+            "acceptedAnswers": [
+              "Voel je je niet lekker?",
+              "Voel je je niet lekker?"
+            ],
+            "preferred": "Voel je je niet lekker?",
+            "explanation": "'Zich voelen' needs the reflexive: 'Voel je je niet lekker?' The first 'je' is the subject, the second the reflexive pronoun. The doubled 'je je' looks odd but is correct — without it, the verb means something else."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik verheug ___ ___ het concert van volgende week.",
+            "task": "Vul het reflexief voornaamwoord én het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Ik verheug me op het concert van volgende week.",
+              "me op"
+            ],
+            "preferred": "Ik verheug me op het concert van volgende week.",
+            "explanation": "'Zich verheugen op' = to look forward to. Pronoun 'me' (matches 'ik'), preposition 'op' (not 'naar'). 'Ik verheug me op ...' is the standard polite-eager phrasing."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij bemoeit zich altijd ___ andermans zaken.",
+            "task": "Vul het juiste voorzetsel in.",
+            "acceptedAnswers": [
+              "Hij bemoeit zich altijd met andermans zaken.",
+              "met"
+            ],
+            "preferred": "Hij bemoeit zich altijd met andermans zaken.",
+            "explanation": "'Zich bemoeien met' = to interfere in / meddle with. The fixed preposition is 'met', not 'over' or 'in'. 'Andermans zaken' = other people's business."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We haasten. We willen de trein halen.",
+            "task": "Verbind met 'zich haasten' (let op het reflexief voornaamwoord).",
+            "acceptedAnswers": [
+              "We haasten ons om de trein te halen.",
+              "We moeten ons haasten om de trein te halen."
+            ],
+            "preferred": "We haasten ons om de trein te halen.",
+            "explanation": "'Zich haasten' with first-person plural 'ons'. 'We haasten ons om ... te halen' — the 'om ... te' clause expresses purpose. The reflexive 'ons' matches 'we'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Op het laatste moment ik bedacht me.",
+            "task": "Verbeter de woordvolgorde.",
+            "acceptedAnswers": [
+              "Op het laatste moment bedacht ik me.",
+              "Op het laatste moment bedacht ik me."
+            ],
+            "preferred": "Op het laatste moment bedacht ik me.",
+            "explanation": "Fronted 'Op het laatste moment' triggers inversion: 'bedacht ik me', not 'ik bedacht'. 'Zich bedenken' = to change one's mind (≠ 'bedenken' = to devise). The reflexive 'me' stays right after the inverted subject."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je schaamt voor je accent. (= dat moet niet)",
+            "task": "Maak een gebod met 'zich schamen voor' (Je moet je niet ...).",
+            "acceptedAnswers": [
+              "Je moet je niet schamen voor je accent.",
+              "Je hoeft je niet te schamen voor je accent."
+            ],
+            "preferred": "Je moet je niet schamen voor je accent.",
+            "explanation": "'Zich schamen voor' = to be ashamed of. Reflexive 'je' (matching subject 'je'), preposition 'voor'. 'Je moet je niet schamen' or the gentler 'je hoeft je niet te schamen' (you needn't be ashamed). 'Voor', not 'over'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I feel much better today.",
+            "modelAnswer": "Ik voel me vandaag veel beter.",
+            "alternatives": [
+              "Ik voel me vandaag veel beter.",
+              "Ik voel me vandaag een stuk beter."
+            ],
+            "note": "'Zich voelen' (to feel) needs the reflexive 'me' (matching 'ik'). 'Ik voel me ... beter.' 'Een stuk beter' = a good deal better, very idiomatic."
+          },
+          {
+            "type": "translation",
+            "prompt": "She's looking forward to the trip.",
+            "modelAnswer": "Ze verheugt zich op de reis.",
+            "alternatives": [
+              "Ze verheugt zich op de reis.",
+              "Ze kijkt uit naar de reis."
+            ],
+            "note": "'Zich verheugen op' = to look forward to. Third-person 'zich', preposition 'op'. The non-reflexive 'uitkijken naar' (with 'naar') means the same thing — note the two verbs take different prepositions."
+          },
+          {
+            "type": "translation",
+            "prompt": "He's always interfering in everything.",
+            "modelAnswer": "Hij bemoeit zich overal mee.",
+            "alternatives": [
+              "Hij bemoeit zich overal mee.",
+              "Hij bemoeit zich met alles."
+            ],
+            "note": "'Zich bemoeien met' = to interfere with. 'Overal mee' (er-form of 'met alles') or plainly 'met alles'. The fixed preposition 'met' surfaces as 'mee' in the pronominal-adverb form 'overal mee'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You shouldn't be ashamed of that.",
+            "modelAnswer": "Daar hoef je je niet voor te schamen.",
+            "alternatives": [
+              "Daar hoef je je niet voor te schamen.",
+              "Je hoeft je daar niet voor te schamen."
+            ],
+            "note": "'Zich schamen voor' + a thing → 'daar ... voor' (stressed) or 'er ... voor'. Reflexive 'je' plus 'hoeven ... te' (needn't). 'Daar hoef je je niet voor te schamen' threads reflexive, fixed preposition, er/daar-form, and 'hoeven te' all together."
+          },
+          {
+            "type": "translation",
+            "prompt": "I have to hurry, otherwise I'll be late.",
+            "modelAnswer": "Ik moet me haasten, anders kom ik te laat.",
+            "alternatives": [
+              "Ik moet me haasten, anders kom ik te laat.",
+              "Ik moet opschieten, anders kom ik te laat."
+            ],
+            "note": "'Zich haasten' (to hurry) with 'me'. 'Anders' (otherwise) fronts the second clause and inverts it: 'kom ik'. 'Opschieten' (separable, to get a move on) is the everyday non-reflexive alternative."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I remember that we hurried because we were afraid of missing the train.",
+            "modelAnswer": "Ik herinner me dat we ons haastten omdat we bang waren de trein te missen.",
+            "alternatives": [
+              "Ik herinner me dat we ons haastten omdat we bang waren de trein te missen.",
+              "Ik herinner me dat we ons haastten omdat we bang waren om de trein te missen."
+            ],
+            "note": "Two reflexives in one sentence with different pronouns: 'ik herinner me' and 'we ... ons haastten' — the pronoun tracks each subject. 'Bang zijn' + bare 'te missen' (or 'om ... te missen'). The 'dat'- and 'omdat'-clauses are both verb-final."
+          },
+          {
+            "type": "translation",
+            "prompt": "She was mistaken about the date, so we hurried for nothing.",
+            "modelAnswer": "Ze had zich vergist in de datum, dus we hebben ons voor niets gehaast.",
+            "alternatives": [
+              "Ze had zich vergist in de datum, dus we hebben ons voor niets gehaast.",
+              "Ze vergiste zich in de datum, dus we haastten ons voor niets."
+            ],
+            "note": "'Zich vergissen in' (to be mistaken about) and 'zich haasten' — two reflexives, two subjects, two pronouns ('zich' / 'ons'). In the perfect, the reflexive stays: 'we hebben ons ... gehaast'. 'Voor niets' = for nothing. 'Dus' triggers a loose inversion."
+          },
+          {
+            "type": "translation",
+            "prompt": "You shouldn't be ashamed of making mistakes; that's how you learn.",
+            "modelAnswer": "Je moet je niet schamen om fouten te maken; zo leer je nu eenmaal.",
+            "alternatives": [
+              "Je moet je niet schamen om fouten te maken; zo leer je nu eenmaal.",
+              "Je hoeft je niet te schamen voor het maken van fouten; zo leer je nu eenmaal."
+            ],
+            "note": "'Zich schamen' with an 'om ... te' clause ('om fouten te maken') or with 'voor' + a nominalised infinitive ('voor het maken van fouten'). 'Zo leer je nu eenmaal' = that's just how you learn ('nu eenmaal' = that's just the way it is). Fronted 'zo' inverts: 'leer je'."
+          },
+          {
+            "type": "translation",
+            "prompt": "I can't imagine that he doesn't remember anything about it.",
+            "modelAnswer": "Ik kan me niet voorstellen dat hij zich er niets van herinnert.",
+            "alternatives": [
+              "Ik kan me niet voorstellen dat hij zich er niets van herinnert.",
+              "Ik kan me niet voorstellen dat hij zich daar niets van herinnert."
+            ],
+            "note": "Two reflexives, different pronouns: 'ik kan me ... voorstellen' (zich voorstellen = to imagine) and 'hij zich ... herinnert' (zich herinneren = to remember). Plus 'zich iets herinneren van' → 'er ... van' / 'daar ... van'. The 'dat'-clause is verb-final. A dense, fully-assembled reflexive sentence."
+          },
+          {
+            "type": "translation",
+            "prompt": "If he behaved a bit better, people wouldn't be so annoyed with him.",
+            "modelAnswer": "Als hij zich wat beter gedroeg, zouden mensen zich niet zo aan hem ergeren.",
+            "alternatives": [
+              "Als hij zich wat beter gedroeg, zouden mensen zich niet zo aan hem ergeren.",
+              "Als hij zich wat beter zou gedragen, zouden mensen zich niet zo aan hem ergeren."
+            ],
+            "note": "A present-unreal conditional built from two reflexives: 'zich gedragen' (to behave) in the 'als'-clause, 'zich ergeren aan' (to be annoyed by) in the main clause. 'Aan hem' — a person, so the pronoun stays (not 'eraan'). Fronted 'als'-clause inverts: 'zouden mensen'. Conditional + reflexive + person-vs-thing, all at once."
+          }
+        ]
+      }
+    }
+  ]
+}

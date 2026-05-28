@@ -1,0 +1,241 @@
+{
+  "zone": "scheidbaar",
+  "zoneName": "Scheidbare werkwoorden",
+  "tiles": [
+    {
+      "id": "scheidbaar-1-basis",
+      "theme": "Scheidbare werkwoorden: de basis",
+      "themeEnglish": "How separable verbs behave — split in a main clause, whole after a modal and in a bijzin, and ge- in the middle of the participle",
+      "recognitionQuestion": "Is the separable verb handled correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik sta elke ochtend om zeven uur op.",
+            "correctUse": true,
+            "explanation": "Correct. In a main clause the separable verb SPLITS: the prefix 'op' goes to the end. 'Ik sta ... op' = I get up. The finite verb 'sta' is in second position, the prefix 'op' at the close. This is the default behaviour of a separable verb."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Morgen ik sta vroeg op om de trein te halen.",
+            "correctUse": false,
+            "explanation": "Niet correct — the word order, not the splitting. After the fronted 'Morgen', the verb must come before the subject: 'Morgen sta ik vroeg op', not 'Morgen ik sta'. The separable split ('sta ... op') is fine; the missing inversion is the error. Correct: 'Morgen sta ik vroeg op om de trein te halen.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik moet morgen heel vroeg opstaan.",
+            "correctUse": true,
+            "explanation": "Correct. After a modal, the separable verb stays WHOLE as an infinitive at the end: 'moet ... opstaan'. It does not split under a modal. Compare the main-clause split ('ik sta op') with this joined infinitive ('moet opstaan')."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze belde net toen ik de deur uitging.",
+            "correctUse": true,
+            "explanation": "Correct. In a bijzin the separable verb stays TOGETHER at the end: 'toen ik de deur uitging' (not 'uit ging'). 'Uitgaan' reunites in the subordinate clause. The 'toen'-bijzin is verb-final, and the separable verb sits there whole."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij is vanmorgen veel te laat opgestaan.",
+            "correctUse": true,
+            "explanation": "Correct. The participle of a separable verb inserts 'ge-' in the MIDDLE: 'op + ge + staan' → 'opgestaan'. 'Hij is ... opgestaan' = he got up. (Note 'opstaan' takes 'zijn'.) The 'ge-' slots between the prefix and the stem, never at the front."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ze heeft de hele vergadering opnemen met haar telefoon.",
+            "correctUse": false,
+            "explanation": "Niet correct. The participle must insert 'ge-' in the middle: 'opgenomen', not the infinitive 'opnemen'. Correct: 'Ze heeft de hele vergadering opgenomen met haar telefoon.' 'Opnemen' → 'op + ge + nomen' = 'opgenomen' (sterk werkwoord). A bare infinitive where a participle belongs is a common slip."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Vergeet niet je telefoon mee te nemen.",
+            "correctUse": true,
+            "explanation": "Correct. In an 'om/te'-construction the separable verb splits around 'te': 'mee + te + nemen'. 'Meenemen' (to bring along) → 'mee te nemen'. The 'te' wedges between the prefix and the stem — the same splitting logic, just with 'te' in the gap."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "opstaan / ik / om zeven uur (hoofdzin, tegenwoordige tijd)",
+            "task": "Maak een hoofdzin.",
+            "acceptedAnswers": [
+              "Ik sta om zeven uur op.",
+              "Ik sta om zeven uur op."
+            ],
+            "preferred": "Ik sta om zeven uur op.",
+            "explanation": "Main clause → the separable verb splits: finite 'sta' in second position, prefix 'op' at the end. 'Ik sta om zeven uur op.' The default separable behaviour."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik sta om zeven uur op.",
+            "task": "Begin met 'Morgen' (let op de inversie).",
+            "acceptedAnswers": [
+              "Morgen sta ik om zeven uur op.",
+              "Morgen sta ik om zeven uur op."
+            ],
+            "preferred": "Morgen sta ik om zeven uur op.",
+            "explanation": "Fronting 'Morgen' inverts the verb and subject: 'sta ik'. The prefix 'op' still goes to the end. 'Morgen sta ik om zeven uur op' — split verb plus inversion together."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik sta vroeg op.",
+            "task": "Voeg 'moeten' toe (modaal werkwoord).",
+            "acceptedAnswers": [
+              "Ik moet vroeg opstaan.",
+              "Ik moet vroeg opstaan."
+            ],
+            "preferred": "Ik moet vroeg opstaan.",
+            "explanation": "Under a modal the separable verb stays whole as an infinitive at the end: 'moet ... opstaan'. It does NOT split here. Contrast the bare main clause 'ik sta vroeg op'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik stond vroeg op. (waarom? omdat de wekker ging)",
+            "task": "Maak er een bijzin van met 'omdat' (Ik was moe omdat ...).",
+            "acceptedAnswers": [
+              "Ik was moe omdat ik vroeg opstond.",
+              "Ik was moe omdat ik zo vroeg opstond."
+            ],
+            "preferred": "Ik was moe omdat ik vroeg opstond.",
+            "explanation": "In the 'omdat'-bijzin the separable verb stays together at the end: 'omdat ik vroeg opstond' (not 'op stond'). Subordinate clauses reunite separable verbs. Verb-final, whole."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik sta op. (voltooide tijd)",
+            "task": "Zet in de voltooide tijd.",
+            "acceptedAnswers": [
+              "Ik ben opgestaan.",
+              "Ik ben opgestaan."
+            ],
+            "preferred": "Ik ben opgestaan.",
+            "explanation": "Participle with 'ge-' in the middle: 'op + ge + staan' → 'opgestaan'. 'Opstaan' takes 'zijn': 'Ik ben opgestaan.' The 'ge-' always sits between prefix and stem in a separable participle."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik neem de vergadering op. (voltooide tijd)",
+            "task": "Zet in de voltooide tijd.",
+            "acceptedAnswers": [
+              "Ik heb de vergadering opgenomen.",
+              "Ik heb de vergadering opgenomen."
+            ],
+            "preferred": "Ik heb de vergadering opgenomen.",
+            "explanation": "Participle 'opgenomen' ('op + ge + nomen', sterk). 'Opnemen' takes 'hebben': 'Ik heb de vergadering opgenomen.' The 'ge-' in the middle, the object before the participle."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik neem mijn paraplu mee. (negatief gebod met 'vergeten ... te')",
+            "task": "Maak er een gebod van: 'Vergeet niet ...'.",
+            "acceptedAnswers": [
+              "Vergeet niet je paraplu mee te nemen.",
+              "Vergeet niet om je paraplu mee te nemen."
+            ],
+            "preferred": "Vergeet niet je paraplu mee te nemen.",
+            "explanation": "In the 'te'-construction the separable verb splits around 'te': 'mee + te + nemen'. 'Vergeet niet ... mee te nemen.' The 'te' goes in the gap, just as the prefix would land at the end elsewhere."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I get up at seven every day.",
+            "modelAnswer": "Ik sta elke dag om zeven uur op.",
+            "alternatives": [
+              "Ik sta elke dag om zeven uur op.",
+              "Elke dag sta ik om zeven uur op."
+            ],
+            "note": "Main clause → split: 'sta ... op'. Front 'elke dag' and invert: 'sta ik'. The prefix 'op' always lands at the end of the main clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "I have to get up early tomorrow.",
+            "modelAnswer": "Ik moet morgen vroeg opstaan.",
+            "alternatives": [
+              "Ik moet morgen vroeg opstaan.",
+              "Morgen moet ik vroeg opstaan."
+            ],
+            "note": "Under the modal 'moeten', the separable verb stays whole: 'opstaan'. Front 'morgen' and the modal inverts: 'moet ik', with 'opstaan' still at the end."
+          },
+          {
+            "type": "translation",
+            "prompt": "She recorded the whole meeting.",
+            "modelAnswer": "Ze heeft de hele vergadering opgenomen.",
+            "alternatives": [
+              "Ze heeft de hele vergadering opgenomen.",
+              "Ze nam de hele vergadering op."
+            ],
+            "note": "Participle 'opgenomen' ('ge-' in the middle), with 'hebben'. The imperfectum splits in a main clause: 'Ze nam ... op.' Perfect vs imperfectum, both shown."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't forget to bring your passport.",
+            "modelAnswer": "Vergeet niet je paspoort mee te nemen.",
+            "alternatives": [
+              "Vergeet niet je paspoort mee te nemen.",
+              "Vergeet niet om je paspoort mee te nemen."
+            ],
+            "note": "'Meenemen' splits around 'te': 'mee te nemen'. The imperative 'Vergeet niet ...' leads. 'Vergeten' tolerates both bare 'te' and 'om ... te' here."
+          },
+          {
+            "type": "translation",
+            "prompt": "I was tired because I'd got up so early.",
+            "modelAnswer": "Ik was moe omdat ik zo vroeg was opgestaan.",
+            "alternatives": [
+              "Ik was moe omdat ik zo vroeg opgestaan was.",
+              "Ik was moe omdat ik zo vroeg was opgestaan."
+            ],
+            "note": "In the 'omdat'-bijzin the verb cluster goes to the end: 'was opgestaan' (plusquamperfectum, with 'zijn'). The participle 'opgestaan' keeps 'ge-' in the middle. Both cluster orders ('was opgestaan' / 'opgestaan was') are accepted."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "When I got home, I took off my coat and hung it up.",
+            "modelAnswer": "Toen ik thuiskwam, deed ik mijn jas uit en hing hem op.",
+            "alternatives": [
+              "Toen ik thuiskwam, deed ik mijn jas uit en hing ik hem op.",
+              "Toen ik thuiskwam, trok ik mijn jas uit en hing hem op."
+            ],
+            "note": "Three separable verbs: 'thuiskomen' whole in the bijzin ('thuiskwam'), then 'uitdoen/uittrekken' and 'ophangen' split in the main clauses ('deed ... uit', 'hing ... op'). Fronted 'toen'-bijzin inverts the first main clause: 'deed ik'. 'Een jas uittrekken' is the more idiomatic 'take off a coat'."
+          },
+          {
+            "type": "translation",
+            "prompt": "He promised to call me back, but he never picked up the phone again.",
+            "modelAnswer": "Hij beloofde me terug te bellen, maar hij nam de telefoon nooit meer op.",
+            "alternatives": [
+              "Hij beloofde me terug te bellen, maar hij nam de telefoon nooit meer op.",
+              "Hij beloofde me terug te bellen, maar hij heeft de telefoon nooit meer opgenomen."
+            ],
+            "note": "Two separable verbs in different frames: 'terugbellen' splits around 'te' ('terug te bellen'), 'opnemen' splits in the main clause imperfectum ('nam ... op') or appears as participle 'opgenomen' in the perfect. 'De telefoon opnemen' = to answer the phone."
+          },
+          {
+            "type": "translation",
+            "prompt": "Before you leave, please turn off the lights and lock the door.",
+            "modelAnswer": "Voordat je weggaat, doe alsjeblieft de lichten uit en doe de deur op slot.",
+            "alternatives": [
+              "Voordat je weggaat, doe alsjeblieft de lichten uit en doe de deur op slot.",
+              "Voordat je weggaat, zet alsjeblieft de lichten uit en doe de deur op slot."
+            ],
+            "note": "'Weggaan' stays whole in the 'voordat'-bijzin ('weggaat'). Then two imperatives: 'uitdoen/uitzetten' splits ('doe ... uit' / 'zet ... uit'), and 'de deur op slot doen' (to lock the door — an idiom rather than a single separable verb). Fronted bijzin, then verb-first imperatives."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd already filled in the form before I realised I'd made a mistake.",
+            "modelAnswer": "Ik had het formulier al ingevuld voordat ik doorhad dat ik een fout had gemaakt.",
+            "alternatives": [
+              "Ik had het formulier al ingevuld voordat ik doorhad dat ik een fout had gemaakt.",
+              "Ik had het formulier al ingevuld voordat ik me realiseerde dat ik een fout had gemaakt."
+            ],
+            "note": "Participle 'ingevuld' ('in + ge + vuld', 'invullen' = to fill in). 'Doorhebben' (to realise) stays whole in the 'voordat'-bijzin ('doorhad'), with a nested 'dat'-clause ('dat ik een fout had gemaakt'). Three verb-final clauses, one separable participle with 'ge-' in the middle."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you don't write it down, you'll probably forget it, so note it down straight away.",
+            "modelAnswer": "Als je het niet opschrijft, vergeet je het waarschijnlijk, dus schrijf het meteen op.",
+            "alternatives": [
+              "Als je het niet opschrijft, vergeet je het waarschijnlijk, dus schrijf het meteen op.",
+              "Als je het niet noteert, vergeet je het waarschijnlijk, dus noteer het meteen."
+            ],
+            "note": "'Opschrijven' (to write down) — whole in the 'als'-bijzin ('opschrijft'), split in the imperative ('schrijf ... op'). Fronted 'als'-clause inverts the main clause: 'vergeet je'. 'Dus' leads the imperative. The separable verb shown in two frames in one sentence: bijzin-whole vs main-clause-split."
+          }
+        ]
+      }
+    }
+  ]
+}
