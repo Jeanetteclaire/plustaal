@@ -1,0 +1,241 @@
+{
+  "zone": "zouden",
+  "zoneName": "Zouden + conditional",
+  "tiles": [
+    {
+      "id": "zouden-4-foutjesgids-zouden",
+      "theme": "Foutjesgids zouden",
+      "themeEnglish": "Mixed review of the whole zouden topic — unreal conditionals, hearsay, politeness, and the word order that goes with them",
+      "recognitionQuestion": "Is the zou-construction correct here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Als ik meer tijd had, zou ik vaker langskomen.",
+            "correctUse": true,
+            "explanation": "Correct. Present unreal: 'als' + imperfectum ('had'), main clause 'zou' + infinitive ('zou ... langskomen'). Fronted 'als'-clause inverts the main clause. The imperfectum marks it as contrary to fact — I don't have more time."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik rijk ben, zou ik de hele wereld rondreizen.",
+            "correctUse": false,
+            "explanation": "Niet correct. For a present UNREAL condition, the 'als'-clause needs the imperfectum, not the present: 'Als ik rijk was, ...'. The present 'ben' turns it into a real, open possibility. Correct: 'Als ik rijk was, zou ik de hele wereld rondreizen.'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als ik het had geweten, ik zou je gewaarschuwd hebben.",
+            "correctUse": false,
+            "explanation": "Niet correct. The main clause must invert after the fronted 'als'-clause: '..., zou ik je gewaarschuwd hebben', not '..., ik zou'. Correct: 'Als ik het had geweten, zou ik je gewaarschuwd hebben.' The conditional perfect is fine; only the word order is wrong."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Volgens de geruchten zou het bedrijf binnenkort failliet gaan.",
+            "correctUse": true,
+            "explanation": "Correct. Hearsay 'zou': 'zou ... failliet gaan' = is reportedly going bankrupt. 'Volgens de geruchten' (according to rumour) flags the unverified claim. The separable 'failliet gaan' stays whole as the infinitive after 'zou'. 'Zou' here means 'supposedly', not 'would'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij zou volgens zijn collega's morgen niet komt.",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zou' is always followed by an INFINITIVE, never a finite verb: 'hij zou ... niet komen', not 'niet komt'. Correct: 'Hij zou volgens zijn collega's morgen niet komen.' Whether hearsay or conditional, 'zou' takes an infinitive at the end."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik zou graag een afspraak willen maken voor volgende week.",
+            "correctUse": true,
+            "explanation": "Correct. Polite wish 'zou ... willen': 'Ik zou graag ... willen maken' = I'd like to make .... 'Graag' is the politeness marker; the cluster 'willen maken' closes the clause. The courteous default for booking something."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Als je harder had gestudeerd, had je voor het examen geslaagd hebben.",
+            "correctUse": false,
+            "explanation": "Niet correct. The main clause has a doubled auxiliary. Use EITHER the plusquamperfectum 'had je ... geslaagd' OR the conditional perfect 'zou je ... geslaagd zijn' — not 'had ... hebben'. Also 'slagen' takes 'zijn', not 'hebben'. Correct: 'Als je harder had gestudeerd, was je voor het examen geslaagd' (or 'zou je ... geslaagd zijn')."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Als ik rijk ben, zou ik stoppen met werken.",
+            "task": "Verbeter de voorwaarde (present unreal).",
+            "acceptedAnswers": [
+              "Als ik rijk was, zou ik stoppen met werken.",
+              "Als ik rijk was, zou ik stoppen met werken."
+            ],
+            "preferred": "Als ik rijk was, zou ik stoppen met werken.",
+            "explanation": "Present unreal needs the imperfectum in the 'als'-clause: 'als ik rijk was'. The present 'ben' would make it a real condition. The main clause keeps 'zou' + infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij komt volgens de berichten morgen niet. (hearsay met 'zou')",
+            "task": "Herschrijf met de hearsay-'zou'.",
+            "acceptedAnswers": [
+              "Hij zou morgen niet komen.",
+              "Volgens de berichten zou hij morgen niet komen."
+            ],
+            "preferred": "Hij zou morgen niet komen.",
+            "explanation": "Hearsay 'zou' + infinitive 'komen'. 'Hij zou morgen niet komen' = he reportedly isn't coming tomorrow. Never 'zou ... komt' — 'zou' always takes an infinitive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Als ik het had geweten, ik had je gebeld.",
+            "task": "Verbeter de woordvolgorde.",
+            "acceptedAnswers": [
+              "Als ik het had geweten, had ik je gebeld.",
+              "Als ik het geweten had, had ik je gebeld."
+            ],
+            "preferred": "Als ik het had geweten, had ik je gebeld.",
+            "explanation": "The main clause must invert after the fronted 'als'-clause: 'had ik je gebeld', not 'ik had'. Past unreal with plusquamperfectum in both halves. The inversion is the fix."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Praat eens met je huisarts. (voorzichtig advies)",
+            "task": "Maak voorzichtig advies met 'Je zou ... moeten'.",
+            "acceptedAnswers": [
+              "Je zou eens met je huisarts moeten praten.",
+              "Je zou met je huisarts moeten praten."
+            ],
+            "preferred": "Je zou eens met je huisarts moeten praten.",
+            "explanation": "'Zou ... moeten' softens a command into advice. 'Eens' adds the friendly nudge. 'Praten met' — 'met' for the person. The cluster 'moeten praten' at the end. 'Huisarts' = GP."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik heb meer geld. Ik koop een nieuwe auto. (present unreal, zonder 'zou')",
+            "task": "Maak een present unreal met imperfectum in beide delen.",
+            "acceptedAnswers": [
+              "Als ik meer geld had, kocht ik een nieuwe auto.",
+              "Als ik meer geld had, kocht ik een nieuwe auto."
+            ],
+            "preferred": "Als ik meer geld had, kocht ik een nieuwe auto.",
+            "explanation": "The 'zou'-less present unreal: imperfectum in both clauses ('had' ... 'kocht'). A natural, lighter alternative to 'zou ... kopen'. Fronted 'als'-clause inverts: 'kocht ik'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Het is ongeveer drie uur rijden. (voorzichtige schatting)",
+            "task": "Maak het voorzichtiger met 'Ik zou zeggen dat ...'.",
+            "acceptedAnswers": [
+              "Ik zou zeggen dat het ongeveer drie uur rijden is.",
+              "Ik zou zeggen dat het zo'n drie uur rijden is."
+            ],
+            "preferred": "Ik zou zeggen dat het ongeveer drie uur rijden is.",
+            "explanation": "Hedging 'Ik zou zeggen dat ...' makes the estimate tentative. The 'dat'-bijzin is verb-final ('is'). 'Drie uur rijden' = a three-hour drive."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Je studeert harder. Je slaagt voor het examen. (past unreal — verwijt)",
+            "task": "Maak een past unreal (plusquamperfectum + correcte hoofdzin).",
+            "acceptedAnswers": [
+              "Als je harder had gestudeerd, was je voor het examen geslaagd.",
+              "Als je harder had gestudeerd, zou je voor het examen geslaagd zijn."
+            ],
+            "preferred": "Als je harder had gestudeerd, was je voor het examen geslaagd.",
+            "explanation": "Past unreal: 'als' + plusquamperfectum ('had gestudeerd'), main clause EITHER 'was ... geslaagd' (plusquamperfectum) OR 'zou ... geslaagd zijn' (conditional perfect) — never both auxiliaries. 'Slagen voor' takes 'zijn'."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "If I had more time, I'd read more.",
+            "modelAnswer": "Als ik meer tijd had, zou ik meer lezen.",
+            "alternatives": [
+              "Als ik meer tijd had, zou ik meer lezen.",
+              "Als ik meer tijd had, las ik meer."
+            ],
+            "note": "Present unreal: 'als' + imperfectum ('had'), 'zou' + infinitive. The 'zou'-less 'las ik meer' (imperfectum) is the lighter version. Fronted 'als'-clause inverts the main clause."
+          },
+          {
+            "type": "translation",
+            "prompt": "He's reportedly leaving the company.",
+            "modelAnswer": "Hij zou het bedrijf verlaten.",
+            "alternatives": [
+              "Hij zou bij het bedrijf weggaan.",
+              "Naar verluidt zou hij het bedrijf verlaten."
+            ],
+            "note": "Hearsay 'zou' + infinitive ('verlaten' / 'weggaan'). 'Hij zou het bedrijf verlaten' = he's reportedly leaving. 'Naar verluidt' (reportedly) makes the unverified source explicit. Never a finite verb after 'zou'."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I'd known, I'd have told you.",
+            "modelAnswer": "Als ik het had geweten, had ik het je verteld.",
+            "alternatives": [
+              "Als ik het had geweten, zou ik het je hebben verteld.",
+              "Had ik het geweten, dan had ik het je verteld."
+            ],
+            "note": "Past unreal: plusquamperfectum throughout ('had geweten' ... 'had verteld'), or the conditional perfect 'zou ... hebben verteld'. The 'zonder als' version 'Had ik het geweten, dan ...' is the elegant twin from the inversie topic."
+          },
+          {
+            "type": "translation",
+            "prompt": "I'd like to ask you something.",
+            "modelAnswer": "Ik zou je iets willen vragen.",
+            "alternatives": [
+              "Ik zou je graag iets willen vragen.",
+              "Ik zou je iets willen vragen."
+            ],
+            "note": "Polite 'zou ... willen': 'Ik zou je iets willen vragen' = I'd like to ask you something. Add 'graag' for extra courtesy. The cluster 'willen vragen' at the end — softer than the blunt 'ik wil je iets vragen'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You should really see a doctor.",
+            "modelAnswer": "Je zou echt naar de dokter moeten gaan.",
+            "alternatives": [
+              "Je zou echt eens naar de dokter moeten gaan.",
+              "Je zou echt naar de huisarts moeten gaan."
+            ],
+            "note": "Tentative-but-firm advice 'zou ... moeten'. 'Echt' makes it insistent; 'eens' would soften it again. The cluster 'moeten gaan' at the end. 'Naar de dokter / huisarts gaan' = to see a doctor / GP."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "If I were in charge, I'd do things very differently, but nobody asks my opinion.",
+            "modelAnswer": "Als ik de leiding had, zou ik het heel anders doen, maar niemand vraagt naar mijn mening.",
+            "alternatives": [
+              "Als ik de leiding had, zou ik het heel anders aanpakken, maar niemand vraagt naar mijn mening.",
+              "Als ik de baas was, zou ik het heel anders doen, maar niemand vraagt naar mijn mening."
+            ],
+            "note": "Present unreal ('als ik de leiding had' + 'zou ik ... doen') followed by a 'maar'-clause. 'Vragen naar' (ask about/for — fixed prep) with 'mijn mening'. 'De leiding hebben' / 'de baas zijn' = to be in charge. 'Aanpakken' (separable) = to tackle/handle."
+          },
+          {
+            "type": "translation",
+            "prompt": "According to the report, the bridge is supposed to be finished by spring, but I'd say that's optimistic.",
+            "modelAnswer": "Volgens het rapport zou de brug tegen de lente klaar zijn, maar ik zou zeggen dat dat optimistisch is.",
+            "alternatives": [
+              "Volgens het rapport zou de brug tegen de lente af zijn, maar ik zou zeggen dat dat optimistisch is.",
+              "Naar verluidt zou de brug tegen de lente klaar zijn, maar ik zou zeggen dat dat optimistisch is."
+            ],
+            "note": "Two 'zou's, two functions: hearsay ('zou ... klaar zijn' = is supposedly finished) and hedged opinion ('ik zou zeggen dat ...'). Fronted 'Volgens het rapport' inverts: 'zou de brug'. 'Tegen de lente' = by spring. 'Klaar / af zijn' = to be finished."
+          },
+          {
+            "type": "translation",
+            "prompt": "If you had asked me earlier, I would gladly have helped, but now I really don't have time.",
+            "modelAnswer": "Als je het me eerder had gevraagd, zou ik je graag hebben geholpen, maar nu heb ik echt geen tijd.",
+            "alternatives": [
+              "Had je het me eerder gevraagd, dan had ik je graag geholpen, maar nu heb ik echt geen tijd.",
+              "Als je het me eerder had gevraagd, had ik je graag geholpen, maar nu heb ik echt geen tijd."
+            ],
+            "note": "Past unreal: 'als' + plusquamperfectum, main clause conditional perfect 'zou ... hebben geholpen' (or plusquamperfectum 'had ... geholpen'). Then 'maar nu' fronts and inverts: 'heb ik'. The 'zonder als' twin opens 'Had je ... gevraagd, dan ...'."
+          },
+          {
+            "type": "translation",
+            "prompt": "It could be that she's already left, in which case it would be pointless to call her.",
+            "modelAnswer": "Het zou kunnen dat ze al weg is, in welk geval het geen zin zou hebben om haar te bellen.",
+            "alternatives": [
+              "Het zou kunnen dat ze al vertrokken is, in welk geval het geen zin zou hebben om haar te bellen.",
+              "Het kan zijn dat ze al weg is, in welk geval het geen zin zou hebben haar te bellen."
+            ],
+            "note": "Speculation 'het zou kunnen dat ...' (verb-final 'weg is') plus a conditional 'het zou geen zin hebben om ... te bellen'. 'In welk geval' = in which case. 'Geen zin hebben om ... te' = to be pointless to. Two 'zou's, an om...te clause, all stacked."
+          },
+          {
+            "type": "translation",
+            "prompt": "If I were you, I'd say it would be wiser to wait, but of course it's your decision.",
+            "modelAnswer": "Als ik jou was, zou ik zeggen dat het verstandiger zou zijn om te wachten, maar het is natuurlijk jouw beslissing.",
+            "alternatives": [
+              "Als ik jou was, zou ik zeggen dat het verstandiger zou zijn om te wachten, maar het is natuurlijk jouw beslissing.",
+              "Als ik jou was, zou ik zeggen dat het beter zou zijn om te wachten, maar het is natuurlijk jouw keuze."
+            ],
+            "note": "Three layered 'zou's: conditional ('als ik jou was, zou ik zeggen'), hedged opinion ('dat het verstandiger zou zijn'), plus an 'om ... te' clause. Then a 'maar'-clause with fronted-feeling 'natuurlijk' (here mid-clause, no inversion needed). The full conditional toolkit in one sentence."
+          }
+        ]
+      }
+    }
+  ]
+}

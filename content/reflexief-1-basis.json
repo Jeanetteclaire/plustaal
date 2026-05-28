@@ -1,0 +1,241 @@
+{
+  "zone": "reflexief",
+  "zoneName": "Reflexieve werkwoorden",
+  "tiles": [
+    {
+      "id": "reflexief-1-basis",
+      "theme": "Reflexieve werkwoorden: de basis",
+      "themeEnglish": "Reflexive verbs and the me/je/zich pronoun system — verbs like zich herinneren and zich vergissen that can't exist without the pronoun",
+      "recognitionQuestion": "Is the reflexive pronoun used correctly here?",
+      "levels": {
+        "1": [
+          {
+            "type": "recognition",
+            "prompt": "Ik herinner me die zomer nog heel goed.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich herinneren' (to remember) is truly reflexive — it can't appear without its pronoun. First person 'ik' takes 'me': 'ik herinner me'. The pronoun sits right after the finite verb. 'Ik herinner die zomer' (without 'me') would simply be wrong."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Hij vergist zich nooit met dat soort berekeningen.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich vergissen' (to be mistaken) takes 'zich' in the third person: 'hij vergist zich'. The reflexive pronoun for hij/zij/het/ze (plural)/u is always 'zich'. Like 'herinneren', this verb has no non-reflexive existence."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Voel je niet goed vandaag?",
+            "correctUse": false,
+            "explanation": "Niet correct. 'Zich voelen' (to feel) needs its pronoun, and for 'je' that pronoun is 'je': 'Voel je je niet goed?' Yes — two 'je's: the subject and the reflexive. It looks odd but it's right. Correct: 'Voel je je niet goed vandaag?'"
+          },
+          {
+            "type": "recognition",
+            "prompt": "We moeten ons haasten, anders missen we de trein.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich haasten' (to hurry) takes 'ons' for 'we': 'we moeten ons haasten'. Under a modal, the reflexive pronoun sits early (after 'we'), while the infinitive 'haasten' goes to the end. The pronoun set: me / je / zich / zich / ons / je / zich."
+          },
+          {
+            "type": "recognition",
+            "prompt": "De kinderen hebben zich heel netjes gedragen op het feest.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich gedragen' (to behave) with plural 'de kinderen' takes 'zich'. In the perfect, the pronoun sits after the auxiliary 'hebben': 'hebben zich ... gedragen'. The participle 'gedragen' closes the clause."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Ik verbaas zich erover dat hij niets gezegd heeft.",
+            "correctUse": false,
+            "explanation": "Niet correct. The reflexive pronoun must match the subject: with 'ik' it's 'me', not 'zich'. Correct: 'Ik verbaas me erover dat hij niets gezegd heeft.' 'Zich verbazen over' (to be amazed at) — 'zich' is only for the third person; first person needs 'me'."
+          },
+          {
+            "type": "recognition",
+            "prompt": "Je moet je niet schamen voor je accent.",
+            "correctUse": true,
+            "explanation": "Correct. 'Zich schamen' (to be ashamed) with subject 'je' takes the reflexive 'je': 'je moet je niet schamen'. Again the doubled 'je' (subject + reflexive). Under the modal 'moet', the pronoun sits early and 'schamen' goes to the end."
+          }
+        ],
+        "2": [
+          {
+            "type": "transformation",
+            "prompt": "Ik herinner ___ jouw verjaardag nog goed.",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "Ik herinner me jouw verjaardag nog goed.",
+              "me"
+            ],
+            "preferred": "Ik herinner me jouw verjaardag nog goed.",
+            "explanation": "'Zich herinneren' with 'ik' → 'me'. 'Ik herinner me ...'. The pronoun sits straight after the finite verb. This verb cannot drop its reflexive pronoun."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Hij vergist ___ in de datum.",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "Hij vergist zich in de datum.",
+              "zich"
+            ],
+            "preferred": "Hij vergist zich in de datum.",
+            "explanation": "'Zich vergissen' with 'hij' → 'zich'. 'Hij vergist zich in de datum' = he's got the date wrong. 'Zich vergissen in' = to be mistaken about. Third person always 'zich'."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Voel jij ___ wel lekker?",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "Voel jij je wel lekker?",
+              "je"
+            ],
+            "preferred": "Voel jij je wel lekker?",
+            "explanation": "'Zich voelen' with subject 'jij' → reflexive 'je'. 'Voel jij je wel lekker?' = are you feeling alright? 'Zich lekker voelen' = to feel well. The subject 'jij' and reflexive 'je' are different words doing different jobs."
+          },
+          {
+            "type": "transformation",
+            "prompt": "We haasten ___ naar het station.",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "We haasten ons naar het station.",
+              "ons"
+            ],
+            "preferred": "We haasten ons naar het station.",
+            "explanation": "'Zich haasten' with 'we' → 'ons'. 'We haasten ons ...'. The first-person plural reflexive is 'ons'. The pronoun follows the finite verb."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Jullie gedragen ___ altijd voorbeeldig.",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "Jullie gedragen je altijd voorbeeldig.",
+              "je"
+            ],
+            "preferred": "Jullie gedragen je altijd voorbeeldig.",
+            "explanation": "'Zich gedragen' with 'jullie' → 'je'. The second-person plural reflexive is 'je' (the same as singular 'je'). 'Voorbeeldig' = exemplary. Some speakers also accept 'jullie gedragen jullie', but 'je' is standard."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ze verbazen ___ over de hoge prijzen.",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "Ze verbazen zich over de hoge prijzen.",
+              "zich"
+            ],
+            "preferred": "Ze verbazen zich over de hoge prijzen.",
+            "explanation": "'Zich verbazen over' (to be amazed at) with plural 'ze' → 'zich'. Third person, singular or plural, always 'zich'. 'Verbazen over' takes 'over' for what amazes them."
+          },
+          {
+            "type": "transformation",
+            "prompt": "Ik schaam ___ een beetje voor mijn rommelige huis.",
+            "task": "Vul het juiste reflexieve voornaamwoord in.",
+            "acceptedAnswers": [
+              "Ik schaam me een beetje voor mijn rommelige huis.",
+              "me"
+            ],
+            "preferred": "Ik schaam me een beetje voor mijn rommelige huis.",
+            "explanation": "'Zich schamen voor' (to be ashamed of) with 'ik' → 'me'. 'Ik schaam me ...'. First person 'me', never 'zich'. 'Rommelig' = messy."
+          }
+        ],
+        "3": [
+          {
+            "type": "translation",
+            "prompt": "I remember that day well.",
+            "modelAnswer": "Ik herinner me die dag nog goed.",
+            "alternatives": [
+              "Ik herinner me die dag nog goed.",
+              "Ik kan me die dag nog goed herinneren."
+            ],
+            "note": "'Zich herinneren' with 'ik' → 'me'. 'Nog' = still. The modal version 'Ik kan me ... herinneren' puts the infinitive 'herinneren' at the end and keeps 'me' early. This verb always needs its pronoun."
+          },
+          {
+            "type": "translation",
+            "prompt": "He's mistaken.",
+            "modelAnswer": "Hij vergist zich.",
+            "alternatives": [
+              "Hij vergist zich.",
+              "Hij heeft het mis."
+            ],
+            "note": "'Zich vergissen' with 'hij' → 'zich'. 'Hij vergist zich' = he's wrong/mistaken. The idiom 'het mis hebben' (to have it wrong) is a non-reflexive alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "Are you feeling alright?",
+            "modelAnswer": "Voel je je wel goed?",
+            "alternatives": [
+              "Voel je je wel goed?",
+              "Voel je je niet lekker?"
+            ],
+            "note": "'Zich voelen' with 'je' → the doubled 'je je' (subject + reflexive). 'Voel je je wel goed?' = are you feeling OK? It looks strange but it's correct. 'Zich lekker / goed voelen' = to feel well."
+          },
+          {
+            "type": "translation",
+            "prompt": "We have to hurry.",
+            "modelAnswer": "We moeten ons haasten.",
+            "alternatives": [
+              "We moeten ons haasten.",
+              "We moeten opschieten."
+            ],
+            "note": "'Zich haasten' with 'we' → 'ons'. Under the modal 'moeten', 'ons' sits early and 'haasten' goes to the end. 'Opschieten' (to hurry up) is a non-reflexive everyday alternative."
+          },
+          {
+            "type": "translation",
+            "prompt": "Don't be ashamed.",
+            "modelAnswer": "Schaam je niet.",
+            "alternatives": [
+              "Schaam je niet.",
+              "Je hoeft je nergens voor te schamen."
+            ],
+            "note": "'Zich schamen' in the imperative with 'je': 'Schaam je niet' = don't be ashamed. The reflexive 'je' stays even in the imperative. The fuller 'Je hoeft je nergens voor te schamen' = you've nothing to be ashamed of."
+          }
+        ],
+        "4": [
+          {
+            "type": "translation",
+            "prompt": "I remember that we hurried because we were afraid we'd miss the train.",
+            "modelAnswer": "Ik herinner me dat we ons haastten omdat we bang waren dat we de trein zouden missen.",
+            "alternatives": [
+              "Ik herinner me dat we ons haastten omdat we bang waren de trein te missen.",
+              "Ik herinner me nog dat we ons haastten omdat we bang waren dat we de trein zouden missen."
+            ],
+            "note": "Two reflexives, two persons: 'ik herinner me' (me) and 'we ... haastten' (ons), the second inside a 'dat'-bijzin (verb-final 'haastten'). Then 'bang zijn dat ...' with a future-in-the-past 'zouden missen'. Reflexive pronouns track their own subjects independently."
+          },
+          {
+            "type": "translation",
+            "prompt": "If he behaved a bit better, people wouldn't be so amazed.",
+            "modelAnswer": "Als hij zich wat beter gedroeg, zouden de mensen zich niet zo verbazen.",
+            "alternatives": [
+              "Als hij zich wat beter zou gedragen, zouden de mensen zich niet zo verbazen.",
+              "Als hij zich wat beter gedroeg, zouden mensen zich niet zo verbazen."
+            ],
+            "note": "Present unreal conditional (a callback to zouden) with two reflexives: 'zich gedragen' (hij → zich) in the 'als'-clause and 'zich verbazen' (de mensen → zich) in the main clause. Fronted 'als'-clause inverts: 'zouden de mensen'. Both third-person, so both 'zich'."
+          },
+          {
+            "type": "translation",
+            "prompt": "You shouldn't be ashamed of making mistakes; that's how you learn.",
+            "modelAnswer": "Je zou je niet moeten schamen dat je fouten maakt; zo leer je het.",
+            "alternatives": [
+              "Je hoeft je niet te schamen dat je fouten maakt; zo leer je het.",
+              "Je zou je niet moeten schamen voor je fouten; zo leer je het."
+            ],
+            "note": "'Zich schamen' (je → je) under the advice-'zou ... moeten' (a zouden callback). The reflexive 'je' sits early; 'schamen' goes to the end. 'Zo leer je het' — fronted 'zo' inverts ('leer je'). 'Je hoeft je niet te schamen' = you needn't be ashamed (the gentler 'hoeven te' version)."
+          },
+          {
+            "type": "translation",
+            "prompt": "She was mistaken about the date, so we hurried for nothing.",
+            "modelAnswer": "Ze had zich in de datum vergist, dus we hebben ons voor niets gehaast.",
+            "alternatives": [
+              "Ze had zich in de datum vergist, dus we hebben ons voor niets gehaast.",
+              "Ze had zich in de datum vergist, dus hebben we ons voor niets gehaast."
+            ],
+            "note": "Two reflexives in the perfect/pluperfect: 'zich vergissen' (ze → zich, plusquamperfectum 'had zich ... vergist') and 'zich haasten' (we → ons, perfect 'hebben ons ... gehaast'). In the perfect the pronoun follows the auxiliary; the participle closes. 'Voor niets' = for nothing."
+          },
+          {
+            "type": "translation",
+            "prompt": "I can't imagine that he doesn't remember anything about it.",
+            "modelAnswer": "Ik kan me niet voorstellen dat hij zich er niets van herinnert.",
+            "alternatives": [
+              "Ik kan me niet voorstellen dat hij zich er niets van herinnert.",
+              "Ik kan me niet voorstellen dat hij zich er niets van kan herinneren."
+            ],
+            "note": "Two reflexives nested: 'zich voorstellen' (to imagine — ik → me) in the main clause, and 'zich herinneren' (hij → zich) in the 'dat'-bijzin, verb-final. Plus 'er ... van' (er + voorzetsel: 'zich iets van herinneren'). Three layers — reflexive, reflexive, er-form — all tracking correctly."
+          }
+        ]
+      }
+    }
+  ]
+}
